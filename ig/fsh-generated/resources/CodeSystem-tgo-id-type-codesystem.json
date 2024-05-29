@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "TGOIDTypeCodeSystem",
+  "id": "tgo-id-type-codesystem",
+  "title": "Identifier Types Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/tgo-id-type-codesystem",
+  "concept": [
+    {
+      "code": "employeecode",
+      "display": "Numéro Matricule"
+    },
+    {
+      "code": "coordnumber",
+      "display": "Numéro de Coorporation"
+    },
+    {
+      "code": "militarycard",
+      "display": "Carte Militaire"
+    },
+    {
+      "code": "passport",
+      "display": "Passeport"
+    },
+    {
+      "code": "cni",
+      "display": "Carte Nationale d’Identité (CNI)"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 5
+}

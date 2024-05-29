@@ -1,0 +1,170 @@
+{
+  "resourceType": "Basic",
+  "id": "ihris-page-inservice-training",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-page"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "page",
+        "system": "http://ihris.org/fhir/CodeSystem/ihris-resource-codesystem"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-display",
+      "extension": [
+        {
+          "url": "resource",
+          "valueReference": {
+            "reference": "StructureDefinition/inservice-training-profile"
+          }
+        },
+        {
+          "url": "search",
+          "valueString": "Practitioner|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+        },
+        {
+          "extension": [
+            {
+              "url": "field",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "url",
+              "valueUrl": "/resource/view/practitioner/FIELD"
+            },
+            {
+              "url": "text",
+              "valueString": "View Health Worker"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-account-arrow-right"
+            }
+          ],
+          "url": "link"
+        },
+        {
+          "extension": [
+            {
+              "url": "field",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "url",
+              "valueUrl": "/questionnaire/ihris-education-history/education-history?practitioner=FIELD"
+            },
+            {
+              "url": "text",
+              "valueString": "Add Another"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-account-arrow-right"
+            },
+            {
+              "url": "task",
+              "valueId": "ihris-task-add-inservice-training"
+            }
+          ],
+          "url": "link"
+        },
+        {
+          "url": "search",
+          "valueString": "Institution|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='institution').valueReference.reference"
+        },
+        {
+          "url": "search",
+          "valueString": "Degree|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='degree').valueReference.reference"
+        },
+        {
+          "extension": [
+            {
+              "url": "path",
+              "valueString": "Basic.extension:practitioner.value[x]:valueReference"
+            },
+            {
+              "url": "readOnlyIfSet",
+              "valueBoolean": true
+            }
+          ],
+          "url": "field"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Inservice Training"
+        },
+        {
+          "url": "description",
+          "valueString": "Inservice Training details"
+        },
+        {
+          "url": "name",
+          "valueString": "Basic"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:practitioner"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:institution"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:location"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:year"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:degree"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:specialized"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:specialization"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:training-mode"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:training-fund"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:training-fund-other"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:observation"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    }
+  ]
+}

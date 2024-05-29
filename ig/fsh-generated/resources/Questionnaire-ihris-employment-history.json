@@ -1,0 +1,146 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ihris-employment-history",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/ihris-employment-history",
+  "title": "iHRIS Work Experience Workflow",
+  "description": "iHRIS workflow to record a Work Experience",
+  "name": "ihris-employment-history",
+  "status": "active",
+  "date": "2020-08-27",
+  "purpose": "Workflow page for recording a Work Experience information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history",
+      "text": "Work Experience",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory",
+          "text": "Details",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "Basic.extension[0].extension[0]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:institution-type.value[x]:valueCoding",
+              "text": "Institution Type",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/institution-type-valueset",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:organization.value[x]:valueString",
+              "text": "Organization Name",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "organization",
+                    "system": "http://ihris.org/fhir/CodeSystem/institution-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:ministry.value[x]:valueCoding",
+              "text": "Ministry",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/ministry-valueset",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "ministry",
+                    "system": "http://ihris.org/fhir/CodeSystem/institution-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding",
+              "text": "Country",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/country-valueset",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job.value[x]:valueString",
+              "text": "Function/Job Title",
+              "type": "string",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[5]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job-description.value[x]:valueString",
+              "text": "Job Description",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[6]#year",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:start-year.value[x]:valueDate",
+              "text": "Start Year",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[7]#year",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:end-year.value[x]:valueDate",
+              "text": "End Year",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[8]#text",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:reason-leaving.value[x]:valueString",
+              "text": "Reason For Leaving",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[9]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding",
+              "text": "Service",
+              "type": "choice",
+              "answerValueSet": "http://hl7.org/fhir/ValueSet/work-service-valueset",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[10]#tree",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:location.value[x]:valueReference",
+              "text": "Location",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

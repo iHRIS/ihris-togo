@@ -1,0 +1,110 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ihris-discipline",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/ihris-discipline",
+  "title": "iHRIS Discipline Workflow",
+  "description": "iHRIS workflow to record a Discipline",
+  "name": "ihris-discipline",
+  "status": "active",
+  "date": "2020-09-02",
+  "purpose": "Workflow page for recording a Discipline information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline",
+      "text": "Discipline",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline",
+          "text": "Details",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "Basic.extension[0].extension[0]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionType.value[x]:valueCoding",
+              "text": "Disciplinary Action Type",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/discipline-action-type-valueset",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTypeOther.value[x]:valueString",
+              "text": "Other Disciplinary Action Type",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "other",
+                    "system": "http://ihris.org/fhir/CodeSystem/ihris-discipline-action-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:givenBy.value[x]:valueString",
+              "text": "Given By",
+              "type": "string",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTaken.value[x]:valueCoding",
+              "text": "Action Taken",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/disciplinary-action-taken-valueset",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:act-reference.value[x]:valueString",
+              "text": "Reference of the Act",
+              "type": "string",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[5]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:start-date.value[x]:valueDate",
+              "text": "Effective Start date",
+              "type": "date",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[6]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:end-date.value[x]:valueDate",
+              "text": "Effective End Date",
+              "type": "date",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[7]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:patterns.value[x]:valueString",
+              "text": "Patterns",
+              "type": "string",
+              "required": true,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
