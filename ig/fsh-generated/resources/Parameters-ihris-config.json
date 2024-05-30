@@ -12,15 +12,15 @@
       "valueSignature": {
         "type": [
           {
-            "code": "1.2.840.10065.1.12.1.14",
-            "system": "urn:iso-astm:E1762-95:2013"
+            "system": "urn:iso-astm:E1762-95:2013",
+            "code": "1.2.840.10065.1.12.1.14"
           }
         ],
-        "when": "2022-06-21T09:31:16.469Z",
+        "when": "2024-05-29T11:47:24.626Z",
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "V870cwmayGw0tOXXdiUn7/MNEaPt/KzRCk7H2t6IvqxmhshwxLxAYve8yNEdkhj/WhybFokLXR5rhtqU4VKE9EiN/dL1fHVbdu0rk/WrcFy2vPqYPUxepFAAAWQXIQV7gsVSMFEbUOTiYaQ42dt7gddrmJYq8p+6RFLAMDkxpzU="
+        "data": "RP0/b9rTbBzZQDkYLJt1sMeZHGnMVjGk0o2p7iGcVEPYxk9SEyOCQCuqgH2VkKcRzsZJhAw8U9/6r2PVWJmhd0oBH9isKpsl8EWrQAWSS6QcFy5fHfBjYQ7lZ0Ec5AiK4YEWU5ML97lv4RlJBWC1/pgiOjaP+uevDGjshU74raM="
       }
     },
     {
@@ -181,34 +181,6 @@
         {
           "name": "site:nav:menu:person:menu:person_add:url",
           "valueString": "/questionnaire/ihris-practitioner/practitioner"
-        },
-        {
-          "name": "site:nav:menu:position:text",
-          "valueString": "Positions"
-        },
-        {
-          "name": "site:nav:menu:position:order",
-          "valueString": "5"
-        },
-        {
-          "name": "site:nav:menu:position:icon",
-          "valueString": "mdi-account-multiple"
-        },
-        {
-          "name": "site:nav:menu:position:menu:position_search:text",
-          "valueString": "Search Positions"
-        },
-        {
-          "name": "site:nav:menu:position:menu:position_search:url",
-          "valueString": "/resource/search/practitionerrole"
-        },
-        {
-          "name": "site:nav:menu:position:menu:position_add:text",
-          "valueString": "Add Position"
-        },
-        {
-          "name": "site:nav:menu:position:menu:position_add:url",
-          "valueString": "/resource/add/practitionerrole"
         },
         {
           "name": "site:nav:menu:location:text",
@@ -633,6 +605,18 @@
         {
           "name": "site:nav:menu:database:menu:facility-data:menu:facility:order",
           "valueString": "1"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:sector:text",
+          "valueString": "Sector"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:sector:url",
+          "valueString": "/resource/search/sector"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:sector:order",
+          "valueString": "2"
         },
         {
           "name": "site:nav:menu:reports:text",

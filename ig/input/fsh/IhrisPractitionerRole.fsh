@@ -307,7 +307,7 @@ InstanceOf:     IhrisPage
 Title:          "iHRIS Job CodeSystem Page"
 Usage:          #example
 * code = IhrisResourceCodeSystem#page
-* extension[display].extension[resource].valueReference = Reference(CodeSystem/ihris-job)
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/togo-job-codesystem)
 * extension[display].extension[search][0].valueString = "Code|code"
 * extension[display].extension[search][1].valueString = "Display|display"
 * extension[display].extension[search][2].valueString = "Cadre|cadre"
@@ -318,9 +318,6 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.code"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.definition"
 * extension[section][0].extension[field][2].valueString = "CodeSystem.display"
-* extension[section][0].extension[field][3].valueString = "CodeSystem.cadre"
-* extension[section][0].extension[field][4].valueString = "CodeSystem.classification"
-* extension[section][0].extension[field][5].valueString = "CodeSystem.salary-grade"
 
 Instance:       ihris-page-salary-grade
 InstanceOf:     IhrisPage

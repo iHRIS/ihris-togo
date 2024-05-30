@@ -93,7 +93,7 @@ Description:    "Facility Sector."
 * value[x] only Coding
 * valueCoding 1..1 MS
 * valueCoding ^label = "Sector"
-* valueCoding from http://ihris.org/fhir/ValueSet/sector-valueset (required)
+* valueCoding from http://ihris.org/fhir/ValueSet/facility-sector-valueset (required)
 
 
 Instance:       ihris-page-tgo-facility

@@ -1,0 +1,1490 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "QualificationCodeSystem",
+  "id": "qualification-codesystem",
+  "title": "Qualification Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/qualification-codesystem",
+  "concept": [
+    {
+      "code": "qualification1",
+      "display": "Interne stagiaire"
+    },
+    {
+      "code": "qualification2",
+      "display": "Interne titulaire"
+    },
+    {
+      "code": "qualification3",
+      "display": "Matrone"
+    },
+    {
+      "code": "qualification4",
+      "display": "Médecin interniste et pneumologue"
+    },
+    {
+      "code": "qualification5",
+      "display": "Microscopiste"
+    },
+    {
+      "code": "qualification6",
+      "display": "Accoucheuse auxiliaire d'Etat"
+    },
+    {
+      "code": "qualification7",
+      "display": "Accoucheuse permanente"
+    },
+    {
+      "code": "qualification8",
+      "display": "Adjoint administratif"
+    },
+    {
+      "code": "qualification9",
+      "display": "Adjoint technique en génie mécanique"
+    },
+    {
+      "code": "qualification10",
+      "display": "Admininstrateur en sécurité réseau informatique"
+    },
+    {
+      "code": "qualification11",
+      "display": "Administrateur civil"
+    },
+    {
+      "code": "qualification12",
+      "display": "Administrateur des hôpitaux"
+    },
+    {
+      "code": "qualification13",
+      "display": "Administrateur de développement"
+    },
+    {
+      "code": "qualification14",
+      "display": "Administrateur des collectivités locales"
+    },
+    {
+      "code": "qualification15",
+      "display": "Administrateur des entreprises"
+    },
+    {
+      "code": "qualification16",
+      "display": "Administrateur des finances"
+    },
+    {
+      "code": "qualification17",
+      "display": "Administrateur des services de santé"
+    },
+    {
+      "code": "qualification18",
+      "display": "Agent commercial"
+    },
+    {
+      "code": "qualification19",
+      "display": "Agent d'accueil et orientation"
+    },
+    {
+      "code": "qualification20",
+      "display": "Agent de caisse"
+    },
+    {
+      "code": "qualification21",
+      "display": "Agent de collation"
+    },
+    {
+      "code": "qualification22",
+      "display": "Agent de la morgue"
+    },
+    {
+      "code": "qualification23",
+      "display": "Agent de promotion sociale"
+    },
+    {
+      "code": "qualification24",
+      "display": "Agent de recouvrement"
+    },
+    {
+      "code": "qualification25",
+      "display": "Agent de renseignement"
+    },
+    {
+      "code": "qualification26",
+      "display": "Agent de sécurité"
+    },
+    {
+      "code": "qualification27",
+      "display": "Agent de transit"
+    },
+    {
+      "code": "qualification28",
+      "display": "Agent de vente de pharmacie"
+    },
+    {
+      "code": "qualification29",
+      "display": "Agent incinérateur"
+    },
+    {
+      "code": "qualification30",
+      "display": "Agent technique de satistique"
+    },
+    {
+      "code": "qualification31",
+      "display": "Aide comptable / Comptable mécanographe"
+    },
+    {
+      "code": "qualification32",
+      "display": "Aide laborantin"
+    },
+    {
+      "code": "qualification33",
+      "display": "Aide soignant"
+    },
+    {
+      "code": "qualification34",
+      "display": "Ambulancier"
+    },
+    {
+      "code": "qualification35",
+      "display": "Anthropologue"
+    },
+    {
+      "code": "qualification36",
+      "display": "Anthropologue de la santé"
+    },
+    {
+      "code": "qualification37",
+      "display": "Architecte urbaniste"
+    },
+    {
+      "code": "qualification38",
+      "display": "Archiviste"
+    },
+    {
+      "code": "qualification39",
+      "display": "Aspergeur"
+    },
+    {
+      "code": "qualification40",
+      "display": "Assistant administratif"
+    },
+    {
+      "code": "qualification41",
+      "display": "Assistant contrôleur"
+    },
+    {
+      "code": "qualification42",
+      "display": "Assistant de gestion PMI/PME"
+    },
+    {
+      "code": "qualification43",
+      "display": "Assistant d'hygiène d’Etat"
+    },
+    {
+      "code": "qualification44",
+      "display": "Assistant d'hygiène d'Etat de santé publique"
+    },
+    {
+      "code": "qualification45",
+      "display": "Assistant social"
+    },
+    {
+      "code": "qualification46",
+      "display": "Attaché d'administration générale"
+    },
+    {
+      "code": "qualification47",
+      "display": "Attaché d'administration hospitalière"
+    },
+    {
+      "code": "qualification48",
+      "display": "Auditeur et contrôleur"
+    },
+    {
+      "code": "qualification49",
+      "display": "Auxiliaire d'Etat en pharmacie"
+    },
+    {
+      "code": "qualification50",
+      "display": "Blanchisseur"
+    },
+    {
+      "code": "qualification51",
+      "display": "Brancardier"
+    },
+    {
+      "code": "qualification52",
+      "display": "Buandier"
+    },
+    {
+      "code": "qualification53",
+      "display": "Cadre administratif de soins de santé"
+    },
+    {
+      "code": "qualification54",
+      "display": "Cadre administratif de soins de santé, spécialiste de santé publique"
+    },
+    {
+      "code": "qualification55",
+      "display": "Cadre superieur de dévelopement social"
+    },
+    {
+      "code": "qualification56",
+      "display": "Chauffeur"
+    },
+    {
+      "code": "qualification57",
+      "display": "Chauffeur mécanicien"
+    },
+    {
+      "code": "qualification58",
+      "display": "Chimiste"
+    },
+    {
+      "code": "qualification59",
+      "display": "Chirurgien-dentiste"
+    },
+    {
+      "code": "qualification60",
+      "display": "Comptable"
+    },
+    {
+      "code": "qualification61",
+      "display": "Comptable gestionnaire"
+    },
+    {
+      "code": "qualification62",
+      "display": "Cordonnier"
+    },
+    {
+      "code": "qualification63",
+      "display": "Couturier"
+    },
+    {
+      "code": "qualification64",
+      "display": "Cuisinier"
+    },
+    {
+      "code": "qualification65",
+      "display": "Démographe statisticien"
+    },
+    {
+      "code": "qualification66",
+      "display": "Développeur d'application"
+    },
+    {
+      "code": "qualification67",
+      "display": "Dispensateur ARV"
+    },
+    {
+      "code": "qualification68",
+      "display": "Docteur en psychologie clinique"
+    },
+    {
+      "code": "qualification69",
+      "display": "Economiste"
+    },
+    {
+      "code": "qualification70",
+      "display": "Economiste de la santé"
+    },
+    {
+      "code": "qualification71",
+      "display": "Economiste et statisticien"
+    },
+    {
+      "code": "qualification72",
+      "display": "Economiste gestionnaire"
+    },
+    {
+      "code": "qualification73",
+      "display": "Economiste planificateur"
+    },
+    {
+      "code": "qualification74",
+      "display": "Educateur spécialisé"
+    },
+    {
+      "code": "qualification75",
+      "display": "Electricien"
+    },
+    {
+      "code": "qualification76",
+      "display": "Electricien rebobineur"
+    },
+    {
+      "code": "qualification77",
+      "display": "Electronicien"
+    },
+    {
+      "code": "qualification78",
+      "display": "Electrotechnicien"
+    },
+    {
+      "code": "qualification79",
+      "display": "Employé de bureau"
+    },
+    {
+      "code": "qualification80",
+      "display": "Frigoriste"
+    },
+    {
+      "code": "qualification81",
+      "display": "Garde malades"
+    },
+    {
+      "code": "qualification82",
+      "display": "Géographe"
+    },
+    {
+      "code": "qualification83",
+      "display": "Gestionnaire commercial"
+    },
+    {
+      "code": "qualification84",
+      "display": "Gestionnaire des entreprises"
+    },
+    {
+      "code": "qualification85",
+      "display": "Gestionnaire des projets"
+    },
+    {
+      "code": "qualification86",
+      "display": "Gestionnaire des projets et management de la qualité"
+    },
+    {
+      "code": "qualification87",
+      "display": "Gestionnaire des projets et passation des marchés"
+    },
+    {
+      "code": "qualification88",
+      "display": "Gestionnaire des ressources humaines"
+    },
+    {
+      "code": "qualification89",
+      "display": "Gestionnaire des services de santé"
+    },
+    {
+      "code": "qualification90",
+      "display": "Gestionnaire des stocks"
+    },
+    {
+      "code": "qualification91",
+      "display": "Historien"
+    },
+    {
+      "code": "qualification92",
+      "display": "Hygiéniste alimentaire et qualiticien"
+    },
+    {
+      "code": "qualification93",
+      "display": "Infirmier auxiliaire d'Etat"
+    },
+    {
+      "code": "qualification94",
+      "display": "Infirmier diplômé d'Etat"
+    },
+    {
+      "code": "qualification95",
+      "display": "Infirmier diplômé d'Etat de santé publique"
+    },
+    {
+      "code": "qualification96",
+      "display": "Infirmier permanent"
+    },
+    {
+      "code": "qualification97",
+      "display": "Informaticien"
+    },
+    {
+      "code": "qualification98",
+      "display": "Informaticien de gestion"
+    },
+    {
+      "code": "qualification99",
+      "display": "Ingénieur adjoint de la statistique"
+    },
+    {
+      "code": "qualification100",
+      "display": "Ingénieur biochimiste"
+    },
+    {
+      "code": "qualification101",
+      "display": "Ingénieur biologiste"
+    },
+    {
+      "code": "qualification102",
+      "display": "Ingénieur biologiste spécialisé en santé de la reproduction"
+    },
+    {
+      "code": "qualification103",
+      "display": "Ingénieur biomédical"
+    },
+    {
+      "code": "qualification104",
+      "display": "Ingénieur de travaux informatiques"
+    },
+    {
+      "code": "qualification105",
+      "display": "Ingénieur des travaux biologique spécialisé en épidémiologie de terrain"
+    },
+    {
+      "code": "qualification106",
+      "display": "Ingénieur des travaux d'analyses médicales et biologiques"
+    },
+    {
+      "code": "qualification107",
+      "display": "Ingénieur des travaux d'analyses médicales et biologiques de santé publique"
+    },
+    {
+      "code": "qualification108",
+      "display": "Ingénieur des travaux en industrie agroalimentaire"
+    },
+    {
+      "code": "qualification109",
+      "display": "Ingénieur des Travaux publics"
+    },
+    {
+      "code": "qualification110",
+      "display": "Ingénieur en eau et environnement"
+    },
+    {
+      "code": "qualification111",
+      "display": "Ingénieur en hygiène alimentaire et management de la quailité"
+    },
+    {
+      "code": "qualification112",
+      "display": "Ingénieur en management de laboratoire de santé publique"
+    },
+    {
+      "code": "qualification113",
+      "display": "Ingénieur en santé environnementale"
+    },
+    {
+      "code": "qualification114",
+      "display": "Ingénieur génie civil"
+    },
+    {
+      "code": "qualification115",
+      "display": "Ingénieur génie électrique"
+    },
+    {
+      "code": "qualification116",
+      "display": "Ingénieur génie sanitaire"
+    },
+    {
+      "code": "qualification117",
+      "display": "Ingénieur statisticien économiste"
+    },
+    {
+      "code": "qualification118",
+      "display": "Ingénieur Télécoms et Réseaux"
+    },
+    {
+      "code": "qualification119",
+      "display": "Inspecteur central du trésor"
+    },
+    {
+      "code": "qualification120",
+      "display": "Inspecteur de douane"
+    },
+    {
+      "code": "qualification121",
+      "display": "Jardinier"
+    },
+    {
+      "code": "qualification122",
+      "display": "Juriste"
+    },
+    {
+      "code": "qualification123",
+      "display": "Juriste de la santé"
+    },
+    {
+      "code": "qualification124",
+      "display": "Kinésithérapeute d'Etat"
+    },
+    {
+      "code": "qualification125",
+      "display": "Kinésithérapeute d'Etat de santé publique"
+    },
+    {
+      "code": "qualification126",
+      "display": "Linguiste"
+    },
+    {
+      "code": "qualification127",
+      "display": "Logisticien de la santé"
+    },
+    {
+      "code": "qualification128",
+      "display": "Logisticien de santé de santé publique"
+    },
+    {
+      "code": "qualification129",
+      "display": "Lunettier"
+    },
+    {
+      "code": "qualification130",
+      "display": "Maçon"
+    },
+    {
+      "code": "qualification131",
+      "display": "Magasinier"
+    },
+    {
+      "code": "qualification132",
+      "display": "Maintenancier électronicien"
+    },
+    {
+      "code": "qualification133",
+      "display": "Maintenancier informaticien"
+    },
+    {
+      "code": "qualification134",
+      "display": "Maître de conférences agrégé en cardiologie"
+    },
+    {
+      "code": "qualification135",
+      "display": "Maître de conférences agrégé en urologie-andrologie"
+    },
+    {
+      "code": "qualification136",
+      "display": "Maître nageur"
+    },
+    {
+      "code": "qualification137",
+      "display": "Manœuvre"
+    },
+    {
+      "code": "qualification138",
+      "display": "Médecin anatomopathologiste"
+    },
+    {
+      "code": "qualification139",
+      "display": "Médecin anesthésiste réanimateur"
+    },
+    {
+      "code": "qualification140",
+      "display": "Médecin biologiste"
+    },
+    {
+      "code": "qualification141",
+      "display": "Médecin biologiste épidémiologiste"
+    },
+    {
+      "code": "qualification142",
+      "display": "Médecin biologiste spécialiste Histo-EmbryoCytogénétique"
+    },
+    {
+      "code": "qualification143",
+      "display": "Médecin cancérologue (chirurgie)"
+    },
+    {
+      "code": "qualification144",
+      "display": "Médecin cardiologue"
+    },
+    {
+      "code": "qualification145",
+      "display": "Médecin CES rhumatologie"
+    },
+    {
+      "code": "qualification146",
+      "display": "Médecin Chirurgien"
+    },
+    {
+      "code": "qualification147",
+      "display": "Médecin chirurgien cardio-vasculaire"
+    },
+    {
+      "code": "qualification148",
+      "display": "Médecin chirurgien dentiste"
+    },
+    {
+      "code": "qualification149",
+      "display": "Médecin chirurgien générale"
+    },
+    {
+      "code": "qualification150",
+      "display": "Médecin chirurgien obstétricien"
+    },
+    {
+      "code": "qualification151",
+      "display": "Médecin chirurgien orthopédiste traumatologue"
+    },
+    {
+      "code": "qualification152",
+      "display": "Médecin chirurgien pédiatre"
+    },
+    {
+      "code": "qualification153",
+      "display": "Médecin chirurgien plasticien"
+    },
+    {
+      "code": "qualification154",
+      "display": "Médecin chirurgien thoracique"
+    },
+    {
+      "code": "qualification155",
+      "display": "Médecin chirurgien urologue"
+    },
+    {
+      "code": "qualification156",
+      "display": "Médecin de radiologie et imagerie médicale"
+    },
+    {
+      "code": "qualification157",
+      "display": "Médecin de santé publique"
+    },
+    {
+      "code": "qualification158",
+      "display": "Médecin dermatologue"
+    },
+    {
+      "code": "qualification159",
+      "display": "Médecin du travail"
+    },
+    {
+      "code": "qualification160",
+      "display": "Médecin économiste de la santé"
+    },
+    {
+      "code": "qualification161",
+      "display": "Médecin endocrinologue"
+    },
+    {
+      "code": "qualification162",
+      "display": "Médecin épidémiologiste"
+    },
+    {
+      "code": "qualification163",
+      "display": "Médecin épidémiologiste de terrain"
+    },
+    {
+      "code": "qualification164",
+      "display": "Médecin généraliste"
+    },
+    {
+      "code": "qualification165",
+      "display": "Medecin gestionnaire des services de santé"
+    },
+    {
+      "code": "qualification166",
+      "display": "Médecin gynéco-obstétricien"
+    },
+    {
+      "code": "qualification167",
+      "display": "Médecin hématologue"
+    },
+    {
+      "code": "qualification168",
+      "display": "Médecin hépatho-gastro-entérologue"
+    },
+    {
+      "code": "qualification169",
+      "display": "Médecin infectiologue"
+    },
+    {
+      "code": "qualification170",
+      "display": "Médecin interniste"
+    },
+    {
+      "code": "qualification171",
+      "display": "Médecin légiste, médecin du travail et médecin du sport"
+    },
+    {
+      "code": "qualification172",
+      "display": "Médecin néphrologue"
+    },
+    {
+      "code": "qualification173",
+      "display": "Médecin neurochirurgien"
+    },
+    {
+      "code": "qualification174",
+      "display": "Médecin neurologue"
+    },
+    {
+      "code": "qualification175",
+      "display": "Médecin ophtalmologue"
+    },
+    {
+      "code": "qualification176",
+      "display": "Médecin oto-rhino-laryngologie et chirurgie cervico-faciale"
+    },
+    {
+      "code": "qualification177",
+      "display": "Médecin oto-rhino-laryngologue"
+    },
+    {
+      "code": "qualification178",
+      "display": "Médecin pédiatre"
+    },
+    {
+      "code": "qualification179",
+      "display": "Médecin de santé publique"
+    },
+    {
+      "code": "qualification180",
+      "display": "Médecin pneumologue"
+    },
+    {
+      "code": "qualification181",
+      "display": "Médecin psychiatre"
+    },
+    {
+      "code": "qualification182",
+      "display": "Médecin psychologue de santé"
+    },
+    {
+      "code": "qualification183",
+      "display": "Médecin radiologue"
+    },
+    {
+      "code": "qualification184",
+      "display": "Médecin rhumatologue"
+    },
+    {
+      "code": "qualification185",
+      "display": "Médecin spécialiste en oncologie médicale"
+    },
+    {
+      "code": "qualification186",
+      "display": "Médecin stomatologue"
+    },
+    {
+      "code": "qualification187",
+      "display": "Médecin stomatologue & chirurgien maxillo-facial"
+    },
+    {
+      "code": "qualification188",
+      "display": "Médecin traumatologue"
+    },
+    {
+      "code": "qualification189",
+      "display": "Médecin urgentiste"
+    },
+    {
+      "code": "qualification190",
+      "display": "Médecin urologue"
+    },
+    {
+      "code": "qualification191",
+      "display": "Médecin vétérinaire"
+    },
+    {
+      "code": "qualification192",
+      "display": "Médiateur"
+    },
+    {
+      "code": "qualification193",
+      "display": "Menuisier"
+    },
+    {
+      "code": "qualification194",
+      "display": "Numérotateur"
+    },
+    {
+      "code": "qualification195",
+      "display": "Nutritionniste"
+    },
+    {
+      "code": "qualification196",
+      "display": "Opérateur de saisie"
+    },
+    {
+      "code": "qualification197",
+      "display": "Orthoprothésiste d'Etat"
+    },
+    {
+      "code": "qualification198",
+      "display": "Pharmacien"
+    },
+    {
+      "code": "qualification199",
+      "display": "Pharmacien spécialiste en économie et gestion de santé"
+    },
+    {
+      "code": "qualification200",
+      "display": "Plombier"
+    },
+    {
+      "code": "qualification201",
+      "display": "Professeur agrégé de chirurgie cancérologie"
+    },
+    {
+      "code": "qualification202",
+      "display": "Professeur agrégé de chirurgie générale"
+    },
+    {
+      "code": "qualification203",
+      "display": "Professeur agrégé de stomatologie"
+    },
+    {
+      "code": "qualification204",
+      "display": "Professeur agrégé en anesthésie réanimation"
+    },
+    {
+      "code": "qualification205",
+      "display": "Professeur agrégé en biochimie"
+    },
+    {
+      "code": "qualification206",
+      "display": "Professeur agrégé en cardiologie"
+    },
+    {
+      "code": "qualification207",
+      "display": "Professeur agrégé en chirurgie pédiatrique"
+    },
+    {
+      "code": "qualification208",
+      "display": "Professeur agrégé en chirurgie viscérale"
+    },
+    {
+      "code": "qualification209",
+      "display": "Professeur agrégé en dermatologie"
+    },
+    {
+      "code": "qualification210",
+      "display": "Professeur agrége en gynécologie obstétrique"
+    },
+    {
+      "code": "qualification211",
+      "display": "Professeur agrégé en hématologie clinique"
+    },
+    {
+      "code": "qualification212",
+      "display": "Professeur agrégé en hépatho-gastro-entérologie"
+    },
+    {
+      "code": "qualification213",
+      "display": "Professeur agrégé en immunologie"
+    },
+    {
+      "code": "qualification214",
+      "display": "Professeur agrégé en médecine interne"
+    },
+    {
+      "code": "qualification215",
+      "display": "Professeur agrégé en néphrologie"
+    },
+    {
+      "code": "qualification216",
+      "display": "Professeur agrégé en neurochirurgie"
+    },
+    {
+      "code": "qualification217",
+      "display": "Professeur agrégé en neurologie"
+    },
+    {
+      "code": "qualification218",
+      "display": "Professeur agrégé en ophtalmologie"
+    },
+    {
+      "code": "qualification219",
+      "display": "Professeur agrégé en orthopédie traumatologie"
+    },
+    {
+      "code": "qualification220",
+      "display": "Professeur agrégé en oto-rhino-laryngologie"
+    },
+    {
+      "code": "qualification221",
+      "display": "Professeur agrégé en oto-rhino-laryngologie et chirurgie cervico-faciale"
+    },
+    {
+      "code": "qualification222",
+      "display": "Professeur agrégé en pédiatre, génétique médicale"
+    },
+    {
+      "code": "qualification223",
+      "display": "Professeur agrégé en pédiatrie"
+    },
+    {
+      "code": "qualification224",
+      "display": "Professeur agrégé en pneumologie"
+    },
+    {
+      "code": "qualification225",
+      "display": "Professeur agrégé en psychiatrie d'adultes"
+    },
+    {
+      "code": "qualification226",
+      "display": "Professeur agrégé en radiologie et imagerie médaicale"
+    },
+    {
+      "code": "qualification227",
+      "display": "Professeur agrégé en rhumatologie"
+    },
+    {
+      "code": "qualification228",
+      "display": "Professeur agrégé en stomatologie & chirurgie Maxillo-faciale"
+    },
+    {
+      "code": "qualification229",
+      "display": "Professeur agrégé en urologie andrologie"
+    },
+    {
+      "code": "qualification230",
+      "display": "Professeur en neurologie"
+    },
+    {
+      "code": "qualification231",
+      "display": "Professeur ophtalmologue"
+    },
+    {
+      "code": "qualification232",
+      "display": "Professeur rhumatologue"
+    },
+    {
+      "code": "qualification233",
+      "display": "Professeur titulaire en anatomie pathologique"
+    },
+    {
+      "code": "qualification234",
+      "display": "Professeur titulaire en Bactériologie-virologie"
+    },
+    {
+      "code": "qualification235",
+      "display": "Professeur titulaire en cardiologie"
+    },
+    {
+      "code": "qualification236",
+      "display": "Professeur titulaire en chirurgie générale"
+    },
+    {
+      "code": "qualification237",
+      "display": "Professeur titulaire en chirurgie pédiatrique"
+    },
+    {
+      "code": "qualification238",
+      "display": "Professeur titulaire en dermatologie-vénérologie"
+    },
+    {
+      "code": "qualification239",
+      "display": "Professeur titulaire en médecine interne"
+    },
+    {
+      "code": "qualification240",
+      "display": "Professeur titulaire en neurologie"
+    },
+    {
+      "code": "qualification241",
+      "display": "Professeur titulaire en orthopédie traumatologie"
+    },
+    {
+      "code": "qualification242",
+      "display": "Professeur titulaire en oto-rhino-laryngoloie"
+    },
+    {
+      "code": "qualification243",
+      "display": "Professeur titulaire en pédiatrie"
+    },
+    {
+      "code": "qualification244",
+      "display": "Professeur titulaire en pharmacien biologiste"
+    },
+    {
+      "code": "qualification245",
+      "display": "Professeur titulaire en psychiatrie"
+    },
+    {
+      "code": "qualification246",
+      "display": "Professeur titulaire en radiologie et imagerie médicale"
+    },
+    {
+      "code": "qualification247",
+      "display": "Professeur titulaire en rhumatologie"
+    },
+    {
+      "code": "qualification248",
+      "display": "Professeur titulaire en traumatologie"
+    },
+    {
+      "code": "qualification249",
+      "display": "Psychologue de l'éducation"
+    },
+    {
+      "code": "qualification250",
+      "display": "Psychologue de santé"
+    },
+    {
+      "code": "qualification251",
+      "display": "Psychologue du travail"
+    },
+    {
+      "code": "qualification252",
+      "display": "Régisseur"
+    },
+    {
+      "code": "qualification253",
+      "display": "Sage-femme d’Etat"
+    },
+    {
+      "code": "qualification254",
+      "display": "Sage-femme d’Etat de santé publique"
+    },
+    {
+      "code": "qualification255",
+      "display": "Secrétaire"
+    },
+    {
+      "code": "qualification256",
+      "display": "Secrétaire bureautique"
+    },
+    {
+      "code": "qualification257",
+      "display": "Secrétaire dactylographe"
+    },
+    {
+      "code": "qualification258",
+      "display": "Secrétaire d'administration"
+    },
+    {
+      "code": "qualification259",
+      "display": "Secrétaire de direction"
+    },
+    {
+      "code": "qualification260",
+      "display": "Sérigraphe"
+    },
+    {
+      "code": "qualification261",
+      "display": "Sociologue"
+    },
+    {
+      "code": "qualification262",
+      "display": "Soudeur"
+    },
+    {
+      "code": "qualification263",
+      "display": "Spécialiste de la gouvernance"
+    },
+    {
+      "code": "qualification264",
+      "display": "Spécialiste des sciences infirmières"
+    },
+    {
+      "code": "qualification265",
+      "display": "Spécialiste en anesthésie réanimation"
+    },
+    {
+      "code": "qualification266",
+      "display": "Spécialiste en bactériologie"
+    },
+    {
+      "code": "qualification267",
+      "display": "Spécialiste en communication"
+    },
+    {
+      "code": "qualification268",
+      "display": "Spécialiste en eau et assainissement"
+    },
+    {
+      "code": "qualification269",
+      "display": "Spécialiste en économie de développoment"
+    },
+    {
+      "code": "qualification270",
+      "display": "Spécialiste en environnement, hygiène alimentaire et management de la qualité"
+    },
+    {
+      "code": "qualification271",
+      "display": "Spécialiste en épidémiologie de terrain"
+    },
+    {
+      "code": "qualification272",
+      "display": "Spécialiste en expertise et ingénierie des systèmes d'information sanitaire"
+    },
+    {
+      "code": "qualification273",
+      "display": "Spécialiste en finances audit"
+    },
+    {
+      "code": "qualification274",
+      "display": "Spécialiste en finances comptabilité"
+    },
+    {
+      "code": "qualification275",
+      "display": "Spécialiste en génie eau, assainissement et déchets"
+    },
+    {
+      "code": "qualification276",
+      "display": "Spécialiste en gestion globale des risques et crises"
+    },
+    {
+      "code": "qualification277",
+      "display": "Spécialiste en Immunulogie parasitologie"
+    },
+    {
+      "code": "qualification278",
+      "display": "Spécialiste en instrumentation chirurgicale des blocs opératoires"
+    },
+    {
+      "code": "qualification279",
+      "display": "Spécialiste en kinésithérapie"
+    },
+    {
+      "code": "qualification280",
+      "display": "Spécialiste en microbilogie pharmaceutique"
+    },
+    {
+      "code": "qualification281",
+      "display": "Spécialiste en nutrition et santé publique"
+    },
+    {
+      "code": "qualification282",
+      "display": "Spécialiste en nutrition et sécurité alimentaire"
+    },
+    {
+      "code": "qualification283",
+      "display": "Spécialiste en odonto stomatologie"
+    },
+    {
+      "code": "qualification284",
+      "display": "Spécialiste en ophtalmologie"
+    },
+    {
+      "code": "qualification285",
+      "display": "Spécialiste en optométrie"
+    },
+    {
+      "code": "qualification286",
+      "display": "Spécialiste en oto-rhino-laryngologie"
+    },
+    {
+      "code": "qualification287",
+      "display": "Spécialiste en pédagogie des sciences de la santé"
+    },
+    {
+      "code": "qualification288",
+      "display": "Spécialiste en physiologie-pharmacologie"
+    },
+    {
+      "code": "qualification289",
+      "display": "Spécialiste en planification du développement"
+    },
+    {
+      "code": "qualification290",
+      "display": "Spécialiste en population et santé"
+    },
+    {
+      "code": "qualification291",
+      "display": "Spécialiste en qualité des aliments"
+    },
+    {
+      "code": "qualification292",
+      "display": "Spécialiste en qualité métrologie"
+    },
+    {
+      "code": "qualification293",
+      "display": "Spécialiste en radiologie et imagerie médicale"
+    },
+    {
+      "code": "qualification294",
+      "display": "Spécialiste en santé environnementale"
+    },
+    {
+      "code": "qualification295",
+      "display": "Spécialiste en santé mentale"
+    },
+    {
+      "code": "qualification296",
+      "display": "Spécialiste en santé mentale de santé publique"
+    },
+    {
+      "code": "qualification297",
+      "display": "Spécialiste en sciences biomédicales"
+    },
+    {
+      "code": "qualification298",
+      "display": "Spécialiste en sciences de la population"
+    },
+    {
+      "code": "qualification299",
+      "display": "Spécialiste en sécurité alimentaire et management de la qualité"
+    },
+    {
+      "code": "qualification300",
+      "display": "Spécialiste en soins obstétricaux"
+    },
+    {
+      "code": "qualification301",
+      "display": "Spécialiste orthopédiste d'Etat"
+    },
+    {
+      "code": "qualification302",
+      "display": "Spécialiste orthophoniste d'Etat"
+    },
+    {
+      "code": "qualification303",
+      "display": "Spécialiste prothésiste dentaire"
+    },
+    {
+      "code": "qualification304",
+      "display": "Spécialiste QHSE"
+    },
+    {
+      "code": "qualification305",
+      "display": "Spésialiste en marketing et stratégie"
+    },
+    {
+      "code": "qualification306",
+      "display": "Technicien audioprothésiste"
+    },
+    {
+      "code": "qualification307",
+      "display": "Technicien de génie électrique"
+    },
+    {
+      "code": "qualification308",
+      "display": "Technicien de laboratoire"
+    },
+    {
+      "code": "qualification309",
+      "display": "Technicien de maintenance biomédicale"
+    },
+    {
+      "code": "qualification310",
+      "display": "Technicien de surface"
+    },
+    {
+      "code": "qualification311",
+      "display": "Technicien électronicien"
+    },
+    {
+      "code": "qualification312",
+      "display": "Technicien en informatique"
+    },
+    {
+      "code": "qualification313",
+      "display": "Technicien en communication"
+    },
+    {
+      "code": "qualification314",
+      "display": "Technicien en dessin bâtiments"
+    },
+    {
+      "code": "qualification315",
+      "display": "Technicien en électricité"
+    },
+    {
+      "code": "qualification316",
+      "display": "Technicien en électronique"
+    },
+    {
+      "code": "qualification317",
+      "display": "Technicien en électrotechnique"
+    },
+    {
+      "code": "qualification318",
+      "display": "Technicien en froid et climatisation"
+    },
+    {
+      "code": "qualification319",
+      "display": "Technicien en lunetterie"
+    },
+    {
+      "code": "qualification320",
+      "display": "Technicien en maintenance biomédicale"
+    },
+    {
+      "code": "qualification321",
+      "display": "Technicien en maintenance électronique"
+    },
+    {
+      "code": "qualification322",
+      "display": "Technicien en maintenance et réseau"
+    },
+    {
+      "code": "qualification323",
+      "display": "Technicien en maintenance informatique"
+    },
+    {
+      "code": "qualification324",
+      "display": "Technicien en télécommunication"
+    },
+    {
+      "code": "qualification325",
+      "display": "Technicien génie civil"
+    },
+    {
+      "code": "qualification326",
+      "display": "Technicien orthoprothésiste d'Etat"
+    },
+    {
+      "code": "qualification327",
+      "display": "Technicien prothésiste"
+    },
+    {
+      "code": "qualification328",
+      "display": "Technicien supérieur action commerciale et force de vente"
+    },
+    {
+      "code": "qualification329",
+      "display": "Technicien supérieur biomédical"
+    },
+    {
+      "code": "qualification330",
+      "display": "Technicien supérieur d'anesthésie réanimation"
+    },
+    {
+      "code": "qualification331",
+      "display": "Technicien supérieur d'assurance"
+    },
+    {
+      "code": "qualification332",
+      "display": "Technicien supérieur de développement"
+    },
+    {
+      "code": "qualification333",
+      "display": "Technicien supérieur de diétique"
+    },
+    {
+      "code": "qualification334",
+      "display": "Technicien supérieur de laboratoire"
+    },
+    {
+      "code": "qualification335",
+      "display": "Technicien supérieur de laboratoire de santé publique"
+    },
+    {
+      "code": "qualification336",
+      "display": "Technicien supérieur de laboratoire spécialisé en épidémiologie de terrain"
+    },
+    {
+      "code": "qualification337",
+      "display": "Technicien supérieur de maintenance biomédicale"
+    },
+    {
+      "code": "qualification338",
+      "display": "Technicien supérieur de prothésiste dentaire"
+    },
+    {
+      "code": "qualification339",
+      "display": "Technicien supérieur de radiologie et imagerie médicale"
+    },
+    {
+      "code": "qualification340",
+      "display": "Technicien supérieur de santé"
+    },
+    {
+      "code": "qualification341",
+      "display": "Technicien supérieur de santé publique"
+    },
+    {
+      "code": "qualification342",
+      "display": "Technicien supérieur de santé spécialisé en épidémiologie de terrain"
+    },
+    {
+      "code": "qualification343",
+      "display": "Technicien supérieur d'instrumentation chirurgicale"
+    },
+    {
+      "code": "qualification344",
+      "display": "Technicien supérieur d'odonto-stomatologie"
+    },
+    {
+      "code": "qualification345",
+      "display": "Technicien supérieur d'ophtalmologie"
+    },
+    {
+      "code": "qualification346",
+      "display": "Technicien supérieur d'ophtalmologie de santé publique"
+    },
+    {
+      "code": "qualification347",
+      "display": "Technicien supérieur d'oto-rhino-laryngologie"
+    },
+    {
+      "code": "qualification348",
+      "display": "Technicien supérieur en biologie animale"
+    },
+    {
+      "code": "qualification349",
+      "display": "Technicien supérieur en biologie-biochimie et biotechnologie"
+    },
+    {
+      "code": "qualification350",
+      "display": "Technicien supérieur en comptabilité et gestion des entreprises"
+    },
+    {
+      "code": "qualification351",
+      "display": "Technicien supérieur en contrôle des aliments"
+    },
+    {
+      "code": "qualification352",
+      "display": "Technicien supérieur en électronique"
+    },
+    {
+      "code": "qualification353",
+      "display": "Technicien supérieur en électrotechnique"
+    },
+    {
+      "code": "qualification354",
+      "display": "Technicien supérieur en gestion des entreprises"
+    },
+    {
+      "code": "qualification355",
+      "display": "Technicien supérieur en logistique et transport"
+    },
+    {
+      "code": "qualification356",
+      "display": "Technicien supérieur en maintenance informatique"
+    },
+    {
+      "code": "qualification357",
+      "display": "Technicien supérieur en télécommunication"
+    },
+    {
+      "code": "qualification358",
+      "display": "Technicien supérieur génie civil"
+    },
+    {
+      "code": "qualification359",
+      "display": "Technicien supérieur génie électrique"
+    },
+    {
+      "code": "qualification360",
+      "display": "Technicien supérieur génie sanitaire"
+    },
+    {
+      "code": "qualification361",
+      "display": "Technicien supérieur génie sanitaire de santé publique"
+    },
+    {
+      "code": "qualification362",
+      "display": "Technicien supérieur orthésiste prothésiste"
+    },
+    {
+      "code": "qualification363",
+      "display": "Technicien supérieur orthopédiste d'Etat"
+    },
+    {
+      "code": "qualification364",
+      "display": "Technicien supérieur orthopédiste d'Etat de santé publique"
+    },
+    {
+      "code": "qualification365",
+      "display": "Technicien supérieur orthophoniste de santé publique"
+    },
+    {
+      "code": "qualification366",
+      "display": "Technicien supérieur orthophoniste d'Etat"
+    },
+    {
+      "code": "qualification367",
+      "display": "Technicien supérieur orthoprothésiste"
+    },
+    {
+      "code": "qualification368",
+      "display": "Transitaire"
+    },
+    {
+      "code": "qualification369",
+      "display": "Vaguemestre"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 369
+}

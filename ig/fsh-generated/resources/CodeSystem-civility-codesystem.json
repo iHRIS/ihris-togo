@@ -9,22 +9,38 @@
   "url": "http://ihris.org/fhir/CodeSystem/civility-codesystem",
   "concept": [
     {
-      "code": "madam",
-      "display": "Madame"
-    },
-    {
-      "code": "miss",
-      "display": "Mademoiselle"
-    },
-    {
-      "code": "sir",
+      "code": "monsieur",
       "display": "Monsieur"
     },
     {
-      "code": "doctor",
+      "code": "madame",
+      "display": "Madame"
+    },
+    {
+      "code": "mademoiselle",
+      "display": "Mademoiselle"
+    },
+    {
+      "code": "sœur",
+      "display": "Sœur"
+    },
+    {
+      "code": "frère",
+      "display": "Frère"
+    },
+    {
+      "code": "ingénieur",
+      "display": "Ingénieur"
+    },
+    {
+      "code": "docteur",
       "display": "Docteur"
+    },
+    {
+      "code": "professeur",
+      "display": "Professeur"
     }
   ],
   "date": "2024-02-02T08:14:00.000Z",
-  "count": 4
+  "count": 8
 }

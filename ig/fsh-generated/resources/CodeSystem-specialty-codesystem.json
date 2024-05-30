@@ -1,0 +1,126 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "SpecialtyCodeSystem",
+  "id": "specialty-codesystem",
+  "title": "Specialty Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/specialty-codesystem",
+  "concept": [
+    {
+      "code": "specialty1",
+      "display": "Anesthésie-réanimation"
+    },
+    {
+      "code": "specialty2",
+      "display": "Biologie clinique"
+    },
+    {
+      "code": "specialty3",
+      "display": "Cadre Administratif des Soins de Santé"
+    },
+    {
+      "code": "specialty4",
+      "display": "Cardiologie"
+    },
+    {
+      "code": "specialty5",
+      "display": "Chirurgie générale"
+    },
+    {
+      "code": "specialty6",
+      "display": "Chirurgie pédiatrique"
+    },
+    {
+      "code": "specialty7",
+      "display": "Dermatologie"
+    },
+    {
+      "code": "specialty8",
+      "display": "Epidémiologie de terrain"
+    },
+    {
+      "code": "specialty9",
+      "display": "Gynécologie obstétricale"
+    },
+    {
+      "code": "specialty10",
+      "display": "Hépato-gastro-entérologie"
+    },
+    {
+      "code": "specialty11",
+      "display": "Instrumentation des blocs opératoires"
+    },
+    {
+      "code": "specialty12",
+      "display": "Médecine interne"
+    },
+    {
+      "code": "specialty13",
+      "display": "Neurologie"
+    },
+    {
+      "code": "specialty14",
+      "display": "Odontostomatologie"
+    },
+    {
+      "code": "specialty15",
+      "display": "Ophtalmologie"
+    },
+    {
+      "code": "specialty16",
+      "display": "Ophtalmologie"
+    },
+    {
+      "code": "specialty17",
+      "display": "Oto-Rhino-Laryngologie"
+    },
+    {
+      "code": "specialty18",
+      "display": "Oto-Rhino-Laryngologie"
+    },
+    {
+      "code": "specialty19",
+      "display": "Pédiatrie"
+    },
+    {
+      "code": "specialty20",
+      "display": "Pneumologie-phtisiologie"
+    },
+    {
+      "code": "specialty21",
+      "display": "Radiologie et imagerie médicale"
+    },
+    {
+      "code": "specialty22",
+      "display": "Radiologie et imagerie médicale"
+    },
+    {
+      "code": "specialty23",
+      "display": "Rhumatologie"
+    },
+    {
+      "code": "specialty24",
+      "display": "Santé"
+    },
+    {
+      "code": "specialty25",
+      "display": "Santé environnementale"
+    },
+    {
+      "code": "specialty26",
+      "display": "Santé mentale"
+    },
+    {
+      "code": "specialty27",
+      "display": "Santé publique"
+    },
+    {
+      "code": "specialty28",
+      "display": "Traumatologie-orthopédie"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 28
+}

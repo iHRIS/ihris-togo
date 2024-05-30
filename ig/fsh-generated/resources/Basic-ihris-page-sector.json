@@ -1,6 +1,6 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-page-job",
+  "id": "ihris-page-sector",
   "meta": {
     "profile": [
       "http://ihris.org/fhir/StructureDefinition/ihris-page"
@@ -21,12 +21,8 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "CodeSystem/togo-job-codesystem"
+            "reference": "CodeSystem/facility-sector-codesystem"
           }
-        },
-        {
-          "url": "search",
-          "valueString": "Code|code"
         },
         {
           "url": "search",
@@ -34,11 +30,20 @@
         },
         {
           "url": "search",
-          "valueString": "Cadre|cadre"
+          "valueString": "Code|code"
         },
         {
-          "url": "search",
-          "valueString": "Classification|classification"
+          "extension": [
+            {
+              "url": "path",
+              "valueString": "CodeSystem.code"
+            },
+            {
+              "url": "readOnlyIfSet",
+              "valueBoolean": true
+            }
+          ],
+          "url": "field"
         }
       ]
     },
@@ -46,11 +51,11 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Job"
+          "valueString": "Sector"
         },
         {
           "url": "description",
-          "valueString": "Job Titles"
+          "valueString": "Sector"
         },
         {
           "url": "name",
@@ -58,15 +63,11 @@
         },
         {
           "url": "field",
-          "valueString": "CodeSystem.code"
-        },
-        {
-          "url": "field",
-          "valueString": "CodeSystem.definition"
-        },
-        {
-          "url": "field",
           "valueString": "CodeSystem.display"
+        },
+        {
+          "url": "field",
+          "valueString": "CodeSystem.code"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

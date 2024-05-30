@@ -348,6 +348,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/address-district"
+        },
+        "name": "District Address",
+        "description": "District Address.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/agent-status"
         },
         "name": "Agent Status",
@@ -1149,6 +1157,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/civil-servant-category-valueset"
+        },
+        "name": "Civil Servant Category ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/civility-valueset"
         },
         "name": "Civility ValueSet",
@@ -1159,6 +1174,13 @@
           "reference": "ValueSet/classification-category-valueset"
         },
         "name": "Classification Category ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/classification-class-valueset"
+        },
+        "name": "Classification Class ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1190,6 +1212,13 @@
           "reference": "ValueSet/contact-type-valueset"
         },
         "name": "Contact Type ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/contractual-category-valueset"
+        },
+        "name": "Contractual Category ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1231,6 +1260,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/echelon-valueset"
+        },
+        "name": "Echelon ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/education-sector-valueset"
         },
         "name": "Education Sector ValueSet",
@@ -1238,9 +1274,23 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/facility-sector-valueset"
+        },
+        "name": "Facility Sector ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/facility-type-valueset"
         },
         "name": "Facility Type ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/grade-valueset"
+        },
+        "name": "Grade ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1476,9 +1526,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/sector-valueset"
+          "reference": "ValueSet/qualification-valueset"
         },
-        "name": "Sector ValueSet",
+        "name": "Qualification ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1503,6 +1553,13 @@
         },
         "name": "Service type",
         "description": "This value set defines an example set of codes of service-types.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/specialty-valueset"
+        },
+        "name": "Specialty ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1588,6 +1645,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/civil-servant-category-codesystem"
+        },
+        "name": "Civil Servant Category Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/civility-codesystem"
         },
         "name": "Civility Code System",
@@ -1598,6 +1662,13 @@
           "reference": "CodeSystem/classification-category-codesystem"
         },
         "name": "Classification Category Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/classification-class-codesystem"
+        },
+        "name": "Classification Class Code System",
         "exampleBoolean": false
       },
       {
@@ -1629,6 +1700,13 @@
           "reference": "CodeSystem/contact-type-codesystem"
         },
         "name": "Contact Type Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/contractual-category-codesystem"
+        },
+        "name": "Contractual Category Code System",
         "exampleBoolean": false
       },
       {
@@ -1670,6 +1748,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/echelon-codesystem"
+        },
+        "name": "Echelon Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/education-sector-codesystem"
         },
         "name": "Education Sector Code System",
@@ -1677,9 +1762,23 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/facility-sector-codesystem"
+        },
+        "name": "Facility Sector Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/facility-type-codesystem"
         },
         "name": "Facility Type Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/grade-codesystem"
+        },
+        "name": "Grade Code System",
         "exampleBoolean": false
       },
       {
@@ -1913,17 +2012,17 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/snomedct"
+          "reference": "CodeSystem/qualification-codesystem"
         },
-        "name": "SNOMED CT (all versions)",
-        "description": "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+        "name": "Qualification Code System",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/sector-codesystem"
+          "reference": "CodeSystem/snomedct"
         },
-        "name": "Sector Code System",
+        "name": "SNOMED CT (all versions)",
+        "description": "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
         "exampleBoolean": false
       },
       {
@@ -1948,6 +2047,13 @@
         },
         "name": "Service type",
         "description": "This value set defines an example set of codes of service-types.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/specialty-codesystem"
+        },
+        "name": "Specialty Code System",
         "exampleBoolean": false
       },
       {
@@ -2425,6 +2531,13 @@
           "reference": "Basic/ihris-page-scanned-document"
         },
         "name": "Scanned Document Information Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-sector"
+        },
+        "name": "Sector Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {

@@ -70,9 +70,9 @@ Description:    "iHRIS profile of Practitioner."
 * telecom ^constraint[0].human = "The identifier must be unique and another record has this identifier"
 * address 0..* MS
 * address ^label = "Address"
-* address.use
+* address.use 1..1 MS
 * address.use ^label = "Use"
-* address.type
+* address.type 1..1 MS
 * address.type ^label = "Type"
 * address.line 1..1 MS
 * address.line ^label = "Line"
@@ -86,6 +86,11 @@ Description:    "iHRIS profile of Practitioner."
 * address.postalCode ^label = "Postal Code"
 * address.country MS
 * address.country ^label = "Country"
+* address.extension contains
+    AddressDistrict named district 0..1 MS
+* address.extension[district] MS
+* address.extension[district] ^label = "District"
+* address.extension[district].valueReference MS
 * gender 1..1 MS
 * gender ^label = "Gender"
 * gender from TGOGenderValueSet (required)
@@ -128,6 +133,16 @@ Description:    "iHRIS profile of Practitioner."
 * extension[registrationNumber].valueString ^label = "Registration Number"
 * active 1..1 MS
 * active ^label = "Active"
+
+Extension:      AddressDistrict
+Id:             address-district
+Title:          "District Address"
+Description:    "District Address."
+* ^context[0].type = #element
+* ^context[0].expression = "Basic"
+* value[x] only Reference 
+* valueReference only Reference(TGODistrict)
+* valueReference ^label = "District"
 
 Extension:      RegistrationNumber
 Id:             registration-number

@@ -643,7 +643,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/sector-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/facility-sector-valueset"
         },
         "mapping": [
           {

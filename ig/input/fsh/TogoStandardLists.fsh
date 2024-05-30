@@ -75,6 +75,22 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 
+Instance:       ihris-page-sector
+InstanceOf:     IhrisPage
+Title:          "Sector Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/facility-sector-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Sector"
+* extension[section][0].extension[description].valueString = "Sector"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
 Extension:      EducationType
 Id:             education-type
 Title:          "Education Type"
