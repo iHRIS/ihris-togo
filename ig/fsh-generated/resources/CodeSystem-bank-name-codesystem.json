@@ -1,0 +1,158 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BankNameCodeSystem",
+  "id": "bank-name-codesystem",
+  "title": "Bank Name Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/bank-name-codesystem",
+  "concept": [
+    {
+      "code": "ATLANTIQUE",
+      "display": "ATLANTIQUE BANQUE"
+    },
+    {
+      "code": "BIA",
+      "display": "BIA TOGO"
+    },
+    {
+      "code": "BOA",
+      "display": "BOA TOGO"
+    },
+    {
+      "code": "BSIC",
+      "display": "BSIC Togo"
+    },
+    {
+      "code": "CCPPOSTE",
+      "display": "CCP-POSTE"
+    },
+    {
+      "code": "CORISBANKTOGO",
+      "display": "CORIS BANK TOGO"
+    },
+    {
+      "code": "DIAMOND",
+      "display": "DIAMOND BANK"
+    },
+    {
+      "code": "ECOBANK",
+      "display": "ECOBANK"
+    },
+    {
+      "code": "IBBANKTOGO",
+      "display": "IB BANK TOGO"
+    },
+    {
+      "code": "NSIABANQUE",
+      "display": "NSIA BANQUE"
+    },
+    {
+      "code": "ORABANK",
+      "display": "ORABANK"
+    },
+    {
+      "code": "SIAB",
+      "display": "SIAB"
+    },
+    {
+      "code": "SUNUBANQUE",
+      "display": "SUNU BANQUE"
+    },
+    {
+      "code": "UTB",
+      "display": "UTB"
+    },
+    {
+      "code": "FUCEC",
+      "display": "FUCEC"
+    },
+    {
+      "code": "WAGES",
+      "display": "WAGES"
+    },
+    {
+      "code": "BQPOP",
+      "display": "BQ POP"
+    },
+    {
+      "code": "CCT",
+      "display": "CCT"
+    },
+    {
+      "code": "CECA",
+      "display": "CECA"
+    },
+    {
+      "code": "CECAV",
+      "display": "CECAV"
+    },
+    {
+      "code": "CEF",
+      "display": "CEF"
+    },
+    {
+      "code": "CFAE",
+      "display": "CFAE"
+    },
+    {
+      "code": "CMEC",
+      "display": "CMEC"
+    },
+    {
+      "code": "COCEC",
+      "display": "COCEC"
+    },
+    {
+      "code": "COFEC",
+      "display": "COFEC"
+    },
+    {
+      "code": "COMEC",
+      "display": "COMEC"
+    },
+    {
+      "code": "COOPEC",
+      "display": "COOPEC"
+    },
+    {
+      "code": "COOPECAD",
+      "display": "COOPEC AD"
+    },
+    {
+      "code": "COPEC",
+      "display": "COPEC"
+    },
+    {
+      "code": "FECECAV",
+      "display": "FECECAV"
+    },
+    {
+      "code": "MUTUELLEAKWABA",
+      "display": "MUTUELLE AKWABA"
+    },
+    {
+      "code": "SGBSSenegal",
+      "display": "SGBS Sénégal"
+    },
+    {
+      "code": "UCMEC",
+      "display": "UCMEC"
+    },
+    {
+      "code": "UMECTO",
+      "display": "UMECTO"
+    },
+    {
+      "code": "URCLEC",
+      "display": "URCLEC"
+    },
+    {
+      "code": "USMEC",
+      "display": "USMEC"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 36
+}

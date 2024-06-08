@@ -1,0 +1,70 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "banking",
+  "url": "http://ihris.org/fhir/Questionnaire/banking",
+  "title": "iHRIS Banking Workflow",
+  "description": "iHRIS workflow to record Banking",
+  "name": "banking",
+  "status": "active",
+  "date": "2023-11-19",
+  "purpose": "Workflow page for recording Banking Information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile",
+      "text": "Banking Information",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking",
+          "text": "Details",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "Basic.extension[0].extension[0]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:name.value[x]:valueCoding",
+              "text": "Bank Name",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/bank-name-valueset",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:branch.value[x]:valueString",
+              "text": "Branch Name",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-number.value[x]:valueString",
+              "text": "Account Number",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-name.value[x]:valueString",
+              "text": "Account Name",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-type.value[x]:valueString",
+              "text": "Account Type",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

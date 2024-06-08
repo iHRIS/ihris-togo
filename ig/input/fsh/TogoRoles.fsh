@@ -18,6 +18,46 @@ Title:          "Add Situation"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-situation"
 
+Instance:       ihris-task-add-children
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Staff Child"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "Add Staff Child"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-children"
+
+Instance:       ihris-task-edit-children
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Staff Child"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "Edit Staff Child"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-children"
+
+Instance:       ihris-task-add-banking
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Banking Information"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "Add Banking Information"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-banking"
+
+Instance:       ihris-task-edit-banking
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Banking Information"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "Edit Banking Information"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-banking"
+
 Instance:       ihris-task-add-performance
 InstanceOf:     IhrisTask
 Usage:          #example

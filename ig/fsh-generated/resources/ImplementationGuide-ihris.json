@@ -36,6 +36,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/banking-profile"
+        },
+        "name": "Banking Information",
+        "description": "iHRIS Profile of the Basic resource for Banking.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/classification-profile"
         },
         "name": "Classification Information",
@@ -292,6 +300,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/staff-child-profile"
+        },
+        "name": "Staff Child Information",
+        "description": "iHRIS Profile of the Basic resource for Staff Child.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/tgo-commune"
         },
         "name": "Commune",
@@ -356,6 +372,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/agent-id"
+        },
+        "name": "Agent Id",
+        "description": "Agent Id",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/agent-status"
         },
         "name": "Agent Status",
@@ -408,6 +432,14 @@
         },
         "name": "Authorization Reference",
         "description": "Authorization Reference.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/banking"
+        },
+        "name": "iHRIS Practitioner Bank",
+        "description": "iHRIS extension for Practitioner Bank.",
         "exampleBoolean": false
       },
       {
@@ -488,6 +520,14 @@
         },
         "name": "Contractual Category",
         "description": "Contractual Category.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/corporation-number"
+        },
+        "name": "Corporation Number",
+        "description": "Corporation Number",
         "exampleBoolean": false
       },
       {
@@ -1079,6 +1119,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/spouse-name"
+        },
+        "name": "Spouse Name",
+        "description": "Spouse Name",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/study-level"
         },
         "name": "Level of Study",
@@ -1153,6 +1201,13 @@
           "reference": "ValueSet/agent-status-valueset"
         },
         "name": "Agent Status ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/bank-name-valueset"
+        },
+        "name": "Bank Name ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1645,6 +1700,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/bank-name-codesystem"
+        },
+        "name": "Bank Name Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/civil-servant-category-codesystem"
         },
         "name": "Civil Servant Category Code System",
@@ -2129,6 +2191,13 @@
       },
       {
         "reference": {
+          "reference": "Questionnaire/banking"
+        },
+        "name": "Banking",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/basic-location-constraint"
         },
         "name": "basic-location-constraint",
@@ -2300,6 +2369,20 @@
           "reference": "Basic/ihris-page-auditevent"
         },
         "name": "AuditEvent",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-bank"
+        },
+        "name": "Bank Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-banking"
+        },
+        "name": "Banking Information",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2549,6 +2632,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-staff-child"
+        },
+        "name": "iHRIS Basic Staff Child Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-task"
         },
         "name": "iHRIS Tasks",
@@ -2689,6 +2779,20 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-add-banking"
+        },
+        "name": "Add Banking Information",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-add-children"
+        },
+        "name": "Add Staff Child",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-add-classification"
         },
         "name": "Add Classification",
@@ -2783,6 +2887,20 @@
           "reference": "Basic/ihris-task-all-permissions-to-everything"
         },
         "name": "iHRIS Task With All Permissions To Everything",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-banking"
+        },
+        "name": "Edit Banking Information",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-children"
+        },
+        "name": "Edit Staff Child",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3350,6 +3468,13 @@
           "reference": "Questionnaire/situation"
         },
         "name": "Situation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/staff-child"
+        },
+        "name": "StaffChild",
         "exampleBoolean": false
       },
       {

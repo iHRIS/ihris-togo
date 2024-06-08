@@ -1,0 +1,34 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "staff-child",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/staff-child",
+  "title": "iHRIS Staff Child Workflow",
+  "description": "iHRIS workflow to record a Staff Child",
+  "name": "staff-child",
+  "status": "active",
+  "date": "2020-08-27",
+  "purpose": "Workflow page for recording a Staff Child information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/staff-child-profile",
+      "text": "Staff Child",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/staff-child-profile#Basic.extension:name.value[x]:valueString",
+          "text": "Child Name",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

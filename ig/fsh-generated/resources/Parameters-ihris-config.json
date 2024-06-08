@@ -12,15 +12,15 @@
       "valueSignature": {
         "type": [
           {
-            "system": "urn:iso-astm:E1762-95:2013",
-            "code": "1.2.840.10065.1.12.1.14"
+            "code": "1.2.840.10065.1.12.1.14",
+            "system": "urn:iso-astm:E1762-95:2013"
           }
         ],
-        "when": "2024-05-29T11:47:24.626Z",
+        "when": "2022-06-21T09:31:16.469Z",
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "RP0/b9rTbBzZQDkYLJt1sMeZHGnMVjGk0o2p7iGcVEPYxk9SEyOCQCuqgH2VkKcRzsZJhAw8U9/6r2PVWJmhd0oBH9isKpsl8EWrQAWSS6QcFy5fHfBjYQ7lZ0Ec5AiK4YEWU5ML97lv4RlJBWC1/pgiOjaP+uevDGjshU74raM="
+        "data": "V870cwmayGw0tOXXdiUn7/MNEaPt/KzRCk7H2t6IvqxmhshwxLxAYve8yNEdkhj/WhybFokLXR5rhtqU4VKE9EiN/dL1fHVbdu0rk/WrcFy2vPqYPUxepFAAAWQXIQV7gsVSMFEbUOTiYaQ42dt7gddrmJYq8p+6RFLAMDkxpzU="
       }
     },
     {
@@ -507,6 +507,30 @@
           "valueString": "4"
         },
         {
+          "name": "site:nav:menu:database:menu:otherLists:menu:bank:text",
+          "valueString": "Bank"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:bank:url",
+          "valueString": "/resource/search/bank"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:bank:order",
+          "valueString": "5"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:civility:text",
+          "valueString": "Civility"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:civility:url",
+          "valueString": "/resource/search/civility"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:civility:order",
+          "valueString": "6"
+        },
+        {
           "name": "site:nav:menu:database:menu:geography:text",
           "valueString": "Geographical Information"
         },
@@ -892,7 +916,7 @@
         },
         {
           "name": "workflow:processor:emergency:file",
-          "valueString": "workflowEmergency"
+          "valueString": "defaultWorkflow"
         },
         {
           "name": "workflow:questionnaire:emergency:url",
@@ -921,6 +945,62 @@
         {
           "name": "workflow:questionnaire:leaveRequest:url",
           "valueString": "http://ihris.org/fhir/Questionnaire/ihris-leave"
+        },
+        {
+          "name": "workflow:processor:situation:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:situation:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/situation"
+        },
+        {
+          "name": "workflow:processor:classification:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:classification:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/classification"
+        },
+        {
+          "name": "workflow:processor:child:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:child:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/staff-child"
+        },
+        {
+          "name": "workflow:processor:banking:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:banking:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/banking"
+        },
+        {
+          "name": "workflow:processor:validation:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:validation:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/validation"
+        },
+        {
+          "name": "workflow:processor:scanned-document:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:scanned-document:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/scanned-document"
+        },
+        {
+          "name": "workflow:processor:notes:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:notes:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/notes"
         },
         {
           "name": "workflow:processor:user:file",
@@ -1077,6 +1157,30 @@
         {
           "name": "site:intro:practitionerrole:data:profilePicture:path",
           "valueString": "Practitioner.photo[0]"
+        },
+        {
+          "name": "defaults:page:employment-history:fields:Basic.extension:employmentHistory.extension:location.value[x]:valueReference:initialValue",
+          "valueString": "Location/countrytgo"
+        },
+        {
+          "name": "defaults:components:attachment:maxValueAttachment",
+          "valueString": "512KB"
+        },
+        {
+          "name": "defaults:components:date:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:date-time:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:ihris-search:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:ihris-secondary:date-format",
+          "valueString": "DD-MM-YYYY"
         }
       ]
     }

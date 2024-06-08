@@ -94,7 +94,9 @@
       "Pre-service Information": "Informations Formation Initiale",
       "In-service Information": "Information Formation Continue",
       "Work Experience": "L'expérience professionnelle",
-      "Performance Evaluation": "Evaluation de la Performance"
+      "Performance Evaluation": "Evaluation de la Performance",
+      "Commune": "",
+      "Bank": ""
     },
     "intro": {
       "Summary": "Résumé",
@@ -103,7 +105,9 @@
       "Surname": "Nom",
       "Gender": "Sexe",
       "Date Of Birth": "Date de naissance",
-      "Photo": "Photo"
+      "Photo": "Photo",
+      "Person Information": "",
+      "Name": ""
     },
     "reports": {
       "Staff Directorate": "Dossier du personnel",
@@ -746,7 +750,32 @@
       "Add Scanned Document": "Ajouter un Document",
       "Notes": "Commentaires",
       "Add Note": "Ajouter",
-      "Amount": "Montant"
+      "Amount": "Montant",
+      "Agent ID": "",
+      "Corporation Number": "",
+      "Spouse Name": "",
+      "Telecom Type": "",
+      "Staff Child": "",
+      "Child Name": "",
+      "name": "",
+      "Staff Child Information": "",
+      "Staff Child details": "",
+      "Commune": "",
+      "Facility Sector Code System": "",
+      "Job Code System": "",
+      "Children": "",
+      "Staff Children": "",
+      "Add Child": "",
+      "Banking Information": "",
+      "Bank Name": "",
+      "Branch Name": "",
+      "Account Number": "",
+      "Account Name": "",
+      "Account Type": "",
+      "Bank Name Code System": "",
+      "Bank": "",
+      "Add Banking Information": "",
+      "Pay Point": ""
     },
     "hardcoded-texts": {
       "Installed Apps": "Applications installées",

@@ -22,10 +22,26 @@
       "item": [
         {
           "linkId": "Practitioner.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:agent-id.value[x]:valueString",
+          "text": "Agent ID",
+          "type": "string",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "Practitioner.extension[1]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:registrationNumber.value[x]:valueString",
           "text": "Registration Number",
           "type": "string",
-          "required": true,
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "Practitioner.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:corporation-number.value[x]:valueString",
+          "text": "Corporation Number",
+          "type": "string",
+          "required": false,
           "repeats": false
         },
         {
@@ -97,13 +113,39 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[1]",
+          "linkId": "Practitioner.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:marital-status.value[x]:valueCoding",
           "text": "Marital Status",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/marital-status-valueset",
           "required": true,
           "repeats": false
+        },
+        {
+          "linkId": "Practitioner.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:spouse-name.value[x]:valueString",
+          "text": "Spouse Name",
+          "type": "string",
+          "required": false,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Practitioner.extension[3]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "married",
+                "system": "http://ihris.org/fhir/CodeSystem/marital-status-codesystem"
+              }
+            },
+            {
+              "question": "Practitioner.gender",
+              "operator": "=",
+              "answerCoding": {
+                "code": "female",
+                "system": "http://hl7.org/fhir/administrative-gender"
+              }
+            }
+          ]
         },
         {
           "linkId": "Practitioner.birthDate",
@@ -114,7 +156,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[2]",
+          "linkId": "Practitioner.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:birth-place.value[x]:valueString",
           "text": "Place of Birth",
           "type": "string",
@@ -122,7 +164,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[3]",
+          "linkId": "Practitioner.extension[6]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding",
           "text": "Nationality",
           "type": "choice",
@@ -131,7 +173,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[4]",
+          "linkId": "Practitioner.extension[7]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger",
           "text": "Number of Children",
           "type": "integer",
@@ -349,7 +391,7 @@
               "initial": [
                 {
                   "valueCoding": {
-                    "code": "country98",
+                    "code": "country100",
                     "system": "http://ihris.org/fhir/CodeSystem/country-codesystem"
                   }
                 }

@@ -116,7 +116,10 @@ Description:    "iHRIS profile of Practitioner."
 * communication.extension[proficiency].extension[level].valueCoding MS
 * communication.extension[proficiency].extension[type].valueCoding MS
 * extension contains
-    RegistrationNumber named registrationNumber 1..1 MS and
+    RegistrationNumber named registrationNumber 0..1 MS and
+    AgentId named agent-id 0..1 MS and
+    CorporationNumber named corporation-number 0..1 MS and
+    SpouseName named spouse-name 0..1 MS and
     BirthPlace named birth-place 0..1 MS and
     IhrisPractitionerNationality named nationality 0..1 MS and
     IhrisPractitionerMaritalStatus named marital-status 0..1 MS and
@@ -127,10 +130,16 @@ Description:    "iHRIS profile of Practitioner."
 * extension[nationality].valueCoding MS
 * extension[marital-status]  ^label = "Marital Status"
 * extension[marital-status].valueCoding MS
+* extension[spouse-name]  ^label = "Spouse Name"
+* extension[spouse-name].valueString MS
 * extension[children]  ^label = "Number of Children"
 * extension[children].valueInteger MS
 * extension[registrationNumber].valueString 1..1 MS
 * extension[registrationNumber].valueString ^label = "Registration Number"
+* extension[agent-id].valueString 1..1 MS
+* extension[agent-id].valueString ^label = "Agent ID"
+* extension[corporation-number].valueString 1..1 MS
+* extension[corporation-number].valueString ^label = "Corporation Number"
 * active 1..1 MS
 * active ^label = "Active"
 
@@ -144,6 +153,16 @@ Description:    "District Address."
 * valueReference only Reference(TGODistrict)
 * valueReference ^label = "District"
 
+Extension:      SpouseName
+Id:             spouse-name
+Title:          "Spouse Name"
+Description:    "Spouse Name"
+* ^context.type = #element
+* ^context.expression = "Basic"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Spouse Name"
+
 Extension:      RegistrationNumber
 Id:             registration-number
 Title:          "Registration Number"
@@ -153,6 +172,26 @@ Description:    "Registration Number"
 * value[x] only string
 * valueString 1..1 MS
 * valueString ^label = "Registration Number"
+
+Extension:      AgentId
+Id:             agent-id
+Title:          "Agent Id"
+Description:    "Agent Id"
+* ^context.type = #element
+* ^context.expression = "Basic"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Agent Id"
+
+Extension:      CorporationNumber
+Id:             corporation-number
+Title:          "Corporation Number"
+Description:    "Corporation Number"
+* ^context.type = #element
+* ^context.expression = "Basic"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Corporation Number"
 
 Extension:      IdIssueDate
 Id:             id-issue-date

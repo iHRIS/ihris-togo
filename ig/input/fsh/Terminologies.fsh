@@ -63,6 +63,55 @@ Title:             "Performance Score ValueSet"
 * ^version = "0.1.0"
 * codes from system PerformanceScoreCodeSystem
 
+CodeSystem:       BankNameCodeSystem
+Id:               bank-name-codesystem
+Title:            "Bank Name Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #ATLANTIQUE "ATLANTIQUE BANQUE"
+* #BIA "BIA TOGO"
+* #BOA "BOA TOGO"
+* #BSIC "BSIC Togo"
+* #CCPPOSTE "CCP-POSTE"
+* #CORISBANKTOGO "CORIS BANK TOGO"
+* #DIAMOND "DIAMOND BANK"
+* #ECOBANK "ECOBANK"
+* #IBBANKTOGO "IB BANK TOGO"
+* #NSIABANQUE "NSIA BANQUE"
+* #ORABANK "ORABANK"
+* #SIAB "SIAB"
+* #SUNUBANQUE "SUNU BANQUE"
+* #UTB "UTB"
+* #FUCEC "FUCEC"
+* #WAGES "WAGES"
+* #BQPOP "BQ POP"
+* #CCT "CCT"
+* #CECA "CECA"
+* #CECAV "CECAV"
+* #CEF "CEF"
+* #CFAE "CFAE"
+* #CMEC "CMEC"
+* #COCEC "COCEC"
+* #COFEC "COFEC"
+* #COMEC "COMEC"
+* #COOPEC "COOPEC"
+* #COOPECAD "COOPEC AD"
+* #COPEC "COPEC"
+* #FECECAV "FECECAV"
+* #MUTUELLEAKWABA "MUTUELLE AKWABA"
+* #SGBSSenegal "SGBS Sénégal"
+* #UCMEC "UCMEC"
+* #UMECTO "UMECTO"
+* #URCLEC "URCLEC"
+* #USMEC "USMEC"
+
+ValueSet:          BankNameValueSet
+Id:                bank-name-valueset
+Title:             "Bank Name ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system BankNameCodeSystem
+
 ValueSet:         TGOGenderValueSet
 Id:               tgo-gender-valueset
 Title:            "TGO Gender ValueSet"
@@ -993,7 +1042,7 @@ Id:               contact-type-codesystem
 Title:            "Contact Type Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #phone "Phone"
+* #phone "Téléphone"
 * #email "Email"
 
 ValueSet:          ContactTypeValueSet
