@@ -68,15 +68,6 @@
         },
         {
           "linkId": "Basic.extension[4]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:level.value[x]:valueCoding",
-          "text": "Level",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/level-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding",
           "text": "Level of Study",
           "type": "choice",
@@ -85,7 +76,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[6]",
+          "linkId": "Basic.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding",
           "text": "Specialty",
           "type": "choice",

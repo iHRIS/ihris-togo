@@ -22,9 +22,6 @@ Description:    "Situation Information Profile."
 * extension[function]  1..1 MS
 * extension[function]  ^label = "Function"
 * extension[function].valueCoding MS
-* extension[level]  1..1 MS
-* extension[level]  ^label = "Level"
-* extension[level].valueCoding MS
 * extension[study-level]  1..1 MS
 * extension[study-level]  ^label = "Level of Study"
 * extension[study-level].valueCoding MS
@@ -83,14 +80,6 @@ Title:          "Function"
 * valueCoding 1..1 MS
 * valueCoding ^label = "Function"
 * valueCoding from http://ihris.org/fhir/ValueSet/function-valueset (required)
-
-Extension:      Level
-Id:             level
-Title:          "Level"
-* value[x] only Coding
-* valueCoding 1..1 MS
-* valueCoding ^label = "Level"
-* valueCoding from http://ihris.org/fhir/ValueSet/level-valueset (required)
 
 Extension:      StudyLevel
 Id:             study-level
@@ -153,28 +142,20 @@ Usage:          #definition
 * item[0].item[3].repeats = false
 
 * item[0].item[4].linkId = "Basic.extension[4]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:level.value[x]:valueCoding"
-* item[0].item[4].text = "Level"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding"
+* item[0].item[4].text = "Level of Study"
 * item[0].item[4].type = #choice
-* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/level-valueset"
+* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
 * item[0].item[5].linkId = "Basic.extension[5]"
-* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding"
-* item[0].item[5].text = "Level of Study"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding"
+* item[0].item[5].text = "Specialty"
 * item[0].item[5].type = #choice
-* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
-* item[0].item[5].required = true
+* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
+* item[0].item[5].required = false
 * item[0].item[5].repeats = false
-
-* item[0].item[6].linkId = "Basic.extension[6]"
-* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding"
-* item[0].item[6].text = "Specialty"
-* item[0].item[6].type = #choice
-* item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
-* item[0].item[6].required = false
-* item[0].item[6].repeats = false
 
 Instance:       ihris-page-situation
 InstanceOf:     IhrisPage
@@ -197,6 +178,5 @@ Usage:          #example
 * extension[section][0].extension[field][1].valueString = "Basic.extension:agent-status"
 * extension[section][0].extension[field][2].valueString = "Basic.extension:qualification"
 * extension[section][0].extension[field][3].valueString = "Basic.extension:function"
-* extension[section][0].extension[field][4].valueString = "Basic.extension:level"
-* extension[section][0].extension[field][5].valueString = "Basic.extension:study-level"
-* extension[section][0].extension[field][6].valueString = "Basic.extension:specialty"
+* extension[section][0].extension[field][4].valueString = "Basic.extension:study-level"
+* extension[section][0].extension[field][5].valueString = "Basic.extension:specialty"

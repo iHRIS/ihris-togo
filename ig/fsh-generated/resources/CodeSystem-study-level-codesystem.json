@@ -1,0 +1,98 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "StudyLevelCodeSystem",
+  "id": "study-level-codesystem",
+  "title": "Level of Study Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/study-level-codesystem",
+  "concept": [
+    {
+      "code": "Sansdiplôme",
+      "display": "Sans diplôme"
+    },
+    {
+      "code": "CEPD",
+      "display": "CEPD"
+    },
+    {
+      "code": "CEPDpermisdeconduire",
+      "display": "CEPD + permis de conduire"
+    },
+    {
+      "code": "BEPC",
+      "display": "BEPC"
+    },
+    {
+      "code": "BEPCpermisdeconduire",
+      "display": "BEPC + permis de conduire"
+    },
+    {
+      "code": "CAP",
+      "display": "CAP"
+    },
+    {
+      "code": "BEPCM",
+      "display": "BEP-CM"
+    },
+    {
+      "code": "BEPSDC",
+      "display": "BEP-SDC"
+    },
+    {
+      "code": "BACGénéral",
+      "display": "BAC Général"
+    },
+    {
+      "code": "BACTechnique",
+      "display": "BAC Technique"
+    },
+    {
+      "code": "BT",
+      "display": "BT"
+    },
+    {
+      "code": "BTS",
+      "display": "BTS"
+    },
+    {
+      "code": "DUT",
+      "display": "DUT"
+    },
+    {
+      "code": "Licence",
+      "display": "Licence"
+    },
+    {
+      "code": "Maîtrise",
+      "display": "Maîtrise"
+    },
+    {
+      "code": "Ingénieur",
+      "display": "Ingénieur"
+    },
+    {
+      "code": "Master",
+      "display": "Master"
+    },
+    {
+      "code": "Doctorat",
+      "display": "Doctorat"
+    },
+    {
+      "code": "DES",
+      "display": "DES"
+    },
+    {
+      "code": "Doctoratspécialisation",
+      "display": "Doctorat + spécialisation"
+    },
+    {
+      "code": "Doctoratagrégation",
+      "display": "Doctorat + agrégation"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 21
+}

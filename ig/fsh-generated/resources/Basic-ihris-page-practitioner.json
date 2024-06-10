@@ -50,7 +50,7 @@
         },
         {
           "url": "filter",
-          "valueString": "Gender|gender|http://ihris.org/fhir/ValueSet/td-gender-valueset"
+          "valueString": "Gender|gender|http://ihris.org/fhir/ValueSet/tgo-gender-valueset"
         },
         {
           "url": "filter",
@@ -120,15 +120,19 @@
         },
         {
           "url": "field",
+          "valueString": "Practitioner.extension:agent-id"
+        },
+        {
+          "url": "field",
           "valueString": "Practitioner.extension:registrationNumber"
         },
         {
           "url": "field",
-          "valueString": "Practitioner.identifier"
+          "valueString": "Practitioner.extension:corporation-number"
         },
         {
           "url": "field",
-          "valueString": "Practitioner.identifier.use"
+          "valueString": "Practitioner.identifier"
         },
         {
           "url": "field",
@@ -160,6 +164,10 @@
           "valueString": "Practitioner"
         },
         {
+          "url": "hide",
+          "valueString": "Practitioner.name.use"
+        },
+        {
           "url": "field",
           "valueString": "Practitioner.name"
         },
@@ -177,7 +185,7 @@
         },
         {
           "url": "field",
-          "valueString": "Practitioner.extension:maritalStatus"
+          "valueString": "Practitioner.extension:marital-status"
         },
         {
           "url": "field",
@@ -199,6 +207,18 @@
         {
           "url": "name",
           "valueString": "contact"
+        },
+        {
+          "url": "hide",
+          "valueString": "Practitioner.telecom.use"
+        },
+        {
+          "url": "hide",
+          "valueString": "Practitioner.address.use"
+        },
+        {
+          "url": "hide",
+          "valueString": "Practitioner.address.type"
         },
         {
           "url": "field",

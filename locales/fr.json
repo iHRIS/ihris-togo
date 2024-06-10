@@ -778,6 +778,9 @@
       "Pay Point": ""
     },
     "hardcoded-texts": {
+      "true": "vraie",
+      "false": "fausse",
+      "print": "Print",
       "Installed Apps": "Applications installées",
       "Install": "Installer",
       "Install New iHRIS App": "Installer une nouvelle application IHRIS",

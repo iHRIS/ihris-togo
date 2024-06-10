@@ -430,6 +430,9 @@
       "User Status": "User Status"
     },
     "hardcoded-texts": {
+      "true": "true",
+      "false": "false",
+      "print": "Print",
       "Installed Apps": "Installed Apps",
       "Install": "Install",
       "Install New iHRIS App": "Install New iHRIS App",

@@ -980,13 +980,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/level"
-        },
-        "name": "Level",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/note"
         },
         "name": "Note",
@@ -1343,6 +1336,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/function-valueset"
+        },
+        "name": "Function ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/grade-valueset"
         },
         "name": "Grade ValueSet",
@@ -1619,6 +1619,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/study-level-valueset"
+        },
+        "name": "Level of Study ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/tgo-gender-valueset"
         },
         "name": "TGO Gender ValueSet",
@@ -1834,6 +1841,13 @@
           "reference": "CodeSystem/facility-type-codesystem"
         },
         "name": "Facility Type Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/function-codesystem"
+        },
+        "name": "Function Code System",
         "exampleBoolean": false
       },
       {
@@ -2116,6 +2130,13 @@
           "reference": "CodeSystem/specialty-codesystem"
         },
         "name": "Specialty Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/study-level-codesystem"
+        },
+        "name": "Level of Study Code System",
         "exampleBoolean": false
       },
       {
