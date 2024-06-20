@@ -17,13 +17,13 @@
     {
       "linkId": "PractitionerRole",
       "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role",
-      "text": "Position|Position the person holds",
+      "text": "Staff Situation|Staff Situation",
       "type": "group",
       "item": [
         {
           "linkId": "PractitionerRole.code",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code",
-          "text": "Job Title",
+          "text": "Function",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/togo-job-valueset",
           "required": true,
@@ -39,10 +39,73 @@
         },
         {
           "linkId": "PractitionerRole.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString",
-          "text": "Reference Assignment or Appointment",
-          "type": "string",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:agent-type.value[x]:valueCoding",
+          "text": "Agent Type",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-type-valueset",
           "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:organization.value[x]:valueCoding",
+          "text": "Organization",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/organization-valueset",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "PractitionerRole.extension[1]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "contractualpartners",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-type-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "PractitionerRole.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:qualification.value[x]:valueCoding",
+          "text": "Profile/Qualification",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/qualification-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:study-level.value[x]:valueCoding",
+          "text": "Level of Study",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:specialty.value[x]:valueCoding",
+          "text": "Specialty",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[6]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:bonus-date.value[x]:valueDate",
+          "text": "Bonus Date",
+          "type": "date",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[7]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:bonus-reference.value[x]:valueString",
+          "text": "Bonus Reference",
+          "type": "string",
+          "required": false,
           "repeats": false
         },
         {
@@ -62,7 +125,7 @@
           "repeats": false
         },
         {
-          "linkId": "PractitionerRole.extension[2]",
+          "linkId": "PractitionerRole.extension[8]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service-start-reference.value[x]:valueString",
           "text": "Service Start Reference",
           "type": "string",
@@ -70,7 +133,7 @@
           "repeats": false
         },
         {
-          "linkId": "PractitionerRole.extension[3]",
+          "linkId": "PractitionerRole.extension[9]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-date.value[x]:valueDate",
           "text": "Date of Effective Presence",
           "type": "date",
@@ -78,7 +141,7 @@
           "repeats": false
         },
         {
-          "linkId": "PractitionerRole.extension[4]",
+          "linkId": "PractitionerRole.extension[10]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-reference.value[x]:valueString",
           "text": "Effective Presence Reference",
           "type": "string",
@@ -86,7 +149,7 @@
           "repeats": false
         },
         {
-          "linkId": "PractitionerRole.extension[5]",
+          "linkId": "PractitionerRole.extension[11]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:assignment-act.value[x]:valueAttachment",
           "text": "Act of Assignment or Appointment",
           "type": "attachment",
@@ -94,7 +157,7 @@
           "repeats": false
         },
         {
-          "linkId": "PractitionerRole.extension[6]#text",
+          "linkId": "PractitionerRole.extension[12]#text",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:comments.value[x]:valueString",
           "text": "Comments",
           "type": "string",
@@ -106,6 +169,38 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.location",
           "text": "Facility",
           "type": "reference",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[13]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-date.value[x]:valueDate",
+          "text": "Date of Tenure",
+          "type": "date",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[14]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-reference.value[x]:valueString",
+          "text": "Reference of the Tenure",
+          "type": "string",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[15]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:integration-date.value[x]:valueDate",
+          "text": "Integration Date",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "PractitionerRole.extension[16]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:reference-integration-act.value[x]:valueString",
+          "text": "Reference Act of Integration",
+          "type": "string",
           "required": true,
           "repeats": false
         }

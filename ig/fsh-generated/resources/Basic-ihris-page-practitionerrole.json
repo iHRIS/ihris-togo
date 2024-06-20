@@ -91,11 +91,11 @@
         },
         {
           "url": "field",
-          "valueString": "PractitionerRole.code"
+          "valueString": "PractitionerRole.practitioner"
         },
         {
           "url": "field",
-          "valueString": "PractitionerRole.practitioner"
+          "valueString": "PractitionerRole.code"
         },
         {
           "url": "field",

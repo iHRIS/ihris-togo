@@ -126,7 +126,7 @@
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding",
               "text": "Service",
               "type": "choice",
-              "answerValueSet": "http://hl7.org/fhir/ValueSet/work-service-valueset",
+              "answerValueSet": "http://hl7.org/fhir/ValueSet/service-valueset",
               "required": false,
               "repeats": false
             },

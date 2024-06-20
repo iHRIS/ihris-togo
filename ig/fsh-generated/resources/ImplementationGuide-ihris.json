@@ -380,10 +380,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/agent-status"
+          "reference": "StructureDefinition/agent-type"
         },
-        "name": "Agent Status",
-        "description": "Agent Status.",
+        "name": "Agent Type",
+        "description": "Agent Type.",
         "exampleBoolean": false
       },
       {
@@ -448,6 +448,22 @@
         },
         "name": "Place of Birth",
         "description": "Place of Birth.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/bonus-date"
+        },
+        "name": "Bonus Date",
+        "description": "Bonus Date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/bonus-reference"
+        },
+        "name": "Bonus Reference",
+        "description": "Bonus Reference.",
         "exampleBoolean": false
       },
       {
@@ -1072,6 +1088,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/service"
+        },
+        "name": "Service",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/service-end-date"
         },
         "name": "End of Service Date",
@@ -1191,9 +1214,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/agent-status-valueset"
+          "reference": "ValueSet/agent-type-valueset"
         },
-        "name": "Agent Status ValueSet",
+        "name": "Agent Type ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1612,6 +1635,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/service-valueset"
+        },
+        "name": "Service ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/specialty-valueset"
         },
         "name": "Specialty ValueSet",
@@ -1662,13 +1692,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/work-service-valueset"
-        },
-        "name": "Service ValueSet",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/yes-no-valueset"
         },
         "name": "Yes/No ValueSet",
@@ -1700,9 +1723,9 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/agent-status-codesystem"
+          "reference": "CodeSystem/agent-type-codesystem"
         },
-        "name": "Agent Status Code System",
+        "name": "Agent Type Code System",
         "exampleBoolean": false
       },
       {
@@ -2111,6 +2134,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/service-codesystem"
+        },
+        "name": "Service Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/service-provision-conditions"
         },
         "name": "ServiceProvisionConditions",
@@ -2166,13 +2196,6 @@
         },
         "name": "v3 Code System RoleCode",
         "description": " A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/work-service-codesystem"
-        },
-        "name": "Service Code System",
         "exampleBoolean": false
       },
       {
@@ -2387,6 +2410,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-agent-type"
+        },
+        "name": "Agent Type Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-auditevent"
         },
         "name": "AuditEvent",
@@ -2569,6 +2599,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-qualification"
+        },
+        "name": "Qualification Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-reason-departure"
         },
         "name": "iHRIS Reason for Departure CodeSystem Page",
@@ -2646,6 +2683,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-service"
+        },
+        "name": "Service Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-situation"
         },
         "name": "Situation Information Page",
@@ -2656,6 +2700,13 @@
           "reference": "Basic/ihris-page-staff-child"
         },
         "name": "iHRIS Basic Staff Child Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-study-level"
+        },
+        "name": "Study Level Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {

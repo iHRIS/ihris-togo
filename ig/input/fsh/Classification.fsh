@@ -13,10 +13,6 @@ Description:    "Classification Information Profile."
     Echelon named echelon 1..1 MS and
     DateLastAdminSituation named date-last-admin-situation 0..1 MS and
     ReferenceEchelon named reference-echelon 1..1 MS and
-    IntegrationDate named integration-date 1..1 MS and
-    ReferenceIntegrationAct named reference-integration-act 1..1 MS and
-    TenureDate named tenure-date 1..1 MS and
-    TenureReference named tenure-reference 1..1 MS and
     ClassificationCategory named classification-category 1..1 MS
 * extension[grade]  1..1 MS
 * extension[grade]  ^label = "Grade"
@@ -42,18 +38,6 @@ Description:    "Classification Information Profile."
 * extension[reference-echelon]  1..1 MS
 * extension[reference-echelon]  ^label = "Reference Echelon"
 * extension[reference-echelon].valueString MS
-* extension[integration-date]  1..1 MS
-* extension[integration-date]  ^label = "Integration Date"
-* extension[integration-date].valueDate MS
-* extension[reference-integration-act]  1..1 MS
-* extension[reference-integration-act]  ^label = "Reference Integration Act"
-* extension[reference-integration-act].valueString MS
-* extension[tenure-date]  1..1 MS
-* extension[tenure-date]  ^label = "Date of tenure"
-* extension[tenure-date].valueDate MS
-* extension[tenure-reference]  1..1 MS
-* extension[tenure-reference]  ^label = "Reference of the tenure"
-* extension[tenure-reference].valueString MS
 
 Extension:      Grade
 Id:             grade
@@ -141,46 +125,6 @@ Description:    "Reference Echelon."
 * valueString 1..1 MS
 * valueString ^label = "Reference Echelon"
 
-Extension:      IntegrationDate
-Id:             integration-date
-Title:          "Integration Date"
-Description:    "Integration Date."
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only date
-* valueDate 1..1 MS
-* valueDate ^label = "Integration Date"
-
-Extension:      ReferenceIntegrationAct
-Id:             reference-integration-act
-Title:          "Reference Integration Act"
-Description:    "Reference Integration Act."
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only string
-* valueString 1..1 MS
-* valueString ^label = "Reference Integration Act"
-
-Extension:      TenureDate
-Id:             tenure-date
-Title:          "Tenure Date"
-Description:    "Tenure Date."
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only date
-* valueDate 1..1 MS
-* valueDate ^label = "Tenure Date"
-
-Extension:      TenureReference
-Id:             tenure-reference
-Title:          "Tenure Reference"
-Description:    "Tenure Reference."
-* ^context.type = #element
-* ^context.expression = "Practitioner"
-* value[x] only string
-* valueString 1..1 MS
-* valueString ^label = "Tenure Reference"
-
 Instance:       Classification
 InstanceOf:     IhrisQuestionnaire
 Usage:          #definition
@@ -266,34 +210,6 @@ Usage:          #definition
 * item[0].item[7].required = false
 * item[0].item[7].repeats = false
 
-* item[0].item[8].linkId = "Basic.extension[8]"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate"
-* item[0].item[8].text = "Integration Date"
-* item[0].item[8].type = #date
-* item[0].item[8].required = true
-* item[0].item[8].repeats = false
-
-* item[0].item[9].linkId = "Basic.extension[9]"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString"
-* item[0].item[9].text = "Reference Act of Integration"
-* item[0].item[9].type = #string
-* item[0].item[9].required = true
-* item[0].item[9].repeats = false
-
-* item[0].item[10].linkId = "Basic.extension[10]"
-* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate"
-* item[0].item[10].text = "Date of Tenure"
-* item[0].item[10].type = #date
-* item[0].item[10].required = false
-* item[0].item[10].repeats = false
-
-* item[0].item[11].linkId = "Basic.extension[11]"
-* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString"
-* item[0].item[11].text = "Reference of the Tenure"
-* item[0].item[11].type = #string
-* item[0].item[11].required = false
-* item[0].item[11].repeats = false
-
 Instance:       ihris-page-classification
 InstanceOf:     IhrisPage
 Title:          "Classification Information Page"
@@ -320,7 +236,3 @@ Usage:          #example
 * extension[section][0].extension[field][6].valueString = "Basic.extension:echelon"
 * extension[section][0].extension[field][7].valueString = "Basic.extension:date-last-admin-situation"
 * extension[section][0].extension[field][8].valueString = "Basic.extension:reference-echelon"
-* extension[section][0].extension[field][9].valueString = "Basic.extension:integration-date"
-* extension[section][0].extension[field][10].valueString = "Basic.extension:reference-integration-act"
-* extension[section][0].extension[field][11].valueString = "Basic.extension:tenure-date"
-* extension[section][0].extension[field][12].valueString = "Basic.extension:tenure-reference"

@@ -6,22 +6,25 @@ Description:    "Situation Information Profile."
 * extension[practitioner].valueReference 1..1 MS
 * extension[practitioner].valueReference ^label = "Health Practitioner"
 * extension contains
-    AgentStatus named agent-status 1..1 MS and
+    AgentType named agent-type 1..1 MS and
     Qualification named qualification 1..1 MS and
     Function named function 1..1 MS and
-    Level named level 1..1 MS and
+    Service named service 1..1 MS and
     StudyLevel named study-level 1..1 MS and
     Organization named organization 1..1 MS and
     Specialty named specialty 1..1 MS
-* extension[agent-status]  1..1 MS
-* extension[agent-status]  ^label = "Agent Status"
-* extension[agent-status].valueCoding MS
+* extension[agent-type]  1..1 MS
+* extension[agent-type]  ^label = "Agent Type"
+* extension[agent-type].valueCoding MS
 * extension[qualification]  1..1 MS
 * extension[qualification]  ^label = "Profile/Qualification"
 * extension[qualification].valueCoding MS
 * extension[function]  1..1 MS
 * extension[function]  ^label = "Function"
 * extension[function].valueCoding MS
+* extension[service]  1..1 MS
+* extension[service]  ^label = "Service"
+* extension[service].valueCoding MS
 * extension[study-level]  1..1 MS
 * extension[study-level]  ^label = "Level of Study"
 * extension[study-level].valueCoding MS
@@ -32,16 +35,34 @@ Description:    "Situation Information Profile."
 * extension[specialty]  ^label = "Specialty"
 * extension[specialty].valueCoding MS
 
-Extension:      AgentStatus
-Id:             agent-status
-Title:          "Agent Status"
-Description:    "Agent Status."
+Extension:      BonusDate
+Id:             bonus-date
+Title:          "Bonus Date"
+Description:    "Bonus Date."
+* ^context.type = #element
+* value[x] only date
+* valueDate 1..1 MS
+* valueDate ^label = "Bonus Date"
+
+Extension:      BonusReference
+Id:             bonus-reference
+Title:          "Bonus Reference"
+Description:    "Bonus Reference."
+* ^context.type = #element
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Bonus Reference"
+
+Extension:      AgentType
+Id:             agent-type
+Title:          "Agent Type"
+Description:    "Agent Type."
 * ^context.type = #element
 * ^context.expression = "Practitioner"
 * value[x] only Coding
 * valueCoding 1..1 MS
-* valueCoding ^label = "Agent Status"
-* valueCoding from http://ihris.org/fhir/ValueSet/agent-status-valueset (required)
+* valueCoding ^label = "Agent Type"
+* valueCoding from http://ihris.org/fhir/ValueSet/agent-type-valueset (required)
 
 Extension:      Specialty
 Id:             specialty
@@ -81,6 +102,14 @@ Title:          "Function"
 * valueCoding ^label = "Function"
 * valueCoding from http://ihris.org/fhir/ValueSet/function-valueset (required)
 
+Extension:      Service
+Id:             service
+Title:          "Service"
+* value[x] only Coding
+* valueCoding 1..1 MS
+* valueCoding ^label = "Service"
+* valueCoding from http://ihris.org/fhir/ValueSet/service-valueset (required)
+
 Extension:      StudyLevel
 Id:             study-level
 Title:          "Level of Study"
@@ -107,10 +136,10 @@ Usage:          #definition
 * item[0].type = #group
 
 * item[0].item[0].linkId = "Basic.extension[0]"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-status.value[x]:valueCoding"
-* item[0].item[0].text = "Agent Status"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-type.value[x]:valueCoding"
+* item[0].item[0].text = "Agent Type"
 * item[0].item[0].type = #choice
-* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-status-valueset"
+* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-type-valueset"
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
@@ -123,7 +152,7 @@ Usage:          #definition
 * item[0].item[1].repeats = false
 * item[0].item[1].enableWhen[0].question = "Basic.extension[0]"
 * item[0].item[1].enableWhen[0].operator = #=
-* item[0].item[1].enableWhen[0].answerCoding = agent-status-codesystem#contractualpartners
+* item[0].item[1].enableWhen[0].answerCoding = agent-type-codesystem#contractualpartners
 
 * item[0].item[2].linkId = "Basic.extension[2]"
 * item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueCoding"
@@ -142,20 +171,28 @@ Usage:          #definition
 * item[0].item[3].repeats = false
 
 * item[0].item[4].linkId = "Basic.extension[4]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding"
-* item[0].item[4].text = "Level of Study"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:service.value[x]:valueCoding"
+* item[0].item[4].text = "Service"
 * item[0].item[4].type = #choice
-* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
+* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/service-valueset"
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
 * item[0].item[5].linkId = "Basic.extension[5]"
-* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding"
-* item[0].item[5].text = "Specialty"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding"
+* item[0].item[5].text = "Level of Study"
 * item[0].item[5].type = #choice
-* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
-* item[0].item[5].required = false
+* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
+* item[0].item[5].required = true
 * item[0].item[5].repeats = false
+
+* item[0].item[6].linkId = "Basic.extension[6]"
+* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding"
+* item[0].item[6].text = "Specialty"
+* item[0].item[6].type = #choice
+* item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
+* item[0].item[6].required = false
+* item[0].item[6].repeats = false
 
 Instance:       ihris-page-situation
 InstanceOf:     IhrisPage
@@ -168,14 +205,14 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-account-arrow-right"
 * extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/practitioner/FIELD"
-* extension[display].extension[search][0].valueString = "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+* extension[display].extension[search][0].valueString = "Agent Type|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-type').valueCoding"
 * extension[display].extension[field][0].extension[path].valueString = "Basic.extension:practitioner.value[x]:valueReference"
 * extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
 * extension[section][0].extension[title].valueString = "Situation Information"
 * extension[section][0].extension[description].valueString = "Situation Information"
 * extension[section][0].extension[name].valueString = "situationinformation"
 * extension[section][0].extension[field][0].valueString = "Basic.extension:practitioner"
-* extension[section][0].extension[field][1].valueString = "Basic.extension:agent-status"
+* extension[section][0].extension[field][1].valueString = "Basic.extension:agent-type"
 * extension[section][0].extension[field][2].valueString = "Basic.extension:qualification"
 * extension[section][0].extension[field][3].valueString = "Basic.extension:function"
 * extension[section][0].extension[field][4].valueString = "Basic.extension:study-level"

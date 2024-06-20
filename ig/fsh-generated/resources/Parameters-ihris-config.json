@@ -20,7 +20,7 @@
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "V870cwmayGw0tOXXdiUn7/MNEaPt/KzRCk7H2t6IvqxmhshwxLxAYve8yNEdkhj/WhybFokLXR5rhtqU4VKE9EiN/dL1fHVbdu0rk/WrcFy2vPqYPUxepFAAAWQXIQV7gsVSMFEbUOTiYaQ42dt7gddrmJYq8p+6RFLAMDkxpzU="
+        "data": "Y495LzkSZWkjeDNmXlhyFh2hDNmyjoBbwYOTZryQ+7lqHFwQnjFB8HUF5CGPhQcqgemL658mBTWxhh3iMBDNDiUGMsm61YUk2FgO03y8TTluWjtdleYL57P19/0M9n5+1dKuetIjcldCUQJ4/74/PUi74e89LmMOrZNPRhOok7E="
       }
     },
     {
@@ -183,34 +183,6 @@
           "valueString": "/questionnaire/ihris-practitioner/practitioner"
         },
         {
-          "name": "site:nav:menu:location:text",
-          "valueString": "Locations and Facilities"
-        },
-        {
-          "name": "site:nav:menu:location:order",
-          "valueString": "6"
-        },
-        {
-          "name": "site:nav:menu:location:icon",
-          "valueString": "mdi-map-marker-multiple"
-        },
-        {
-          "name": "site:nav:menu:location:menu:location_search:text",
-          "valueString": "Locations"
-        },
-        {
-          "name": "site:nav:menu:location:menu:location_search:url",
-          "valueString": "/resource/search/location"
-        },
-        {
-          "name": "site:nav:menu:location:menu:facility_search:text",
-          "valueString": "Facilities"
-        },
-        {
-          "name": "site:nav:menu:location:menu:facility_search:url",
-          "valueString": "/resource/search/facility"
-        },
-        {
           "name": "site:nav:menu:database:text",
           "valueString": "Database"
         },
@@ -277,18 +249,6 @@
         {
           "name": "site:nav:menu:database:menu:jobLists:menu:salary-grade:order",
           "valueString": "3"
-        },
-        {
-          "name": "site:nav:menu:database:menu:jobLists:menu:job:text",
-          "valueString": "Job Titles"
-        },
-        {
-          "name": "site:nav:menu:database:menu:jobLists:menu:job:url",
-          "valueString": "/resource/search/job"
-        },
-        {
-          "name": "site:nav:menu:database:menu:jobLists:menu:job:order",
-          "valueString": "4"
         },
         {
           "name": "site:nav:menu:database:menu:jobLists:menu:job-type:text",
@@ -596,6 +556,82 @@
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:nationality:order",
+          "valueString": "4"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:text",
+          "valueString": "Situation Lists"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:color",
+          "valueString": "#D06F1A"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:order",
+          "valueString": "3"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:icon",
+          "valueString": "mdi-database"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-type:text",
+          "valueString": "Agent Type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-type:url",
+          "valueString": "/resource/search/agent-type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-type:order",
+          "valueString": "0"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:service:text",
+          "valueString": "Service"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:service:url",
+          "valueString": "/resource/search/service"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:service:order",
+          "valueString": "1"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:job:text",
+          "valueString": "Job Titles/Function"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:job:url",
+          "valueString": "/resource/search/job"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:job:order",
+          "valueString": "2"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:qualification:text",
+          "valueString": "Qualification"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:qualification:url",
+          "valueString": "/resource/search/qualification"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:qualification:order",
+          "valueString": "3"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:study-level:text",
+          "valueString": "Study Level"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:study-level:url",
+          "valueString": "/resource/search/study-level"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:study-level:order",
           "valueString": "4"
         },
         {

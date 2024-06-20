@@ -92,6 +92,70 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 
+Instance:       ihris-page-agent-type
+InstanceOf:     IhrisPage
+Title:          "Agent Type Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/agent-type-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Agent Type"
+* extension[section][0].extension[description].valueString = "Agent Type"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-service
+InstanceOf:     IhrisPage
+Title:          "Service Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/service-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Service"
+* extension[section][0].extension[description].valueString = "Service"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-qualification
+InstanceOf:     IhrisPage
+Title:          "Qualification Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/qualification-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Qualification"
+* extension[section][0].extension[description].valueString = "Qualification"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-study-level
+InstanceOf:     IhrisPage
+Title:          "Study Level Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/study-level-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Study Level"
+* extension[section][0].extension[description].valueString = "Study Level"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
 Instance:       ihris-page-sector
 InstanceOf:     IhrisPage
 Title:          "Sector Page"

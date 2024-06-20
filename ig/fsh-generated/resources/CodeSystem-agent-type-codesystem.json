@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "AgentStatusCodeSystem",
-  "id": "agent-status-codesystem",
-  "title": "Agent Status Code System",
+  "name": "AgentTypeCodeSystem",
+  "id": "agent-type-codesystem",
+  "title": "Agent Type Code System",
   "version": "0.1.0",
-  "url": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem",
+  "url": "http://ihris.org/fhir/CodeSystem/agent-type-codesystem",
   "concept": [
     {
       "code": "regularcivilservant",

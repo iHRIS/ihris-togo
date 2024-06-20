@@ -2841,7 +2841,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/work-service-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/service-valueset"
         },
         "mapping": [
           {
@@ -3812,7 +3812,7 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/work-service-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/service-valueset"
         }
       },
       {

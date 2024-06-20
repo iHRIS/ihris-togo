@@ -68,7 +68,7 @@ Title:          "Work Experience details"
 * extension[reason-leaving].valueString ^label = "Reason For Leaving"
 * extension[service].value[x] only Coding
 * extension[service].valueCoding ^label = "Service"
-* extension[service].valueCoding from WorkServiceValueSet (required)
+* extension[service].valueCoding from ServiceValueSet (required)
 * extension[location].value[x] only Reference(TGORegion or TGODistrict or TGOFacility)
 * extension[location].valueReference ^label = "Location"
 
@@ -170,7 +170,7 @@ Usage:          #definition
 * item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding"
 * item[0].item[0].item[9].text = "Service"
 * item[0].item[0].item[9].type = #choice
-* item[0].item[0].item[9].answerValueSet = "http://hl7.org/fhir/ValueSet/work-service-valueset"
+* item[0].item[0].item[9].answerValueSet = "http://hl7.org/fhir/ValueSet/service-valueset"
 * item[0].item[0].item[9].required = false
 * item[0].item[0].item[9].repeats = false
 
