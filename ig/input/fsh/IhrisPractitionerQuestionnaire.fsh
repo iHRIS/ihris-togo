@@ -188,31 +188,11 @@ Usage:          #definition
 * item[1].item[0].item[3].required = false
 * item[1].item[0].item[3].repeats = false
 
-* item[1].item[0].item[4].linkId = "Practitioner.address[0].extension[0]#tree"
-* item[1].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.extension:district.value[x]:valueReference"
-* item[1].item[0].item[4].text = "District"
-* item[1].item[0].item[4].type = #reference
-* item[1].item[0].item[4].required = false
-* item[1].item[0].item[4].repeats = false
-
-* item[1].item[0].item[5].linkId = "Practitioner.address[0].state"
-* item[1].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.state"
-* item[1].item[0].item[5].text = "State"
-* item[1].item[0].item[5].type = #string
-* item[1].item[0].item[5].required = false
-* item[1].item[0].item[5].repeats = false
-
-* item[1].item[0].item[6].linkId = "Practitioner.address[0].postalCode"
-* item[1].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.postalCode"
-* item[1].item[0].item[6].text = "Postal Code"
-* item[1].item[0].item[6].type = #string
-* item[1].item[0].item[6].required = false
-* item[1].item[0].item[6].repeats = false
-
 * item[1].item[0].item[7].linkId = "Practitioner.address[0].country"
 * item[1].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.country"
 * item[1].item[0].item[7].text = "Country"
 * item[1].item[0].item[7].type = #string
+* item[1].item[0].item[7].initial[0].valueString = "TOGO"
 * item[1].item[0].item[7].required = false
 * item[1].item[0].item[7].repeats = false
 

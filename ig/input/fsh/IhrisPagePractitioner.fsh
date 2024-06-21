@@ -35,6 +35,7 @@ Usage:          #example
 * extension[section][1].extension[description].valueString = "Primary demographic details"
 * extension[section][1].extension[name].valueString = "Practitioner"
 * extension[section][1].extension[hide][0].valueString = "Practitioner.name.use"
+* extension[section][1].extension[hide][1].valueString = "Practitioner.address.district"
 * extension[section][1].extension[field][0].valueString = "Practitioner.name"
 * extension[section][1].extension[field][1].valueString = "Practitioner.birthDate"
 * extension[section][1].extension[field][2].valueString = "Practitioner.gender"

@@ -30,6 +30,25 @@ Title:             "Identifier Types ValueSet"
 * ^version = "0.1.0"
 * codes from system TGOIDTypeCodeSystem
 
+CodeSystem:      IhrisRelationCodesystem
+Id:              ihris-relation-codesystem
+Title:           "Relationship"
+* ^date = "2020-10-29T08:41:04.362Z"
+* ^version = "0.2.0"
+* #spouse "Spouse" "Spouse"
+* #mother "Mother" "Mother"
+* #father "Father" "Father"
+* #adoptedchild "Adopted Child" "Adopted Child"
+* #bilogicalChild "Biological Child" "Biological Child"
+* #other "other" "other"
+
+ValueSet:         IhrisRelationValueSet
+Id:               ihris-relation-valueset
+Title:            "iHRIS Relationship ValueSet"
+* ^date = "2020-10-29T08:41:04.362Z"
+* ^version = "0.2.0"
+* codes from system IhrisRelationCodesystem
+
 CodeSystem:       PerformanceScoreCodeSystem
 Id:               performance-score-codesystem
 Title:            "Performance Score Code System"
@@ -356,6 +375,21 @@ Title:             "Education Sector ValueSet"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
 * codes from system EducationSectorCodeSystem
+
+CodeSystem:       TrainingModeCodeSystem
+Id:               training-mode-codesystem
+Title:            "Training Mode Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #online "En ligne"
+* #inperson "En Présentiel"
+
+ValueSet:          TrainingModeValueSet
+Id:                training-mode-valueset
+Title:             "Training Mode ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system TrainingModeCodeSystem
 
 CodeSystem:      IhrisDisciplinaryActionType
 Id:              ihris-discipline-action-type-codesystem

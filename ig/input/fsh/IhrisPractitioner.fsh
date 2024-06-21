@@ -75,22 +75,22 @@ Description:    "iHRIS profile of Practitioner."
 * address.type 1..1 MS
 * address.type ^label = "Type"
 * address.line 1..1 MS
-* address.line ^label = "Line"
+* address.line ^label = "Street Address"
 * address.city MS
 * address.city ^label = "City"
-* address.district MS
+* address.district 0..0
 * address.district ^label = "District"
-* address.state MS
+* address.state 0..0
 * address.state ^label = "State"
-* address.postalCode MS
+* address.postalCode 0..0
 * address.postalCode ^label = "Postal Code"
 * address.country MS
 * address.country ^label = "Country"
-* address.extension contains
-    AddressDistrict named district 0..1 MS
-* address.extension[district] MS
-* address.extension[district] ^label = "District"
-* address.extension[district].valueReference MS
+// * address.extension contains
+//     AddressDistrict named district 0..1 MS
+// * address.extension[district] MS
+// * address.extension[district] ^label = "District"
+// * address.extension[district].valueReference MS
 * gender 1..1 MS
 * gender ^label = "Gender"
 * gender from TGOGenderValueSet (required)
@@ -336,25 +336,6 @@ Description:    "iHRIS extension for Practitioner number of children."
 * value[x] only integer
 * valueInteger 1..1 MS
 * valueInteger ^label = "Number of Children"
-
-CodeSystem:      IhrisRelationCodesystem
-Id:              ihris-relation-codesystem
-Title:           "Relationship"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* #spouse "Spouse" "Spouse"
-* #mother "Mother" "Mother"
-* #father "Father" "Father"
-* #adoptedchild "Adopted Child" "Adopted Child"
-* #bilogicalChild "Biological Child" "Biological Child"
-* #other "other" "other"
-
-ValueSet:         IhrisRelationValueSet
-Id:               ihris-relation-valueset
-Title:            "iHRIS Relationship ValueSet"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* codes from system IhrisRelationCodesystem
 
 Instance:       ihris-page-relation
 InstanceOf:     IhrisPage

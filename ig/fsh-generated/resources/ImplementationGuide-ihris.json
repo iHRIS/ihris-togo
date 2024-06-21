@@ -1684,6 +1684,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/training-mode-valueset"
+        },
+        "name": "Training Mode ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/v3-ServiceDeliveryLocationRoleType"
         },
         "name": "V3 Value SetServiceDeliveryLocationRoleType",
@@ -2192,6 +2199,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/training-mode-codesystem"
+        },
+        "name": "Training Mode Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/v3-RoleCode"
         },
         "name": "v3 Code System RoleCode",
@@ -2445,6 +2459,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-civil-servant-category"
+        },
+        "name": "Civil Servant Category Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-civility"
         },
         "name": "Civility Page",
@@ -2459,9 +2480,44 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-classification-class"
+        },
+        "name": "Class Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-contractual-category"
+        },
+        "name": "Contractual Category Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-disciplinary-action-taken"
+        },
+        "name": "Disciplinary Action Taken Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-discipline"
         },
         "name": "iHRIS Basic Discipline Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-echelon"
+        },
+        "name": "Echelon Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-education-type"
+        },
+        "name": "Education Type Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2501,9 +2557,23 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-grade"
+        },
+        "name": "Grade Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-identifier-type"
         },
         "name": "Identifier Type Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-ihris-relation"
+        },
+        "name": "Relationship Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2518,6 +2588,13 @@
           "reference": "Basic/ihris-page-inservice-training-request"
         },
         "name": "Inservice Training Request",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-institution-type"
+        },
+        "name": "Institution Type Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2697,6 +2774,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-specialty"
+        },
+        "name": "Specialty Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-staff-child"
         },
         "name": "iHRIS Basic Staff Child Page",
@@ -2763,6 +2847,13 @@
           "reference": "Basic/ihris-page-tgo-region"
         },
         "name": "Region Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-training-fund"
+        },
+        "name": "Training Fund Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {

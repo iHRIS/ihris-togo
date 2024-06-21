@@ -168,6 +168,10 @@
           "valueString": "Practitioner.name.use"
         },
         {
+          "url": "hide",
+          "valueString": "Practitioner.address.district"
+        },
+        {
           "url": "field",
           "valueString": "Practitioner.name"
         },
