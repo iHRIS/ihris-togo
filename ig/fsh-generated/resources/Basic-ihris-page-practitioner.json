@@ -1947,7 +1947,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-salary').extension.where(url='period').valuePeriod.start"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-salary').extension.where(url='start-date').valueDate"
                 }
               ],
               "url": "column"
@@ -1960,7 +1960,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-salary').extension.where(url='period').valuePeriod.end"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-salary').extension.where(url='end-date').valueDate"
                 }
               ],
               "url": "column"
@@ -1999,6 +1999,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-salary"
                 }
               ],
               "url": "action"
@@ -2020,6 +2024,31 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-salary/salary/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-salary"
                 }
               ],
               "url": "action"

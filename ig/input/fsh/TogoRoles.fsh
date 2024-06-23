@@ -158,6 +158,26 @@ Title:          "Edit Employment"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-employment"
 
+Instance:       ihris-task-add-salary
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Salary"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-salary"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-salary"
+
+Instance:       ihris-task-edit-salary
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Salary"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-salary"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-salary"
+
 Instance:       ihris-task-add-emergency
 InstanceOf:     IhrisTask
 Usage:          #example

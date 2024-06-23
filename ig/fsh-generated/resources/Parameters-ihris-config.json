@@ -12,11 +12,11 @@
       "valueSignature": {
         "type": [
           {
-            "system": "urn:iso-astm:E1762-95:2013",
-            "code": "1.2.840.10065.1.12.1.14"
+            "code": "1.2.840.10065.1.12.1.14",
+            "system": "urn:iso-astm:E1762-95:2013"
           }
         ],
-        "when": "2024-06-21T08:21:11.262Z",
+        "when": "2022-06-21T09:31:16.469Z",
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
@@ -239,18 +239,6 @@
           "valueString": "2"
         },
         {
-          "name": "site:nav:menu:database:menu:jobLists:menu:salary-grade:text",
-          "valueString": "Salary Grades"
-        },
-        {
-          "name": "site:nav:menu:database:menu:jobLists:menu:salary-grade:url",
-          "valueString": "/resource/search/salary-grade"
-        },
-        {
-          "name": "site:nav:menu:database:menu:jobLists:menu:salary-grade:order",
-          "valueString": "3"
-        },
-        {
           "name": "site:nav:menu:database:menu:jobLists:menu:job-type:text",
           "valueString": "Job Type"
         },
@@ -260,7 +248,7 @@
         },
         {
           "name": "site:nav:menu:database:menu:jobLists:menu:job-type:order",
-          "valueString": "5"
+          "valueString": "3"
         },
         {
           "name": "site:nav:menu:database:menu:eduLists:text",
@@ -391,18 +379,6 @@
           "valueString": "3"
         },
         {
-          "name": "site:nav:menu:database:menu:postLists:menu:frequency:text",
-          "valueString": "Pay Frequency"
-        },
-        {
-          "name": "site:nav:menu:database:menu:postLists:menu:frequency:url",
-          "valueString": "/resource/search/frequency"
-        },
-        {
-          "name": "site:nav:menu:database:menu:postLists:menu:frequency:order",
-          "valueString": "4"
-        },
-        {
           "name": "site:nav:menu:database:menu:otherLists:text",
           "valueString": "Other Lists"
         },
@@ -525,6 +501,50 @@
         {
           "name": "site:nav:menu:database:menu:otherLists:menu:ihris-relation:order",
           "valueString": "9"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:text",
+          "valueString": "Geographical Information"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:color",
+          "valueString": "#227FDD"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:pay-scale:text",
+          "valueString": "Salary Scale"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:pay-scale:url",
+          "valueString": "/resource/search/salary-scale"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:pay-scale:order",
+          "valueString": "0"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:salarysource:text",
+          "valueString": "Salary Sources"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:salarysource:url",
+          "valueString": "/resource/search/salary-source"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:salarysource:order",
+          "valueString": "1"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:frequency:text",
+          "valueString": "Pay Frequency"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:frequency:url",
+          "valueString": "/resource/search/frequency"
+        },
+        {
+          "name": "site:nav:menu:database:menu:salary:menu:frequency:order",
+          "valueString": "2"
         },
         {
           "name": "site:nav:menu:database:menu:geography:text",
@@ -1084,7 +1104,7 @@
         },
         {
           "name": "workflow:processor:salary:file",
-          "valueString": "workflowSalary"
+          "valueString": "defaultWorkflow"
         },
         {
           "name": "workflow:questionnaire:salary:url",

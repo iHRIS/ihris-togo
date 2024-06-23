@@ -35,12 +35,12 @@ Id:              ihris-relation-codesystem
 Title:           "Relationship"
 * ^date = "2020-10-29T08:41:04.362Z"
 * ^version = "0.2.0"
-* #spouse "Spouse" "Spouse"
-* #mother "Mother" "Mother"
-* #father "Father" "Father"
-* #adoptedchild "Adopted Child" "Adopted Child"
-* #bilogicalChild "Biological Child" "Biological Child"
-* #other "other" "other"
+* #spouse "Conjoint" "Conjoint"
+* #mother "Mère" "Mère"
+* #father "Père" "Père"
+* #adoptedchild "Enfant adopté" "Enfant adopté"
+* #bilogicalChild "Enfant biologique" "Enfant biologique"
+* #other "Autre" "Autre"
 
 ValueSet:         IhrisRelationValueSet
 Id:               ihris-relation-valueset
@@ -2402,3 +2402,33 @@ Title:            "Nationality ValueSet"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
 * codes from system NationalityCodeSystem
+
+CodeSystem:      IhrisSalarySource
+Id:              ihris-salary-source-codesystem
+Title:           "Salary Source"
+* ^date = "2020-10-20T08:41:04.362Z"
+
+ValueSet:         IhrisSalarySourceValueSet
+Id:               ihris-salary-source-valueset
+Title:            "iHRIS Salary Source ValueSet"
+* ^date = "2020-10-20T08:41:04.362Z"
+* ^version = "0.2.0"
+* codes from system IhrisSalarySource
+
+CodeSystem:      IhrisFrequency
+Id:              ihris-frequency-codesystem
+Title:           "Frequency"
+* ^date = "2020-10-20T08:41:04.362Z"
+* #daily "Daily"
+* #weekly "Weekly"
+* #monthly "Monthly"
+* #quaterly "Quaterly"
+* #biannually "Bi-Annually"
+* #annualy "Annually/Yearly"
+
+ValueSet:         IhrisFrequencyValueSet
+Id:               ihris-frequency-valueset
+Title:            "iHRIS Frequency ValueSet"
+* ^date = "2020-10-20T08:41:04.362Z"
+* ^version = "0.2.0"
+* codes from system IhrisFrequency

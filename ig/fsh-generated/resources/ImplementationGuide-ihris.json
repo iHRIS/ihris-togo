@@ -3026,6 +3026,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-add-salary"
+        },
+        "name": "Add Salary",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-add-scanned-document"
         },
         "name": "Add Scanned Document",
@@ -3134,6 +3141,13 @@
           "reference": "Basic/ihris-task-edit-preservice-training"
         },
         "name": "Edit Preservice Training",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-salary"
+        },
+        "name": "Edit Salary",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {

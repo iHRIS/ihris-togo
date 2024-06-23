@@ -12,6 +12,8 @@ Description:    "iHRIS Profile of the Basic resource for Emergency."
 * extension[emergency].extension[name].valueString 1..1 MS
 * extension[emergency].extension[relation] ^label = "Relationship"
 * extension[emergency].extension[relation].valueCoding 1..1 MS
+* extension[emergency].extension[other-relation] ^label = "Other Relation"
+* extension[emergency].extension[other-relation].valueString MS
 * extension[emergency].extension[phone] ^label = "Phone"
 * extension[emergency].extension[phone].valueString MS
     
@@ -20,6 +22,7 @@ Id:             ihris-emergency
 Title:          "Emergency details"
 * extension contains name 1..1 MS and
     relation 0..1 MS and
+    other-relation 0..1 MS and
     phone 1..1 MS
 * extension[name].value[x] only string
 * extension[name].valueString 1..1 MS
@@ -28,6 +31,9 @@ Title:          "Emergency details"
 * extension[relation].valueCoding 1..1 MS
 * extension[relation].valueCoding ^label = "Relationship"
 * extension[relation].valueCoding from IhrisRelationValueSet (required)
+* extension[other-relation].value[x] only string
+* extension[other-relation].valueString 0..1 MS
+* extension[other-relation].valueString ^label = "Other Relationship"
 * extension[phone].value[x] only string
 * extension[phone].valueString 0..1 MS
 * extension[phone].valueString ^label = "Phone"
@@ -70,11 +76,21 @@ Usage:          #definition
 * item[0].item[0].item[1].repeats = false
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-emergency#Basic.extension:emergency.extension:phone.value[x]:valueString"
-* item[0].item[0].item[2].text = "Phone"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-emergency#Basic.extension:emergency.extension:other-relation.value[x]:valueString"
+* item[0].item[0].item[2].text = "Other Relation"
 * item[0].item[0].item[2].type = #string
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
+* item[0].item[0].item[2].enableWhen[0].question = "Basic.extension[0].extension[1]"
+* item[0].item[0].item[2].enableWhen[0].operator = #=
+* item[0].item[0].item[2].enableWhen[0].answerCoding = ihris-relation-codesystem#other
+
+* item[0].item[0].item[3].linkId = "Basic.extension[0].extension[3]"
+* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-emergency#Basic.extension:emergency.extension:phone.value[x]:valueString"
+* item[0].item[0].item[3].text = "Phone"
+* item[0].item[0].item[3].type = #string
+* item[0].item[0].item[3].required = true
+* item[0].item[0].item[3].repeats = false
 
 Instance:       ihris-page-emergency
 InstanceOf:     IhrisPage
@@ -87,6 +103,12 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-account-arrow-right"
 * extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/practitioner/FIELD"
+* extension[display].extension[link][1].extension[field].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+* extension[display].extension[link][1].extension[text].valueString = "Add Another"
+* extension[display].extension[link][1].extension[button].valueBoolean = true
+* extension[display].extension[link][1].extension[icon].valueString = "mdi-account-arrow-right"
+* extension[display].extension[link][1].extension[url].valueUrl = "/questionnaire/ihris-emergency/emergency?practitioner=FIELD"
+* extension[display].extension[link][1].extension[task].valueId = "ihris-task-add-emergency"
 * extension[display].extension[search][0].valueString = "Emergency|extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='name').valueString"
 * extension[display].extension[field][0].extension[path].valueString = "Basic.extension:practitioner.value[x]:valueReference"
 * extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
