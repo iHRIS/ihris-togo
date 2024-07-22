@@ -88,27 +88,55 @@
         },
         {
           "url": "field",
+          "valueString": "Basic.extension:salary-index-reference"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:basic-salary"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:bonus"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:deduction"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:gross-salary"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:net-salary"
+        },
+        {
+          "url": "field",
           "valueString": "Basic.extension:grade"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:classification-category"
+          "valueString": "Basic.extension:agent-type"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:civil-servant-category"
+          "valueString": "Basic.extension:budget-type"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:contractual-category"
+          "valueString": "Basic.extension:organization"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:classification-class"
+          "valueString": "Basic.extension:civil-servant-category-reference"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:echelon"
+          "valueString": "Basic.extension:class-reference"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:echelon-reference"
         },
         {
           "url": "field",

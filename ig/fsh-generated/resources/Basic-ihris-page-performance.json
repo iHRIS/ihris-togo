@@ -99,15 +99,11 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:performance.extension:effectiveness"
+          "valueString": "Basic.extension:performance.extension:discipline"
         },
         {
           "url": "field",
           "valueString": "Basic.extension:performance.extension:aptitude"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:performance.extension:manner"
         },
         {
           "url": "field",

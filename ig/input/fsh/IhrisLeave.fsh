@@ -23,6 +23,8 @@ Description:    "iHRIS Profile of the Basic resource for Leave."
 * extension[leave].extension[effective-termination-date].valueDate MS
 * extension[leave].extension[effective-resumption-date] ^label = "Effective Resumption Date"
 * extension[leave].extension[effective-resumption-date].valueDate MS
+* extension[leave].extension[reason] ^label = "Reason"
+* extension[leave].extension[reason].valueString MS
     
 Extension:      IhrisLeave
 Id:             ihris-leave
@@ -32,10 +34,11 @@ Title:          "Leave details"
       start-date 1..1 MS and
       end-date 1..1 MS and
       dateRequested 0..1 MS and
-      leave-order-reference 1..1 MS and
-      leave-order-sign-date 1..1 MS and
-      effective-termination-date 1..1 MS and
-      effective-resumption-date 1..1 MS
+      leave-order-reference 0..1 MS and
+      leave-order-sign-date 0..1 MS and
+      effective-termination-date 0..1 MS and
+      effective-resumption-date 0..1 MS and
+      reason 0..1 MS
 * extension[leave-type].value[x] only Coding
 * extension[leave-type].valueCoding from IhrisLeaveTypeValueSet (required)
 * extension[leave-type].valueCoding ^label = "Leave Type"
@@ -53,6 +56,8 @@ Title:          "Leave details"
 * extension[effective-termination-date].valueDate ^label = "Effective Termination Date"
 * extension[effective-resumption-date].value[x] only date
 * extension[effective-resumption-date].valueDate ^label = "Effective Resumption Date"
+* extension[reason].value[x] only string
+* extension[reason].valueString ^label = "Reason"
 
 Instance:       IhrisPractitionerWorkflowLeave
 InstanceOf:     IhrisQuestionnaire
@@ -84,54 +89,64 @@ Usage:          #definition
 * item[0].item[0].item[0].required = true
 * item[0].item[0].item[0].repeats = false
 
-* item[0].item[0].item[1].linkId = "Basic.extension[0].extension[1]"
-* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:start-date.value[x]:valueDate"
-* item[0].item[0].item[1].text = "Start Date"
-* item[0].item[0].item[1].type = #date
+* item[0].item[0].item[1].linkId = "Basic.extension[0].extension[1]#text"
+* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:reason.value[x]:valueString"
+* item[0].item[0].item[1].text = "Reason"
+* item[0].item[0].item[1].type = #string
 * item[0].item[0].item[1].required = true
 * item[0].item[0].item[1].repeats = false
+* item[0].item[0].item[1].enableWhen[0].question = "Basic.extension[0].extension[0]"
+* item[0].item[0].item[1].enableWhen[0].operator = #=
+* item[0].item[0].item[1].enableWhen[0].answerCoding = ihris-leave-type-codesystem#permission
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:end-date.value[x]:valueDate"
-* item[0].item[0].item[2].text = "End Date"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:start-date.value[x]:valueDate"
+* item[0].item[0].item[2].text = "Start Date"
 * item[0].item[0].item[2].type = #date
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 
 * item[0].item[0].item[3].linkId = "Basic.extension[0].extension[3]"
-* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:dateRequested.value[x]:valueDate"
-* item[0].item[0].item[3].text = "Date Requested"
+* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:end-date.value[x]:valueDate"
+* item[0].item[0].item[3].text = "End Date"
 * item[0].item[0].item[3].type = #date
 * item[0].item[0].item[3].required = true
 * item[0].item[0].item[3].repeats = false
 
 * item[0].item[0].item[4].linkId = "Basic.extension[0].extension[4]"
-* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-reference.value[x]:valueString"
-* item[0].item[0].item[4].text = "Reference of the Leave Order"
-* item[0].item[0].item[4].type = #string
-* item[0].item[0].item[4].required = true
+* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:dateRequested.value[x]:valueDate"
+* item[0].item[0].item[4].text = "Date Requested"
+* item[0].item[0].item[4].type = #date
+* item[0].item[0].item[4].required = false
 * item[0].item[0].item[4].repeats = false
 
 * item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
-* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-sign-date.value[x]:valueDate"
-* item[0].item[0].item[5].text = "Date of signing of the order"
-* item[0].item[0].item[5].type = #date
-* item[0].item[0].item[5].required = true
+* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-reference.value[x]:valueString"
+* item[0].item[0].item[5].text = "Reference of the Leave Order"
+* item[0].item[0].item[5].type = #string
+* item[0].item[0].item[5].required = false
 * item[0].item[0].item[5].repeats = false
 
 * item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]"
-* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-termination-date.value[x]:valueDate"
-* item[0].item[0].item[6].text = "Effective Termination Date"
+* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-sign-date.value[x]:valueDate"
+* item[0].item[0].item[6].text = "Date of signing of the order"
 * item[0].item[0].item[6].type = #date
 * item[0].item[0].item[6].required = false
 * item[0].item[0].item[6].repeats = false
 
 * item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"
-* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-resumption-date.value[x]:valueDate"
-* item[0].item[0].item[7].text = "Effective Resumption Date"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-termination-date.value[x]:valueDate"
+* item[0].item[0].item[7].text = "Effective Termination Date"
 * item[0].item[0].item[7].type = #date
 * item[0].item[0].item[7].required = false
 * item[0].item[0].item[7].repeats = false
+
+* item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]"
+* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-resumption-date.value[x]:valueDate"
+* item[0].item[0].item[8].text = "Effective Resumption Date"
+* item[0].item[0].item[8].type = #date
+* item[0].item[0].item[8].required = false
+* item[0].item[0].item[8].repeats = false
 
 Instance:       ihris-page-leave
 InstanceOf:     IhrisPage

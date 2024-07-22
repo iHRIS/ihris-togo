@@ -7,6 +7,7 @@ const workflowChangeJob = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
+        bundle.entry[0].resource.active = true
         bundle.entry[0].resource.practitioner = {
           reference: "Practitioner/" + req.query.practitioner
         }

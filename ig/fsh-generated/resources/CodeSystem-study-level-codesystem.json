@@ -9,90 +9,174 @@
   "url": "http://ihris.org/fhir/CodeSystem/study-level-codesystem",
   "concept": [
     {
-      "code": "Sansdiplôme",
-      "display": "Sans diplôme"
+      "code": "studylevel1",
+      "display": "Attestation de fin de formation"
     },
     {
-      "code": "CEPD",
-      "display": "CEPD"
+      "code": "studylevel2",
+      "display": "Bac I (Ens. Général)"
     },
     {
-      "code": "CEPDpermisdeconduire",
-      "display": "CEPD + permis de conduire"
+      "code": "studylevel3",
+      "display": "Bac I (Ens. Technique)"
     },
     {
-      "code": "BEPC",
-      "display": "BEPC"
+      "code": "studylevel4",
+      "display": "Bac II (Ens. Général)"
     },
     {
-      "code": "BEPCpermisdeconduire",
-      "display": "BEPC + permis de conduire"
+      "code": "studylevel5",
+      "display": "Bac II (Ens. Technique)"
     },
     {
-      "code": "CAP",
-      "display": "CAP"
+      "code": "studylevel6",
+      "display": "BEPC + Permis de conduire"
     },
     {
-      "code": "BEPCM",
-      "display": "BEP-CM"
+      "code": "studylevel7",
+      "display": "BEPCM"
     },
     {
-      "code": "BEPSDC",
+      "code": "studylevel8",
       "display": "BEP-SDC"
     },
     {
-      "code": "BACGénéral",
-      "display": "BAC Général"
+      "code": "studylevel9",
+      "display": "Brevet de Technicien (BT)"
     },
     {
-      "code": "BACTechnique",
-      "display": "BAC Technique"
+      "code": "studylevel10",
+      "display": "Brevet de Technicien Supérieur (BTS)"
     },
     {
-      "code": "BT",
-      "display": "BT"
+      "code": "studylevel11",
+      "display": "CAP"
     },
     {
-      "code": "BTS",
-      "display": "BTS"
+      "code": "studylevel12",
+      "display": "CEPD + Permis de conduire"
     },
     {
-      "code": "DUT",
-      "display": "DUT"
+      "code": "studylevel13",
+      "display": "CEPE/CEPD"
     },
     {
-      "code": "Licence",
-      "display": "Licence"
+      "code": "studylevel14",
+      "display": "Certificat d’Etudes Spécialisées (CES)"
     },
     {
-      "code": "Maîtrise",
-      "display": "Maîtrise"
+      "code": "studylevel15",
+      "display": "CFA"
     },
     {
-      "code": "Ingénieur",
-      "display": "Ingénieur"
+      "code": "studylevel16",
+      "display": "DECOGEF"
     },
     {
-      "code": "Master",
-      "display": "Master"
+      "code": "studylevel17",
+      "display": "DESCOGEF"
     },
     {
-      "code": "Doctorat",
+      "code": "studylevel18",
+      "display": "Diplôme d’Etat"
+    },
+    {
+      "code": "studylevel19",
+      "display": "Diplôme inter-universitaire (DIU)"
+    },
+    {
+      "code": "studylevel20",
+      "display": "Diplôme d’Etude Universitaire Générale (DEUG)"
+    },
+    {
+      "code": "studylevel21",
+      "display": "Diplôme d’Etudes Approfondies (DEA)"
+    },
+    {
+      "code": "studylevel22",
+      "display": "Diplôme d’Etudes Spécialisées (DES)"
+    },
+    {
+      "code": "studylevel23",
+      "display": "Diplôme d’Etudes Supérieures Spécialisées (DESS)"
+    },
+    {
+      "code": "studylevel24",
+      "display": "Diplôme de Formation Médicale Spécialisée (DFMS)"
+    },
+    {
+      "code": "studylevel25",
+      "display": "Diplôme de Formation Médicale Spécialisée Approfondie (DFMSA)"
+    },
+    {
+      "code": "studylevel26",
+      "display": "Diplôme de Technicien Supérieur (DTS)"
+    },
+    {
+      "code": "studylevel27",
+      "display": "Diplôme Universitaire de Technologie (DUT)"
+    },
+    {
+      "code": "studylevel28",
       "display": "Doctorat"
     },
     {
-      "code": "DES",
-      "display": "DES"
+      "code": "studylevel29",
+      "display": "Doctorat + Agrégation"
     },
     {
-      "code": "Doctoratspécialisation",
-      "display": "Doctorat + spécialisation"
+      "code": "studylevel30",
+      "display": "Doctorat + Certificat d’Etudes Spécialisées (CES)"
     },
     {
-      "code": "Doctoratagrégation",
-      "display": "Doctorat + agrégation"
+      "code": "studylevel31",
+      "display": "Doctorat + Diplôme d’Etudes Spécialisées (DES)"
+    },
+    {
+      "code": "studylevel32",
+      "display": "ENA Cycle I"
+    },
+    {
+      "code": "studylevel33",
+      "display": "ENA Cycle II"
+    },
+    {
+      "code": "studylevel34",
+      "display": "ENA Cycle III"
+    },
+    {
+      "code": "studylevel35",
+      "display": "Ingénieur"
+    },
+    {
+      "code": "studylevel36",
+      "display": "Licence (classique)"
+    },
+    {
+      "code": "studylevel37",
+      "display": "Licence LMD"
+    },
+    {
+      "code": "studylevel38",
+      "display": "Licence Professionnelle"
+    },
+    {
+      "code": "studylevel39",
+      "display": "Maîtrise (classique)"
+    },
+    {
+      "code": "studylevel40",
+      "display": "Master Professionnel"
+    },
+    {
+      "code": "studylevel41",
+      "display": "Master Recherche"
+    },
+    {
+      "code": "studylevel42",
+      "display": "MBA"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 21
+  "count": 42
 }

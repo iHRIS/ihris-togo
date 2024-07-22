@@ -1,0 +1,58 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "AttachmentTypeCodeSystem",
+  "id": "attachment-type-codesystem",
+  "title": "Attachment Type Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/attachment-type-codesystem",
+  "concept": [
+    {
+      "code": "naissance",
+      "display": "Acte de naissance"
+    },
+    {
+      "code": "nationalité",
+      "display": "Nationalité"
+    },
+    {
+      "code": "diplomes",
+      "display": "Diplômes"
+    },
+    {
+      "code": "cv",
+      "display": "Curriculum vitae"
+    },
+    {
+      "code": "portaffectation",
+      "display": "Arrêté/note de service portant affectation"
+    },
+    {
+      "code": "marriage",
+      "display": "Certificat de mariage"
+    },
+    {
+      "code": "appointmentorder",
+      "display": "Arrêté portant nomination"
+    },
+    {
+      "code": "tenureorder",
+      "display": "Arrêté portant titularisation"
+    },
+    {
+      "code": "commcertificate",
+      "display": "Attestation de prise de service"
+    },
+    {
+      "code": "regcertificate",
+      "display": "Attestation d’inscription à l’Ordre ou à la Corporation d’appartenance"
+    },
+    {
+      "code": "other",
+      "display": "Autres"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 11
+}

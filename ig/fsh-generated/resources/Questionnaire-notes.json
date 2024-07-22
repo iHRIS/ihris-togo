@@ -26,7 +26,13 @@
           "text": "Date Added",
           "type": "date",
           "required": true,
-          "repeats": false
+          "repeats": false,
+          "code": [
+            {
+              "system": "default-eval",
+              "code": "date.now"
+            }
+          ]
         },
         {
           "linkId": "Basic.extension[1]#text",

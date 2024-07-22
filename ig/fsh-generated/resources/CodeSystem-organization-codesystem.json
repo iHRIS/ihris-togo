@@ -1,0 +1,62 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "OrganizationCodeSystem",
+  "id": "organization-codesystem",
+  "title": "Organization Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/organization-codesystem",
+  "concept": [
+    {
+      "code": "AMPHEALTH",
+      "display": "AMP HEALTH"
+    },
+    {
+      "code": "ONG",
+      "display": "ONG"
+    },
+    {
+      "code": "DAHW",
+      "display": "DAHW"
+    },
+    {
+      "code": "FONDSMONDIAL",
+      "display": "FONDS MONDIAL"
+    },
+    {
+      "code": "GIZ",
+      "display": "GIZ"
+    },
+    {
+      "code": "PEPFAR",
+      "display": "PEPFAR"
+    },
+    {
+      "code": "PNLS",
+      "display": "PNLS"
+    },
+    {
+      "code": "SANTEINTEGREE",
+      "display": "SANTE INTEGREE"
+    },
+    {
+      "code": "UNFPA",
+      "display": "UNFPA"
+    },
+    {
+      "code": "UNICEF",
+      "display": "UNICEF"
+    },
+    {
+      "code": "USAID",
+      "display": "USAID"
+    },
+    {
+      "code": "Autres",
+      "display": "Autres"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 12
+}

@@ -1,6 +1,6 @@
-Profile:        BWPersonUser
+Profile:        TGOPersonUser
 Parent:         Person
-Id:             bw-person-user
+Id:             tgo-person-user
 Title:          "System User"
 Description:    "iHRIS profile of the Person resource to manage user access."
 * active 1..1 MS
@@ -134,9 +134,9 @@ Description:    "iHRIS user Location extension for local users."
 * valueReference.reference ^label = "Location/Facility"
 
 Instance: ihris-user-admin
-InstanceOf: BWPersonUser
+InstanceOf: TGOPersonUser
 Usage: #example
-* meta.profile = "http://ihris.org/fhir/StructureDefinition/bw-person-user"
+* meta.profile = "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
 * extension[0].url = "http://ihris.org/fhir/StructureDefinition/ihris-password"
 * extension[=].extension[0].url = "password"
 * extension[=].extension[=].valueString = "0da67ef3726a1e0adfbd3c3880c00f33167daeab1f8c728e10b547d382c2b91a96402958209d6af3c947ae9ab53d879dddb79ad046454ade2b12257fe792f8fa"
@@ -153,7 +153,7 @@ Usage: #example
 Instance: ihris-user-loggedout
 InstanceOf: Person
 Usage: #example
-* meta.profile = "http://ihris.org/fhir/StructureDefinition/bw-person-user"
+* meta.profile = "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
 * extension.url = "http://ihris.org/fhir/StructureDefinition/ihris-assign-role"
 * extension.valueReference = Reference(Basic/ihris-role-open)
 * name.use = #official
@@ -164,7 +164,7 @@ Usage: #example
 Instance: ihris-user-demo
 InstanceOf: Person
 Usage: #example
-* meta.profile = "http://ihris.org/fhir/StructureDefinition/bw-person-user"
+* meta.profile = "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
 * extension[0].url = "http://ihris.org/fhir/StructureDefinition/ihris-password"
 * extension[=].extension[0].url = "password"
 * extension[=].extension[=].valueString = "0da67ef3726a1e0adfbd3c3880c00f33167daeab1f8c728e10b547d382c2b91a96402958209d6af3c947ae9ab53d879dddb79ad046454ade2b12257fe792f8fa"
@@ -182,7 +182,7 @@ InstanceOf:     IhrisPage
 Title:          "User"
 Usage:          #example
 * code = IhrisResourceCodeSystem#page
-* extension[display].extension[resource].valueReference = Reference(StructureDefinition/bw-person-user)
+* extension[display].extension[resource].valueReference = Reference(StructureDefinition/tgo-person-user)
 * extension[display].extension[link][0].extension[field].valueString = "Person.id"
 * extension[display].extension[link][0].extension[text].valueString = "Edit User"
 * extension[display].extension[link][0].extension[button].valueBoolean = true
@@ -226,7 +226,7 @@ Usage:          #definition
 * purpose = "Workflow page for recording a user's information."
 
 * item[0].linkId = "Person"
-* item[0].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user"
+* item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
 * item[0].text = "User"
 * item[0].type = #group
 * item[0].extension[constraint].extension[key].valueId = "ihris-password-check"
@@ -235,7 +235,7 @@ Usage:          #definition
 * item[0].extension[constraint].extension[human].valueString = "Please make sure Password and Confrim Password Match."
 
 * item[0].item[0].linkId = "Person.name[0].text"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.name.text"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.text"
 * item[0].item[0].text = "Name"
 * item[0].item[0].type = #string
 * item[0].item[0].required = true
@@ -246,7 +246,7 @@ Usage:          #definition
 * item[0].item[0].extension[constraint].extension[human].valueString = "Name must be only text."
 
 * item[0].item[1].linkId = "Person.name[0].use"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.name.use"
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.use"
 * item[0].item[1].text = "Use"
 * item[0].item[1].type = #choice
 * item[0].item[1].required = true
@@ -256,7 +256,7 @@ Usage:          #definition
 * item[0].item[1].answerOption.initialSelected = true
 
 * item[0].item[2].linkId = "Person.telecom[0].system"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.telecom.system"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.telecom.system"
 * item[0].item[2].text = "Telecom System"
 * item[0].item[2].type = #choice
 * item[0].item[2].required = true
@@ -266,7 +266,7 @@ Usage:          #definition
 * item[0].item[2].answerOption.initialSelected = true
 
 * item[0].item[3].linkId = "Person.telecom[0].value"
-* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.telecom.value"
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.telecom.value"
 * item[0].item[3].text = "Email"
 * item[0].item[3].type = #string
 * item[0].item[3].required = true
@@ -276,15 +276,15 @@ Usage:          #definition
 * item[0].item[3].extension[constraint].extension[expression].valueString = "matches('^[0-9a-zA-Z_.]+@([0-9a-zA-Z]+[.])+[a-zA-Z]{2,4}$')"
 * item[0].item[3].extension[constraint].extension[human].valueString = "Email Address is not properly formatted."
 
-* item[0].item[4].linkId = "Person.extension[0]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:role.value[x]:valueReference"
+* item[0].item[4].linkId = "Person.extension[0]#preloaded"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:role.value[x]:valueReference"
 * item[0].item[4].text = "Role"
 * item[0].item[4].type = #reference
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
 * item[0].item[5].linkId = "Person.extension[1]"
-* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:practitioner.value[x]:valueReference"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:practitioner.value[x]:valueReference"
 * item[0].item[5].text = "Practitioner of this account"
 * item[0].item[5].type = #reference
 * item[0].item[5].required = false
@@ -296,15 +296,15 @@ Usage:          #definition
 * item[0].item[6].required = true
 * item[0].item[6].repeats = false
 
-* item[0].item[7].linkId = "Person.extension[2]"
-* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:location.value[x]:valueReference"
+* item[0].item[7].linkId = "Person.extension[2]#tree"
+* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:location.value[x]:valueReference"
 * item[0].item[7].text = "Location"
 * item[0].item[7].type = #reference
 * item[0].item[7].required = false
 * item[0].item[7].repeats = false
 
 * item[0].item[8].linkId = "Person.active"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.active"
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.active"
 * item[0].item[8].text = "Active?"
 * item[0].item[8].type = #boolean
 * item[0].item[8].required = true
@@ -318,14 +318,14 @@ Usage:          #definition
 * item[0].item[9].repeats = false
 
 * item[0].item[10].linkId = "Person.extension[3]#password"
-* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:initial-password.value[x]:valueString"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:initial-password.value[x]:valueString"
 * item[0].item[10].text = "Password"
 * item[0].item[10].type = #string
 * item[0].item[10].required = false
 * item[0].item[10].repeats = false
 
 * item[0].item[11].linkId = "Person.extension[4]#password"
-* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:confirm-initial-password.value[x]:valueString"
+* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:confirm-initial-password.value[x]:valueString"
 * item[0].item[11].text = "Confirm Password"
 * item[0].item[11].type = #string
 * item[0].item[11].required = false
@@ -345,7 +345,7 @@ Usage:          #definition
 
 * item[0].linkId = "Person"
 * item[0].text = "Change Password"
-* item[0].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.id"
+* item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.id"
 * item[0].type = #group
 * item[0].extension[constraint][0].extension[key].valueId = "ihris-password-check"
 * item[0].extension[constraint][0].extension[severity].valueCode = #error
@@ -358,14 +358,14 @@ Usage:          #definition
 
 * item[0].item[0].linkId = "Person.extension[0]#password"
 * item[0].item[0].text = "Old Password"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:old-password.value[x]:valueString"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:old-password.value[x]:valueString"
 * item[0].item[0].type = #string
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
 * item[0].item[1].linkId = "Person.extension[1]#password"
 * item[0].item[1].text = "Password"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:initial-password.value[x]:valueString"
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:initial-password.value[x]:valueString"
 * item[0].item[1].type = #string
 * item[0].item[1].required = true
 * item[0].item[1].repeats = false
@@ -376,7 +376,7 @@ Usage:          #definition
 
 * item[0].item[2].linkId = "Person.extension[2]#password"
 * item[0].item[2].text = "Confirm Password"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:confirm-initial-password.value[x]:valueString"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:confirm-initial-password.value[x]:valueString"
 * item[0].item[2].type = #string
 * item[0].item[2].required = true
 * item[0].item[2].repeats = false

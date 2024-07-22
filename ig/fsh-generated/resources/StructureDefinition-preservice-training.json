@@ -381,7 +381,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -404,9 +404,9 @@
         ]
       },
       {
-        "id": "Extension.extension:sector.value[x]:valueString",
+        "id": "Extension.extension:sector.value[x]:valueCoding",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valueString",
+        "sliceName": "valueCoding",
         "label": "Sector",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -419,7 +419,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -434,6 +434,10 @@
         ],
         "isModifier": false,
         "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+        },
         "mapping": [
           {
             "identity": "rim",
@@ -3926,16 +3930,20 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "Coding"
           }
         ]
       },
       {
-        "id": "Extension.extension:sector.valueString",
-        "path": "Extension.extension.valueString",
+        "id": "Extension.extension:sector.valueCoding",
+        "path": "Extension.extension.valueCoding",
         "label": "Sector",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+        }
       },
       {
         "id": "Extension.extension:institution",

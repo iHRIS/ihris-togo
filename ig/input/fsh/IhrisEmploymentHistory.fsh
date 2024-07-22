@@ -11,8 +11,10 @@ Description:    "iHRIS Profile of the Basic resource for Work Experience."
 * extension[employmentHistory].extension[institution-type] ^label = "Institution Type"
 * extension[employmentHistory].extension[organization].valueString 1..1 MS
 * extension[employmentHistory].extension[organization] ^label = "Organization Name"
-* extension[employmentHistory].extension[ministry].valueCoding 1..1 MS
+* extension[employmentHistory].extension[ministry].valueString 1..1 MS
 * extension[employmentHistory].extension[ministry] ^label = "Ministry"
+* extension[employmentHistory].extension[institution].valueString 1..1 MS
+* extension[employmentHistory].extension[institution] ^label = "Establishment/Company/Institution"
 * extension[employmentHistory].extension[country].valueCoding MS
 * extension[employmentHistory].extension[country] ^label = "Country"
 * extension[employmentHistory].extension[job].valueString MS
@@ -36,6 +38,7 @@ Title:          "Work Experience details"
 * extension contains
     institution-type 1..1 and
     organization 1..1 MS and
+    institution 1..1 MS and
     ministry 1..1 MS and
     country 1..1 MS and
     job 1..1 MS and
@@ -50,9 +53,10 @@ Title:          "Work Experience details"
 * extension[institution-type].valueCoding from InstitutionTypeValueSet (required)
 * extension[organization].value[x] only string
 * extension[organization].valueString ^label = "Organization Name"
-* extension[ministry].value[x] only Coding
-* extension[ministry].valueCoding ^label = "Ministry"
-* extension[ministry].valueCoding from MinistryValueSet (required)
+* extension[ministry].value[x] only string
+* extension[ministry].valueString ^label = "Ministry"
+* extension[institution].value[x] only string
+* extension[institution].valueString ^label = "Establishment/Company/Institution"
 * extension[country].value[x] only Coding
 * extension[country].valueCoding ^label = "Country"
 * extension[country].valueCoding from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
@@ -113,10 +117,9 @@ Usage:          #definition
 * item[0].item[0].item[1].enableWhen[0].answerCoding = institution-type-codesystem#organization
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:ministry.value[x]:valueCoding"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:ministry.value[x]:valueString"
 * item[0].item[0].item[2].text = "Ministry"
-* item[0].item[0].item[2].type = #choice
-* item[0].item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/ministry-valueset"
+* item[0].item[0].item[2].type = #string
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 * item[0].item[0].item[2].enableWhen[0].question = "Basic.extension[0].extension[0]"
@@ -124,62 +127,72 @@ Usage:          #definition
 * item[0].item[0].item[2].enableWhen[0].answerCoding = institution-type-codesystem#ministry
 
 * item[0].item[0].item[3].linkId = "Basic.extension[0].extension[3]"
-* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding"
-* item[0].item[0].item[3].text = "Country"
-* item[0].item[0].item[3].type = #choice
-* item[0].item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
+* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:institution.value[x]:valueString"
+* item[0].item[0].item[3].text = "Establishment/Company/Institution"
+* item[0].item[0].item[3].type = #string
 * item[0].item[0].item[3].required = true
 * item[0].item[0].item[3].repeats = false
+* item[0].item[0].item[3].enableWhen[0].question = "Basic.extension[0].extension[0]"
+* item[0].item[0].item[3].enableWhen[0].operator = #=
+* item[0].item[0].item[3].enableWhen[0].answerCoding = institution-type-codesystem#institution
 
 * item[0].item[0].item[4].linkId = "Basic.extension[0].extension[4]"
-* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job.value[x]:valueString"
-* item[0].item[0].item[4].text = "Function/Job Title"
-* item[0].item[0].item[4].type = #string
+* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding"
+* item[0].item[0].item[4].text = "Country"
+* item[0].item[0].item[4].type = #choice
+* item[0].item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
 * item[0].item[0].item[4].required = true
 * item[0].item[0].item[4].repeats = false
 
 * item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
-* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job-description.value[x]:valueString"
-* item[0].item[0].item[5].text = "Job Description"
+* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job.value[x]:valueString"
+* item[0].item[0].item[5].text = "Function/Job Title"
 * item[0].item[0].item[5].type = #string
-* item[0].item[0].item[5].required = false
+* item[0].item[0].item[5].required = true
 * item[0].item[0].item[5].repeats = false
 
-* item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]#year"
-* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:start-year.value[x]:valueDate"
-* item[0].item[0].item[6].text = "Start Year"
-* item[0].item[0].item[6].type = #date
+* item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]#text"
+* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job-description.value[x]:valueString"
+* item[0].item[0].item[6].text = "Job Description"
+* item[0].item[0].item[6].type = #string
 * item[0].item[0].item[6].required = false
 * item[0].item[0].item[6].repeats = false
 
 * item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]#year"
-* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:end-year.value[x]:valueDate"
-* item[0].item[0].item[7].text = "End Year"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:start-year.value[x]:valueDate"
+* item[0].item[0].item[7].text = "Start Year"
 * item[0].item[0].item[7].type = #date
 * item[0].item[0].item[7].required = false
 * item[0].item[0].item[7].repeats = false
 
-* item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]#text"
-* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:reason-leaving.value[x]:valueString"
-* item[0].item[0].item[8].text = "Reason For Leaving"
-* item[0].item[0].item[8].type = #string
+* item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]#year"
+* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:end-year.value[x]:valueDate"
+* item[0].item[0].item[8].text = "End Year"
+* item[0].item[0].item[8].type = #date
 * item[0].item[0].item[8].required = false
 * item[0].item[0].item[8].repeats = false
 
-* item[0].item[0].item[9].linkId = "Basic.extension[0].extension[9]"
-* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding"
-* item[0].item[0].item[9].text = "Service"
-* item[0].item[0].item[9].type = #choice
-* item[0].item[0].item[9].answerValueSet = "http://hl7.org/fhir/ValueSet/service-valueset"
+* item[0].item[0].item[9].linkId = "Basic.extension[0].extension[9]#text"
+* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:reason-leaving.value[x]:valueString"
+* item[0].item[0].item[9].text = "Reason For Leaving"
+* item[0].item[0].item[9].type = #string
 * item[0].item[0].item[9].required = false
 * item[0].item[0].item[9].repeats = false
 
-* item[0].item[0].item[10].linkId = "Basic.extension[0].extension[10]#tree"
-* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:location.value[x]:valueReference"
-* item[0].item[0].item[10].text = "Location"
-* item[0].item[0].item[10].type = #reference
+* item[0].item[0].item[10].linkId = "Basic.extension[0].extension[10]"
+* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding"
+* item[0].item[0].item[10].text = "Service"
+* item[0].item[0].item[10].type = #choice
+* item[0].item[0].item[10].answerValueSet = "http://hl7.org/fhir/ValueSet/service-valueset"
 * item[0].item[0].item[10].required = false
 * item[0].item[0].item[10].repeats = false
+
+* item[0].item[0].item[11].linkId = "Basic.extension[0].extension[11]#tree"
+* item[0].item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:location.value[x]:valueReference"
+* item[0].item[0].item[11].text = "Location"
+* item[0].item[0].item[11].type = #reference
+* item[0].item[0].item[11].required = false
+* item[0].item[0].item[11].repeats = false
 
 Instance:       ihris-page-employment-history
 InstanceOf:     IhrisPage
@@ -192,6 +205,12 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-account-arrow-right"
 * extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/practitioner/FIELD"
+* extension[display].extension[link][1].extension[field].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+* extension[display].extension[link][1].extension[text].valueString = "Add Another"
+* extension[display].extension[link][1].extension[button].valueBoolean = true
+* extension[display].extension[link][1].extension[icon].valueString = "mdi-account-arrow-right"
+* extension[display].extension[link][1].extension[url].valueUrl = "/questionnaire/ihris-employment-history/employment-history?practitioner=FIELD"
+* extension[display].extension[link][1].extension[task].valueId = "ihris-task-add-employment"
 * extension[display].extension[search][0].valueString = "Organization|extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='organization').valueString"
 * extension[display].extension[search][1].valueString = "Starting Position|extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='startingPosition').valueString"
 * extension[display].extension[field][0].extension[path].valueString = "Basic.extension:practitioner.value[x]:valueReference"
@@ -203,11 +222,12 @@ Usage:          #example
 * extension[section][0].extension[field][1].valueString = "Basic.extension:employmentHistory.extension:institution-type"
 * extension[section][0].extension[field][2].valueString = "Basic.extension:employmentHistory.extension:organization"
 * extension[section][0].extension[field][3].valueString = "Basic.extension:employmentHistory.extension:ministry"
-* extension[section][0].extension[field][4].valueString = "Basic.extension:employmentHistory.extension:country"
-* extension[section][0].extension[field][5].valueString = "Basic.extension:employmentHistory.extension:job"
-* extension[section][0].extension[field][6].valueString = "Basic.extension:employmentHistory.extension:job-description"
-* extension[section][0].extension[field][7].valueString = "Basic.extension:employmentHistory.extension:start-year"
-* extension[section][0].extension[field][8].valueString = "Basic.extension:employmentHistory.extension:end-year"
-* extension[section][0].extension[field][9].valueString = "Basic.extension:employmentHistory.extension:reason-leaving"
-* extension[section][0].extension[field][10].valueString = "Basic.extension:employmentHistory.extension:service"
-* extension[section][0].extension[field][11].valueString = "Basic.extension:employmentHistory.extension:location"
+* extension[section][0].extension[field][4].valueString = "Basic.extension:employmentHistory.extension:institution"
+* extension[section][0].extension[field][5].valueString = "Basic.extension:employmentHistory.extension:country"
+* extension[section][0].extension[field][6].valueString = "Basic.extension:employmentHistory.extension:job"
+* extension[section][0].extension[field][7].valueString = "Basic.extension:employmentHistory.extension:job-description"
+* extension[section][0].extension[field][8].valueString = "Basic.extension:employmentHistory.extension:start-year"
+* extension[section][0].extension[field][9].valueString = "Basic.extension:employmentHistory.extension:end-year"
+* extension[section][0].extension[field][10].valueString = "Basic.extension:employmentHistory.extension:reason-leaving"
+* extension[section][0].extension[field][11].valueString = "Basic.extension:employmentHistory.extension:service"
+* extension[section][0].extension[field][12].valueString = "Basic.extension:employmentHistory.extension:location"

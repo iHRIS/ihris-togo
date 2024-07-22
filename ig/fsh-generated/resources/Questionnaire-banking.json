@@ -32,14 +32,6 @@
             },
             {
               "linkId": "Basic.extension[0].extension[1]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:branch.value[x]:valueString",
-              "text": "Branch Name",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[2]",
               "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-number.value[x]:valueString",
               "text": "Account Number",
               "type": "string",
@@ -47,7 +39,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[3]",
+              "linkId": "Basic.extension[0].extension[2]",
               "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-name.value[x]:valueString",
               "text": "Account Name",
               "type": "string",
@@ -55,10 +47,11 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[4]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-type.value[x]:valueString",
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-type.value[x]:valueCoding",
               "text": "Account Type",
-              "type": "string",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/account-type-valueset",
               "required": false,
               "repeats": false
             }

@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "ihris-search-profession-parent",
+  "url": "http://ihris.org/fhir/SearchParameter/ihris-search-profession-parent",
+  "description": "search parameter for profession parent",
+  "name": "search parameter for profession parent",
+  "status": "active",
+  "experimental": false,
+  "code": "professionparent",
+  "base": [
+    "Basic"
+  ],
+  "type": "reference",
+  "expression": "Basic.extension('http://ihris.org/fhir/StructureDefinition/profession-parent')",
+  "target": [
+    "Basic"
+  ]
+}

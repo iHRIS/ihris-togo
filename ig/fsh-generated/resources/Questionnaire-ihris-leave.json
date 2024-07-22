@@ -36,7 +36,25 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[1]",
+              "linkId": "Basic.extension[0].extension[1]#text",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:reason.value[x]:valueString",
+              "text": "Reason",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "permission",
+                    "system": "http://ihris.org/fhir/CodeSystem/ihris-leave-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:start-date.value[x]:valueDate",
               "text": "Start Date",
               "type": "date",
@@ -44,7 +62,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[2]",
+              "linkId": "Basic.extension[0].extension[3]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:end-date.value[x]:valueDate",
               "text": "End Date",
               "type": "date",
@@ -52,31 +70,31 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[3]",
+              "linkId": "Basic.extension[0].extension[4]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:dateRequested.value[x]:valueDate",
               "text": "Date Requested",
               "type": "date",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[4]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-reference.value[x]:valueString",
-              "text": "Reference of the Leave Order",
-              "type": "string",
-              "required": true,
+              "required": false,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[5]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-sign-date.value[x]:valueDate",
-              "text": "Date of signing of the order",
-              "type": "date",
-              "required": true,
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-reference.value[x]:valueString",
+              "text": "Reference of the Leave Order",
+              "type": "string",
+              "required": false,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[6]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-order-sign-date.value[x]:valueDate",
+              "text": "Date of signing of the order",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[7]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-termination-date.value[x]:valueDate",
               "text": "Effective Termination Date",
               "type": "date",
@@ -84,7 +102,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[7]",
+              "linkId": "Basic.extension[0].extension[8]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:effective-resumption-date.value[x]:valueDate",
               "text": "Effective Resumption Date",
               "type": "date",

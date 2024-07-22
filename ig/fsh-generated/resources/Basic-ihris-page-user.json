@@ -21,7 +21,7 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "StructureDefinition/bw-person-user"
+            "reference": "StructureDefinition/tgo-person-user"
           }
         },
         {

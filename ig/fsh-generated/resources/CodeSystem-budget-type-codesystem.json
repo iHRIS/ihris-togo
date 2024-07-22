@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BudgetTypeCodeSystem",
+  "id": "budget-type-codesystem",
+  "title": "Budget Type Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/budget-type-codesystem",
+  "concept": [
+    {
+      "code": "BG",
+      "display": "Budget Général (BG)"
+    },
+    {
+      "code": "FAT",
+      "display": "Budget des FAT (FAT)"
+    },
+    {
+      "code": "BA",
+      "display": "Budget autonome (BA)"
+    },
+    {
+      "code": "BU",
+      "display": "Budget des Universités"
+    },
+    {
+      "code": "COGES",
+      "display": "Comité de gestion (COGES)"
+    },
+    {
+      "code": "ANVT",
+      "display": "Agence nationale du volontariat au Togo (ANVT)"
+    },
+    {
+      "code": "BDCL",
+      "display": "Budget des collectivités locales"
+    },
+    {
+      "code": "PTF",
+      "display": "Partenaires techniques et financiers (PTF)"
+    },
+    {
+      "code": "ONG",
+      "display": "ONG et associations"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 9
+}

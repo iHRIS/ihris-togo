@@ -2,10 +2,17 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "IhrisSalarySource",
+  "name": "IhrisSalarySourceCodeSystem",
   "id": "ihris-salary-source-codesystem",
-  "title": "Salary Source",
+  "title": "iHRIS Salary Source Code System",
   "version": "0.1.0",
   "url": "http://ihris.org/fhir/CodeSystem/ihris-salary-source-codesystem",
-  "date": "2020-10-20T08:41:04.362Z"
+  "concept": [
+    {
+      "code": "active",
+      "display": "Autorisation spéciale d'absence"
+    }
+  ],
+  "date": "2020-10-20T08:41:04.362Z",
+  "count": 1
 }

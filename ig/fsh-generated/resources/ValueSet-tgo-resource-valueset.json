@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TGOResourceValueSet",
+  "id": "tgo-resource-valueset",
+  "title": "Value Set for iHRIS Botswana Basic Resources.",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/tgo-resource-valueset",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/tgo-resource-codesystem"
+      }
+    ]
+  }
+}

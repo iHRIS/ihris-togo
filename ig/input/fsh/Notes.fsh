@@ -55,6 +55,8 @@ Usage:          #definition
 * item[0].item[0].type = #date
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
+* item[0].item[0].code[0].system = "default-eval"
+* item[0].item[0].code[0].code = #date.now
 
 * item[0].item[1].linkId = "Basic.extension[1]#text"
 * item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/notes-profile#Basic.extension:note.value[x]:valueString"

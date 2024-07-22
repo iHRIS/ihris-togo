@@ -23,47 +23,33 @@
           "item": [
             {
               "linkId": "Basic.extension[0].extension[0]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:sector.value[x]:valueString",
-              "text": "Sector",
-              "type": "string",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:completed.value[x]:valueCoding",
+              "text": "Training Completed",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[1]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:institution.value[x]:valueString",
-              "text": "Institution Name",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:reason.value[x]:valueString",
+              "text": "Reason",
               "type": "string",
               "required": true,
-              "repeats": false
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "no",
+                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
+                  }
+                }
+              ]
             },
             {
-              "linkId": "Basic.extension[0].extension[2]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:country.value[x]:valueCoding",
-              "text": "Country of training",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/country-valueset",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[3]#year",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:start-year.value[x]:valueDate",
-              "text": "Year of training start",
-              "type": "date",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[4]#year",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:end-year.value[x]:valueDate",
-              "text": "Year of training end",
-              "type": "date",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[5]#preloaded",
+              "linkId": "Basic.extension[0].extension[2]#preloaded",
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueReference",
               "text": "Diploma",
               "type": "reference",
@@ -71,7 +57,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[6]",
+              "linkId": "Basic.extension[0].extension[3]",
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree-name.value[x]:valueString",
               "text": "Diploma Name",
               "type": "string",
@@ -79,25 +65,16 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[7]",
+              "linkId": "Basic.extension[0].extension[4]",
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialized.value[x]:valueCoding",
               "text": "Specialized",
               "type": "choice",
               "answerValueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset",
               "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[8]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialization.value[x]:valueCoding",
-              "text": "Specialization",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
-              "required": false,
               "repeats": false,
               "enableWhen": [
                 {
-                  "question": "Basic.extension[0].extension[7]",
+                  "question": "Basic.extension[0].extension[0]",
                   "operator": "=",
                   "answerCoding": {
                     "code": "yes",
@@ -107,57 +84,77 @@
               ]
             },
             {
-              "linkId": "Basic.extension[0].extension[9]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-mode.value[x]:valueCoding",
-              "text": "Training Mode",
+              "linkId": "Basic.extension[0].extension[5]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialization.value[x]:valueCoding",
+              "text": "Specialization",
               "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/training-mode-valueset",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
               "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[10]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-fund.value[x]:valueCoding",
-              "text": "Funding",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/training-fund-valueset",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[11]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-fund-other.value[x]:valueString",
-              "text": "Other Funding",
-              "type": "string",
-              "required": true,
               "repeats": false,
               "enableWhen": [
                 {
-                  "question": "Basic.extension[0].extension[10]",
+                  "question": "Basic.extension[0].extension[4]",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "other",
-                    "system": "http://ihris.org/fhir/CodeSystem/training-fund-codesystem"
+                    "code": "yes",
+                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
                   }
                 }
               ]
             },
             {
-              "linkId": "Basic.extension[0].extension[12]",
+              "linkId": "Basic.extension[0].extension[6]",
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:observation.value[x]:valueString",
               "text": "Observation",
               "type": "string",
               "required": false,
-              "repeats": false
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "yes",
+                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
+                  }
+                }
+              ]
             },
             {
-              "linkId": "Basic.extension[0].extension[13]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:completed.value[x]:valueCoding",
-              "text": "Training Completed",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset",
+              "linkId": "Basic.extension[0].extension[7]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-date.value[x]:valueDate",
+              "text": "Service Resumption Date",
+              "type": "date",
               "required": true,
-              "repeats": false
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "yes",
+                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[8]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-reference.value[x]:valueString",
+              "text": "Service Resumption Reference",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "yes",
+                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
+                  }
+                }
+              ]
             }
           ]
         }

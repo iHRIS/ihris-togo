@@ -150,10 +150,6 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:banking.extension:branch"
-        },
-        {
-          "url": "field",
           "valueString": "Basic.extension:banking.extension:account-number"
         },
         {

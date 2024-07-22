@@ -34,8 +34,8 @@ Title:          "Discipline details"
     actionTaken 1..1 MS and
     act-reference 1..1 MS and
     givenBy 1..1 MS and
-    start-date 1..1 MS and
-    end-date 1..1 MS and
+    start-date 0..1 MS and
+    end-date 0..1 MS and
     patterns 1..1 MS
 * extension[actionType].value[x] only Coding
 * extension[actionType].valueCoding 1..1 MS
@@ -128,14 +128,14 @@ Usage:          #definition
 * item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:start-date.value[x]:valueDate"
 * item[0].item[0].item[5].text = "Effective Start date"
 * item[0].item[0].item[5].type = #date
-* item[0].item[0].item[5].required = true
+* item[0].item[0].item[5].required = false
 * item[0].item[0].item[5].repeats = false
 
 * item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]"
 * item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:end-date.value[x]:valueDate"
 * item[0].item[0].item[6].text = "Effective End Date"
 * item[0].item[0].item[6].type = #date
-* item[0].item[0].item[6].required = true
+* item[0].item[0].item[6].required = false
 * item[0].item[0].item[6].repeats = false
 
 * item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"

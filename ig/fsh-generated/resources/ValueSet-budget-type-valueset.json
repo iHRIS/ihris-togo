@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BudgetTypeValueSet",
+  "id": "budget-type-valueset",
+  "title": "Budget Type ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/budget-type-valueset",
+  "date": "2024-02-02T08:14:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/budget-type-codesystem"
+      }
+    ]
+  }
+}

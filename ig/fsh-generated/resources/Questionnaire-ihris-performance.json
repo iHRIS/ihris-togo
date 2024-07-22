@@ -47,51 +47,34 @@
             },
             {
               "linkId": "Basic.extension[0].extension[3]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:general-knowledge.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:general-knowledge.value[x]:valueDecimal",
               "text": "Criteria 1: General Knowledge /5",
-              "type": "integer",
+              "type": "decimal",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[4]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:professional-culture.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:professional-culture.value[x]:valueDecimal",
               "text": "Criteria 2: Professional Culture /5",
-              "type": "integer",
+              "type": "decimal",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[5]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:effectiveness.value[x]:valueInteger",
-              "text": "Criteria 3: Effectiveness in carrying out duties/5",
-              "type": "integer",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:discipline.value[x]:valueDecimal",
+              "text": "Criteria 3: discipline in carrying out duties/5",
+              "type": "decimal",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[6]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:aptitude.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:aptitude.value[x]:valueDecimal",
               "text": "Criteria 4: Aptitude for command functions /5",
-              "type": "integer",
+              "type": "decimal",
               "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[7]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:manner.value[x]:valueInteger",
-              "text": "Criteria 4: Manner of carrying out its functions /5",
-              "type": "integer",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[8]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:score.value[x]:valueCoding",
-              "text": "Score Attained",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
-              "required": true,
               "repeats": false
             }
           ]

@@ -1,0 +1,92 @@
+{
+  "resourceType": "Basic",
+  "id": "ihris-page-salary-index",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-page"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "page",
+        "system": "http://ihris.org/fhir/CodeSystem/ihris-resource-codesystem"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-display",
+      "extension": [
+        {
+          "url": "resource",
+          "valueReference": {
+            "reference": "StructureDefinition/salary-index-profile"
+          }
+        },
+        {
+          "url": "search",
+          "valueString": "Name|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-basic-name').valueString"
+        },
+        {
+          "url": "search",
+          "valueString": "Civil Servant Category|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/category-parent').valueReference"
+        },
+        {
+          "extension": [
+            {
+              "url": "url",
+              "valueUrl": "/resource/view/salary-index/FIELD?edit=true"
+            },
+            {
+              "url": "field",
+              "valueString": "Basic.id"
+            },
+            {
+              "url": "text",
+              "valueString": "Edit"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-pencil"
+            },
+            {
+              "url": "class",
+              "valueString": "primary"
+            }
+          ],
+          "url": "link"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Salary Index"
+        },
+        {
+          "url": "description",
+          "valueString": "Salary Index"
+        },
+        {
+          "url": "name",
+          "valueString": "Salary Index"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:name"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:category-parent"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    }
+  ]
+}

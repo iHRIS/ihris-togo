@@ -16,14 +16,21 @@ const inserviceTrainingRequestWorkflow = {
             reference: 'Practitioner/' + req.query.practitioner
           }
         })
+        let startDate = bundle.entry[0].resource.extension.find((ext) => {
+          return ext.url === "http://ihris.org/fhir/StructureDefinition/training-start-date"
+        }).valueDate
+        let endYear = bundle.entry[0].resource.extension.find((ext) => {
+          return ext.url === "http://ihris.org/fhir/StructureDefinition/training-end-year"
+        }).valueDate
+        endYear += "-12-31"
+        if(moment(startDate).isAfter(endYear)) {
+          return reject({message: "La date de début de la formation doit être inférieure à l'année de fin de la formation"})
+        }
         let serviceEndDate = bundle.entry[0].resource.extension.find((ext) => {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/service-end-date"
         })?.valueDate
-        let serviceResumptionDate = bundle.entry[0].resource.extension.find((ext) => {
-          return ext.url === "http://ihris.org/fhir/StructureDefinition/service-resumption-date"
-        })?.valueDate
-        if(serviceResumptionDate && serviceEndDate && moment(serviceEndDate).isAfter(serviceResumptionDate)) {
-          return reject({message: "La date de reprise du service doit être après la date de fin du service"})
+        if(serviceEndDate && moment(serviceEndDate).isAfter(startDate)) {
+          return reject({message: "La date de début de la formation doit être supérieure à la date de fin de service"})
         }
         return resolve(bundle)
       })

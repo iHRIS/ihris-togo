@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "ihris-search-category-parent",
+  "url": "http://ihris.org/fhir/SearchParameter/ihris-search-profession-parent",
+  "description": "search parameter for category-parent",
+  "name": "search parameter for category-parent",
+  "status": "active",
+  "experimental": false,
+  "code": "categoryparent",
+  "base": [
+    "Basic"
+  ],
+  "type": "reference",
+  "expression": "Basic.extension('http://ihris.org/fhir/StructureDefinition/category-parent')",
+  "target": [
+    "Basic"
+  ]
+}

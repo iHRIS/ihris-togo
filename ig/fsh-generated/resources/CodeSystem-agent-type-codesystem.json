@@ -17,26 +17,18 @@
       "display": "Fonctionnaire Stagiaire"
     },
     {
-      "code": "politicalpersonality",
-      "display": "Personnalité Politique"
-    },
-    {
       "code": "contractual",
       "display": "Contractuel"
     },
     {
-      "code": "costreccontr",
-      "display": "Contractuel sur recouvrement de coût"
+      "code": "hospitalcontractual",
+      "display": "Contractuel des Hôpitaux"
     },
     {
       "code": "contractualpartners",
       "display": "Contractuel des Partenaires"
-    },
-    {
-      "code": "other",
-      "display": "Autres"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 7
+  "count": 5
 }

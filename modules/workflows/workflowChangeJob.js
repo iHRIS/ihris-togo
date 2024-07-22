@@ -15,13 +15,15 @@ const workflowChangeJob = {
         }).then((response) => {
           if(response.entry.length) {
             let prevRole = response.entry[0].resource
+            prevRole.active = false
             let currentRole = bundle.entry.find((entry) => {
               return entry.resource.resourceType === "PractitionerRole"
             })
+            currentRole.resource.active = true
             if(moment(prevRole.period.start).isAfter(currentRole.resource.period.start)) {
               return reject({message: "La date de début du rôle actuel doit être après la date de début du rôle précédent"})
             }
-            prevRole.period.end = currentRole.resource.period.start
+            prevRole.period.end = moment(currentRole.resource.period.start).subtract(1, 'days').format("YYYY-MM-DD")
             let departureDetails = bundle.entry.find((entry) => {
               return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/role-departure-profile")
             })

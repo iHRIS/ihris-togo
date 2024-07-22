@@ -21,7 +21,68 @@
       "type": "group",
       "item": [
         {
-          "linkId": "Basic.extension[0]",
+          "linkId": "Basic.extension[0]#tree",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:salary-index-reference.value[x]:valueReference",
+          "text": "Salary Index",
+          "type": "reference",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:bonus.value[x]:valueInteger",
+          "text": "Bonus",
+          "type": "integer",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:deduction.value[x]:valueInteger",
+          "text": "Deductions",
+          "type": "integer",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:agent-type.value[x]:valueCoding",
+          "text": "Agent Type",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-type-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:budget-type.value[x]:valueCoding",
+          "text": "Budget Type",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/budget-type-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:organization.value[x]:valueCoding",
+          "text": "Organization",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/organization-valueset",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[3]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "contractualpartners",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-type-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Basic.extension[6]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:grade.value[x]:valueCoding",
           "text": "Grade",
           "type": "choice",
@@ -30,83 +91,10 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-category.value[x]:valueCoding",
-          "text": "Classification Category",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/classification-category-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding",
-          "text": "Civil Servant Category",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset",
-          "required": true,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic.extension[1]",
-              "operator": "=",
-              "answerCoding": {
-                "code": "civilservant",
-                "system": "http://ihris.org/fhir/CodeSystem/classification-category-codesystem"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "Basic.extension[3]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:contractual-category.value[x]:valueCoding",
-          "text": "Cantractual Category",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/contractual-category-valueset",
-          "required": true,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic.extension[1]",
-              "operator": "=",
-              "answerCoding": {
-                "code": "contract",
-                "system": "http://ihris.org/fhir/CodeSystem/classification-category-codesystem"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "Basic.extension[4]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-class.value[x]:valueCoding",
-          "text": "Class",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/classification-class-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[5]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:echelon.value[x]:valueCoding",
-          "text": "Echelon",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/echelon-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[6]",
+          "linkId": "Basic.extension[7]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:date-last-admin-situation.value[x]:valueDate",
           "text": "Date of last Administrative situation",
           "type": "date",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[7]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString",
-          "text": "Reference Echelon",
-          "type": "string",
           "required": false,
           "repeats": false
         }

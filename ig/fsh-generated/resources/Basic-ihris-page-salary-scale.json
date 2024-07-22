@@ -21,7 +21,7 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "CodeSystem/ihris-salary-grade"
+            "reference": "CodeSystem/ihris-salary-scale-codesystem"
           }
         },
         {
@@ -31,19 +31,6 @@
         {
           "url": "search",
           "valueString": "Display|display"
-        },
-        {
-          "extension": [
-            {
-              "url": "path",
-              "valueString": "CodeSystem.code"
-            },
-            {
-              "url": "readOnlyIfSet",
-              "valueBoolean": true
-            }
-          ],
-          "url": "field"
         }
       ]
     },

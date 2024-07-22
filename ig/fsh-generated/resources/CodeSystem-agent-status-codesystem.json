@@ -1,0 +1,82 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "AgentStatusCodeSystem",
+  "id": "agent-status-codesystem",
+  "title": "Agent Status Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem",
+  "concept": [
+    {
+      "code": "active",
+      "display": "Activité"
+    },
+    {
+      "code": "abandon",
+      "display": "Abandon de poste"
+    },
+    {
+      "code": "agentstatus1",
+      "display": "Autorisation spéciale d'absence"
+    },
+    {
+      "code": "agentstatus2",
+      "display": "Congé administratif/payé"
+    },
+    {
+      "code": "agentstatus3",
+      "display": "Congé de formation"
+    },
+    {
+      "code": "agentstatus4",
+      "display": "Congé de maladie"
+    },
+    {
+      "code": "agentstatus5",
+      "display": "Congé de maternité"
+    },
+    {
+      "code": "agentstatus6",
+      "display": "Congé de paternité"
+    },
+    {
+      "code": "agentstatus7",
+      "display": "Déplacement d'office"
+    },
+    {
+      "code": "agentstatus8",
+      "display": "Détachement"
+    },
+    {
+      "code": "agentstatus9",
+      "display": "Disponibilité"
+    },
+    {
+      "code": "agentstatus10",
+      "display": "Exclusion temporaire de fonction"
+    },
+    {
+      "code": "agentstatus11",
+      "display": "Hors cadre"
+    },
+    {
+      "code": "agentstatus12",
+      "display": "Maintien par ordre sans affectation"
+    },
+    {
+      "code": "agentstatus13",
+      "display": "Mise à disposition"
+    },
+    {
+      "code": "agentstatus14",
+      "display": "Mise à pied"
+    },
+    {
+      "code": "agentstatus15",
+      "display": "Suspension temporaire de fonction"
+    }
+  ],
+  "date": "2020-10-20T08:41:04.362Z",
+  "count": 17
+}

@@ -13,18 +13,70 @@
       "display": "Avertissement"
     },
     {
-      "code": "blame",
-      "display": "Blâme"
+      "code": "blameavec",
+      "display": "Blame avec inscription au dossier"
     },
     {
-      "code": "layoff",
-      "display": "Mise à pied"
+      "code": "blamesans",
+      "display": "Blame sans inscription au dossier"
+    },
+    {
+      "code": "déplacement",
+      "display": "Déplacement d'office"
+    },
+    {
+      "code": "disaction1",
+      "display": "Mise à pied de 3 jours"
+    },
+    {
+      "code": "disaction2",
+      "display": "Mise à pied de 15 jours"
+    },
+    {
+      "code": "disaction3",
+      "display": "Mise à pied de 1 mois"
+    },
+    {
+      "code": "disaction4",
+      "display": "Suspension des fonctions avec suspension de traitement pour une durée maximum de 03 mois"
+    },
+    {
+      "code": "disaction5",
+      "display": "Radiation d'avancement d'échelon"
+    },
+    {
+      "code": "disaction6",
+      "display": "Radiation du tableau d'avancement"
+    },
+    {
+      "code": "disaction7",
+      "display": "Exclusion temporaire des fonctions avec suspension du traitement pour une durée n'excédant pas 03 mois"
+    },
+    {
+      "code": "disaction8",
+      "display": "Abaissement d'échelon"
+    },
+    {
+      "code": "disaction9",
+      "display": "Rétrogradation ou l'abaissement de classe"
+    },
+    {
+      "code": "disaction10",
+      "display": "Rétrogradation ou l'abaissement de classe"
+    },
+    {
+      "code": "disaction11",
+      "display": "Révocation sans suspension des droits à pension"
+    },
+    {
+      "code": "disaction12",
+      "display": "Révocation avec suspension des droits à pension"
     },
     {
       "code": "other",
-      "display": "Autres à preciser"
+      "display": "Autres"
     }
   ],
   "date": "2020-11-10T08:41:04.362Z",
-  "count": 4
+  "count": 17
 }

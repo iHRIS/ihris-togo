@@ -2,6 +2,7 @@ const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
 const moment = require("moment")
+const utils = require("../utils")
 
 const performanceWorkflow = {
   process: ( req ) => {
@@ -34,29 +35,46 @@ const performanceWorkflow = {
         let professionalCulture  = performance.extension.find((ext) => {
           return ext.url === "professional-culture"
         })
-        let effectiveness  = performance.extension.find((ext) => {
-          return ext.url === "effectiveness"
+        let discipline  = performance.extension.find((ext) => {
+          return ext.url === "discipline"
         })
         let aptitude  = performance.extension.find((ext) => {
           return ext.url === "aptitude"
         })
-        let manner  = performance.extension.find((ext) => {
-          return ext.url === "manner"
+        let score = 0
+        if(generalKnowledge && generalKnowledge.valueDecimal) {
+          if(generalKnowledge.valueDecimal > 5) {
+            return reject({message: "Connaissance Professionnelle et Culture Générale doit etre inferieur ou egale a 5"})
+          }
+          score += parseFloat(generalKnowledge.valueDecimal)
+        }
+        if(professionalCulture && professionalCulture.valueDecimal) {
+          if(professionalCulture.valueDecimal > 5) {
+            return reject({message: "Aptitude au Commandement, Sens de la Hierarchie doit etre inferieur ou egale a 5"})
+          }
+          score += parseFloat(professionalCulture.valueDecimal)
+        }
+        if(discipline && discipline.valueDecimal) {
+          if(discipline.valueDecimal > 5) {
+            return reject({message: "Conduite et Discipline doit etre inferieur ou egale a 5"})
+          }
+          score += parseFloat(discipline.valueDecimal)
+        }
+        if(aptitude && aptitude.valueDecimal) {
+          if(aptitude.valueDecimal > 5) {
+            return reject({message: "Sens du Bien Public doit etre inferieur ou egale a 5"})
+          }
+          score += parseFloat(aptitude.valueDecimal)
+        }
+        let scoreindex = performance.extension.findIndex((ext) => {
+          return ext.url === "score"
         })
-        if(generalKnowledge && generalKnowledge.valueInteger && (generalKnowledge.valueInteger < 0 || generalKnowledge.valueInteger > 5)) {
-          return reject({message: "Les connaissances générales doivent être comprises entre 0 et 5"})
+        if(scoreindex === -1) {
+          scoreindex = performance.extension.length
         }
-        if(professionalCulture && professionalCulture.valueInteger && (professionalCulture.valueInteger < 0 || professionalCulture.valueInteger > 5)) {
-          return reject({message: "La culture professionnelle doit être comprise entre 0 et 5"})
-        }
-        if(effectiveness && effectiveness.valueInteger && (effectiveness.valueInteger < 0 || effectiveness.valueInteger > 5)) {
-          return reject({message: "L'efficacité dans l'exercice des fonctions doit être comprise entre 0 et 5"})
-        }
-        if(aptitude && aptitude.valueInteger && (aptitude.valueInteger < 0 || aptitude.valueInteger > 5)) {
-          return reject({message: "L'aptitude aux fonctions de commandement doit être comprise entre 0 et 5"})
-        }
-        if(manner && manner.valueInteger && (manner.valueInteger < 0 || manner.valueInteger > 5)) {
-          return reject({message: "La manière d'exercer ses fonctions doit être comprise entre 0 et 5"})
+        performance.extension[scoreindex] = {
+          url: "score",
+          valueDecimal: score
         }
         return resolve(bundle)
       })

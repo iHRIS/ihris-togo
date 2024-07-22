@@ -116,7 +116,11 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:salary.extension:period.value[x]:valuePeriod"
+          "valueString": "Basic.extension:salary.extension:start-date.value[x]:valueDate"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:salary.extension:end-date.value[x]:valueDate"
         },
         {
           "url": "field",

@@ -21,29 +21,49 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "CodeSystem/qualification-codesystem"
+            "reference": "StructureDefinition/qualification-profile"
           }
         },
         {
           "url": "search",
-          "valueString": "Display|display"
+          "valueString": "Name|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-basic-name').valueString"
         },
         {
           "url": "search",
-          "valueString": "Code|code"
+          "valueString": "Profession Sub-Group|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/profession-parent').valueReference"
+        },
+        {
+          "url": "filter",
+          "valueString": "Name|name:contains"
         },
         {
           "extension": [
             {
-              "url": "path",
-              "valueString": "CodeSystem.code"
+              "url": "url",
+              "valueUrl": "/resource/view/qualification/FIELD?edit=true"
             },
             {
-              "url": "readOnlyIfSet",
+              "url": "field",
+              "valueString": "Basic.id"
+            },
+            {
+              "url": "text",
+              "valueString": "Edit"
+            },
+            {
+              "url": "button",
               "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-pencil"
+            },
+            {
+              "url": "class",
+              "valueString": "primary"
             }
           ],
-          "url": "field"
+          "url": "link"
         }
       ]
     },
@@ -59,15 +79,15 @@
         },
         {
           "url": "name",
-          "valueString": "CodeSystem"
+          "valueString": "Qualification"
         },
         {
           "url": "field",
-          "valueString": "CodeSystem.display"
+          "valueString": "Basic.extension:name"
         },
         {
           "url": "field",
-          "valueString": "CodeSystem.code"
+          "valueString": "Basic.extension:profession-parent"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

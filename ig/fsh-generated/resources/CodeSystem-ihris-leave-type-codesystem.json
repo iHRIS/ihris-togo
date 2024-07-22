@@ -9,17 +9,37 @@
   "url": "http://ihris.org/fhir/CodeSystem/ihris-leave-type-codesystem",
   "concept": [
     {
-      "code": "annual",
-      "display": "Congé annuel regulier"
+      "code": "absence",
+      "display": "Autorisation spéciale d'absence"
     },
     {
       "code": "sick",
-      "display": "congé maladie"
+      "display": "Congé de maladie"
+    },
+    {
+      "code": "rest",
+      "display": "Repos Médical"
+    },
+    {
+      "code": "permission",
+      "display": "Permission d'absence"
     },
     {
       "code": "maternity",
-      "display": "congé maternité"
+      "display": "Congé de maternité"
+    },
+    {
+      "code": "paternity",
+      "display": "Congé de paternité"
+    },
+    {
+      "code": "administrative",
+      "display": "Congé administratif/payé"
+    },
+    {
+      "code": "convalescence",
+      "display": "Congé de convalescence"
     }
   ],
-  "count": 3
+  "count": 8
 }

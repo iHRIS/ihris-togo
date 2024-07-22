@@ -15,8 +15,12 @@
     {
       "code": "organization",
       "display": "Organisation"
+    },
+    {
+      "code": "institution",
+      "display": "Establishment/Company/Institution"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 2
+  "count": 3
 }

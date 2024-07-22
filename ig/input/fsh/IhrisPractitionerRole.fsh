@@ -37,17 +37,17 @@ Description:    "iHRIS profile of Practitioner Role."
 * practitioner.reference ^label = "Health Worker"
 * practitioner only Reference(IhrisPractitioner)
 * code 1..1 MS
-* code ^label = "Job"
+* code ^label = "Function"
 * code from http://ihris.org/fhir/ValueSet/togo-job-valueset
 * code.coding 1..1 MS
-* code.coding ^label = "Job"
+* code.coding ^label = "Function"
 * specialty 0..* MS
 * specialty ^label = "Specialty"
 * specialty.coding 1..1 MS
 * specialty.coding ^label = "Specialty"
 * location 1..1 MS 
 * location ^label = "Facility"
-* location only Reference(TGORegion or TGODistrict or TGOCommune or TGOFacility)
+* location only Reference(TGORegion or TGODistrict or TGOCommune or TGOFacility or TGODepartment or TGOUnit or TGOProgram)
 * extension contains
     AppointmentDate named appointment-date 1..1 MS and
     AppointmentReference named appointment-reference 1..1 MS and
@@ -55,11 +55,9 @@ Description:    "iHRIS profile of Practitioner Role."
     EffectivePresenceDate named effective-presence-date 0..1 MS and
     EffectivePresenceReference named effective-presence-reference 0..1 MS and
     AssignmentAct named assignment-act 1..1 MS and
-    AgentType named agent-type 1..1 MS and
-    Qualification named qualification 1..1 MS and
-    Function named function 1..1 MS and
+    QualificationReference named qualification 1..1 MS and
+    Service named service 1..1 MS and
     StudyLevel named study-level 1..1 MS and
-    Organization named organization 1..1 MS and
     Specialty named specialty 1..1 MS and
     BonusDate named bonus-date 1..1 MS and
     BonusReference named bonus-reference 1..1 MS and
@@ -67,7 +65,9 @@ Description:    "iHRIS profile of Practitioner Role."
     TenureReference named tenure-reference 1..1 MS and
     IntegrationDate named integration-date 1..1 MS and
     ReferenceIntegrationAct named reference-integration-act 1..1 MS and
-    Comments named comments 0..1 MS
+    Comments named comments 0..1 MS and
+    OtherFunction named other-function 1..* MS and
+    Responsible named responsible 1..1 MS
 * extension[appointment-date] ^label = "Date of Assignment or Appointment"
 * extension[appointment-date].valueDate MS
 * extension[appointment-reference] ^label = "Appointment Reference"
@@ -84,33 +84,28 @@ Description:    "iHRIS profile of Practitioner Role."
 * extension[comments].valueString MS
 * extension[appointment-date].valueDate MS
 * extension[appointment-date] ^label = "Date of Assignment or Appointment"
-* extension[appointment-reference].valueString MS
-* extension[appointment-reference] ^label = "Reference Assignment or Appointment"
 * extension[bonus-date].valueDate MS
 * extension[bonus-date] ^label = "Bonus Date"
 * extension[bonus-reference].valueString MS
 * extension[bonus-reference] ^label = "Bonus Reference"
-* extension[agent-type]  1..1 MS
-* extension[agent-type]  ^label = "Agent Type"
-* extension[agent-type].valueCoding MS
 * extension[qualification]  1..1 MS
 * extension[qualification]  ^label = "Profile/Qualification"
-* extension[qualification].valueCoding MS
-* extension[function]  1..1 MS
-* extension[function]  ^label = "Function"
-* extension[function].valueCoding MS
+* extension[qualification].valueReference MS
+* extension[service]  1..1 MS
+* extension[service]  ^label = "Service"
+* extension[service].valueCoding MS
 * extension[study-level]  1..1 MS
 * extension[study-level]  ^label = "Level of Study"
 * extension[study-level].valueCoding MS
-* extension[organization]  1..1 MS
-* extension[organization]  ^label = "Organization"
-* extension[organization].valueCoding MS
 * extension[specialty]  1..1 MS
 * extension[specialty]  ^label = "Specialty"
 * extension[specialty].valueCoding MS
 * extension[integration-date]  1..1 MS
 * extension[integration-date]  ^label = "Integration Date"
 * extension[integration-date].valueDate MS
+* extension[responsible]  1..1 MS
+* extension[responsible]  ^label = "Responsible"
+* extension[responsible].valueCoding MS
 * extension[reference-integration-act]  1..1 MS
 * extension[reference-integration-act]  ^label = "Reference Integration Act"
 * extension[reference-integration-act].valueString MS
@@ -120,6 +115,12 @@ Description:    "iHRIS profile of Practitioner Role."
 * extension[tenure-reference]  1..1 MS
 * extension[tenure-reference]  ^label = "Reference of the tenure"
 * extension[tenure-reference].valueString MS
+* extension[other-function].extension[job] ^label = "Other Function"
+* extension[other-function].extension[job].valueCoding 1..1 MS
+* extension[other-function].extension[job].valueCoding ^label = "Function"
+* extension[other-function].extension[facility] ^label = "Facility"
+* extension[other-function].extension[facility].valueReference 1..1 MS
+* extension[other-function].extension[facility].valueReference ^label = "Facility"
 
 Profile:        RoleDepartureProfile
 Parent:         IhrisPractitionerBasic
@@ -134,6 +135,62 @@ Description:    "Role Departure Details."
 * extension[departure-date] ^label = "Departure Date"
 * extension[position-departure-reason].valueCoding MS
 * extension[position-departure-reason] ^label = "Reason for Departure"
+
+Profile:        ProfessionGroupProfile
+Parent:         Basic
+Id:             profession-group-profile
+Title:          "Profession Group"
+Description:    "Profession Group."
+* code = TGOResourceCodeSystem#standard-lists
+* extension contains
+    IhrisBasicName named name 1..1 MS
+* extension[name].valueString 1..1 MS
+* extension[name].valueString ^label = "Profession Group"
+
+Profile:        ProfessionSubGroupProfile
+Parent:         Basic
+Id:             profession-subgroup-profile
+Title:          "Profession Sub-Group"
+Description:    "Profession Sub-Group."
+* code = TGOResourceCodeSystem#standard-lists
+* extension contains
+    IhrisBasicName named name 1..1 MS and
+    ProfessionParent named profession-parent 1..1 MS
+* extension[name].valueString 1..1 MS
+* extension[name].valueString ^label = "Profession Sub-Group"
+* extension[profession-parent].valueReference 1..1 MS
+* extension[profession-parent].valueReference ^label = "Profession Group"
+
+Profile:        QualificationProfile
+Parent:         Basic
+Id:             qualification-profile
+Title:          "Qualification"
+Description:    "Qualification."
+* code = TGOResourceCodeSystem#standard-lists
+* extension contains
+    IhrisBasicName named name 1..1 MS and
+    ProfessionParent named profession-parent 1..1 MS
+* extension[name].valueString 1..1 MS
+* extension[name].valueString ^label = "Qualification"
+* extension[profession-parent].valueReference 1..1 MS
+* extension[profession-parent].valueReference ^label = "Profession Sub-Group"
+
+Extension:      ProfessionParent
+Id:             profession-parent
+Title:          "Profession Parent"
+Description:    "Profession Parent."
+* ^context[0].type = #element
+* ^context[0].expression = "Basic"
+* value[x] only Reference(ProfessionGroupProfile or ProfessionSubGroupProfile)
+* valueReference 1..1 MS
+* valueReference ^label = "Profession Parent"
+
+Extension:      QualificationReference
+Id:             qualification-reference
+Title:          "Qualification"
+* value[x] only Reference 
+* valueReference only Reference(QualificationProfile)
+* valueReference ^label = "Qualification"
 
 Extension:      PractitionerRoleReference
 Id:             practitioner-role-reference
@@ -165,6 +222,17 @@ Description:    "iHRIS extension for Job Description Position Status."
 * valueCoding ^label = "Position Status"
 * valueCoding from IhrisPositionStatusValueSet (required)
 
+Extension:      Responsible
+Id:             responsable
+Title:          "iHRIS Responsable"
+Description:    "iHRIS Responsible."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only Coding
+* valueCoding 1..1 MS
+* valueCoding ^label = "Responsible"
+* valueCoding from YesNoValueSet (required)
+
 CodeSystem:      IhrisPositionStatusCodeSystem
 Id:              ihris-position-status
 Title:           "Position Status"
@@ -192,26 +260,17 @@ Description:    "Departure Reason."
 * valueCoding ^label = "Departure Reason"
 * valueCoding from PositionDepartureReasonValueSet (required)
 
-CodeSystem:      PositionDepartureReasonCodeSystem
-Id:              position-departure-reason-codesystem
-Title:           "Reason For Change/Departure"
-* ^date = "2020-11-14T08:41:04.362Z"
-* ^version = "0.3.0"
-* #transfer "Transfer" "Transfer"
-* #death "Death" "death"
-* #redeployment  "Redeployment" "Redeployment"
-* #earlyRetirement "Early Retirement" "Early Retirement"
-* #mandatoryRetirement "Mandatory Retirement" "Mandatory Retirement"
-* #resignation "Resignation" "Resignation"
-* #health "Health Related" "Health Related"
-* #quit "Quit" "Quit"
-
-ValueSet:         PositionDepartureReasonValueSet
-Id:               position-departure-reason-valueset
-Title:            "iHRIS Reason Departure ValueSet"
-* ^date = "2020-11-14T08:41:04.362Z"
-* ^version = "0.3.0"
-* codes from system PositionDepartureReasonCodeSystem
+Extension:      OtherFunction
+Id:             other-function
+Title:          "Other Function"
+* extension contains
+      job 1..1 MS and
+      facility 1..1 MS
+* extension[job].value[x] only Coding
+* extension[job].valueCoding ^label = "Job"
+* extension[job].valueCoding from http://ihris.org/fhir/ValueSet/togo-job-valueset (required)
+* extension[facility].value[x] only Reference(TGORegion or TGODistrict or TGOCommune or TGOFacility or TGODepartment or TGOUnit or TGOProgram)
+* extension[facility].valueReference ^label = "Facility"
 
 Extension:      IhrisPractitionerRoleJobType
 Id:             ihris-practitionerrole-job-type
@@ -481,24 +540,7 @@ Usage:          #example
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 * extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
 
-Instance:       ihris-page-salary-scale
-InstanceOf:     IhrisPage
-Title:          "iHRIS Salary Scale CodeSystem Page"
-Usage:          #example
-* code = IhrisResourceCodeSystem#page
-* extension[display].extension[resource].valueReference = Reference(CodeSystem/ihris-salary-grade)
-* extension[display].extension[search][0].valueString = "Code|code"
-* extension[display].extension[search][1].valueString = "Display|display"
-* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
-* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
-* extension[section][0].extension[title].valueString = "Salary Scale"
-* extension[section][0].extension[description].valueString = "Salary Scale"
-* extension[section][0].extension[name].valueString = "CodeSystem"
-* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
-* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
-* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
-
-Instance:       ihris-page-reason-departure
+Instance:       ihris-page-reason-departureFunction
 InstanceOf:     IhrisPage
 Title:          "iHRIS Reason for Departure CodeSystem Page"
 Usage:          #example
@@ -540,45 +582,32 @@ Usage:          #definition
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
-// * item[0].item[1].linkId = "PractitionerRole.extension[0]"
-// * item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:function.value[x]:valueCoding"
-// * item[0].item[1].text = "Function"
-// * item[0].item[1].type = #choice
-// * item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/function-valueset"
-// * item[0].item[1].required = true
-// * item[0].item[1].repeats = false
-
 * item[0].item[1].linkId = "PractitionerRole.extension[0]"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
-* item[0].item[1].text = "Date of Assignment or Appointment"
-* item[0].item[1].type = #date
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:responsible.value[x]:valueCoding"
+* item[0].item[1].text = "Responsible"
+* item[0].item[1].type = #choice
+* item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
 * item[0].item[1].required = true
 * item[0].item[1].repeats = false
 
 * item[0].item[2].linkId = "PractitionerRole.extension[1]"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:agent-type.value[x]:valueCoding"
-* item[0].item[2].text = "Agent Type"
-* item[0].item[2].type = #choice
-* item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-type-valueset"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
+* item[0].item[2].text = "Date of Assignment or Appointment"
+* item[0].item[2].type = #date
 * item[0].item[2].required = true
 * item[0].item[2].repeats = false
 
 * item[0].item[3].linkId = "PractitionerRole.extension[2]"
-* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:organization.value[x]:valueCoding"
-* item[0].item[3].text = "Organization"
-* item[0].item[3].type = #choice
-* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/organization-valueset"
-* item[0].item[3].required = true
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString"
+* item[0].item[3].text = "Appointment Reference"
+* item[0].item[3].type = #string
+* item[0].item[3].required = false
 * item[0].item[3].repeats = false
-* item[0].item[3].enableWhen[0].question = "PractitionerRole.extension[1]"
-* item[0].item[3].enableWhen[0].operator = #=
-* item[0].item[3].enableWhen[0].answerCoding = agent-type-codesystem#contractualpartners
 
 * item[0].item[4].linkId = "PractitionerRole.extension[3]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:qualification.value[x]:valueCoding"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:qualification.value[x]:valueReference"
 * item[0].item[4].text = "Profile/Qualification"
-* item[0].item[4].type = #choice
-* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/qualification-valueset"
+* item[0].item[4].type = #reference
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
@@ -616,7 +645,7 @@ Usage:          #definition
 * item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start"
 * item[0].item[9].text = "Service Start Date"
 * item[0].item[9].type = #date
-* item[0].item[9].required = false
+* item[0].item[9].required = true
 * item[0].item[9].repeats = false
 
 * item[0].item[10].linkId = "PractitionerRole.period.end"
@@ -669,32 +698,62 @@ Usage:          #definition
 * item[0].item[16].repeats = false
 
 * item[0].item[17].linkId = "PractitionerRole.extension[13]"
-* item[0].item[17].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-date.value[x]:valueDate"
-* item[0].item[17].text = "Date of Tenure"
-* item[0].item[17].type = #date
-* item[0].item[17].required = false
+* item[0].item[17].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service.value[x]:valueCoding"
+* item[0].item[17].text = "Service"
+* item[0].item[17].type = #choice
+* item[0].item[17].answerValueSet = "http://ihris.org/fhir/ValueSet/service-valueset"
+* item[0].item[17].required = true
 * item[0].item[17].repeats = false
 
 * item[0].item[18].linkId = "PractitionerRole.extension[14]"
-* item[0].item[18].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-reference.value[x]:valueString"
-* item[0].item[18].text = "Reference of the Tenure"
-* item[0].item[18].type = #string
+* item[0].item[18].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-date.value[x]:valueDate"
+* item[0].item[18].text = "Date of Tenure"
+* item[0].item[18].type = #date
 * item[0].item[18].required = false
 * item[0].item[18].repeats = false
 
 * item[0].item[19].linkId = "PractitionerRole.extension[15]"
-* item[0].item[19].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:integration-date.value[x]:valueDate"
-* item[0].item[19].text = "Integration Date"
-* item[0].item[19].type = #date
-* item[0].item[19].required = true
+* item[0].item[19].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-reference.value[x]:valueString"
+* item[0].item[19].text = "Reference of the Tenure"
+* item[0].item[19].type = #string
+* item[0].item[19].required = false
 * item[0].item[19].repeats = false
 
 * item[0].item[20].linkId = "PractitionerRole.extension[16]"
-* item[0].item[20].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:reference-integration-act.value[x]:valueString"
-* item[0].item[20].text = "Reference Act of Integration"
-* item[0].item[20].type = #string
-* item[0].item[20].required = true
+* item[0].item[20].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:integration-date.value[x]:valueDate"
+* item[0].item[20].text = "Integration Date"
+* item[0].item[20].type = #date
+* item[0].item[20].required = false
 * item[0].item[20].repeats = false
+
+* item[0].item[21].linkId = "PractitionerRole.extension[17]"
+* item[0].item[21].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:reference-integration-act.value[x]:valueString"
+* item[0].item[21].text = "Reference Act of Integration"
+* item[0].item[21].type = #string
+* item[0].item[21].required = false
+* item[0].item[21].repeats = false
+
+* item[0].item[22].linkId = "PractitionerRole.extension[18]"
+* item[0].item[22].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function"
+* item[0].item[22].text = "Other Function"
+* item[0].item[22].type = #group
+* item[0].item[22].required = false
+* item[0].item[22].repeats = true
+
+* item[0].item[22].item[0].linkId = "PractitionerRole.extension[18].extension[0]"
+* item[0].item[22].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function.extension:job.value[x]:valueCoding"
+* item[0].item[22].item[0].text = "Function"
+* item[0].item[22].item[0].type = #choice
+* item[0].item[22].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/togo-job-valueset"
+* item[0].item[22].item[0].required = true
+* item[0].item[22].item[0].repeats = false
+
+* item[0].item[22].item[1].linkId = "PractitionerRole.extension[18].extension[1]#tree"
+* item[0].item[22].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function.extension:facility.value[x]:valueReference"
+* item[0].item[22].item[1].text = "Facility"
+* item[0].item[22].item[1].type = #reference
+* item[0].item[22].item[1].required = true
+* item[0].item[22].item[1].repeats = false
 
 Instance:       ChangeJob
 InstanceOf:     IhrisQuestionnaire
@@ -721,45 +780,32 @@ Usage:          #definition
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
-// * item[0].item[1].linkId = "PractitionerRole.extension[0]"
-// * item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:function.value[x]:valueCoding"
-// * item[0].item[1].text = "Function"
-// * item[0].item[1].type = #choice
-// * item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/function-valueset"
-// * item[0].item[1].required = true
-// * item[0].item[1].repeats = false
-
 * item[0].item[1].linkId = "PractitionerRole.extension[0]"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
-* item[0].item[1].text = "Date of Assignment or Appointment"
-* item[0].item[1].type = #date
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:responsible.value[x]:valueCoding"
+* item[0].item[1].text = "Responsible"
+* item[0].item[1].type = #choice
+* item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
 * item[0].item[1].required = true
 * item[0].item[1].repeats = false
 
 * item[0].item[2].linkId = "PractitionerRole.extension[1]"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:agent-type.value[x]:valueCoding"
-* item[0].item[2].text = "Agent Type"
-* item[0].item[2].type = #choice
-* item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-type-valueset"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
+* item[0].item[2].text = "Date of Assignment or Appointment"
+* item[0].item[2].type = #date
 * item[0].item[2].required = true
 * item[0].item[2].repeats = false
 
 * item[0].item[3].linkId = "PractitionerRole.extension[2]"
-* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:organization.value[x]:valueCoding"
-* item[0].item[3].text = "Organization"
-* item[0].item[3].type = #choice
-* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/organization-valueset"
-* item[0].item[3].required = true
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString"
+* item[0].item[3].text = "Appointment Reference"
+* item[0].item[3].type = #string
+* item[0].item[3].required = false
 * item[0].item[3].repeats = false
-* item[0].item[3].enableWhen[0].question = "PractitionerRole.extension[1]"
-* item[0].item[3].enableWhen[0].operator = #=
-* item[0].item[3].enableWhen[0].answerCoding = agent-type-codesystem#contractualpartners
 
 * item[0].item[4].linkId = "PractitionerRole.extension[3]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:qualification.value[x]:valueCoding"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:qualification.value[x]:valueReference"
 * item[0].item[4].text = "Profile/Qualification"
-* item[0].item[4].type = #choice
-* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/qualification-valueset"
+* item[0].item[4].type = #reference
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
@@ -850,32 +896,62 @@ Usage:          #definition
 * item[0].item[16].repeats = false
 
 * item[0].item[17].linkId = "PractitionerRole.extension[13]"
-* item[0].item[17].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-date.value[x]:valueDate"
-* item[0].item[17].text = "Date of Tenure"
-* item[0].item[17].type = #date
-* item[0].item[17].required = false
+* item[0].item[17].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service.value[x]:valueCoding"
+* item[0].item[17].text = "Service"
+* item[0].item[17].type = #choice
+* item[0].item[17].answerValueSet = "http://ihris.org/fhir/ValueSet/service-valueset"
+* item[0].item[17].required = true
 * item[0].item[17].repeats = false
 
 * item[0].item[18].linkId = "PractitionerRole.extension[14]"
-* item[0].item[18].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-reference.value[x]:valueString"
-* item[0].item[18].text = "Reference of the Tenure"
-* item[0].item[18].type = #string
+* item[0].item[18].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-date.value[x]:valueDate"
+* item[0].item[18].text = "Date of Tenure"
+* item[0].item[18].type = #date
 * item[0].item[18].required = false
 * item[0].item[18].repeats = false
 
 * item[0].item[19].linkId = "PractitionerRole.extension[15]"
-* item[0].item[19].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:integration-date.value[x]:valueDate"
-* item[0].item[19].text = "Integration Date"
-* item[0].item[19].type = #date
-* item[0].item[19].required = true
+* item[0].item[19].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:tenure-reference.value[x]:valueString"
+* item[0].item[19].text = "Reference of the Tenure"
+* item[0].item[19].type = #string
+* item[0].item[19].required = false
 * item[0].item[19].repeats = false
 
 * item[0].item[20].linkId = "PractitionerRole.extension[16]"
-* item[0].item[20].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:reference-integration-act.value[x]:valueString"
-* item[0].item[20].text = "Reference Act of Integration"
-* item[0].item[20].type = #string
-* item[0].item[20].required = true
+* item[0].item[20].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:integration-date.value[x]:valueDate"
+* item[0].item[20].text = "Integration Date"
+* item[0].item[20].type = #date
+* item[0].item[20].required = false
 * item[0].item[20].repeats = false
+
+* item[0].item[21].linkId = "PractitionerRole.extension[17]"
+* item[0].item[21].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:reference-integration-act.value[x]:valueString"
+* item[0].item[21].text = "Reference Act of Integration"
+* item[0].item[21].type = #string
+* item[0].item[21].required = false
+* item[0].item[21].repeats = false
+
+* item[0].item[22].linkId = "PractitionerRole.extension[18]"
+* item[0].item[22].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function"
+* item[0].item[22].text = "Other Function"
+* item[0].item[22].type = #group
+* item[0].item[22].required = false
+* item[0].item[22].repeats = true
+
+* item[0].item[22].item[0].linkId = "PractitionerRole.extension[18].extension[0]"
+* item[0].item[22].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function.extension:job.value[x]:valueCoding"
+* item[0].item[22].item[0].text = "Function"
+* item[0].item[22].item[0].type = #choice
+* item[0].item[22].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/togo-job-valueset"
+* item[0].item[22].item[0].required = true
+* item[0].item[22].item[0].repeats = false
+
+* item[0].item[22].item[1].linkId = "PractitionerRole.extension[18].extension[1]#tree"
+* item[0].item[22].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:other-function.extension:facility.value[x]:valueReference"
+* item[0].item[22].item[1].text = "Facility"
+* item[0].item[22].item[1].type = #reference
+* item[0].item[22].item[1].required = true
+* item[0].item[22].item[1].repeats = false
 
 * item[1].linkId = "Basic[0]"
 * item[1].definition = "http://ihris.org/fhir/StructureDefinition/role-departure-profile"
@@ -951,3 +1027,18 @@ Usage: #definition
 * xpath = "f:Basic/f:extension[@url='http://ihris.org/fhir/StructureDefinition/practitioner-role-reference']"
 * xpathUsage = #normal
 * target = #PractitionerRole
+
+Instance:       ihris-search-profession-parent
+InstanceOf:     SearchParameter
+Title:          "search parameter for profession parent"
+Usage:          #definition
+* url = "http://ihris.org/fhir/SearchParameter/ihris-search-profession-parent"
+* description = "search parameter for profession parent"
+* name = "search parameter for profession parent"
+* status = #active
+* experimental = false
+* code = #professionparent
+* base[0] = #Basic
+* type = #reference
+* expression = "Basic.extension('http://ihris.org/fhir/StructureDefinition/profession-parent')"
+* target[0] = #Basic

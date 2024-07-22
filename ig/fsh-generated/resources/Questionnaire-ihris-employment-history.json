@@ -55,10 +55,9 @@
             },
             {
               "linkId": "Basic.extension[0].extension[2]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:ministry.value[x]:valueCoding",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:ministry.value[x]:valueString",
               "text": "Ministry",
-              "type": "choice",
-              "answerValueSet": "http://ihris.org/fhir/ValueSet/ministry-valueset",
+              "type": "string",
               "required": true,
               "repeats": false,
               "enableWhen": [
@@ -74,6 +73,24 @@
             },
             {
               "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:institution.value[x]:valueString",
+              "text": "Establishment/Company/Institution",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "institution",
+                    "system": "http://ihris.org/fhir/CodeSystem/institution-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding",
               "text": "Country",
               "type": "choice",
@@ -82,7 +99,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[4]",
+              "linkId": "Basic.extension[0].extension[5]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job.value[x]:valueString",
               "text": "Function/Job Title",
               "type": "string",
@@ -90,7 +107,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[5]",
+              "linkId": "Basic.extension[0].extension[6]#text",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:job-description.value[x]:valueString",
               "text": "Job Description",
               "type": "string",
@@ -98,7 +115,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[6]#year",
+              "linkId": "Basic.extension[0].extension[7]#year",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:start-year.value[x]:valueDate",
               "text": "Start Year",
               "type": "date",
@@ -106,7 +123,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[7]#year",
+              "linkId": "Basic.extension[0].extension[8]#year",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:end-year.value[x]:valueDate",
               "text": "End Year",
               "type": "date",
@@ -114,7 +131,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[8]#text",
+              "linkId": "Basic.extension[0].extension[9]#text",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:reason-leaving.value[x]:valueString",
               "text": "Reason For Leaving",
               "type": "string",
@@ -122,7 +139,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[9]",
+              "linkId": "Basic.extension[0].extension[10]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:service.value[x]:valueCoding",
               "text": "Service",
               "type": "choice",
@@ -131,7 +148,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[10]#tree",
+              "linkId": "Basic.extension[0].extension[11]#tree",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:location.value[x]:valueReference",
               "text": "Location",
               "type": "reference",

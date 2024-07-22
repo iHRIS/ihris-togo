@@ -28,6 +28,18 @@ const leaveWorkflow = {
         if(startDate && endDate && moment(startDate.valueDate).isAfter(endDate.valueDate)) {
           return reject({message: "La date de fin doit être après la date de début"})
         }
+        let type = leave.extension.find((ext) => {
+          return ext.url === 'leave-type'
+        })?.valueCoding?.code
+        let dateRequested = leave.extension.find((ext) => {
+          return ext.url === "dateRequested"
+        })?.valueDate
+        let orderSignDate = leave.extension.find((ext) => {
+          return ext.url === "leave-order-sign-date"
+        })?.valueDate
+        let orderRef = leave.extension.find((ext) => {
+          return ext.url === "leave-order-reference"
+        })?.valueString
         let terminationDate = leave.extension.find((ext) => {
           return ext.url === "effective-termination-date"
         })
@@ -36,6 +48,18 @@ const leaveWorkflow = {
         })
         if(terminationDate && resumptionDate && moment(terminationDate.valueDate).isAfter(resumptionDate.valueDate)) {
           return reject({message: "La date de reprise effective doit être après la date de cessation effective"})
+        }
+        console.log(type);
+        if(type !== 'sick') {
+          if(!orderSignDate) {
+            return reject({message: "La date de signature de l'acte est Obligatoire"})
+          }
+          if(!dateRequested) {
+            return reject({message: "La date de demande est obligatoire"})
+          }
+          if(!orderRef) {
+            return reject({message: "La référence de l'acte de congés est obligatoire"})
+          }
         }
         return resolve(bundle)
       })

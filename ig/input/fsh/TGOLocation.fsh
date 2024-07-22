@@ -95,6 +95,129 @@ Description:    "Facility Sector."
 * valueCoding ^label = "Sector"
 * valueCoding from http://ihris.org/fhir/ValueSet/facility-sector-valueset (required)
 
+Profile:        TGODepartment
+Parent:         Location
+Id:             tgo-department
+Title:          "Department"
+Description:    "Profile of Locations to manage department."
+* identifier 0..1 MS
+* identifier ^label = "Identifier"
+* identifier.value MS
+* identifier.value ^label = "Department Code"
+* name 1..1 MS
+* name ^label = "Name"
+* status 1..1 MS
+* status ^label = "Status"
+* partOf 1..1 MS 
+* partOf only Reference(TGOFacility)
+* partOf ^label = "Location"
+
+Profile:        TGOUnit
+Parent:         Location
+Id:             tgo-unit
+Title:          "Unit"
+Description:    "Profile of Locations to manage unit."
+* identifier 0..1 MS
+* identifier ^label = "Identifier"
+* identifier.value MS
+* identifier.value ^label = "Unit Code"
+* name 1..1 MS
+* name ^label = "Name"
+* status 1..1 MS
+* status ^label = "Status"
+* partOf 1..1 MS 
+* partOf only Reference(TGODepartment)
+* partOf ^label = "Location"
+
+Profile:        TGOProgram
+Parent:         Location
+Id:             tgo-program
+Title:          "Unit"
+Description:    "Profile of Locations to manage program."
+* identifier 0..1 MS
+* identifier ^label = "Identifier"
+* identifier.value MS
+* identifier.value ^label = "Program Code"
+* name 1..1 MS
+* name ^label = "Name"
+* status 1..1 MS
+* status ^label = "Status"
+* partOf 1..1 MS 
+* partOf only Reference(TGOUnit)
+* partOf ^label = "Location"
+
+Instance:       ihris-page-tgo-program
+InstanceOf:     IhrisPage
+Title:          "Program Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(StructureDefinition/tgo-program)
+* extension[display].extension[search][0].valueString = "Name|name"
+* extension[display].extension[search][1].valueString = "Unit|partOf"
+* extension[display].extension[filter][0].valueString = "Name|name:contains"
+* extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/tgo-program/FIELD?edit=true"
+* extension[display].extension[link][0].extension[field].valueString = "Location.id"
+* extension[display].extension[link][0].extension[text].valueString = "Edit"
+* extension[display].extension[link][0].extension[button].valueBoolean = true
+* extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
+* extension[display].extension[link][0].extension[class].valueString = "primary"
+* extension[section][0].extension[title].valueString = "Program"
+* extension[section][0].extension[description].valueString = "Program"
+* extension[section][0].extension[name].valueString = "Program"
+* extension[section][0].extension[field][0].valueString = "Location.name"
+* extension[section][0].extension[field][1].valueString = "Location.type"
+* extension[section][0].extension[field][2].valueString = "Location.identifier"
+* extension[section][0].extension[field][3].valueString = "Location.partOf"
+* extension[section][0].extension[field][4].valueString = "Location.status"
+
+Instance:       ihris-page-tgo-unit
+InstanceOf:     IhrisPage
+Title:          "Unit Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(StructureDefinition/tgo-unit)
+* extension[display].extension[search][0].valueString = "Name|name"
+* extension[display].extension[search][1].valueString = "Department|partOf"
+* extension[display].extension[filter][0].valueString = "Name|name:contains"
+* extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/tgo-unit/FIELD?edit=true"
+* extension[display].extension[link][0].extension[field].valueString = "Location.id"
+* extension[display].extension[link][0].extension[text].valueString = "Edit"
+* extension[display].extension[link][0].extension[button].valueBoolean = true
+* extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
+* extension[display].extension[link][0].extension[class].valueString = "primary"
+* extension[section][0].extension[title].valueString = "Unit"
+* extension[section][0].extension[description].valueString = "Unit"
+* extension[section][0].extension[name].valueString = "Unit"
+* extension[section][0].extension[field][0].valueString = "Location.name"
+* extension[section][0].extension[field][1].valueString = "Location.type"
+* extension[section][0].extension[field][2].valueString = "Location.identifier"
+* extension[section][0].extension[field][3].valueString = "Location.partOf"
+* extension[section][0].extension[field][4].valueString = "Location.status"
+
+Instance:       ihris-page-tgo-department
+InstanceOf:     IhrisPage
+Title:          "Department Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(StructureDefinition/tgo-department)
+* extension[display].extension[search][0].valueString = "Name|name"
+* extension[display].extension[search][1].valueString = "Facility|partOf"
+* extension[display].extension[filter][0].valueString = "Name|name:contains"
+* extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/tgo-department/FIELD?edit=true"
+* extension[display].extension[link][0].extension[field].valueString = "Location.id"
+* extension[display].extension[link][0].extension[text].valueString = "Edit"
+* extension[display].extension[link][0].extension[button].valueBoolean = true
+* extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
+* extension[display].extension[link][0].extension[class].valueString = "primary"
+* extension[section][0].extension[title].valueString = "Department"
+* extension[section][0].extension[description].valueString = "Department"
+* extension[section][0].extension[name].valueString = "Department"
+* extension[section][0].extension[field][0].valueString = "Location.name"
+* extension[section][0].extension[field][1].valueString = "Location.type"
+* extension[section][0].extension[field][2].valueString = "Location.identifier"
+* extension[section][0].extension[field][3].valueString = "Location.partOf"
+* extension[section][0].extension[field][4].valueString = "Location.status"
+
 
 Instance:       ihris-page-tgo-facility
 InstanceOf:     IhrisPage

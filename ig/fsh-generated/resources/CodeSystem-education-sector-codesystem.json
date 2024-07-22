@@ -9,10 +9,770 @@
   "url": "http://ihris.org/fhir/CodeSystem/education-sector-codesystem",
   "concept": [
     {
-      "code": "health",
-      "display": "Santé"
+      "code": "edusector1",
+      "display": "Chirurgie dentaire"
+    },
+    {
+      "code": "edusector2",
+      "display": "Médecine générale"
+    },
+    {
+      "code": "edusector3",
+      "display": "Odonto-stomatologie"
+    },
+    {
+      "code": "edusector4",
+      "display": "Pharmacie"
+    },
+    {
+      "code": "edusector5",
+      "display": "Anatomopathologie"
+    },
+    {
+      "code": "edusector6",
+      "display": "Anesthésiologie"
+    },
+    {
+      "code": "edusector7",
+      "display": "Bactériologie-virologie"
+    },
+    {
+      "code": "edusector8",
+      "display": "Biochimie médicale"
+    },
+    {
+      "code": "edusector9",
+      "display": "Biologie clinique"
+    },
+    {
+      "code": "edusector10",
+      "display": "Biologie épidémiologie"
+    },
+    {
+      "code": "edusector11",
+      "display": "Cardiologie"
+    },
+    {
+      "code": "edusector12",
+      "display": "Chirurgie cancérologie"
+    },
+    {
+      "code": "edusector13",
+      "display": "Chirurgie cardiaque"
+    },
+    {
+      "code": "edusector14",
+      "display": "Chirurgie cardiovasculaire"
+    },
+    {
+      "code": "edusector15",
+      "display": "Chirurgie générale"
+    },
+    {
+      "code": "edusector16",
+      "display": "Chirurgie maxillo-faciale"
+    },
+    {
+      "code": "edusector17",
+      "display": "Chirurgie pédiatrique"
+    },
+    {
+      "code": "edusector18",
+      "display": "Chirurgie plastique"
+    },
+    {
+      "code": "edusector19",
+      "display": "Chirurgie thoracique"
+    },
+    {
+      "code": "edusector20",
+      "display": "Chirurgie viscérale"
+    },
+    {
+      "code": "edusector21",
+      "display": "Dermatologie"
+    },
+    {
+      "code": "edusector22",
+      "display": "Diabétologie"
+    },
+    {
+      "code": "edusector23",
+      "display": "Endocrinologie"
+    },
+    {
+      "code": "edusector24",
+      "display": "Epidémiologie"
+    },
+    {
+      "code": "edusector25",
+      "display": "Epidémiologie de terrain"
+    },
+    {
+      "code": "edusector26",
+      "display": "Gastro-entérologie"
+    },
+    {
+      "code": "edusector27",
+      "display": "Génétique médicale"
+    },
+    {
+      "code": "edusector28",
+      "display": "Gériatrie"
+    },
+    {
+      "code": "edusector29",
+      "display": "Gynécologie-obstétrique"
+    },
+    {
+      "code": "edusector30",
+      "display": "Hématologie"
+    },
+    {
+      "code": "edusector31",
+      "display": "Hépato-gastro-entérologie"
+    },
+    {
+      "code": "edusector32",
+      "display": "Histologie-Embryologie-Cytogénétique"
+    },
+    {
+      "code": "edusector33",
+      "display": "Immunologie"
+    },
+    {
+      "code": "edusector34",
+      "display": "Immunologie clinique et allergie"
+    },
+    {
+      "code": "edusector35",
+      "display": "Infectiologie"
+    },
+    {
+      "code": "edusector36",
+      "display": "Médecine d’urgence"
+    },
+    {
+      "code": "edusector37",
+      "display": "Médecine du sport"
+    },
+    {
+      "code": "edusector38",
+      "display": "Médecine du Travail"
+    },
+    {
+      "code": "edusector39",
+      "display": "Médecine interne"
+    },
+    {
+      "code": "edusector40",
+      "display": "Médecine légale"
+    },
+    {
+      "code": "edusector41",
+      "display": "Médecine légale, du travail et du sport"
+    },
+    {
+      "code": "edusector42",
+      "display": "Médecine nucléaire"
+    },
+    {
+      "code": "edusector43",
+      "display": "Médecine vétérinaire"
+    },
+    {
+      "code": "edusector44",
+      "display": "Microbiologie médicale et infectiologie"
+    },
+    {
+      "code": "edusector45",
+      "display": "Néphrologie"
+    },
+    {
+      "code": "edusector46",
+      "display": "Neurochirurgie"
+    },
+    {
+      "code": "edusector47",
+      "display": "Neurologie"
+    },
+    {
+      "code": "edusector48",
+      "display": "Oncologie médicale"
+    },
+    {
+      "code": "edusector49",
+      "display": "Ophtalmologie"
+    },
+    {
+      "code": "edusector50",
+      "display": "Oto-rhino-laryngologie"
+    },
+    {
+      "code": "edusector51",
+      "display": "Oto-rhino-laryngologie et chirurgie cervico-faciale"
+    },
+    {
+      "code": "edusector52",
+      "display": "Paludologie"
+    },
+    {
+      "code": "edusector53",
+      "display": "Pédiatrie"
+    },
+    {
+      "code": "edusector54",
+      "display": "Physiatrie"
+    },
+    {
+      "code": "edusector55",
+      "display": "Pneumologie"
+    },
+    {
+      "code": "edusector56",
+      "display": "Pneumologie-phtisiologie"
+    },
+    {
+      "code": "edusector57",
+      "display": "Psychiatrie"
+    },
+    {
+      "code": "edusector58",
+      "display": "Psychiatrie d’adulte"
+    },
+    {
+      "code": "edusector59",
+      "display": "Radiologie diagnostique"
+    },
+    {
+      "code": "edusector60",
+      "display": "Radiologie et imagerie médicale"
+    },
+    {
+      "code": "edusector61",
+      "display": "Radio-oncologie"
+    },
+    {
+      "code": "edusector62",
+      "display": "Rhumatologie"
+    },
+    {
+      "code": "edusector63",
+      "display": "Santé publique"
+    },
+    {
+      "code": "edusector64",
+      "display": "Stomatologie"
+    },
+    {
+      "code": "edusector65",
+      "display": "Stomatologie et chirurgie maxillo-faciale"
+    },
+    {
+      "code": "edusector66",
+      "display": "Traumatologie-orthopédie"
+    },
+    {
+      "code": "edusector67",
+      "display": "Toxicologie médicale"
+    },
+    {
+      "code": "edusector68",
+      "display": "Urologie"
+    },
+    {
+      "code": "edusector69",
+      "display": "Urologie-andrologie"
+    },
+    {
+      "code": "edusector70",
+      "display": "Analyses médicales et biologiques"
+    },
+    {
+      "code": "edusector71",
+      "display": "Anesthésie réanimation"
+    },
+    {
+      "code": "edusector72",
+      "display": "Auxiliaire en pharmacie"
+    },
+    {
+      "code": "edusector73",
+      "display": "Biologie-biochimie et biotechnologie"
+    },
+    {
+      "code": "edusector74",
+      "display": "Ergothérapie"
+    },
+    {
+      "code": "edusector75",
+      "display": "Génie sanitaire"
+    },
+    {
+      "code": "edusector76",
+      "display": "Hygiène et assainissement"
+    },
+    {
+      "code": "edusector77",
+      "display": "Kinésithérapie"
+    },
+    {
+      "code": "edusector78",
+      "display": "Nutrition"
+    },
+    {
+      "code": "edusector79",
+      "display": "Ophtalmologie"
+    },
+    {
+      "code": "edusector80",
+      "display": "Optique-optométrie"
+    },
+    {
+      "code": "edusector81",
+      "display": "Orthopédiste"
+    },
+    {
+      "code": "edusector82",
+      "display": "Orthophonie"
+    },
+    {
+      "code": "edusector83",
+      "display": "Orthoprothésie"
+    },
+    {
+      "code": "edusector84",
+      "display": "Radiologie et imagerie médicale"
+    },
+    {
+      "code": "edusector85",
+      "display": "Soins infirmiers"
+    },
+    {
+      "code": "edusector86",
+      "display": "Soins obstétricaux"
+    },
+    {
+      "code": "edusector87",
+      "display": "Accoucheuse auxiliaire d’Etat"
+    },
+    {
+      "code": "edusector88",
+      "display": "Infirmier auxiliaire d’Etat"
+    },
+    {
+      "code": "edusector89",
+      "display": "Action commerciale et force de vente"
+    },
+    {
+      "code": "edusector90",
+      "display": "Administration des réseaux locaux d’entreprise"
+    },
+    {
+      "code": "edusector91",
+      "display": "Administration et Gestion des Affaires"
+    },
+    {
+      "code": "edusector92",
+      "display": "Administration Générale"
+    },
+    {
+      "code": "edusector93",
+      "display": "Administration hospitalière"
+    },
+    {
+      "code": "edusector94",
+      "display": "Administration système"
+    },
+    {
+      "code": "edusector95",
+      "display": "Agent de promotion sociale"
+    },
+    {
+      "code": "edusector96",
+      "display": "Anthropologie"
+    },
+    {
+      "code": "edusector97",
+      "display": "Anthropologie de la santé"
+    },
+    {
+      "code": "edusector98",
+      "display": "Architecture"
+    },
+    {
+      "code": "edusector99",
+      "display": "Architecture réseau"
+    },
+    {
+      "code": "edusector100",
+      "display": "Architecture urbanisme"
+    },
+    {
+      "code": "edusector101",
+      "display": "Assistant administratif"
+    },
+    {
+      "code": "edusector102",
+      "display": "Assistant de direction"
+    },
+    {
+      "code": "edusector103",
+      "display": "Assistant de Gestion PME-PMI"
+    },
+    {
+      "code": "edusector104",
+      "display": "Audit"
+    },
+    {
+      "code": "edusector105",
+      "display": "Audit et Contrôle de Gestion"
+    },
+    {
+      "code": "edusector106",
+      "display": "Banque et Assurances"
+    },
+    {
+      "code": "edusector107",
+      "display": "Biomédical"
+    },
+    {
+      "code": "edusector108",
+      "display": "Cadre supérieur de développement social (Assistant social)"
+    },
+    {
+      "code": "edusector109",
+      "display": "Chaudronnerie"
+    },
+    {
+      "code": "edusector110",
+      "display": "Commerce International"
+    },
+    {
+      "code": "edusector111",
+      "display": "Communication des entreprises"
+    },
+    {
+      "code": "edusector112",
+      "display": "Communication et Information"
+    },
+    {
+      "code": "edusector113",
+      "display": "Comptabilité et Gestion des Entreprises"
+    },
+    {
+      "code": "edusector114",
+      "display": "Comptabilité"
+    },
+    {
+      "code": "edusector115",
+      "display": "Contrôle de gestion"
+    },
+    {
+      "code": "edusector116",
+      "display": "Contrôle et audit interne"
+    },
+    {
+      "code": "edusector117",
+      "display": "Contrôle interne"
+    },
+    {
+      "code": "edusector118",
+      "display": "Couture"
+    },
+    {
+      "code": "edusector119",
+      "display": "Cybersécurité"
+    },
+    {
+      "code": "edusector120",
+      "display": "Dessin bâtiment"
+    },
+    {
+      "code": "edusector121",
+      "display": "Développement d’applications"
+    },
+    {
+      "code": "edusector122",
+      "display": "Développement Social"
+    },
+    {
+      "code": "edusector123",
+      "display": "Développement web et mobile"
+    },
+    {
+      "code": "edusector124",
+      "display": "Documentation, archivage et Bibliothèque"
+    },
+    {
+      "code": "edusector125",
+      "display": "Droit de la santé"
+    },
+    {
+      "code": "edusector126",
+      "display": "Droit des affaires"
+    },
+    {
+      "code": "edusector127",
+      "display": "Droit privé"
+    },
+    {
+      "code": "edusector128",
+      "display": "Droit public fondamental"
+    },
+    {
+      "code": "edusector129",
+      "display": "Economie"
+    },
+    {
+      "code": "edusector130",
+      "display": "Economie de la santé"
+    },
+    {
+      "code": "edusector131",
+      "display": "Economie planification"
+    },
+    {
+      "code": "edusector132",
+      "display": "Electricité d’équipement"
+    },
+    {
+      "code": "edusector133",
+      "display": "Electronique"
+    },
+    {
+      "code": "edusector134",
+      "display": "Electrotechnique"
+    },
+    {
+      "code": "edusector135",
+      "display": "Finance Banque"
+    },
+    {
+      "code": "edusector136",
+      "display": "Finances et trésor"
+    },
+    {
+      "code": "edusector137",
+      "display": "Froid et climatisation"
+    },
+    {
+      "code": "edusector138",
+      "display": "Génie Civil"
+    },
+    {
+      "code": "edusector139",
+      "display": "Génie Electrique"
+    },
+    {
+      "code": "edusector140",
+      "display": "Génie Logiciel"
+    },
+    {
+      "code": "edusector141",
+      "display": "Géographie"
+    },
+    {
+      "code": "edusector142",
+      "display": "Gestion Commerciale"
+    },
+    {
+      "code": "edusector143",
+      "display": "Gestion commerciale et Marketing"
+    },
+    {
+      "code": "edusector144",
+      "display": "Gestion Comptable et Contrôle Audit"
+    },
+    {
+      "code": "edusector145",
+      "display": "Gestion de Projet et Passation des Marchés"
+    },
+    {
+      "code": "edusector146",
+      "display": "Gestion des collectivités locales"
+    },
+    {
+      "code": "edusector147",
+      "display": "Gestion des Marchés Publics"
+    },
+    {
+      "code": "edusector148",
+      "display": "Gestion des opérations et de la logistique"
+    },
+    {
+      "code": "edusector149",
+      "display": "Gestion des Projets"
+    },
+    {
+      "code": "edusector150",
+      "display": "Gestion des Ressources Humaines"
+    },
+    {
+      "code": "edusector151",
+      "display": "Gestion des services de santé"
+    },
+    {
+      "code": "edusector152",
+      "display": "Gestion Fiscale des Entreprises"
+    },
+    {
+      "code": "edusector153",
+      "display": "Histoire"
+    },
+    {
+      "code": "edusector154",
+      "display": "Informatique et gestion"
+    },
+    {
+      "code": "edusector155",
+      "display": "Inspection des services de santé"
+    },
+    {
+      "code": "edusector156",
+      "display": "Inspection pharmaceutique"
+    },
+    {
+      "code": "edusector157",
+      "display": "Journalisme"
+    },
+    {
+      "code": "edusector158",
+      "display": "Maçonnerie"
+    },
+    {
+      "code": "edusector159",
+      "display": "Maintenance informatique"
+    },
+    {
+      "code": "edusector160",
+      "display": "Management et Gestion des Entreprises"
+    },
+    {
+      "code": "edusector161",
+      "display": "Marketing-Communication"
+    },
+    {
+      "code": "edusector162",
+      "display": "Mécanique automobile"
+    },
+    {
+      "code": "edusector163",
+      "display": "Mécanique d’entretien"
+    },
+    {
+      "code": "edusector164",
+      "display": "Mécanique générale"
+    },
+    {
+      "code": "edusector165",
+      "display": "Menuiserie"
+    },
+    {
+      "code": "edusector166",
+      "display": "Planification"
+    },
+    {
+      "code": "edusector167",
+      "display": "Planification du développement"
+    },
+    {
+      "code": "edusector168",
+      "display": "Plomberie sanitaire"
+    },
+    {
+      "code": "edusector169",
+      "display": "Qualité Sécurité Hygiène Environnement"
+    },
+    {
+      "code": "edusector170",
+      "display": "Qualité-Sécurité–Environnement et Responsabilité Sociétale (QSE/RS) des entreprises"
+    },
+    {
+      "code": "edusector171",
+      "display": "Réseaux & télécoms"
+    },
+    {
+      "code": "edusector172",
+      "display": "Réseaux informatiques"
+    },
+    {
+      "code": "edusector173",
+      "display": "Réseaux, système et sécurité"
+    },
+    {
+      "code": "edusector174",
+      "display": "Science des données (Data science)"
+    },
+    {
+      "code": "edusector175",
+      "display": "Sciences Technique Comptable et Financière"
+    },
+    {
+      "code": "edusector176",
+      "display": "Secrétariat administratif"
+    },
+    {
+      "code": "edusector177",
+      "display": "Secrétariat commercial bilingue"
+    },
+    {
+      "code": "edusector178",
+      "display": "Secrétariat de direction"
+    },
+    {
+      "code": "edusector179",
+      "display": "Secrétariat médical"
+    },
+    {
+      "code": "edusector180",
+      "display": "Secrétariat bureautique"
+    },
+    {
+      "code": "edusector181",
+      "display": "Sociologie"
+    },
+    {
+      "code": "edusector182",
+      "display": "Sociologie de la santé"
+    },
+    {
+      "code": "edusector183",
+      "display": "Système d’information en santé"
+    },
+    {
+      "code": "edusector184",
+      "display": "Télécommunications et Réseaux (conception des systèmes électroniques)"
+    },
+    {
+      "code": "edusector185",
+      "display": "Transport-Logistique"
+    },
+    {
+      "code": "edusector186",
+      "display": "PhD en biologie"
+    },
+    {
+      "code": "edusector187",
+      "display": "Psychologie de la santé"
+    },
+    {
+      "code": "edusector188",
+      "display": "Psychologie du travail"
+    },
+    {
+      "code": "edusector189",
+      "display": "Sciences, Technologie, Ingénierie et Santé (ED-STIS)"
+    },
+    {
+      "code": "edusector190",
+      "display": "Sociologie"
+    },
+    {
+      "code": "edusector191",
+      "display": "Immunologie, mention biologie et pathologie humaine"
     }
   ],
   "date": "2024-02-02T08:14:00.000Z",
-  "count": 1
+  "count": 191
 }

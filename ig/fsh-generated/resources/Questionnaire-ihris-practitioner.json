@@ -22,24 +22,8 @@
       "item": [
         {
           "linkId": "Practitioner.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:agent-id.value[x]:valueString",
-          "text": "Agent ID",
-          "type": "string",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "Practitioner.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:registrationNumber.value[x]:valueString",
-          "text": "Registration Number",
-          "type": "string",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "Practitioner.extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:corporation-number.value[x]:valueString",
-          "text": "Corporation Number",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:unique-number.value[x]:valueString",
+          "text": "Unique Identification Number (UIN)",
           "type": "string",
           "required": false,
           "repeats": false
@@ -100,8 +84,18 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo",
           "text": "Photo",
           "type": "attachment",
-          "required": true,
-          "repeats": false
+          "required": false,
+          "repeats": false,
+          "code": [
+            {
+              "system": "attachment-types",
+              "code": ".png"
+            },
+            {
+              "system": "attachment-types",
+              "code": ".jpeg"
+            }
+          ]
         },
         {
           "linkId": "Practitioner.gender",
@@ -113,7 +107,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[3]",
+          "linkId": "Practitioner.extension[1]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:marital-status.value[x]:valueCoding",
           "text": "Marital Status",
           "type": "choice",
@@ -122,7 +116,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[4]",
+          "linkId": "Practitioner.extension[2]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:spouse-name.value[x]:valueString",
           "text": "Spouse Name",
           "type": "string",
@@ -130,7 +124,7 @@
           "repeats": false,
           "enableWhen": [
             {
-              "question": "Practitioner.extension[3]",
+              "question": "Practitioner.extension[1]",
               "operator": "=",
               "answerCoding": {
                 "code": "married",
@@ -156,7 +150,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[5]",
+          "linkId": "Practitioner.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:birth-place.value[x]:valueString",
           "text": "Place of Birth",
           "type": "string",
@@ -164,7 +158,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[6]",
+          "linkId": "Practitioner.extension[4]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding",
           "text": "Nationality",
           "type": "choice",
@@ -173,7 +167,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[7]",
+          "linkId": "Practitioner.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger",
           "text": "Number of Children",
           "type": "integer",
@@ -255,25 +249,9 @@
             },
             {
               "linkId": "Practitioner.address[0].extension[0]#tree",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.extension:district.value[x]:valueReference",
-              "text": "District",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.extension:municipal.value[x]:valueReference",
+              "text": "Municipal",
               "type": "reference",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Practitioner.address[0].state",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.state",
-              "text": "State",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Practitioner.address[0].postalCode",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.postalCode",
-              "text": "Postal Code",
-              "type": "string",
               "required": false,
               "repeats": false
             },
@@ -282,6 +260,11 @@
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.country",
               "text": "Country",
               "type": "string",
+              "initial": [
+                {
+                  "valueString": "TOGO"
+                }
+              ],
               "required": false,
               "repeats": false
             }

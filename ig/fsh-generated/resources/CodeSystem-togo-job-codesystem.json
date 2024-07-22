@@ -10,11 +10,11 @@
   "concept": [
     {
       "code": "job1",
-      "display": "Accoucheuse auxiliaire d'Etat"
+      "display": "Accoucheuse auxiliaire"
     },
     {
       "code": "job2",
-      "display": "Accoucheuse permanante"
+      "display": "Accoucheuse permanente"
     },
     {
       "code": "job3",
@@ -22,219 +22,219 @@
     },
     {
       "code": "job4",
-      "display": "Adjoint au chef service Appareillage"
+      "display": "Adjoint au chargé du suivi évaluation"
     },
     {
       "code": "job5",
-      "display": "Adjoint technique en génie mécanique"
+      "display": "Adjoint au chef service appareillage"
     },
     {
       "code": "job6",
-      "display": "Adjointe au chargé du suivi évaluation"
+      "display": "Adjoint technique en génie mécanique"
     },
     {
       "code": "job7",
-      "display": "Administrateur civil"
+      "display": "Administrateur"
     },
     {
       "code": "job8",
-      "display": "Administrateur des collectivités locales"
+      "display": "Administrateur civil"
     },
     {
       "code": "job9",
-      "display": "Administrateur des entreprises"
+      "display": "Administrateur de développement"
     },
     {
       "code": "job10",
-      "display": "Administrateur des finances"
+      "display": "Administrateur des collectivités locales"
     },
     {
       "code": "job11",
-      "display": "Administrateur des services de santé"
+      "display": "Administrateur des entreprises"
     },
     {
       "code": "job12",
-      "display": "Administrateur réseaux"
+      "display": "Administrateur des finances"
     },
     {
       "code": "job13",
-      "display": "Administrateur/Cadre Administratif des Soins de Santé"
+      "display": "Administrateur des services de santé"
     },
     {
       "code": "job14",
-      "display": "Agent commercial"
+      "display": "Administrateur en sécurité réseau informatique"
     },
     {
       "code": "job15",
-      "display": "Agent comptable"
+      "display": "Administrateur réseaux"
     },
     {
       "code": "job16",
-      "display": "Agent Comptable"
+      "display": "Agent commercial"
     },
     {
       "code": "job17",
-      "display": "Agent d'accueil"
+      "display": "Agent Comptable"
     },
     {
       "code": "job18",
-      "display": "Agent d'admission"
+      "display": "Agent d'Accueil/Orientation/Renseignement"
     },
     {
       "code": "job19",
-      "display": "Agent d'assainissement"
+      "display": "Agent d'admission"
     },
     {
       "code": "job20",
-      "display": "Agent de buanderie"
+      "display": "Agent d'assainissement"
     },
     {
       "code": "job21",
-      "display": "Agent de caisse"
+      "display": "Agent de buanderie"
     },
     {
       "code": "job22",
-      "display": "Agent de Chambre Froide"
+      "display": "Agent de caisse"
     },
     {
       "code": "job23",
-      "display": "Agent de collation"
+      "display": "Agent de chambre froide"
     },
     {
       "code": "job24",
-      "display": "Agent de dispensation des ARV"
+      "display": "Agent de collation"
     },
     {
       "code": "job25",
-      "display": "Agent de FNFI"
+      "display": "Agent de dispensation des ARV"
     },
     {
       "code": "job26",
-      "display": "Agent de formolisation"
+      "display": "Agent de FNFI"
     },
     {
       "code": "job27",
-      "display": "Agent de la Facturation"
+      "display": "Agent de formolisation"
     },
     {
       "code": "job28",
-      "display": "Agent de la morgue"
+      "display": "Agent de la facturation"
     },
     {
       "code": "job29",
-      "display": "Agent de pharmacie"
+      "display": "Agent de la morgue"
     },
     {
       "code": "job30",
-      "display": "Agent de production et de vente d'eau de javel"
+      "display": "Agent de maîtrise en électronique"
     },
     {
       "code": "job31",
-      "display": "Agent de promotion sociale"
+      "display": "Agent de pharmacie"
     },
     {
       "code": "job32",
-      "display": "Agent de recette perception"
+      "display": "Agent de production et de vente d'eau de javel"
     },
     {
       "code": "job33",
-      "display": "Agent de Recouvrement"
+      "display": "Agent de promotion sociale"
     },
     {
       "code": "job34",
-      "display": "Agent de Renseignement"
+      "display": "Agent de recette perception"
     },
     {
       "code": "job35",
-      "display": "Agent de securité"
+      "display": "Agent de recouvrement"
     },
     {
       "code": "job36",
-      "display": "Agent de stérilisation"
+      "display": "Agent de sécurité (Gardien)"
     },
     {
       "code": "job37",
-      "display": "Agent de suivi"
+      "display": "Agent de stérilisation"
     },
     {
       "code": "job38",
-      "display": "Agent de vente de pharmacie"
+      "display": "Agent de suivi"
     },
     {
       "code": "job39",
-      "display": "Agent d'entretien"
+      "display": "Agent de transit"
     },
     {
       "code": "job40",
-      "display": "Agent d'entretien"
+      "display": "Agent de vente Kit"
     },
     {
       "code": "job41",
-      "display": "Agent des admissons"
+      "display": "Agent de vente pharmacie"
     },
     {
       "code": "job42",
-      "display": "Agent INAM et School Asur"
+      "display": "Agent d'entretien"
     },
     {
       "code": "job43",
-      "display": "Agent Technique de la Statistique"
+      "display": "Agent des admissons"
     },
     {
       "code": "job44",
-      "display": "Aide - manipulateur radio"
+      "display": "Agent INAM et School Asur"
     },
     {
       "code": "job45",
-      "display": "Aide anesthésiste"
+      "display": "Agent incinérateur"
     },
     {
       "code": "job46",
-      "display": "Aide chirurgien"
+      "display": "Agent technique de satistique"
     },
     {
       "code": "job47",
-      "display": "Aide comptable"
+      "display": "Aide anesthésiste"
     },
     {
       "code": "job48",
-      "display": "Aide dentiste"
+      "display": "Aide chirurgien"
     },
     {
       "code": "job49",
-      "display": "Aide Infirmier"
+      "display": "Aide comptable"
     },
     {
       "code": "job50",
-      "display": "Aide Laborantin"
+      "display": "Aide dentiste"
     },
     {
       "code": "job51",
-      "display": "Aide magasinier"
+      "display": "Aide infirmier"
     },
     {
       "code": "job52",
-      "display": "Aide magasinier"
+      "display": "Aide laborantin"
     },
     {
       "code": "job53",
-      "display": "Aide Manipulateur"
+      "display": "Aide magasinier"
     },
     {
       "code": "job54",
-      "display": "Aide prothésiste"
+      "display": "Aide manipulateur"
     },
     {
       "code": "job55",
-      "display": "Aide radiologue"
+      "display": "Aide prothésiste"
     },
     {
       "code": "job56",
-      "display": "Aide soignant"
+      "display": "Aide radiologue"
     },
     {
       "code": "job57",
-      "display": "Aide technicien"
+      "display": "Aide soignant"
     },
     {
       "code": "job58",
@@ -242,659 +242,659 @@
     },
     {
       "code": "job59",
-      "display": "Ambulancier"
+      "display": "Aide-Anesthésiste"
     },
     {
       "code": "job60",
-      "display": "Analyste au Laboratoire National de Contrôle et Qualité des Médicaments"
+      "display": "Aide-Comptable"
     },
     {
       "code": "job61",
-      "display": "Anesthésiste réanimateur"
+      "display": "Aide-Manipulateur"
     },
     {
       "code": "job62",
-      "display": "Anthropologue"
+      "display": "Aide-Soignant"
     },
     {
       "code": "job63",
-      "display": "Assistant administratif"
+      "display": "Ambulancier"
     },
     {
       "code": "job64",
-      "display": "Assistant Administratif"
+      "display": "Analyste"
     },
     {
       "code": "job65",
-      "display": "Assistant au Point Focal PCIMNE"
+      "display": "Anthropologue"
     },
     {
       "code": "job66",
-      "display": "Assistant Comptable"
+      "display": "Anthropologue de la santé"
     },
     {
       "code": "job67",
-      "display": "Assistant d’hygiène d’Etat"
+      "display": "Architecte urbaniste"
     },
     {
       "code": "job68",
-      "display": "Assistant de direction"
+      "display": "Archiviste"
     },
     {
       "code": "job69",
-      "display": "Assistant de gestion"
+      "display": "Aspergeur"
     },
     {
       "code": "job70",
-      "display": "Assistant d'hygiène d'Etat de santé publique"
+      "display": "Assistant administratif"
     },
     {
       "code": "job71",
-      "display": "Assistant en gestion des ressources humaines"
+      "display": "Assistant au Point Focal PCIMNE"
     },
     {
       "code": "job72",
-      "display": "Assistant Hygiène et Assainissement"
+      "display": "Assistant Comptable"
     },
     {
       "code": "job73",
-      "display": "Assistant Médical"
+      "display": "Assistant contrôleur"
     },
     {
       "code": "job74",
-      "display": "Assistant Médical"
+      "display": "Assistant d’hygiène d’Etat"
     },
     {
       "code": "job75",
-      "display": "Assistant Médical de santé publique"
+      "display": "Assistant de direction"
     },
     {
       "code": "job76",
-      "display": "Assistant social"
+      "display": "Assistant de Gestion"
     },
     {
       "code": "job77",
-      "display": "Assistant suivi et évaluation"
+      "display": "Assistant de gestion PMI/PME"
     },
     {
       "code": "job78",
-      "display": "Assistant suivi et évaluation régional"
+      "display": "Assistant d'Hygiène d'Etat"
     },
     {
       "code": "job79",
-      "display": "Assitant de direction"
+      "display": "Assistant d'Hygiène d'Etat de santé publique"
     },
     {
       "code": "job80",
-      "display": "Attaché d'administration"
+      "display": "Assistant en gestion des ressources humaines"
     },
     {
       "code": "job81",
-      "display": "Attaché d'administration générale"
+      "display": "Assistant Hygiène et Assainissement"
     },
     {
       "code": "job82",
-      "display": "Attachée d'administration hospitalière"
+      "display": "Assistant Médical de santé publique"
     },
     {
       "code": "job83",
-      "display": "Auditeur et contrôleur"
+      "display": "Assistant Social"
     },
     {
       "code": "job84",
-      "display": "Auditeur et contrôleur de gestion"
+      "display": "Assistant suivi et évaluation"
     },
     {
       "code": "job85",
-      "display": "Auditeur et contrôleur interne"
+      "display": "Assistant suivi et évaluation régional"
     },
     {
       "code": "job86",
-      "display": "Auxiliaire d'Etat en Pharmacie"
+      "display": "Assitant de direction"
     },
     {
       "code": "job87",
-      "display": "Billeteur"
+      "display": "Attaché d'administration"
     },
     {
       "code": "job88",
-      "display": "Biologiste Ph D"
+      "display": "Attaché d'administration générale"
     },
     {
       "code": "job89",
-      "display": "Blanchisseur"
+      "display": "Attaché d'administration hospitalière"
     },
     {
       "code": "job90",
-      "display": "Brancardier"
+      "display": "Auditeur et contrôleur"
     },
     {
       "code": "job91",
-      "display": "Buandier"
+      "display": "Auditeur et contrôleur de gestion"
     },
     {
       "code": "job92",
-      "display": "Cadre administratif de soins de santé"
+      "display": "Auditeur et contrôleur interne"
     },
     {
       "code": "job93",
-      "display": "Cadre Superieur de Développement Social"
+      "display": "Auxiliaire d'Etat en Pharmacie"
     },
     {
       "code": "job94",
-      "display": "Caissier"
+      "display": "Bibliothécaire"
     },
     {
       "code": "job95",
-      "display": "Cardiologue"
+      "display": "Billeteur"
     },
     {
       "code": "job96",
-      "display": "Chargé chambre Froide"
+      "display": "Biologiste"
     },
     {
       "code": "job97",
-      "display": "Chargé communication"
+      "display": "Blanchisseur/Buandier"
     },
     {
       "code": "job98",
-      "display": "Chargé de Budget"
+      "display": "Brancardier"
     },
     {
       "code": "job99",
-      "display": "Chargé de CPC"
+      "display": "Cadre administratif de soins de santé"
     },
     {
       "code": "job100",
-      "display": "Chargé de CPN"
+      "display": "Cadre administratif de soins de santé de santé publique"
     },
     {
       "code": "job101",
-      "display": "Chargé de gestion de materiel"
+      "display": "Cadre Superieur de Développement Social"
     },
     {
       "code": "job102",
-      "display": "Chargé de kits"
+      "display": "Caissier"
     },
     {
       "code": "job103",
-      "display": "Chargé de la chaine de froid"
+      "display": "Cardiologue"
     },
     {
       "code": "job104",
-      "display": "Chargé de la communication"
+      "display": "Chargé chambre Froide"
     },
     {
       "code": "job105",
-      "display": "Chargé de la comptabilité matière"
+      "display": "Chargé confection de kits de dialyse"
     },
     {
       "code": "job106",
-      "display": "Chargé de la Culture des mycobactéries et de la gestion des intrants"
+      "display": "Chargé de Budget"
     },
     {
       "code": "job107",
-      "display": "Chargé de la documentation de la qualité de service et du suivi de la mise en œuvre des plans"
+      "display": "Chargé de CPC"
     },
     {
       "code": "job108",
-      "display": "Chargé de la gestion administrative"
+      "display": "Chargé de CPN"
     },
     {
       "code": "job109",
-      "display": "Chargé de la gestion des données et des statistiques"
+      "display": "Chargé de gestion de materiel"
     },
     {
       "code": "job110",
-      "display": "Chargé de la Maintenance des Equipements"
+      "display": "Chargé de kits"
     },
     {
       "code": "job111",
-      "display": "Chargé de la Planification"
+      "display": "Chargé de la chaine de froid"
     },
     {
       "code": "job112",
-      "display": "Chargé de la qualité du laboratoire"
+      "display": "Chargé de la communication"
     },
     {
       "code": "job113",
-      "display": "Chargé de la Solde"
+      "display": "Chargé de la comptabilité matière"
     },
     {
       "code": "job114",
-      "display": "Chargé de la statistique"
+      "display": "Chargé de la confection des kits"
     },
     {
       "code": "job115",
-      "display": "Chargé de l'Administration et de la Gestion des Ressources Humaines"
+      "display": "Chargé de la Culture des mycobactéries et de la gestion des intrants"
     },
     {
       "code": "job116",
-      "display": "Chargé de l'assainissement de base"
+      "display": "Chargé de la distribution des MID et de la vaccination des enfants de moins d'un an"
     },
     {
       "code": "job117",
-      "display": "Chargé de l'équité et non discrimination"
+      "display": "Chargé de la documentation de la qualité de service et du suivi de la mise en œuvre des plans"
     },
     {
       "code": "job118",
-      "display": "Chargé de l'Ordonnancement"
+      "display": "Chargé de la gestion administrative"
     },
     {
       "code": "job119",
-      "display": "Chargé de PEV"
+      "display": "Chargé de la gestion des données et des statistiques"
     },
     {
       "code": "job120",
-      "display": "Chargé de suivi évaluation (volet communautaire)"
+      "display": "Chargé de la lutte contre les micronutriments"
     },
     {
       "code": "job121",
-      "display": "Chargé de Unité de prise en charge médicale"
+      "display": "Chargé de la Maintenance des Equipements"
     },
     {
       "code": "job122",
-      "display": "Chargé des Activités du volet recherche"
+      "display": "Chargé de la Planification"
     },
     {
       "code": "job123",
-      "display": "Chargé des archives"
+      "display": "Chargé de la prise en charge de la malnutrition aigue"
     },
     {
       "code": "job124",
-      "display": "Chargé des archives"
+      "display": "Chargé de la qualité du laboratoire"
     },
     {
       "code": "job125",
-      "display": "Chargé des Assurances"
+      "display": "Chargé de la Solde"
     },
     {
       "code": "job126",
-      "display": "Chargé des données"
+      "display": "Chargé de la statistique"
     },
     {
       "code": "job127",
-      "display": "Chargé des engagements"
+      "display": "Chargé de la vitamine A et volet communautaire, Chargée adjoint de sel iodé"
     },
     {
       "code": "job128",
-      "display": "Chargé des études et recherches / Moniteur"
+      "display": "Chargé de l'Administration et de la Gestion des Ressources Humaines"
     },
     {
       "code": "job129",
-      "display": "Chargé des infrastructures sanitaires"
+      "display": "Chargé de l'assainissement de base"
     },
     {
       "code": "job130",
-      "display": "Chargé des Opérations"
+      "display": "Chargé de l'équité et non discrimination"
     },
     {
       "code": "job131",
-      "display": "Chargé des Personnes Agées"
+      "display": "Chargé de l'Ordonnancement"
     },
     {
       "code": "job132",
-      "display": "Chargé des projets"
+      "display": "Chargé de Monitorage"
     },
     {
       "code": "job133",
-      "display": "Chargé des Ressources Humaines"
+      "display": "Chargé de PEV"
     },
     {
       "code": "job134",
-      "display": "Chargé des soins obstétricaux"
+      "display": "Chargé de stock"
     },
     {
       "code": "job135",
-      "display": "Chargé des statistiques"
+      "display": "Chargé de suivi évaluation (volet communautaire)"
     },
     {
       "code": "job136",
-      "display": "Chargé des TIC et de la maintenance informatique"
+      "display": "Chargé de l'unité de prise en charge médicale"
     },
     {
       "code": "job137",
-      "display": "Chargé d'études"
+      "display": "Chargé de vitamine A, contrôle et promotion de la croissance"
     },
     {
       "code": "job138",
-      "display": "Chargé d'Instrument au Bloc"
+      "display": "Chargé des activités du volet recherche"
     },
     {
       "code": "job139",
-      "display": "Chargé du Magasin Général"
+      "display": "Chargé des archives"
     },
     {
       "code": "job140",
-      "display": "Chargé du programme ATPC"
+      "display": "Chargé des Assurances"
     },
     {
       "code": "job141",
-      "display": "Chargé du programme tuberculose"
+      "display": "Chargé des données"
     },
     {
       "code": "job142",
-      "display": "Chargé du registre des cancers"
+      "display": "Chargé des engagements"
     },
     {
       "code": "job143",
-      "display": "Chargé du suivi biologique"
+      "display": "Chargé des études et recherches / Moniteur"
     },
     {
       "code": "job144",
-      "display": "Chargé du suivi évaluation"
+      "display": "Chargé des infrastructures sanitaires"
     },
     {
       "code": "job145",
-      "display": "Chargé Finances et Administration"
+      "display": "Chargé des Opérations"
     },
     {
       "code": "job146",
-      "display": "Chargé Hygiène et assainissement, IEC et MTN"
+      "display": "Chargé des Personnes Agées"
     },
     {
       "code": "job147",
-      "display": "Chargé IBC, MNT, PS"
+      "display": "Chargé des projets"
     },
     {
       "code": "job148",
-      "display": "Chargé INAM"
+      "display": "Chargé des Ressources Humaines"
     },
     {
       "code": "job149",
-      "display": "CHARGE LOGISTIQUE"
+      "display": "Chargé des soins obstétricaux"
     },
     {
       "code": "job150",
-      "display": "Chargé MTN, Paludisme"
+      "display": "Chargé des statistiques"
     },
     {
       "code": "job151",
-      "display": "Chargé National Logistique des Urgences"
+      "display": "Chargé des TIC et de la maintenance informatique"
     },
     {
       "code": "job152",
-      "display": "CHARGE ONCHOCERCOSE AU PNMTN"
+      "display": "Chargé d'études"
     },
     {
       "code": "job153",
-      "display": "Chargé PEV/Assainissement"
+      "display": "Chargé d'Instrument au Bloc"
     },
     {
       "code": "job154",
-      "display": "Chargé Planification & suivi qualité des données"
+      "display": "Chargé du Magasin Général"
     },
     {
       "code": "job155",
-      "display": "Chargé Planification, Suivi-Evaluation"
+      "display": "Chargé du partenariat"
     },
     {
       "code": "job156",
-      "display": "CHARGE PREFECTORAL DES MEG"
+      "display": "Chargé du programme ATPC"
     },
     {
       "code": "job157",
-      "display": "Chargé Prévention de la transmission mère enfant"
+      "display": "Chargé du programme tuberculose"
     },
     {
       "code": "job158",
-      "display": "Chargé PTA UNFPA"
+      "display": "Chargé du registre des cancers"
     },
     {
       "code": "job159",
-      "display": "Chargé régional de suivi évaluation"
+      "display": "Chargé du suivi biologique"
     },
     {
       "code": "job160",
-      "display": "Chargé RH& Planification"
+      "display": "Chargé du suivi évaluation"
     },
     {
       "code": "job161",
-      "display": "Chargé Section liquidation"
+      "display": "Chargé Finances et Administration"
     },
     {
       "code": "job162",
-      "display": "Chargé SIMR"
+      "display": "Chargé Hygiène et assainissement, IEC et MTN"
     },
     {
       "code": "job163",
-      "display": "Chargé SMT"
+      "display": "Chargé IBC, MNT, PS"
     },
     {
       "code": "job164",
-      "display": "Chargé SR"
+      "display": "Chargé INAM"
     },
     {
       "code": "job165",
-      "display": "Chargé suivi-évaluation"
+      "display": "Chargé logistique"
     },
     {
       "code": "job166",
-      "display": "Chargé TB, MNT-PEC, Envenimation"
+      "display": "Chargé MTN, Paludisme"
     },
     {
       "code": "job167",
-      "display": "Chargé UPECM"
+      "display": "Chargé National Logistique des Urgences"
     },
     {
       "code": "job168",
-      "display": "Chargé VIH"
+      "display": "Chargé Onchocercose (PNMTN)"
     },
     {
       "code": "job169",
-      "display": "Chargée de chambre froide"
+      "display": "Chargé Passation de marché"
     },
     {
       "code": "job170",
-      "display": "Chargée de la distribution des MID et de la vaccination des enfants de moins d'un an"
+      "display": "Chargé PEV/Assainissement"
     },
     {
       "code": "job171",
-      "display": "Chargée de la lutte contre les micronutriments"
+      "display": "Chargé Planification & suivi qualité des données"
     },
     {
       "code": "job172",
-      "display": "Chargée de la prise en charge de la malnutrition aigue"
+      "display": "Chargé Planification, Suivi-Evaluation"
     },
     {
       "code": "job173",
-      "display": "Chargée de la vitamine A et volet communautaire, Chargée adjoint de sel iodé"
+      "display": "Chargé préfectoral des MEG"
     },
     {
       "code": "job174",
-      "display": "Chargée de Monitorage"
+      "display": "Chargé Prévention de la transmission mère enfant"
     },
     {
       "code": "job175",
-      "display": "Chargée de stock"
+      "display": "Chargé PTA UNFPA"
     },
     {
       "code": "job176",
-      "display": "Chargée de vitamine A, contrôle et promotion de la croissance"
+      "display": "Chargé régional de suivi évaluation"
     },
     {
       "code": "job177",
-      "display": "Chargée des archives"
+      "display": "Chargé RH & Planification"
     },
     {
       "code": "job178",
-      "display": "Chargée d'études"
+      "display": "Chargé Section liquidation"
     },
     {
       "code": "job179",
-      "display": "Chargée du Parténariat"
+      "display": "Chargé SIMR"
     },
     {
       "code": "job180",
-      "display": "Chargée Passation de marché"
+      "display": "Chargé SMI"
     },
     {
       "code": "job181",
-      "display": "Chargée SMI"
+      "display": "Chargé SMT"
     },
     {
       "code": "job182",
-      "display": "Chauffeur"
+      "display": "Chargé SR"
     },
     {
       "code": "job183",
-      "display": "Chauffeur"
+      "display": "Chargé suivi-évaluation"
     },
     {
       "code": "job184",
-      "display": "Chauffeur Ambulancier"
+      "display": "Chargé TB, MNT-PEC, Envenimation"
     },
     {
       "code": "job185",
-      "display": "Chef SRHAB"
+      "display": "Chargé UPECM"
     },
     {
       "code": "job186",
-      "display": "Chef cuisinier"
+      "display": "Chargé VIH"
     },
     {
       "code": "job187",
-      "display": "Chef d'Assainissement"
+      "display": "Chauffeur"
     },
     {
       "code": "job188",
-      "display": "Chef de l'institut national d'hygiène antenne de Kara"
+      "display": "Chauffeur ambulancier"
     },
     {
       "code": "job189",
-      "display": "Chef de l'unité de préparation"
+      "display": "Chef cuisinier"
     },
     {
       "code": "job190",
-      "display": "Chef de l'Unité de Télémédecine"
+      "display": "Chef d'Assainissement"
     },
     {
       "code": "job191",
-      "display": "Chef de service Social"
+      "display": "Chef de l'institut national d'hygiène antenne de Kara"
     },
     {
       "code": "job192",
-      "display": "Chef des services éconmiques"
+      "display": "Chef de l'unité de préparation"
     },
     {
       "code": "job193",
-      "display": "Chef des travaux"
+      "display": "Chef de l'Unité de Télémédecine"
     },
     {
       "code": "job194",
-      "display": "Chef Division Assainissement de base"
+      "display": "Chef des services économiques et financiers (Econome)"
     },
     {
       "code": "job195",
-      "display": "Chef division Budget"
+      "display": "Chef des travaux"
     },
     {
       "code": "job196",
-      "display": "Chef Division de la formation et du renforcement des capacités du personnel"
+      "display": "Chef Division Assainissement de base"
     },
     {
       "code": "job197",
-      "display": "Chef Division de la gestion courante du personnel"
+      "display": "Chef Division Budget"
     },
     {
       "code": "job198",
-      "display": "Chef Division de la gestion prévisionnelle"
+      "display": "Chef Division de la formation et du renforcement des capacités du personnel"
     },
     {
       "code": "job199",
-      "display": "Chef Division de la Médecine et Pharmacopée Traditionnelles"
+      "display": "Chef Division de la gestion courante du personnel"
     },
     {
       "code": "job200",
-      "display": "Chef Division de la Nutrition"
+      "display": "Chef Division de la gestion prévisionnelle"
     },
     {
       "code": "job201",
-      "display": "Chef Division de la programmation et de la coopération"
+      "display": "Chef Division de la Médecine et Pharmacopée Traditionnelles"
     },
     {
       "code": "job202",
-      "display": "Chef Division de la promotion de la santé"
+      "display": "Chef Division de la Nutrition"
     },
     {
       "code": "job203",
-      "display": "Chef Division de la surveillance intégrée des urgences sanitaires et de la riposte"
+      "display": "Chef Division de la programmation et de la coopération"
     },
     {
       "code": "job204",
-      "display": "Chef division des affaires juridiques"
+      "display": "Chef Division de la promotion de la santé"
     },
     {
       "code": "job205",
-      "display": "Chef Division des équipements médicotechniques, de la logistique et de la maintenance"
+      "display": "Chef Division de la surveillance intégrée des urgences sanitaires et de la riposte"
     },
     {
       "code": "job206",
-      "display": "Chef division des établissements publics de soins"
+      "display": "Chef Division des affaires juridiques"
     },
     {
       "code": "job207",
-      "display": "Chef Division des études et de la recherche"
+      "display": "Chef Division des équipements médicotechniques, de la logistique et de la maintenance"
     },
     {
       "code": "job208",
-      "display": "Chef Division des Laboratoires"
+      "display": "Chef Division des établissements publics de soins"
     },
     {
       "code": "job209",
-      "display": "Chef Division des soins de réadaptation et des établissements privés"
+      "display": "Chef Division des études et de la recherche"
     },
     {
       "code": "job210",
-      "display": "Chef Division DSJA"
+      "display": "Chef Division des Laboratoires"
     },
     {
       "code": "job211",
-      "display": "Chef Division du Contrôle et Inspection Sanitaire"
+      "display": "Chef Division des soins de réadaptation et des établissements privés"
     },
     {
       "code": "job212",
-      "display": "Chef Division du médicament et des produits de santé / Responsable CGKC"
+      "display": "Chef Division DSJA"
     },
     {
       "code": "job213",
-      "display": "Chef Division Etablissements Privés"
+      "display": "Chef Division du Contrôle et Inspection Sanitaire"
     },
     {
       "code": "job214",
-      "display": "Chef Division Hygiène publique"
+      "display": "Chef Division du médicament et des produits de santé / Responsable CGKC"
     },
     {
       "code": "job215",
-      "display": "Chef Division Infrastructures Sanitaires"
+      "display": "Chef Division Etablissements Privés"
     },
     {
       "code": "job216",
-      "display": "Chef Division Planification et carte sanitaire"
+      "display": "Chef Division Hygiène publique"
     },
     {
       "code": "job217",
-      "display": "Chef Division Planification Suivi-Evaluation au SP-PNDS"
+      "display": "Chef Division Infrastructures Sanitaires"
     },
     {
       "code": "job218",
-      "display": "Chef Division SMI/PF"
+      "display": "Chef Division Planification et carte sanitaire"
     },
     {
       "code": "job219",
-      "display": "Chef DSCPA"
+      "display": "Chef Division Planification Suivi-Evaluation au SP-PNDS"
     },
     {
       "code": "job220",
-      "display": "Chef du Laboratoire"
+      "display": "Chef Division SMI/PF"
     },
     {
       "code": "job221",
-      "display": "Chef du laboratoire de biologie moléculaire"
+      "display": "Chef DSCPA"
     },
     {
       "code": "job222",
-      "display": "Chef du laboratoire d'Hématologie"
+      "display": "Chef du Laboratoire"
     },
     {
       "code": "job223",
@@ -906,79 +906,79 @@
     },
     {
       "code": "job225",
-      "display": "Chef du service de cardiologie"
+      "display": "Chef du secrétariat du personnel"
     },
     {
       "code": "job226",
-      "display": "Chef du service de médecine interne et des urgences médicales"
+      "display": "Chef du service de cardiologie"
     },
     {
       "code": "job227",
-      "display": "Chef du service régional des établissements de soins, chargé des RH"
+      "display": "Chef du service de médecine interne et des urgences médicales"
     },
     {
       "code": "job228",
-      "display": "Chef d'unité Chaine de Froid"
+      "display": "Chef du service régional des établissements de soins, chargé des RH"
     },
     {
       "code": "job229",
-      "display": "Chef d'Unité de Distribution des PSL"
+      "display": "Chef d'unité Chaine de Froid"
     },
     {
       "code": "job230",
-      "display": "Chef d'unité de poste de collecte et de distribution"
+      "display": "Chef d'Unité de Distribution des PSL"
     },
     {
       "code": "job231",
-      "display": "Chef d'unité Distribution"
+      "display": "Chef d'unité de poste de collecte et de distribution"
     },
     {
       "code": "job232",
-      "display": "Chef d'unité HPI"
+      "display": "Chef d'unité Distribution"
     },
     {
       "code": "job233",
-      "display": "Chef d'unité Hygiène et Sécurité"
+      "display": "Chef d'unité HPI"
     },
     {
       "code": "job234",
-      "display": "Chef d'Unité IEC/Collectes"
+      "display": "Chef d'unité Hygiène et Sécurité"
     },
     {
       "code": "job235",
-      "display": "Chef d'unité Immuno-Hémato"
+      "display": "Chef d'Unité IEC/Collectes"
     },
     {
       "code": "job236",
-      "display": "Chef d'unité Préparation"
+      "display": "Chef d'unité Immuno-Hémato"
     },
     {
       "code": "job237",
-      "display": "Chef d'unité Sérologie"
+      "display": "Chef d'unité Préparation"
     },
     {
       "code": "job238",
-      "display": "Chef d'unité UH"
+      "display": "Chef d'unité Sérologie"
     },
     {
       "code": "job239",
-      "display": "Chef facturation"
+      "display": "Chef d'unité UH"
     },
     {
       "code": "job240",
-      "display": "Chef Garage de la Santé"
+      "display": "Chef facturation"
     },
     {
       "code": "job241",
-      "display": "Chef magasinier"
+      "display": "Chef Garage de la Santé"
     },
     {
       "code": "job242",
-      "display": "Chef morguier"
+      "display": "Chef magasinier"
     },
     {
       "code": "job243",
-      "display": "Chef Personnel"
+      "display": "Chef morguier"
     },
     {
       "code": "job244",
@@ -994,7 +994,7 @@
     },
     {
       "code": "job247",
-      "display": "Chef Secrétariat Général"
+      "display": "Chef secrétariat général"
     },
     {
       "code": "job248",
@@ -1086,47 +1086,47 @@
     },
     {
       "code": "job270",
-      "display": "Chef section RH et affaires juridiques"
-    },
-    {
-      "code": "job271",
       "display": "Chef section santé communautaire"
     },
     {
-      "code": "job272",
+      "code": "job271",
       "display": "Chef section santé de la mère et de l'enfant/ PF SR"
     },
     {
-      "code": "job273",
+      "code": "job272",
       "display": "Chef section santé mère enfant"
     },
     {
-      "code": "job274",
+      "code": "job273",
       "display": "Chef Section SMTS"
     },
     {
-      "code": "job275",
+      "code": "job274",
       "display": "Chef section Suivi/Evaluation"
     },
     {
-      "code": "job276",
+      "code": "job275",
       "display": "Chef section vigilance et promotion du bon usage des produits de santé"
     },
     {
-      "code": "job277",
+      "code": "job276",
       "display": "Chef sécurité"
     },
     {
-      "code": "job278",
+      "code": "job277",
       "display": "Chef service"
     },
     {
-      "code": "job279",
+      "code": "job278",
       "display": "Chef service administratif et financier"
     },
     {
-      "code": "job280",
+      "code": "job279",
       "display": "Chef service Admissions"
+    },
+    {
+      "code": "job280",
+      "display": "Chef service ANAPATH"
     },
     {
       "code": "job281",
@@ -1162,11 +1162,11 @@
     },
     {
       "code": "job289",
-      "display": "Chef service chirurgie générale"
+      "display": "Chef service Chirurgie Générale"
     },
     {
       "code": "job290",
-      "display": "Chef service chirurgie pédiatrique"
+      "display": "Chef service Chirurgie Pédiatrique"
     },
     {
       "code": "job291",
@@ -1174,1745 +1174,2329 @@
     },
     {
       "code": "job292",
-      "display": "Chef service Comptabilité"
+      "display": "Chef service CMC"
     },
     {
       "code": "job293",
-      "display": "Chef service CUPPM"
+      "display": "Chef service Comptabilité"
     },
     {
       "code": "job294",
-      "display": "Chef service d'anatomie pathologie"
+      "display": "Chef service Contrôle de gestion"
     },
     {
       "code": "job295",
-      "display": "Chef service de Cardiologie"
+      "display": "Chef service CUPPM"
     },
     {
       "code": "job296",
-      "display": "Chef service de cardiologie"
+      "display": "Chef service d'anatomie pathologie"
     },
     {
       "code": "job297",
-      "display": "Chef service de laboratoire de biologie médicale"
+      "display": "Chef service de Cardiologie"
     },
     {
       "code": "job298",
-      "display": "Chef service de pharmacie"
+      "display": "Chef service de laboratoire de biologie médicale"
     },
     {
       "code": "job299",
-      "display": "Chef Service Dermatologie"
+      "display": "Chef service de Pédiatrie"
     },
     {
       "code": "job300",
-      "display": "Chef Service du centre régional d'appareillage orthopédique"
+      "display": "Chef service de pharmacie"
     },
     {
       "code": "job301",
-      "display": "Chef service economiques et financiers"
+      "display": "Chef Service Dermatologie"
     },
     {
       "code": "job302",
-      "display": "Chef service facturation"
+      "display": "Chef service Dermatologie-vénérologie"
     },
     {
       "code": "job303",
-      "display": "Chef service Gynécologie"
+      "display": "Chef Service du centre régional d'appareillage orthopédique"
     },
     {
       "code": "job304",
-      "display": "Chef service gynécologie"
+      "display": "Chef service Facturation"
     },
     {
       "code": "job305",
-      "display": "Chef service Hémato"
+      "display": "Chef service Gynécologie"
     },
     {
       "code": "job306",
-      "display": "Chef service hygiène et asainissement"
+      "display": "Chef service Hématologie-Immunologie"
     },
     {
       "code": "job307",
-      "display": "Chef service Informatique"
+      "display": "Chef service hygiène et asainissement"
     },
     {
       "code": "job308",
-      "display": "Chef service Kinésithérapie"
+      "display": "Chef service Informatique"
     },
     {
       "code": "job309",
-      "display": "Chef service laboratoire"
+      "display": "Chef service Kinésithérapie"
     },
     {
       "code": "job310",
-      "display": "Chef service maternité"
+      "display": "Chef service laboratoire"
     },
     {
       "code": "job311",
-      "display": "Chef service Médecine générale"
+      "display": "Chef service Maladies infectieuses"
     },
     {
       "code": "job312",
-      "display": "Chef service Morgue"
+      "display": "Chef service Maternité"
     },
     {
       "code": "job313",
-      "display": "Chef service Néphrologie"
+      "display": "Chef service Médecine générale"
     },
     {
       "code": "job314",
-      "display": "Chef Service Neurochirurgie"
+      "display": "Chef service Morgue"
     },
     {
       "code": "job315",
-      "display": "Chef service neurologie"
+      "display": "Chef service Néphrologie"
     },
     {
       "code": "job316",
-      "display": "Chef service Odontostomatologie"
+      "display": "Chef Service Neurochirurgie"
     },
     {
       "code": "job317",
-      "display": "Chef service Ophtalmologie"
+      "display": "Chef service Neurologie"
     },
     {
       "code": "job318",
-      "display": "Chef service ordonnancement"
+      "display": "Chef service Odontostomatologie"
     },
     {
       "code": "job319",
-      "display": "Chef service ORL"
+      "display": "Chef service Ophtalmologie"
     },
     {
       "code": "job320",
-      "display": "Chef service orthopédie"
+      "display": "Chef service Ordonnancement"
     },
     {
       "code": "job321",
-      "display": "Chef service Orthophonie"
+      "display": "Chef service ORL"
     },
     {
       "code": "job322",
-      "display": "Chef service Parc automobile"
+      "display": "Chef service orthopédie"
     },
     {
       "code": "job323",
-      "display": "Chef service Pavillon Militaire"
+      "display": "Chef service Orthophonie"
     },
     {
       "code": "job324",
-      "display": "Chef service Pédiatrie"
+      "display": "Chef service Parc automobile"
     },
     {
       "code": "job325",
-      "display": "Chef service Pédiatrie"
+      "display": "Chef service Pavillon Militaire"
     },
     {
       "code": "job326",
-      "display": "Chef service pharmacie"
+      "display": "Chef service Pédiatrie"
     },
     {
       "code": "job327",
-      "display": "Chef service Pneumologie"
+      "display": "Chef service pharmacie"
     },
     {
       "code": "job328",
-      "display": "Chef service Psychologie"
+      "display": "Chef service Pneumologie"
     },
     {
       "code": "job329",
-      "display": "Chef Service Qualité"
+      "display": "Chef service Pneumologie-Phtisiologie"
     },
     {
       "code": "job330",
-      "display": "Chef service Radio"
+      "display": "Chef service Psychologie"
     },
     {
       "code": "job331",
-      "display": "Chef service Radiologie et imagerie médicale"
+      "display": "Chef Service Qualité"
     },
     {
       "code": "job332",
-      "display": "Chef service Recouvrement"
+      "display": "Chef service Radiologie et imagerie médicale"
     },
     {
       "code": "job333",
-      "display": "Chef service régie des recettes"
+      "display": "Chef service Recouvrement"
     },
     {
       "code": "job334",
-      "display": "Chef service régional de Promotion de la santé"
+      "display": "Chef service régie des recettes"
     },
     {
       "code": "job335",
-      "display": "chef service régional d'hygiène et assainissement"
+      "display": "Chef service régional de Promotion de la santé"
     },
     {
       "code": "job336",
-      "display": "Chef service Rhumatologie"
+      "display": "chef service régional d'hygiène et assainissement"
     },
     {
       "code": "job337",
-      "display": "Chef service social"
+      "display": "Chef service Rhumatologie"
     },
     {
       "code": "job338",
-      "display": "Chef service solde"
+      "display": "Chef service social"
     },
     {
       "code": "job339",
-      "display": "Chef service statistiques"
+      "display": "Chef service Solde"
     },
     {
       "code": "job340",
-      "display": "Chef service Stomatologie"
+      "display": "Chef service statistiques"
     },
     {
       "code": "job341",
-      "display": "Chef service Traumatologie"
+      "display": "Chef service Stomatologie"
     },
     {
       "code": "job342",
-      "display": "Chef service Travaux"
+      "display": "Chef service Traumatologie-orthopédie"
     },
     {
       "code": "job343",
-      "display": "Chef service Urologie"
+      "display": "Chef service Urgences chirurgicales"
     },
     {
       "code": "job344",
-      "display": "Chef services des travaux audit"
+      "display": "Chef service Urologie"
     },
     {
       "code": "job345",
-      "display": "Chef SPHAM"
+      "display": "Chef services des travaux audit"
     },
     {
       "code": "job346",
-      "display": "Chef travaux"
+      "display": "Chef SPHAM"
     },
     {
       "code": "job347",
-      "display": "Chef Travaux Adjoint"
+      "display": "Chef SRHAB"
     },
     {
       "code": "job348",
-      "display": "Chef Unité Cardiologue"
+      "display": "Chef Travaux"
     },
     {
       "code": "job349",
-      "display": "Chef Unité de gestion des intrants médicaux"
+      "display": "Chef Travaux Adjoint"
     },
     {
       "code": "job350",
-      "display": "Chef Unité Neurologie"
+      "display": "Chef Unité Cardiologue"
     },
     {
       "code": "job351",
-      "display": "Chef Unité prévention de la transmission mère et enfant"
+      "display": "Chef Unité de gestion des intrants médicaux"
     },
     {
       "code": "job352",
-      "display": "Chef Unité prise en charge médicale"
+      "display": "Chef Unité Neurologie"
     },
     {
       "code": "job353",
-      "display": "Chimiste"
+      "display": "Chef Unité prévention de la transmission mère et enfant"
     },
     {
       "code": "job354",
-      "display": "Chirurgien pédiatre"
+      "display": "Chef Unité prise en charge médicale"
     },
     {
       "code": "job355",
-      "display": "Chirurgien Thoracique"
+      "display": "Chimiste"
     },
     {
       "code": "job356",
-      "display": "Chirurgien traumatologue-orthopédiste"
+      "display": "Chirurgien pédiatre"
     },
     {
       "code": "job357",
-      "display": "Chirurgien-dentiste"
+      "display": "Chirurgien Thoracique"
     },
     {
       "code": "job358",
-      "display": "Chirurgien-généraliste"
+      "display": "Chirurgien traumatologue-orthopédiste"
     },
     {
       "code": "job359",
-      "display": "Commis Administratif"
+      "display": "Chirurgien-dentiste"
     },
     {
       "code": "job360",
-      "display": "Commis des recettes"
+      "display": "Chirurgien-généraliste"
     },
     {
       "code": "job361",
-      "display": "Communicateur"
+      "display": "Commis Administratif"
     },
     {
       "code": "job362",
-      "display": "Compable"
+      "display": "Commis des recettes"
     },
     {
       "code": "job363",
-      "display": "Comptable gestionnaire"
+      "display": "Communicateur"
     },
     {
       "code": "job364",
-      "display": "Comptable matières"
+      "display": "Compable"
     },
     {
       "code": "job365",
-      "display": "Comptable Mécanographe"
+      "display": "Comptable Gestionnaire"
     },
     {
       "code": "job366",
-      "display": "Conseiller en communication"
+      "display": "Comptable gestionnaire"
     },
     {
       "code": "job367",
-      "display": "Conseiller psychosocial"
+      "display": "Comptable gestionnaire de la Pharmacie"
     },
     {
       "code": "job368",
-      "display": "Conseiller VIH/chargé des RH"
+      "display": "Comptable matières"
     },
     {
       "code": "job369",
-      "display": "Controleur"
+      "display": "Comptable Mécanographe"
     },
     {
       "code": "job370",
-      "display": "Contrôleur de gestion"
+      "display": "Conseiller en communication"
     },
     {
       "code": "job371",
-      "display": "Contrôleur des assurances"
+      "display": "Conseiller psychosocial"
     },
     {
       "code": "job372",
-      "display": "Contrôleur financier délégué"
+      "display": "Conseiller VIH/chargé des RH"
     },
     {
       "code": "job373",
-      "display": "Controleur sanitaire"
+      "display": "Controleur"
     },
     {
       "code": "job374",
-      "display": "Coordonnateur"
+      "display": "Contrôleur de gestion"
     },
     {
       "code": "job375",
-      "display": "Cordonnier"
+      "display": "Contrôleur de trésor"
     },
     {
       "code": "job376",
-      "display": "COUNSLING PRE-POST TEST VIH"
+      "display": "Contrôleur des assurances"
     },
     {
       "code": "job377",
-      "display": "Couturier"
+      "display": "Contrôleur financier délégué"
     },
     {
       "code": "job378",
-      "display": "Cuisinier"
+      "display": "Controleur sanitaire"
     },
     {
       "code": "job379",
-      "display": "Démographe statisticien"
+      "display": "Coordonnateur"
     },
     {
       "code": "job380",
-      "display": "Dessinateur bâtiments"
+      "display": "Cordonnier"
     },
     {
       "code": "job381",
-      "display": "Développeur d'application"
+      "display": "Counseling Pré-post test VIH"
     },
     {
       "code": "job382",
-      "display": "Directeur"
+      "display": "Couturier"
     },
     {
       "code": "job383",
-      "display": "Directeur adjoint chargé des études"
+      "display": "Cuisinier"
     },
     {
       "code": "job384",
-      "display": "Directeur Adjoint chargé des Finances"
+      "display": "Démographe statisticien"
     },
     {
       "code": "job385",
-      "display": "Directeur adjoint chargé des ressources humaines"
+      "display": "Dessinateur bâtiments"
     },
     {
       "code": "job386",
-      "display": "Directeur adjoint chargé des ressources humaines et du budget"
+      "display": "Développeur d'application"
     },
     {
       "code": "job387",
-      "display": "Directeur Général"
+      "display": "Directeur adjoint chargé de la gestion financière et comptable"
     },
     {
       "code": "job388",
-      "display": "Directeur préfectoral de la Santé"
+      "display": "Directeur adjoint chargé des études"
     },
     {
       "code": "job389",
-      "display": "Directeur régional de la santé"
+      "display": "Directeur Adjoint chargé des Finances"
     },
     {
       "code": "job390",
-      "display": "Dispensateur"
+      "display": "Directeur adjoint chargé des ressources humaines"
     },
     {
       "code": "job391",
-      "display": "Dispensateur ARV"
+      "display": "Directeur adjoint chargé des ressources humaines et du budget"
     },
     {
       "code": "job392",
-      "display": "Economiste"
+      "display": "Directeur Général"
     },
     {
       "code": "job393",
-      "display": "Economiste et statisticien"
+      "display": "Directeur Préfectoral de la Santé (DPS)"
     },
     {
       "code": "job394",
-      "display": "Educatrice spécialisée"
+      "display": "Directeur régional de la santé (DRS)"
     },
     {
       "code": "job395",
-      "display": "Electricien bâtiment"
+      "display": "Dispensateur ARV"
     },
     {
       "code": "job396",
-      "display": "Electricien Rebobineur"
+      "display": "Ecologiste urbaniste"
     },
     {
       "code": "job397",
-      "display": "Electronicien"
+      "display": "Economiste"
     },
     {
       "code": "job398",
-      "display": "Electrotechnicien"
+      "display": "Economiste de la santé"
     },
     {
       "code": "job399",
-      "display": "Employé de bureau"
+      "display": "Economiste et statisticien"
     },
     {
       "code": "job400",
-      "display": "Fille de salle"
+      "display": "Economiste gestionnaire"
     },
     {
       "code": "job401",
-      "display": "Formoleur"
+      "display": "Economiste planificateur"
     },
     {
       "code": "job402",
-      "display": "FRIGORISTE"
+      "display": "Educateur spécialisé"
     },
     {
       "code": "job403",
-      "display": "Garçon de blocs"
+      "display": "Electricien"
     },
     {
       "code": "job404",
-      "display": "Garçon de Laboratoire"
+      "display": "Electricien"
     },
     {
       "code": "job405",
-      "display": "Garçon du bloc"
+      "display": "Electricien bâtiment"
     },
     {
       "code": "job406",
-      "display": "Garde malade"
+      "display": "Electricien Rebobineur"
     },
     {
       "code": "job407",
-      "display": "Gardien"
+      "display": "Electronicien"
     },
     {
       "code": "job408",
-      "display": "Gérant de caisse"
+      "display": "Electrotechnicien"
     },
     {
       "code": "job409",
-      "display": "Gérant de pharmacie"
+      "display": "Employé de Bureau"
     },
     {
       "code": "job410",
-      "display": "Gestionaire des Projets et Management de la Qualité"
+      "display": "Femme de ménage"
     },
     {
       "code": "job411",
-      "display": "Gestionnaire commercial"
+      "display": "Fille de salle"
     },
     {
       "code": "job412",
-      "display": "Gestionnaire de la Clinique Médicale"
+      "display": "Formoleur"
     },
     {
       "code": "job413",
-      "display": "Gestionnaire de Projets"
+      "display": "Frigoriste"
     },
     {
       "code": "job414",
-      "display": "Gestionnaire des données et de la Surveillance"
+      "display": "Garde malades (Brancardier, Garçon de blocs, Garçon de laboratoire, Garçon de radiologie)"
     },
     {
       "code": "job415",
-      "display": "Gestionnaire des réactifs"
+      "display": "Garde-Malades"
     },
     {
       "code": "job416",
-      "display": "Gestionnaire des ressources humaines"
+      "display": "Géographe"
     },
     {
       "code": "job417",
-      "display": "Gestionnaire des services de santé"
+      "display": "Gérant de caisse"
     },
     {
       "code": "job418",
-      "display": "Gestionnaire des stocks"
+      "display": "Gérant de pharmacie"
     },
     {
       "code": "job419",
-      "display": "Historien"
+      "display": "Gestionaire des Projets et Management de la Qualité"
     },
     {
       "code": "job420",
-      "display": "Hospitalisation"
+      "display": "Gestionnaire commercial"
     },
     {
       "code": "job421",
-      "display": "Iinfirmier Diplômé d'Etat"
+      "display": "Gestionnaire de la Clinique Médicale"
     },
     {
       "code": "job422",
-      "display": "Infectiologue"
+      "display": "Gestionnaire de Projets"
     },
     {
       "code": "job423",
-      "display": "Infirmier Auxiliaire d'Etat"
+      "display": "Gestionnaire des données et de la Surveillance"
     },
     {
       "code": "job424",
-      "display": "Infirmier d'Etat de Santé Publique"
+      "display": "Gestionnaire des entreprises"
     },
     {
       "code": "job425",
-      "display": "Infirmier diplômé d'Etat"
+      "display": "Gestionnaire des projets"
     },
     {
       "code": "job426",
-      "display": "Infirmier permanent"
+      "display": "Gestionnaire des projets de développement"
     },
     {
       "code": "job427",
-      "display": "Informaticien"
+      "display": "Gestionnaire des réactifs"
     },
     {
       "code": "job428",
-      "display": "Ingenier de Travaux Biologiques"
+      "display": "Gestionnaire des ressources humaines"
     },
     {
       "code": "job429",
-      "display": "Ingénieur adjoint de la statistique"
+      "display": "Gestionnaire des services de santé"
     },
     {
       "code": "job430",
-      "display": "Ingénieur biomédical"
+      "display": "Gestionnaire des stocks"
     },
     {
       "code": "job431",
-      "display": "Ingénieur de radiologie et imagerie médicale"
+      "display": "Gestionnaire des stocks des médicaments"
     },
     {
       "code": "job432",
-      "display": "Ingénieur de travail, d'analyse médicale et biologique"
+      "display": "Historien"
     },
     {
       "code": "job433",
-      "display": "Ingénieur de travaux informatique"
+      "display": "Hygiéniste alimentaire et qualiticien"
     },
     {
       "code": "job434",
-      "display": "Ingénieur des Travaux publics"
+      "display": "Infectiologue"
     },
     {
       "code": "job435",
-      "display": "Ingénieur en instrumentation chirurgicale des blocs opératoires"
+      "display": "Infirmier Auxiliaire d'Etat"
     },
     {
       "code": "job436",
-      "display": "Ingénieur en Kinésithérapie"
+      "display": "Infirmier d'Etat de Santé Publique"
     },
     {
       "code": "job437",
-      "display": "Ingénieur en management de laboratoire de santé publique"
+      "display": "Infirmier Diplômé d'Etat"
     },
     {
       "code": "job438",
-      "display": "Ingénieur en pédagogie"
+      "display": "Infirmier permanent"
     },
     {
       "code": "job439",
-      "display": "Ingénieur en Santé Environnement (Eau et Assainissement)"
+      "display": "Informaticien"
     },
     {
       "code": "job440",
-      "display": "Ingénieur en santé mentale"
+      "display": "Informaticien de gestion"
     },
     {
       "code": "job441",
-      "display": "Ingénieur génie sanitaire"
+      "display": "Ingénieur adjoint de la statistique"
     },
     {
       "code": "job442",
-      "display": "Ingénieur Télécoms et Réseaux"
+      "display": "Ingénieur biochimiste"
     },
     {
       "code": "job443",
-      "display": "Inspecteur Central du Trésor"
+      "display": "Ingénieur biologiste"
     },
     {
       "code": "job444",
-      "display": "Inspecteur de douane"
+      "display": "Ingénieur biologiste spécialisé en santé de la reproduction"
     },
     {
       "code": "job445",
-      "display": "Inspecteur général des services de santé"
+      "display": "Ingénieur Biomédical"
     },
     {
       "code": "job446",
-      "display": "instrumentiste"
+      "display": "Ingénieur de conception en génie électrique"
     },
     {
       "code": "job447",
-      "display": "Jardinier"
+      "display": "Ingénieur de radiologie et imagerie médicale"
     },
     {
       "code": "job448",
-      "display": "Juriste"
+      "display": "Ingénieur de travaux informatiques"
     },
     {
       "code": "job449",
-      "display": "Kinésitherapeute d' Etat"
+      "display": "Ingénieur des Travaux d'Analyses Médicales et Biologiques"
     },
     {
       "code": "job450",
-      "display": "Kinesitherapeute en santé publique"
+      "display": "Ingénieur des travaux d'analyses médicales et biologiques de santé publique"
     },
     {
       "code": "job451",
-      "display": "Laboratin"
+      "display": "Ingénieur des travaux d'analyses médicales et biologiques spécialisé en épidémiologie de terrain"
     },
     {
       "code": "job452",
-      "display": "Linger"
+      "display": "Ingénieur des travaux en industrie agroalimentaire"
     },
     {
       "code": "job453",
-      "display": "Logisticien"
+      "display": "Ingénieur des Travaux publics"
     },
     {
       "code": "job454",
-      "display": "Logisticien de la santé"
+      "display": "Ingénieur en eau et environnement"
     },
     {
       "code": "job455",
-      "display": "Lunettier"
+      "display": "Ingénieur en hygiène alimentaire et management de la quailité"
     },
     {
       "code": "job456",
-      "display": "Maçon"
+      "display": "Ingénieur en instrumentation chirurgicale des blocs opératoires"
     },
     {
       "code": "job457",
-      "display": "Magasinier"
+      "display": "Ingénieur en Kinésithérapie"
     },
     {
       "code": "job458",
-      "display": "Maïeuticien d'Etat"
+      "display": "Ingénieur en management de laboratoire de santé publique"
     },
     {
       "code": "job459",
-      "display": "Maintenance biomédicale"
+      "display": "Ingénieur en orthopédie"
     },
     {
       "code": "job460",
-      "display": "Maintenancier Informatique"
+      "display": "Ingénieur en pédagogie"
     },
     {
       "code": "job461",
-      "display": "Maître de Conférence Agrégé en Chirurgie générale"
+      "display": "Ingénieur en pédagogie des sciences de la santé"
     },
     {
       "code": "job462",
-      "display": "Maitre nageur"
+      "display": "Ingénieur en Radiologie et imagerie médicale"
     },
     {
       "code": "job463",
-      "display": "Maître-assistant en hématologie biologique et clinique"
+      "display": "Ingénieur en santé environnementale"
     },
     {
       "code": "job464",
-      "display": "Manipulateur de radio panoramique"
+      "display": "Ingénieur en santé mentale"
     },
     {
       "code": "job465",
-      "display": "Manœuvre"
+      "display": "Ingénieur en santé publique"
     },
     {
       "code": "job466",
-      "display": "Master en instrumentation chirurgicale des blocs opératoires"
+      "display": "Ingénieur en santé publique internationale"
     },
     {
       "code": "job467",
-      "display": "Master en Odontostomatologie"
+      "display": "Ingénieur génie civil"
     },
     {
       "code": "job468",
-      "display": "Master en Ophtalmologie"
+      "display": "Ingénieur génie sanitaire"
     },
     {
       "code": "job469",
-      "display": "Master en radiologie et imagerie médicale"
+      "display": "Ingénieur statisticien économiste"
     },
     {
       "code": "job470",
-      "display": "Master en santé mentale"
+      "display": "Ingénieur Télécoms et Réseaux"
     },
     {
       "code": "job471",
-      "display": "Master en sécurité alimentaire et management de la qualité"
+      "display": "Inspecteur Central du Trésor"
     },
     {
       "code": "job472",
-      "display": "Master Psychologue de Santé"
+      "display": "Inspecteur de douane"
     },
     {
       "code": "job473",
-      "display": "Matrone"
+      "display": "Inspecteur du trésor"
     },
     {
       "code": "job474",
-      "display": "MBA Management des projets et programmes"
+      "display": "Inspecteur général des services de santé"
     },
     {
       "code": "job475",
-      "display": "Mécanicien auto"
+      "display": "instrumentiste"
     },
     {
       "code": "job476",
-      "display": "Mécanicien Chauffeur"
+      "display": "Internes stagiaires"
     },
     {
       "code": "job477",
-      "display": "Médecin anatomopathologiste"
+      "display": "Internes titulaires"
     },
     {
       "code": "job478",
-      "display": "Médecin anesthésiste-réanimateur"
+      "display": "Jardinier"
     },
     {
       "code": "job479",
-      "display": "Médecin biologiste"
+      "display": "Juriste"
     },
     {
       "code": "job480",
-      "display": "Médecin biologiste spécialiste Histo-EmbryoCytogénétique"
+      "display": "Juriste de la santé"
     },
     {
       "code": "job481",
-      "display": "Médecin Capitaine Ophtalmo"
+      "display": "Kinésitherapeute d' Etat"
     },
     {
       "code": "job482",
-      "display": "Médecin Cardiologue"
+      "display": "Kinésithérapeute d'Etat de santé publique"
     },
     {
       "code": "job483",
-      "display": "Médecin chef de la commune"
+      "display": "Laboratin"
     },
     {
       "code": "job484",
-      "display": "Médecin chef de service"
+      "display": "Linguiste"
     },
     {
       "code": "job485",
-      "display": "Médecin Chirurgien Généraliste"
+      "display": "Logisticien"
     },
     {
       "code": "job486",
-      "display": "Médecin chirurgien plasticien"
+      "display": "Logisticien de la santé"
     },
     {
       "code": "job487",
-      "display": "Médecin chirurgien urologue"
+      "display": "Logisticien de santé de santé publique"
     },
     {
       "code": "job488",
-      "display": "Médecin de Santé Publique"
+      "display": "Lunettier"
     },
     {
       "code": "job489",
-      "display": "Médecin Dermatologue"
+      "display": "Maçon"
     },
     {
       "code": "job490",
-      "display": "Médecin Endocrinologue"
+      "display": "Magasinier"
     },
     {
       "code": "job491",
-      "display": "Médecin épidémiologiste"
+      "display": "Maïeuticien d'Etat"
     },
     {
       "code": "job492",
-      "display": "Médecin Généraliste"
+      "display": "Maître de conférence agrégé en chirurgie générale"
     },
     {
       "code": "job493",
-      "display": "Médecin gynécologue obstétricien"
+      "display": "Maître de conférences agrégé de chirurgie cancérologie"
     },
     {
       "code": "job494",
-      "display": "Médecin hépato-gastro-entérologue"
+      "display": "Maître de conférences agrégé en anesthésie réanimation"
     },
     {
       "code": "job495",
-      "display": "Médecin Infectiologue"
+      "display": "Maître de conférences agrégé en biochimie"
     },
     {
       "code": "job496",
-      "display": "Médecin Interniste"
+      "display": "Maître de conférences agrégé en cardiologie"
     },
     {
       "code": "job497",
-      "display": "médecin néphrologue"
+      "display": "Maître de conférences agrégé en Chirurgie générale"
     },
     {
       "code": "job498",
-      "display": "Médecin Neurochirurgien"
+      "display": "Maître de conférences agrégé en chirurgie pédiatrique"
     },
     {
       "code": "job499",
-      "display": "Médecin neurologue"
+      "display": "Maître de conférences agrégé en chirurgie viscérale"
     },
     {
       "code": "job500",
-      "display": "Médecin Nutritionniste"
+      "display": "Maître de conférences agrégé en dermatologie"
     },
     {
       "code": "job501",
-      "display": "Médecin ophtalmologue"
+      "display": "Maître de conférences agrégé en gynécologie obstétrique"
     },
     {
       "code": "job502",
-      "display": "Médecin oto-rhino-larybgologue"
+      "display": "Maître de conférences agrégé en hématologie clinique"
     },
     {
       "code": "job503",
-      "display": "Medecin pédiatre"
+      "display": "Maître de conférences agrégé en hépatho-gastro-entérologie"
     },
     {
       "code": "job504",
-      "display": "Médecin Pneumologue"
+      "display": "Maître de conférences agrégé en immunologie"
     },
     {
       "code": "job505",
-      "display": "Médecin Prescripteur ARV"
+      "display": "Maître de conférences agrégé en médecine interne"
     },
     {
       "code": "job506",
-      "display": "Médecin psychiatre"
+      "display": "Maître de conférences agrégé en néphrologie"
     },
     {
       "code": "job507",
-      "display": "Médecin radiologue"
+      "display": "Maître de conférences agrégé en neurochirurgie"
     },
     {
       "code": "job508",
-      "display": "médecin rhumatologue"
+      "display": "Maître de conférences agrégé en neurologie"
     },
     {
       "code": "job509",
-      "display": "Médecin spécialiste de cancérologie (chirurgie)"
+      "display": "Maître de conférences agrégé en ophtalmologie"
     },
     {
       "code": "job510",
-      "display": "Médecin spécialiste en oncologie médicale"
+      "display": "Maître de conférences agrégé en orthopédie traumatologie"
     },
     {
       "code": "job511",
-      "display": "Médecin stomatologue"
+      "display": "Maître de conférences agrégé en oto-rhino-laryngologie"
     },
     {
       "code": "job512",
-      "display": "Médecin Traumatologue"
+      "display": "Maître de conférences agrégé en oto-rhino-laryngologie et chirurgie cervico-faciale"
     },
     {
       "code": "job513",
-      "display": "Médecin traumato-orthopédie"
+      "display": "Maître de conférences agrégé en pédiatre, génétique médicale"
     },
     {
       "code": "job514",
-      "display": "Médecin Urgentiste"
+      "display": "Maître de conférences agrégé en pédiatrie"
     },
     {
       "code": "job515",
-      "display": "Médecin Urologue"
+      "display": "Maître de conférences agrégé en pneumologie"
     },
     {
       "code": "job516",
-      "display": "Médecin Urologue-andrologue"
+      "display": "Maître de conférences agrégé en psychiatrie d'adultes"
     },
     {
       "code": "job517",
-      "display": "Mediateur"
+      "display": "Maître de conférences agrégé en psychologie de santé"
     },
     {
       "code": "job518",
-      "display": "Menuisier"
+      "display": "Maître de conférences agrégé en radiologie et imagerie médaicale"
     },
     {
       "code": "job519",
-      "display": "Microscopiste"
+      "display": "Maître de conférences agrégé en rhumatologie"
     },
     {
       "code": "job520",
-      "display": "Moniteur"
+      "display": "Maître de conférences agrégé en stomatologie"
     },
     {
       "code": "job521",
-      "display": "Nutritioniste"
+      "display": "Maître de conférences agrégé en stomatologie & chirurgie Maxillo-faciale"
     },
     {
       "code": "job522",
-      "display": "Operateur de saisie"
+      "display": "Maître de conférences agrégé en urologie andrologie"
     },
     {
       "code": "job523",
-      "display": "Ophalmologue"
+      "display": "Maitre nageur"
     },
     {
       "code": "job524",
-      "display": "Orthophoniste d'Etat"
+      "display": "Manipulateur de radio panoramique"
     },
     {
       "code": "job525",
-      "display": "Orthoprothésiste"
+      "display": "Manœuvre"
     },
     {
       "code": "job526",
-      "display": "Personne Responsable des Marché Publics (PRMP)"
+      "display": "Matrone"
     },
     {
       "code": "job527",
-      "display": "PFD Assurance, MNT"
+      "display": "Mécanicien auto"
     },
     {
       "code": "job528",
-      "display": "PFD Palu, SIS"
+      "display": "Médecin anatomopathologiste"
     },
     {
       "code": "job529",
-      "display": "PFD VIH, Surveillant"
+      "display": "Médecin anesthésiste réanimateur"
     },
     {
       "code": "job530",
-      "display": "Pharmacien"
+      "display": "Médecin Biologiste"
     },
     {
       "code": "job531",
-      "display": "Plombier"
+      "display": "Médecin biologiste épidémiologiste"
     },
     {
       "code": "job532",
-      "display": "Point focal Assurance Qualité"
+      "display": "Médecin biologiste spécialiste en Histo-Embryo-Cytogénétique"
     },
     {
       "code": "job533",
-      "display": "Point focal chargé de PEV"
+      "display": "Médecin Cardiologue"
     },
     {
       "code": "job534",
-      "display": "Point focal DBC"
+      "display": "Médecin chef de commune"
     },
     {
       "code": "job535",
-      "display": "POINT FOCAL DISTRICT DE L'HYGIENE ET DE L'ASSAINISSEMENT DE BASE"
+      "display": "Médecin chef de service"
     },
     {
       "code": "job536",
-      "display": "Point focal établissement de soins"
+      "display": "Médecin chirurgien cardio-vasculaire"
     },
     {
       "code": "job537",
-      "display": "Point focal Hygiène et assainissement/IEC"
+      "display": "Médecin chirurgien générale"
     },
     {
       "code": "job538",
-      "display": "Point focal IBC"
+      "display": "Médecin Chirurgien Généraliste"
     },
     {
       "code": "job539",
-      "display": "Point Focal Intervention a Base Communautaire et Pharmacovigilance"
+      "display": "Médecin chirurgien orthopédiste traumatologue"
     },
     {
       "code": "job540",
-      "display": "Point focal Marché Public"
+      "display": "Médecin chirurgien pédiatre"
     },
     {
       "code": "job541",
-      "display": "Point focal MMR/SONU"
+      "display": "Médecin chirurgien plasticien"
     },
     {
       "code": "job542",
-      "display": "Point focal MNT"
+      "display": "Médecin chirurgien thoracique"
     },
     {
       "code": "job543",
-      "display": "Point focal nutrition"
+      "display": "Médecin chirurgien urologue"
     },
     {
       "code": "job544",
-      "display": "Point focal Paludisme"
+      "display": "Médecin de Santé Publique"
     },
     {
       "code": "job545",
-      "display": "Point focal PEV"
+      "display": "Médecin Dermatologue"
     },
     {
       "code": "job546",
-      "display": "Point focal PFA"
+      "display": "Médecin du travail"
     },
     {
       "code": "job547",
-      "display": "Point focal Pharmacovigilance"
+      "display": "Médecin économiste de la santé"
     },
     {
       "code": "job548",
-      "display": "Point focal Projet TAKEDA"
+      "display": "Médecin Endocrinologue"
     },
     {
       "code": "job549",
-      "display": "Point focal promotion de la santé"
+      "display": "Médecin épidémiologiste"
     },
     {
       "code": "job550",
-      "display": "Point focal PTME"
+      "display": "Médecin épidémiologiste de santé publique"
     },
     {
       "code": "job551",
-      "display": "Point focal Référence Contre Référence"
+      "display": "Médecin épidémiologiste de terrain"
     },
     {
       "code": "job552",
-      "display": "Point Focal Régional Lèpre Tuberculose"
+      "display": "Médecin Généraliste"
     },
     {
       "code": "job553",
-      "display": "Point Focal Régional Paludisme"
+      "display": "Medecin gestionnaire des services de santé"
     },
     {
       "code": "job554",
-      "display": "Point focal Régional SAJ"
+      "display": "Médecin Gynécologue-Obstétricien"
     },
     {
       "code": "job555",
-      "display": "Point focal Rougeole"
+      "display": "Médecin hématologue"
     },
     {
       "code": "job556",
-      "display": "Point Focal Santé de la Reproduction"
+      "display": "Médecin hépato-gastro-entérologue"
     },
     {
       "code": "job557",
-      "display": "Point Focal santé des jeunes et des adoleservicents"
+      "display": "Médecin Infectiologue"
     },
     {
       "code": "job558",
-      "display": "Point focal SIMR/ RCR"
+      "display": "Médecin Interniste"
     },
     {
       "code": "job559",
-      "display": "Point focal SNIS"
+      "display": "Médecin interniste et pneumologue"
     },
     {
       "code": "job560",
-      "display": "Point focal SP"
+      "display": "Médecin légiste, médecin du travail et médecin du sport"
     },
     {
       "code": "job561",
-      "display": "Point focal Suivi evaluation et Logistique"
+      "display": "médecin néphrologue"
     },
     {
       "code": "job562",
-      "display": "Point focal Surveillance"
+      "display": "Médecin Neurochirurgien"
     },
     {
       "code": "job563",
-      "display": "Point focal Tuberculose"
+      "display": "Médecin Neurologue"
     },
     {
       "code": "job564",
-      "display": "Point focal tuberculose et Lèpre"
+      "display": "Médecin Nutritionniste"
     },
     {
       "code": "job565",
-      "display": "Point focal VIH"
+      "display": "Médecin ophtalmologue"
     },
     {
       "code": "job566",
-      "display": "Point focal WASH/ATPC"
+      "display": "Médecin oto-rhino-laryngologie et chirurgie cervico-faciale"
     },
     {
       "code": "job567",
-      "display": "Préparateur de l'eau de javel"
+      "display": "Médecin oto-rhino-laryngologue"
     },
     {
       "code": "job568",
-      "display": "Prescriptrice ARV"
+      "display": "Médecin Pédiatre"
     },
     {
       "code": "job569",
-      "display": "Producteur d'eau de Javel"
+      "display": "Médecin pédiatre de santé publique"
     },
     {
       "code": "job570",
-      "display": "Professeur Agrégé de chirurgie cancérologie"
+      "display": "Médecin Pneumologue"
     },
     {
       "code": "job571",
-      "display": "Professeur Agrégé de chirurgie générale"
+      "display": "Médecin Pneumologue-phtisiologue"
     },
     {
       "code": "job572",
-      "display": "Professeur Agrégé en hépatho-gastro-entérologie"
+      "display": "Médecin Prescripteur ARV"
     },
     {
       "code": "job573",
-      "display": "Professeur agrégé en radiologie"
+      "display": "Médecin psychiatre"
     },
     {
       "code": "job574",
-      "display": "Professeur Agrégé en rhumatologie"
+      "display": "Médecin radiologue"
     },
     {
       "code": "job575",
-      "display": "Professeur ophtalmologue"
+      "display": "médecin rhumatologue"
     },
     {
       "code": "job576",
-      "display": "Professeur Titulaire en Anatomie Pathologique"
+      "display": "Médecin spécialisé en hématologie biologique et clinique"
     },
     {
       "code": "job577",
-      "display": "Professeur titulaire en neurologie"
+      "display": "Médecin spécialiste de cancérologie (chirurgie)"
     },
     {
       "code": "job578",
-      "display": "Professeur Titulaire pédiatrie"
+      "display": "Médecin spécialiste en Neurochirurgie"
     },
     {
       "code": "job579",
-      "display": "Psychologue clinicien"
+      "display": "Médecin spécialiste en oncologie médicale"
     },
     {
       "code": "job580",
-      "display": "Psychologue de la santé"
+      "display": "Médecin spécialiste en ORL et Chirurgie cervico-faciale"
     },
     {
       "code": "job581",
-      "display": "Psychologue de l'éducation"
+      "display": "Médecin spécialiste en oto-rhino-laryngologie et chirurgie cervico-faciale"
     },
     {
       "code": "job582",
-      "display": "Psychologue du Travail"
+      "display": "Médecin stomatologue"
     },
     {
       "code": "job583",
-      "display": "Receptionniste"
+      "display": "Médecin stomatologue & chirurgien maxillo-facial"
     },
     {
       "code": "job584",
-      "display": "Regisseur des recettes"
+      "display": "Médecin Traumatologue"
     },
     {
       "code": "job585",
-      "display": "Responsable contrôle et inspection sanitaire / Contrôle de la qualité de l'eau"
+      "display": "Médecin Urgentiste"
     },
     {
       "code": "job586",
-      "display": "Responsable de la gestion courante du personnel"
+      "display": "Médecin Urologue"
     },
     {
       "code": "job587",
-      "display": "Responsable de la maternité"
+      "display": "Médecin Urologue-andrologue"
     },
     {
       "code": "job588",
-      "display": "Responsable de la pharmacie"
+      "display": "Médecin vétérinaire"
     },
     {
       "code": "job589",
-      "display": "Responsable de la promotion des prestations"
+      "display": "Mediateur"
     },
     {
       "code": "job590",
-      "display": "Responsable de la Sous-unité Finance et comptabilité"
+      "display": "Médiateur PECM"
     },
     {
       "code": "job591",
-      "display": "Responsable de la sous-unité lutte contre le paludisme dans les FS publics et privées"
+      "display": "Médiateur PTME"
     },
     {
       "code": "job592",
-      "display": "Responsable de la Sous-unité Prévention du palu chez les femmes enceintes et les enfants de moins de cinq ans"
+      "display": "Menuisier"
     },
     {
       "code": "job593",
-      "display": "Responsable de la sous-unité Promotion de Lutte contre le paludisme et du Partenariat"
+      "display": "Microscopiste"
     },
     {
       "code": "job594",
-      "display": "Responsable de la sous-unité services généraux"
+      "display": "Moniteur"
     },
     {
       "code": "job595",
-      "display": "Responsable de la Sous-Unité Suivi/Evaluation & Chargé de la CPS"
+      "display": "Morguier chargé de la conservation des corps (MCCC)"
     },
     {
       "code": "job596",
-      "display": "Responsable de l'unité des urgences médicales"
+      "display": "Morguier chargé de la réception et de dépôt des corps (MCRDC)"
     },
     {
       "code": "job597",
-      "display": "Responsable de l'unité d'hospitalisation Médecine Interne et endocrinologie"
+      "display": "Morguier chargé des formalités informatisées de dépôt des corps (MCFIDC)"
     },
     {
       "code": "job598",
-      "display": "Responsable de l'Unité Gestion des Achats et Stocks"
+      "display": "Morguier chargé des formalités informatisées de retrait des corps (MCFIRC)"
     },
     {
       "code": "job599",
-      "display": "Responsable de l'Unité Prévention"
+      "display": "Numérotateur"
     },
     {
       "code": "job600",
-      "display": "Responsable de l'Unité Prise en charge"
+      "display": "Nutritionniste"
     },
     {
       "code": "job601",
-      "display": "Responsable de l'Unité Surveillance Epidémiologique"
+      "display": "Odontostomatologiste"
     },
     {
       "code": "job602",
-      "display": "Responsable de magasin"
+      "display": "Opérateur de saisie"
     },
     {
       "code": "job603",
-      "display": "Responsable de pharmacie"
+      "display": "Orthophoniste d'Etat"
     },
     {
       "code": "job604",
-      "display": "Responsable du recrutement et l'accompagnement des carrières"
+      "display": "Orthoprothésiste d'Etat"
     },
     {
       "code": "job605",
-      "display": "Responsable du secretariat"
+      "display": "Personne Responsable des Marché Publics (PRMP)"
     },
     {
       "code": "job606",
-      "display": "Responsable du service de kinésithérapie"
+      "display": "PFD Assurance, MNT"
     },
     {
       "code": "job607",
-      "display": "Responsable du service d'hygiène et assainissement"
+      "display": "PFD Palu, SIS"
     },
     {
       "code": "job608",
-      "display": "Responsable financier"
+      "display": "PFD VIH, Surveillant"
     },
     {
       "code": "job609",
-      "display": "Responsable Formation Sanitaire"
+      "display": "Pharmacien"
     },
     {
       "code": "job610",
-      "display": "Responsable Laboratoire"
+      "display": "Pharmacien spécialiste en économie et gestion de santé"
     },
     {
       "code": "job611",
-      "display": "Responsable magasin biomédical"
+      "display": "Plombier"
     },
     {
       "code": "job612",
-      "display": "Responsable magasin de fonctionnement"
+      "display": "Point focal Assurance Qualité"
     },
     {
       "code": "job613",
-      "display": "Responsable statistique"
+      "display": "Point focal chargé de PEV"
     },
     {
       "code": "job614",
-      "display": "Responsable suivi évaluation au PNMTN"
+      "display": "Point focal DBC"
     },
     {
       "code": "job615",
-      "display": "Responsable UAFL"
+      "display": "Point Focal District de l'Hygiène et de l'Assainissement de Base"
     },
     {
       "code": "job616",
-      "display": "Responsable UGIM"
+      "display": "Point focal établissement de soins"
     },
     {
       "code": "job617",
-      "display": "Sage Femme d’Etat"
+      "display": "Point focal Hygiène et assainissement/IEC"
     },
     {
       "code": "job618",
-      "display": "Sage femme de Santé Publique"
+      "display": "Point focal IBC"
     },
     {
       "code": "job619",
-      "display": "Secrétaire"
+      "display": "Point Focal Intervention à Base Communautaire et Pharmacovigilance"
     },
     {
       "code": "job620",
-      "display": "Secrétaire bureautique"
+      "display": "Point focal Marchés Publics"
     },
     {
       "code": "job621",
-      "display": "Secrétaire dactylographe"
+      "display": "Point focal MMR/SONU"
     },
     {
       "code": "job622",
-      "display": "Secrétaire d'Administration"
+      "display": "Point focal MNT"
     },
     {
       "code": "job623",
-      "display": "Secrétaire de direction"
+      "display": "Point focal nutrition"
     },
     {
       "code": "job624",
-      "display": "Secrétaire Général"
+      "display": "Point focal Paludisme"
     },
     {
       "code": "job625",
-      "display": "Secrétaire Médical"
+      "display": "Point focal PEV"
     },
     {
       "code": "job626",
-      "display": "Secrétaire Particuliaire"
+      "display": "Point focal PFA"
     },
     {
       "code": "job627",
-      "display": "Sérigraphe"
+      "display": "Point focal Pharmacovigilance"
     },
     {
       "code": "job628",
-      "display": "Sociologue"
+      "display": "Point focal Projet TAKEDA"
     },
     {
       "code": "job629",
-      "display": "Soudeur"
+      "display": "Point focal promotion de la santé"
     },
     {
       "code": "job630",
-      "display": "Spécialiste de radiologie et imagerie médicale"
+      "display": "Point focal PTME"
     },
     {
       "code": "job631",
-      "display": "Spécialiste de santé mentale"
+      "display": "Point focal Référence Contre Référence"
     },
     {
       "code": "job632",
-      "display": "Spécialiste des sciences infirmières"
+      "display": "Point Focal Régional Lèpre Tuberculose"
     },
     {
       "code": "job633",
-      "display": "Spécialiste en hygiène alimentaire"
+      "display": "Point Focal Régional Paludisme"
     },
     {
       "code": "job634",
-      "display": "Spécialiste en anesthésie réanimation"
+      "display": "Point focal Régional SAJ"
     },
     {
       "code": "job635",
-      "display": "Spécialiste en environnement, hygiène alimentaire et management de la qualité"
+      "display": "Point focal Rougeole"
     },
     {
       "code": "job636",
-      "display": "Spécialiste en épidémiologie de terrain"
+      "display": "Point Focal Santé de la Reproduction"
     },
     {
       "code": "job637",
-      "display": "Spécialiste en expertise et ingénierie des systèmes d'information sanitaire"
+      "display": "Point Focal santé des jeunes et des adoleservicents"
     },
     {
       "code": "job638",
-      "display": "Spécialiste en génie eau, assainissement et déchets"
+      "display": "Point focal SIMR/ RCR"
     },
     {
       "code": "job639",
-      "display": "Spécialiste en gestion globale des risques et crises"
+      "display": "Point focal SNIS"
     },
     {
       "code": "job640",
-      "display": "Spécialiste en instrumentation chirurgicale des blocs opératoires"
+      "display": "Point focal SP"
     },
     {
       "code": "job641",
-      "display": "Spécialiste en kinésithérapie d'Etat"
+      "display": "Point focal Suivi evaluation et Logistique"
     },
     {
       "code": "job642",
-      "display": "Spécialiste en microbilogie pharmaceutique"
+      "display": "Point focal Surveillance"
     },
     {
       "code": "job643",
-      "display": "Spécialiste en nutrition et sécurité alimentaire"
+      "display": "Point focal Tuberculose"
     },
     {
       "code": "job644",
-      "display": "Spécialiste en odonto-stomatologie"
+      "display": "Point focal tuberculose et Lèpre"
     },
     {
       "code": "job645",
-      "display": "Spécialiste en ophtalmologie"
+      "display": "Point focal VIH"
     },
     {
       "code": "job646",
-      "display": "Spécialiste en optométrie"
+      "display": "Point focal WASH/ATPC"
     },
     {
       "code": "job647",
-      "display": "Spécialiste en Oto-Rhino-Laryngologie"
+      "display": "Préparateur/Producteur de l'eau de javel"
     },
     {
       "code": "job648",
-      "display": "Spécialiste en pédagogie"
+      "display": "Professeur titulaire de chirurgie pédiatrique"
     },
     {
       "code": "job649",
-      "display": "Spécialiste en physiologie-pharmacologie"
+      "display": "Professeur Titulaire en Anatomie Pathologique"
     },
     {
       "code": "job650",
-      "display": "Spécialiste en population et santé"
+      "display": "Professeur titulaire en bactériologie-virologie"
     },
     {
       "code": "job651",
-      "display": "Spécialiste en qualité des aliments"
+      "display": "Professeur titulaire en cardiologie"
     },
     {
       "code": "job652",
-      "display": "Spécialiste en qualité et sécurité environnementale"
+      "display": "Professeur titulaire en chirurgie générale"
     },
     {
       "code": "job653",
-      "display": "Spécialiste en radiologie et imagerie médicale"
+      "display": "Professeur titulaire en chirurgie pédiatrique"
     },
     {
       "code": "job654",
-      "display": "Spécialiste en santé environnementale"
+      "display": "Professeur titulaire en dermatologie-vénérologie"
     },
     {
       "code": "job655",
-      "display": "Spécialiste en santé mentale"
+      "display": "Professeur titulaire en hépatho-gastro-entérologie"
     },
     {
       "code": "job656",
-      "display": "Spécialiste en santé publique"
+      "display": "Professeur titulaire en médecine interne"
     },
     {
       "code": "job657",
-      "display": "Spécialiste en sciences biomédicales"
+      "display": "Professeur titulaire en neurologie"
     },
     {
       "code": "job658",
-      "display": "Spécialiste en sciences infirmières"
+      "display": "Professeur titulaire en ophtalmologue"
     },
     {
       "code": "job659",
-      "display": "Spécialiste en sécurité alimentaire et management de la qualité"
+      "display": "Professeur titulaire en orthopédie traumatologie"
     },
     {
       "code": "job660",
-      "display": "Spécialiste en soins obstétrocaux"
+      "display": "Professeur titulaire en oto-rhino-laryngoloie"
     },
     {
       "code": "job661",
-      "display": "Spécialiste Prothèsiste Dentaire"
+      "display": "Professeur titulaire en pédiatrie"
     },
     {
       "code": "job662",
-      "display": "Spéciliste en instrumentation chirurgicale des blocs opératoires"
+      "display": "Professeur titulaire en pharmacien biologiste"
     },
     {
       "code": "job663",
-      "display": "Spésialiste en marketing et stratégie"
+      "display": "Professeur titulaire en psychiatrie"
     },
     {
       "code": "job664",
-      "display": "Standardiste"
+      "display": "Professeur titulaire en radiologie et imagerie médicale"
     },
     {
       "code": "job665",
-      "display": "Statisticien"
+      "display": "Professeur titulaire en rhumatologie"
     },
     {
       "code": "job666",
-      "display": "Surveillant"
+      "display": "Professeur titulaire en traumatologie"
     },
     {
       "code": "job667",
-      "display": "Surveillant du point de vente"
+      "display": "Professeur Titulaire pédiatrie"
     },
     {
       "code": "job668",
-      "display": "Surveillant général"
+      "display": "Psychologue clinicien"
     },
     {
       "code": "job669",
-      "display": "Surveillant général adjoint"
+      "display": "Psychologue de la santé"
     },
     {
       "code": "job670",
-      "display": "Tailleur"
+      "display": "Psychologue de l'éducation"
     },
     {
       "code": "job671",
-      "display": "Techinicien superieur de Laboratoire"
+      "display": "Psychologue du Travail"
     },
     {
       "code": "job672",
-      "display": "Technicen analyste programmeur"
+      "display": "Receptionniste"
     },
     {
       "code": "job673",
-      "display": "Technicen de surface"
+      "display": "Régisseur"
     },
     {
       "code": "job674",
-      "display": "Technicien orthoprothésiste"
+      "display": "Régisseur d'avances"
     },
     {
       "code": "job675",
-      "display": "Technicien \nSuperieur de Santé Publique"
+      "display": "Régisseur des recettes"
     },
     {
       "code": "job676",
-      "display": "Technicien audioprothésiste"
+      "display": "Responsable contrôle et inspection sanitaire / Contrôle de la qualité de l'eau"
     },
     {
       "code": "job677",
-      "display": "Technicien biomédical"
+      "display": "Responsable de la gestion courante du personnel"
     },
     {
       "code": "job678",
-      "display": "Technicien d'ophtalmo"
+      "display": "Responsable de la maternité"
     },
     {
       "code": "job679",
-      "display": "Technicien électronicien"
+      "display": "Responsable de la pharmacie"
     },
     {
       "code": "job680",
-      "display": "Technicien en génie civil"
+      "display": "Responsable de la promotion des prestations"
     },
     {
       "code": "job681",
-      "display": "Technicien en Informatique"
+      "display": "Responsable de la Sous-unité Finance et comptabilité"
     },
     {
       "code": "job682",
-      "display": "Technicien en maintenance electronique"
+      "display": "Responsable de la sous-unité lutte contre le paludisme dans les FS publics et privées"
     },
     {
       "code": "job683",
-      "display": "Technicien en maintenance informatique"
+      "display": "Responsable de la Sous-unité Prévention du palu chez les femmes enceintes et les enfants de moins de cinq ans"
     },
     {
       "code": "job684",
-      "display": "Technicien en Orthophonie"
+      "display": "Responsable de la sous-unité Promotion de Lutte contre le paludisme et du Partenariat"
     },
     {
       "code": "job685",
-      "display": "Technicien en Télécommunication"
+      "display": "Responsable de la sous-unité services généraux"
     },
     {
       "code": "job686",
-      "display": "Technicien génie civil"
+      "display": "Responsable de la Sous-Unité Suivi/Evaluation & Chargé de la CPS"
     },
     {
       "code": "job687",
-      "display": "Technicien génie électrique"
+      "display": "Responsable de l'unité des urgences médicales"
     },
     {
       "code": "job688",
-      "display": "Technicien Orthopédiste"
+      "display": "Responsable de l'unité d'hospitalisation Médecine Interne et endocrinologie"
     },
     {
       "code": "job689",
-      "display": "Technicien orthopédiste d'Etat"
+      "display": "Responsable de l'Unité Gestion des Achats et Stocks"
     },
     {
       "code": "job690",
-      "display": "Technicien supérieur action commerciale et force de vente"
+      "display": "Responsable de l'Unité Prévention"
     },
     {
       "code": "job691",
-      "display": "Technicien Supérieur Anestesie Réanimation"
+      "display": "Responsable de l'Unité Prise en charge"
     },
     {
       "code": "job692",
-      "display": "Technicien supérieur biomédical"
+      "display": "Responsable de l'Unité Surveillance Epidémiologique"
     },
     {
       "code": "job693",
-      "display": "Technicien Supérieur d' orthophoniste"
+      "display": "Responsable de magasin"
     },
     {
       "code": "job694",
-      "display": "Technicien supérieur d'anesthésie et de réanimation"
+      "display": "Responsable de pharmacie"
     },
     {
       "code": "job695",
-      "display": "Technicien supérieur de genie sanitaire"
+      "display": "Responsable Dépense"
     },
     {
       "code": "job696",
-      "display": "Technicien supérieur de génie sanitaire de santé publique et logisticien"
+      "display": "Responsable du recrutement et l'accompagnement des carrières"
     },
     {
       "code": "job697",
-      "display": "Technicien Superieur de Kinésithérapie"
+      "display": "Responsable du secrétariat"
     },
     {
       "code": "job698",
-      "display": "Technicien Supérieur de Maintenance Biomédicale"
+      "display": "Responsable du service de kinésithérapie"
     },
     {
       "code": "job699",
-      "display": "Technicien supérieur de prothésiste dentaire"
+      "display": "Responsable du service d'hygiène et assainissement"
     },
     {
       "code": "job700",
-      "display": "Technicien supérieur de radiologie et imagerie médicale"
+      "display": "Responsable financier"
     },
     {
       "code": "job701",
-      "display": "Technicien superieur de santé"
+      "display": "Responsable Formation Sanitaire (RFS)"
     },
     {
       "code": "job702",
-      "display": "Technicien supérieur d'instrumentation chirurgicale"
+      "display": "Responsable Laboratoire"
     },
     {
       "code": "job703",
-      "display": "Technicien supérieur d'odontostomatologie"
+      "display": "Responsable magasin biomédical"
     },
     {
       "code": "job704",
-      "display": "Technicien supérieur d'ophtalmologie"
+      "display": "Responsable magasin de fonctionnement"
     },
     {
       "code": "job705",
-      "display": "Technicien supérieur d'ophtalmologie de santé publique"
+      "display": "Responsable statistique"
     },
     {
       "code": "job706",
-      "display": "Technicien supérieur d'orthopédie"
+      "display": "Responsable suivi évaluation au PNMTN"
     },
     {
       "code": "job707",
-      "display": "Technicien supérieur d'oto-rhino-laryngologie"
+      "display": "Responsable UAFL"
     },
     {
       "code": "job708",
-      "display": "Technicien supérieur en anesthésie et réanimation"
+      "display": "Responsable UGIM"
     },
     {
       "code": "job709",
-      "display": "Technicien supérieur en Assurance"
+      "display": "Responsables des kits"
     },
     {
       "code": "job710",
-      "display": "Technicien supérieur en communication des organisations"
+      "display": "Sage-femme d'Etat"
     },
     {
       "code": "job711",
-      "display": "Technicien supérieur en comptabilité et gestion des entreprises"
+      "display": "Sage-femme d'Etat de santé publique"
     },
     {
       "code": "job712",
-      "display": "Technicien supérieur en contrôle des aliments"
+      "display": "Secrétaire"
     },
     {
       "code": "job713",
-      "display": "Technicien Supérieur en Génie Electrique"
+      "display": "Secrétaire bureautique"
     },
     {
       "code": "job714",
-      "display": "Technicien supérieur en logistique et transport"
+      "display": "Secrétaire Dactylographe"
     },
     {
       "code": "job715",
-      "display": "Technicien Supérieur en maintenance biomédicale"
+      "display": "Secrétaire d'Administration"
     },
     {
       "code": "job716",
-      "display": "Technicien superieur en maintenance informatique"
+      "display": "Secrétaire de département"
     },
     {
       "code": "job717",
-      "display": "Technicien supérieur en odonto-stomatologie"
+      "display": "Secrétaire de direction"
     },
     {
       "code": "job718",
-      "display": "Technicien supérieur en orthophonie de santé publique"
+      "display": "Secrétaire de la coordination"
     },
     {
       "code": "job719",
-      "display": "Technicien Supérieur Génie Civil"
+      "display": "Secrétaire Général"
     },
     {
       "code": "job720",
-      "display": "Technicien supérieur génie sanitaire"
+      "display": "Secrétaire Médical"
     },
     {
       "code": "job721",
-      "display": "Technicien supérieur hygiène alimentaire"
+      "display": "Secrétaire Particulière"
     },
     {
       "code": "job722",
-      "display": "Technicien supérieur maintenance informatique"
+      "display": "Sérigraphe"
     },
     {
       "code": "job723",
-      "display": "Transitaire"
+      "display": "Sociologue"
     },
     {
       "code": "job724",
-      "display": "Traumatologue"
+      "display": "Sociologue de la santé"
     },
     {
       "code": "job725",
-      "display": "Vaccinateur"
+      "display": "Soudeur"
     },
     {
       "code": "job726",
+      "display": "Spécialiste de la gouvernance"
+    },
+    {
+      "code": "job727",
+      "display": "Spécialiste en Anesthésie-Réanimation"
+    },
+    {
+      "code": "job728",
+      "display": "Spécialiste en bactériologie"
+    },
+    {
+      "code": "job729",
+      "display": "Spécialiste en communication"
+    },
+    {
+      "code": "job730",
+      "display": "Spécialiste en eau et assainissement"
+    },
+    {
+      "code": "job731",
+      "display": "Spécialiste en économie de développoment"
+    },
+    {
+      "code": "job732",
+      "display": "Spécialiste en éducation inclusive des enfants en situation d'handicap"
+    },
+    {
+      "code": "job733",
+      "display": "Spécialiste en environnement, hygiène alimentaire et management de la qualité"
+    },
+    {
+      "code": "job734",
+      "display": "Spécialiste en épidémiologie de terrain"
+    },
+    {
+      "code": "job735",
+      "display": "Spécialiste en expertise et ingénierie des systèmes d'information sanitaire"
+    },
+    {
+      "code": "job736",
+      "display": "Spécialiste en finances audit"
+    },
+    {
+      "code": "job737",
+      "display": "Spécialiste en finances comptabilité"
+    },
+    {
+      "code": "job738",
+      "display": "Spécialiste en génie eau, assainissement et déchets"
+    },
+    {
+      "code": "job739",
+      "display": "Spécialiste en gestion globale des risques et crises"
+    },
+    {
+      "code": "job740",
+      "display": "Spécialiste en hygiène alimentaire"
+    },
+    {
+      "code": "job741",
+      "display": "Spécialiste en immunulogie parasitologie"
+    },
+    {
+      "code": "job742",
+      "display": "Spécialiste en instrumentation chirurgicale"
+    },
+    {
+      "code": "job743",
+      "display": "Spécialiste en kinésithérapie"
+    },
+    {
+      "code": "job744",
+      "display": "Spécialiste en Management des projets et programmes"
+    },
+    {
+      "code": "job745",
+      "display": "Spécialiste en marketing et stratégie"
+    },
+    {
+      "code": "job746",
+      "display": "Spécialiste en microbiologie pharmaceutique"
+    },
+    {
+      "code": "job747",
+      "display": "Spécialiste en nutrition et santé publique"
+    },
+    {
+      "code": "job748",
+      "display": "Spécialiste en nutrition et sécurité alimentaire"
+    },
+    {
+      "code": "job749",
+      "display": "Spécialiste en odonto stomatologie"
+    },
+    {
+      "code": "job750",
+      "display": "Spécialiste en Ophtalmologie"
+    },
+    {
+      "code": "job751",
+      "display": "Spécialiste en optométrie"
+    },
+    {
+      "code": "job752",
+      "display": "Spécialiste en orthopédie"
+    },
+    {
+      "code": "job753",
+      "display": "Spécialiste en Oto-Rhino-Laryngologie"
+    },
+    {
+      "code": "job754",
+      "display": "Spécialiste en pédagogie"
+    },
+    {
+      "code": "job755",
+      "display": "Spécialiste en pédagogie des sciences de la santé"
+    },
+    {
+      "code": "job756",
+      "display": "Spécialiste en physiologie-pharmacologie"
+    },
+    {
+      "code": "job757",
+      "display": "Spécialiste en planification du développement"
+    },
+    {
+      "code": "job758",
+      "display": "Spécialiste en population et santé"
+    },
+    {
+      "code": "job759",
+      "display": "Spécialiste en prothèse dentaire"
+    },
+    {
+      "code": "job760",
+      "display": "Spécialiste en qualité des aliments"
+    },
+    {
+      "code": "job761",
+      "display": "Spécialiste en qualité et sécurité environnementale"
+    },
+    {
+      "code": "job762",
+      "display": "Spécialiste en qualité métrologie"
+    },
+    {
+      "code": "job763",
+      "display": "Spécialiste en radiologie et imagerie médicale"
+    },
+    {
+      "code": "job764",
+      "display": "Spécialiste en santé communautaire et épidémiologie"
+    },
+    {
+      "code": "job765",
+      "display": "Spécialiste en santé environnementale"
+    },
+    {
+      "code": "job766",
+      "display": "Spécialiste en santé mentale"
+    },
+    {
+      "code": "job767",
+      "display": "Spécialiste en santé mentale de santé publique"
+    },
+    {
+      "code": "job768",
+      "display": "Spécialiste en santé publique"
+    },
+    {
+      "code": "job769",
+      "display": "Spécialiste en santé publique internationale"
+    },
+    {
+      "code": "job770",
+      "display": "Spécialiste en sciences biomédicales"
+    },
+    {
+      "code": "job771",
+      "display": "Spécialiste en sciences de la population"
+    },
+    {
+      "code": "job772",
+      "display": "Spécialiste en sciences infirmières"
+    },
+    {
+      "code": "job773",
+      "display": "Spécialiste en sécurité alimentaire et management de la qualité"
+    },
+    {
+      "code": "job774",
+      "display": "Spécialiste en soins obstétricaux"
+    },
+    {
+      "code": "job775",
+      "display": "Spécialiste QHSE"
+    },
+    {
+      "code": "job776",
+      "display": "Spésialiste en marketing et stratégie"
+    },
+    {
+      "code": "job777",
+      "display": "Standardiste"
+    },
+    {
+      "code": "job778",
+      "display": "Statisticien"
+    },
+    {
+      "code": "job779",
+      "display": "Surveilant de bloc"
+    },
+    {
+      "code": "job780",
+      "display": "Surveillant adjoint de service/unité"
+    },
+    {
+      "code": "job781",
+      "display": "Surveillant de service"
+    },
+    {
+      "code": "job782",
+      "display": "Surveillant du point de vente"
+    },
+    {
+      "code": "job783",
+      "display": "Surveillant d'unité"
+    },
+    {
+      "code": "job784",
+      "display": "Surveillant Général"
+    },
+    {
+      "code": "job785",
+      "display": "Surveillant Général Adjoint"
+    },
+    {
+      "code": "job786",
+      "display": "Tailleur"
+    },
+    {
+      "code": "job787",
+      "display": "Techinicien superieur de Laboratoire"
+    },
+    {
+      "code": "job788",
+      "display": "Technicen analyste programmeur"
+    },
+    {
+      "code": "job789",
+      "display": "Technicen de surface"
+    },
+    {
+      "code": "job790",
+      "display": "Technicien Superieur de Santé Publique"
+    },
+    {
+      "code": "job791",
+      "display": "Technicien audioprothésiste"
+    },
+    {
+      "code": "job792",
+      "display": "Technicien biomédical"
+    },
+    {
+      "code": "job793",
+      "display": "Technicien de génie électrique"
+    },
+    {
+      "code": "job794",
+      "display": "Technicien de Laboratoire"
+    },
+    {
+      "code": "job795",
+      "display": "Technicien de maintenance biomédicale"
+    },
+    {
+      "code": "job796",
+      "display": "Technicien de maintenance biomédicale"
+    },
+    {
+      "code": "job797",
+      "display": "Technicien de maintenance informatique"
+    },
+    {
+      "code": "job798",
+      "display": "Technicien en communication"
+    },
+    {
+      "code": "job799",
+      "display": "Technicien en dessin bâtiments"
+    },
+    {
+      "code": "job800",
+      "display": "Technicien en électricité"
+    },
+    {
+      "code": "job801",
+      "display": "Technicien en électronique"
+    },
+    {
+      "code": "job802",
+      "display": "Technicien en électronique"
+    },
+    {
+      "code": "job803",
+      "display": "Technicien en électrotechnique"
+    },
+    {
+      "code": "job804",
+      "display": "Technicien en froid et climatisation"
+    },
+    {
+      "code": "job805",
+      "display": "Technicien en génie civil"
+    },
+    {
+      "code": "job806",
+      "display": "Technicien en informatique"
+    },
+    {
+      "code": "job807",
+      "display": "Technicien en lunetterie"
+    },
+    {
+      "code": "job808",
+      "display": "Technicien en maintenance électronique"
+    },
+    {
+      "code": "job809",
+      "display": "Technicien en maintenance et réseau"
+    },
+    {
+      "code": "job810",
+      "display": "Technicien en maintenance informatique"
+    },
+    {
+      "code": "job811",
+      "display": "Technicien en orthophonie"
+    },
+    {
+      "code": "job812",
+      "display": "Technicien en Télécommunication"
+    },
+    {
+      "code": "job813",
+      "display": "Technicien génie civil"
+    },
+    {
+      "code": "job814",
+      "display": "Technicien génie électrique"
+    },
+    {
+      "code": "job815",
+      "display": "Technicien Orthopédiste"
+    },
+    {
+      "code": "job816",
+      "display": "Technicien orthophoniste"
+    },
+    {
+      "code": "job817",
+      "display": "Technicien orthoprothésiste"
+    },
+    {
+      "code": "job818",
+      "display": "Technicien orthoprothésiste"
+    },
+    {
+      "code": "job819",
+      "display": "Technicien prothésiste"
+    },
+    {
+      "code": "job820",
+      "display": "Technicien supérieur action commerciale et force de vente"
+    },
+    {
+      "code": "job821",
+      "display": "Technicien supérieur biomédical"
+    },
+    {
+      "code": "job822",
+      "display": "Technicien supérieur d'anesthésie réanimation"
+    },
+    {
+      "code": "job823",
+      "display": "Technicien supérieur d'assurance"
+    },
+    {
+      "code": "job824",
+      "display": "Technicien supérieur de développement"
+    },
+    {
+      "code": "job825",
+      "display": "Technicien supérieur de diététique"
+    },
+    {
+      "code": "job826",
+      "display": "Technicien supérieur de génie sanitaire"
+    },
+    {
+      "code": "job827",
+      "display": "Technicien supérieur de génie sanitaire de santé publique et logisticien"
+    },
+    {
+      "code": "job828",
+      "display": "Technicien Superieur de Kinésithérapie"
+    },
+    {
+      "code": "job829",
+      "display": "Technicien Supérieur de Laboratoire"
+    },
+    {
+      "code": "job830",
+      "display": "Technicien supérieur de laboratoire de santé publique"
+    },
+    {
+      "code": "job831",
+      "display": "Technicien supérieur de laboratoire spécialisé en épidémiologie de terrain"
+    },
+    {
+      "code": "job832",
+      "display": "Technicien Supérieur de Maintenance Biomédicale"
+    },
+    {
+      "code": "job833",
+      "display": "Technicien supérieur de prothèse dentaire"
+    },
+    {
+      "code": "job834",
+      "display": "Technicien supérieur de radiologie et imagerie médicale"
+    },
+    {
+      "code": "job835",
+      "display": "Technicien supérieur de santé"
+    },
+    {
+      "code": "job836",
+      "display": "Technicien supérieur de santé publique"
+    },
+    {
+      "code": "job837",
+      "display": "Technicien supérieur de santé spécialisé en épidémiologie de terrain"
+    },
+    {
+      "code": "job838",
+      "display": "Technicien supérieur d'instrumentation chirurgicale"
+    },
+    {
+      "code": "job839",
+      "display": "Technicien supérieur d'odontostomatologie"
+    },
+    {
+      "code": "job840",
+      "display": "Technicien supérieur d'ophtalmologie"
+    },
+    {
+      "code": "job841",
+      "display": "Technicien supérieur d'ophtalmologie de santé publique"
+    },
+    {
+      "code": "job842",
+      "display": "Technicien supérieur d'orthopédie"
+    },
+    {
+      "code": "job843",
+      "display": "Technicien supérieur d'oto-rhino-laryngologie"
+    },
+    {
+      "code": "job844",
+      "display": "Technicien supérieur en assurance"
+    },
+    {
+      "code": "job845",
+      "display": "Technicien supérieur en biologie animale"
+    },
+    {
+      "code": "job846",
+      "display": "Technicien supérieur en biologie-biochimie et biotechnologie"
+    },
+    {
+      "code": "job847",
+      "display": "Technicien supérieur en communication des organisations"
+    },
+    {
+      "code": "job848",
+      "display": "Technicien Supérieur en Comptabilité et Gestion des Entreprises"
+    },
+    {
+      "code": "job849",
+      "display": "Technicien supérieur en contrôle des aliments"
+    },
+    {
+      "code": "job850",
+      "display": "Technicien supérieur en électronique"
+    },
+    {
+      "code": "job851",
+      "display": "Technicien supérieur en électrotechnique"
+    },
+    {
+      "code": "job852",
+      "display": "Technicien Supérieur en Génie Electrique"
+    },
+    {
+      "code": "job853",
+      "display": "Technicien supérieur en gestion des entreprises"
+    },
+    {
+      "code": "job854",
+      "display": "Technicien supérieur en logistique et transport"
+    },
+    {
+      "code": "job855",
+      "display": "Technicien Supérieur en maintenance biomédicale"
+    },
+    {
+      "code": "job856",
+      "display": "Technicien superieur en maintenance informatique"
+    },
+    {
+      "code": "job857",
+      "display": "Technicien supérieur en orthophonie"
+    },
+    {
+      "code": "job858",
+      "display": "Technicien supérieur en orthophonie de santé publique"
+    },
+    {
+      "code": "job859",
+      "display": "Technicien Supérieur en Télécommunication"
+    },
+    {
+      "code": "job860",
+      "display": "Technicien Supérieur Génie Civil"
+    },
+    {
+      "code": "job861",
+      "display": "Technicien supérieur génie électrique"
+    },
+    {
+      "code": "job862",
+      "display": "Technicien supérieur génie sanitaire"
+    },
+    {
+      "code": "job863",
+      "display": "Technicien supérieur génie sanitaire de santé publique"
+    },
+    {
+      "code": "job864",
+      "display": "Technicien supérieur hygiène alimentaire"
+    },
+    {
+      "code": "job865",
+      "display": "Technicien supérieur orthésiste prothésiste"
+    },
+    {
+      "code": "job866",
+      "display": "Technicien supérieur orthopédiste d'Etat"
+    },
+    {
+      "code": "job867",
+      "display": "Technicien supérieur orthopédiste d'Etat de santé publique"
+    },
+    {
+      "code": "job868",
+      "display": "Technicien supérieur orthophoniste de santé publique"
+    },
+    {
+      "code": "job869",
+      "display": "Technicien supérieur orthoprothésiste"
+    },
+    {
+      "code": "job870",
+      "display": "Transitaire"
+    },
+    {
+      "code": "job871",
+      "display": "Vaccinateur"
+    },
+    {
+      "code": "job872",
       "display": "Vaguemestre"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 726
+  "count": 872
 }

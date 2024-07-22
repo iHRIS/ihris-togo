@@ -57,15 +57,15 @@
           "extension": [
             {
               "url": "field",
-              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training-request-reference').valueReference.reference"
             },
             {
               "url": "url",
-              "valueUrl": "/questionnaire/ihris-education-history/education-history?practitioner=FIELD"
+              "valueUrl": "/resource/view/inservice-training-request/FIELD"
             },
             {
               "url": "text",
-              "valueString": "Add Another"
+              "valueString": "View Training Request"
             },
             {
               "url": "button",
@@ -74,10 +74,6 @@
             {
               "url": "icon",
               "valueString": "mdi-account-arrow-right"
-            },
-            {
-              "url": "task",
-              "valueId": "ihris-task-add-inservice-training"
             }
           ],
           "url": "link"
@@ -125,19 +121,11 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:institution"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:location"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:year"
-        },
-        {
-          "url": "field",
           "valueString": "Basic.extension:inservice-training.extension:degree"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:degree-name"
         },
         {
           "url": "field",
@@ -149,19 +137,15 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:training-mode"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:training-fund"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:inservice-training.extension:training-fund-other"
-        },
-        {
-          "url": "field",
           "valueString": "Basic.extension:inservice-training.extension:observation"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:service-resumption-date"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:inservice-training.extension:service-resumption-reference"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

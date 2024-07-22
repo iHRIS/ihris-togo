@@ -1017,7 +1017,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1040,9 +1040,9 @@
         ]
       },
       {
-        "id": "Extension.extension:bsalary.value[x]:valueString",
+        "id": "Extension.extension:bsalary.value[x]:valueDecimal",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valueString",
+        "sliceName": "valueDecimal",
         "label": "Basic Salary",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1055,7 +1055,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1284,7 +1284,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1307,9 +1307,9 @@
         ]
       },
       {
-        "id": "Extension.extension:allowance.value[x]:valueString",
+        "id": "Extension.extension:allowance.value[x]:valueDecimal",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valueString",
+        "sliceName": "valueDecimal",
         "label": "Allowance",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1322,7 +1322,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1551,7 +1551,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1574,9 +1574,9 @@
         ]
       },
       {
-        "id": "Extension.extension:benefits.value[x]:valueString",
+        "id": "Extension.extension:benefits.value[x]:valueDecimal",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valueString",
+        "sliceName": "valueDecimal",
         "label": "Benefits",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1589,7 +1589,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1613,9 +1613,9 @@
         ]
       },
       {
-        "id": "Extension.extension:period",
+        "id": "Extension.extension:gross",
         "path": "Extension.extension",
-        "sliceName": "period",
+        "sliceName": "gross",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1623,7 +1623,7 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Element.extension",
@@ -1664,7 +1664,7 @@
         ]
       },
       {
-        "id": "Extension.extension:period.id",
+        "id": "Extension.extension:gross.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -1699,7 +1699,7 @@
         ]
       },
       {
-        "id": "Extension.extension:period.extension",
+        "id": "Extension.extension:gross.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -1758,7 +1758,7 @@
         ]
       },
       {
-        "id": "Extension.extension:period.url",
+        "id": "Extension.extension:gross.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -1784,7 +1784,7 @@
             ]
           }
         ],
-        "fixedUri": "period",
+        "fixedUri": "gross",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1795,7 +1795,7 @@
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]",
+        "id": "Extension.extension:gross.value[x]",
         "path": "Extension.extension.value[x]",
         "slicing": {
           "discriminator": [
@@ -1818,7 +1818,7 @@
         },
         "type": [
           {
-            "code": "Period"
+            "code": "decimal"
           }
         ],
         "constraint": [
@@ -1841,10 +1841,10 @@
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]:valuePeriod",
+        "id": "Extension.extension:gross.value[x]:valueDecimal",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valuePeriod",
-        "label": "Effective Period",
+        "sliceName": "valueDecimal",
+        "label": "Gross Salary",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 0,
@@ -1856,19 +1856,20 @@
         },
         "type": [
           {
-            "code": "Period"
+            "code": "decimal"
           }
         ],
         "constraint": [
           {
-            "key": "ihris-period-start-end",
+            "key": "ele-1",
             "severity": "error",
-            "human": "The end date must be after the start date",
-            "expression": "end.empty() or end = '' or end >= start",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1879,8 +1880,59 @@
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]:valuePeriod.id",
-        "path": "Extension.extension.value[x].id",
+        "id": "Extension.extension:net",
+        "path": "Extension.extension",
+        "sliceName": "net",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:net.id",
+        "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1914,8 +1966,8 @@
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]:valuePeriod.extension",
-        "path": "Extension.extension.value[x].extension",
+        "id": "Extension.extension:net.extension",
+        "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
             {
@@ -1934,7 +1986,7 @@
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1973,73 +2025,106 @@
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]:valuePeriod.start",
-        "path": "Extension.extension.value[x].start",
-        "label": "Effective Start Date",
-        "short": "Starting time with inclusive boundary",
-        "definition": "The start of the period. The boundary is inclusive.",
-        "comment": "If the low element is missing, the meaning is that the low boundary is not known.",
+        "id": "Extension.extension:net.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "Period.start",
-          "min": 0,
+          "path": "Extension.url",
+          "min": 1,
           "max": "1"
         },
         "type": [
           {
-            "code": "dateTime"
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "uri"
+              }
+            ]
           }
         ],
-        "condition": [
-          "per-1"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
+        "fixedUri": "net",
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
-            "identity": "v2",
-            "map": "DR.1"
-          },
-          {
             "identity": "rim",
-            "map": "./low"
+            "map": "N/A"
           }
         ]
       },
       {
-        "id": "Extension.extension:period.value[x]:valuePeriod.end",
-        "path": "Extension.extension.value[x].end",
-        "label": "End Date",
-        "short": "End time with inclusive boundary, if not ongoing",
-        "definition": "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-        "comment": "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
+        "id": "Extension.extension:net.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Period.end",
+          "path": "Extension.value[x]",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "dateTime"
+            "code": "decimal"
           }
         ],
-        "meaningWhenMissing": "If the end of the period is missing, it means that the period is ongoing",
-        "condition": [
-          "per-1"
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:net.value[x]:valueDecimal",
+        "path": "Extension.extension.value[x]",
+        "sliceName": "valueDecimal",
+        "label": "Net Salary",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
         ],
         "constraint": [
           {
@@ -2053,15 +2138,545 @@
         ],
         "mustSupport": true,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
-            "identity": "v2",
-            "map": "DR.2"
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date",
+        "path": "Extension.extension",
+        "sliceName": "start-date",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
             "identity": "rim",
-            "map": "./high"
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "uri"
+              }
+            ]
+          }
+        ],
+        "fixedUri": "start-date",
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.value[x]:valueDate",
+        "path": "Extension.extension.value[x]",
+        "sliceName": "valueDate",
+        "label": "Effective Start Date",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date",
+        "path": "Extension.extension",
+        "sliceName": "end-date",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "uri"
+              }
+            ]
+          }
+        ],
+        "fixedUri": "end-date",
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.value[x]:valueDate",
+        "path": "Extension.extension.value[x]",
+        "sliceName": "valueDate",
+        "label": "End Date",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
@@ -3470,13 +4085,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ]
       },
       {
-        "id": "Extension.extension:bsalary.valueString",
-        "path": "Extension.extension.valueString",
+        "id": "Extension.extension:bsalary.valueDecimal",
+        "path": "Extension.extension.valueDecimal",
         "label": "Basic Salary",
         "min": 0,
         "max": "1",
@@ -3515,13 +4130,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ]
       },
       {
-        "id": "Extension.extension:allowance.valueString",
-        "path": "Extension.extension.valueString",
+        "id": "Extension.extension:allowance.valueDecimal",
+        "path": "Extension.extension.valueDecimal",
         "label": "Allowance",
         "min": 0,
         "max": "1",
@@ -3560,38 +4175,38 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "decimal"
           }
         ]
       },
       {
-        "id": "Extension.extension:benefits.valueString",
-        "path": "Extension.extension.valueString",
+        "id": "Extension.extension:benefits.valueDecimal",
+        "path": "Extension.extension.valueDecimal",
         "label": "Benefits",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:period",
+        "id": "Extension.extension:gross",
         "path": "Extension.extension",
-        "sliceName": "period",
-        "min": 1,
+        "sliceName": "gross",
+        "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:period.extension",
+        "id": "Extension.extension:gross.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:period.url",
+        "id": "Extension.extension:gross.url",
         "path": "Extension.extension.url",
-        "fixedUri": "period"
+        "fixedUri": "gross"
       },
       {
-        "id": "Extension.extension:period.value[x]",
+        "id": "Extension.extension:gross.value[x]",
         "path": "Extension.extension.value[x]",
         "slicing": {
           "discriminator": [
@@ -3605,38 +4220,151 @@
         },
         "type": [
           {
-            "code": "Period"
+            "code": "decimal"
           }
         ]
       },
       {
-        "id": "Extension.extension:period.valuePeriod",
-        "path": "Extension.extension.valuePeriod",
-        "label": "Effective Period",
+        "id": "Extension.extension:gross.valueDecimal",
+        "path": "Extension.extension.valueDecimal",
+        "label": "Gross Salary",
         "min": 0,
         "max": "1",
-        "constraint": [
-          {
-            "key": "ihris-period-start-end",
-            "severity": "error",
-            "human": "The end date must be after the start date",
-            "expression": "end.empty() or end = '' or end >= start",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ]
-      },
-      {
-        "id": "Extension.extension:period.valuePeriod.start",
-        "path": "Extension.extension.valuePeriod.start",
-        "label": "Effective Start Date",
-        "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:period.valuePeriod.end",
-        "path": "Extension.extension.valuePeriod.end",
+        "id": "Extension.extension:net",
+        "path": "Extension.extension",
+        "sliceName": "net",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:net.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:net.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "net"
+      },
+      {
+        "id": "Extension.extension:net.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:net.valueDecimal",
+        "path": "Extension.extension.valueDecimal",
+        "label": "Net Salary",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:start-date",
+        "path": "Extension.extension",
+        "sliceName": "start-date",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:start-date.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:start-date.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "start-date"
+      },
+      {
+        "id": "Extension.extension:start-date.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:start-date.valueDate",
+        "path": "Extension.extension.valueDate",
+        "label": "Effective Start Date",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:end-date",
+        "path": "Extension.extension",
+        "sliceName": "end-date",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:end-date.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:end-date.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "end-date"
+      },
+      {
+        "id": "Extension.extension:end-date.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:end-date.valueDate",
+        "path": "Extension.extension.valueDate",
         "label": "End Date",
+        "min": 0,
+        "max": "1",
         "mustSupport": true
       },
       {

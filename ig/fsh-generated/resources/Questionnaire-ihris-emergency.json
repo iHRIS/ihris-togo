@@ -45,6 +45,24 @@
             },
             {
               "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-emergency#Basic.extension:emergency.extension:other-relation.value[x]:valueString",
+              "text": "Other Relation",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[1]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "other",
+                    "system": "http://ihris.org/fhir/CodeSystem/ihris-relation-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-emergency#Basic.extension:emergency.extension:phone.value[x]:valueString",
               "text": "Phone",
               "type": "string",

@@ -12,7 +12,12 @@ const inserviceTrainingWorkflow = {
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         let practitioner
+        let trainingStart
         await fhirAxios.read("Basic", req.query.request).then((response) => {
+          trainingStart = response.extension.find((ext) => {
+            return ext.url === 'http://ihris.org/fhir/StructureDefinition/training-start-date'
+          }).valueDate
+          if(moment(trainingStart).isAfter())
           practitioner = response.extension.find((ext) => {
             return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference"
           })?.valueReference?.reference
@@ -32,12 +37,12 @@ const inserviceTrainingWorkflow = {
         let education = bundle.entry[0].resource.extension.find((ext) => {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/inservice-training"
         })
-        let graduation = education.extension.find((ext) => {
-          return ext.url === "end-year"
+        let resumptionDate = education.extension.find((ext) => {
+          return ext.url === 'service-resumption-date'
         })
-        let startYear = education.extension.find((ext) => {
-          return ext.url === "start-year"
-        })
+        if(resumptionDate && resumptionDate.valueDate && moment(resumptionDate.valueDate).isBefore(trainingStart)) {
+          return reject({message: "La date de reprise de service doit être supérieure à la date de début de la formation."})
+        }
         let specialized = education.extension.find((ext) => {
           return ext.url === "specialized"
         }).valueCoding.code
@@ -48,9 +53,6 @@ const inserviceTrainingWorkflow = {
           return reject({message: "La spécialisation est obligatoire"})
         } else if(specialized === "no" && specialization && specialization.valueCoding && specialization.valueCoding.code) {
           return reject({message: "La spécialisation n'est pas Obligatoire"})
-        }
-        if(startYear && moment(startYear.valueDate).isAfter(graduation.valueDate)) {
-          return reject({message: "L'année de début doit être avant l'obtention du diplôme"})
         }
         return resolve(bundle)
       })

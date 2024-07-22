@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "AccountTypeCodeSystem",
+  "id": "account-type-codesystem",
+  "title": "Account Type Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/account-type-codesystem",
+  "concept": [
+    {
+      "code": "comptecourant",
+      "display": "Compte Courant"
+    },
+    {
+      "code": "comptedepargne",
+      "display": "Compte d’Epargne"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 2
+}

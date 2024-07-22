@@ -3,7 +3,7 @@
   "id": "ihris-user-loggedout",
   "meta": {
     "profile": [
-      "http://ihris.org/fhir/StructureDefinition/bw-person-user"
+      "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
     ]
   },
   "extension": [

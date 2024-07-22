@@ -58,7 +58,7 @@
             }
           ],
           "linkId": "Person.name[0].text",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.name.text",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.text",
           "text": "Name",
           "type": "string",
           "required": true,
@@ -66,7 +66,7 @@
         },
         {
           "linkId": "Person.name[0].use",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.name.use",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.use",
           "text": "Use",
           "type": "choice",
           "required": true,
@@ -84,7 +84,7 @@
         },
         {
           "linkId": "Person.telecom[0].system",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.telecom.system",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.telecom.system",
           "text": "Telecom System",
           "type": "choice",
           "required": true,
@@ -125,15 +125,15 @@
             }
           ],
           "linkId": "Person.telecom[0].value",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.telecom.value",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.telecom.value",
           "text": "Email",
           "type": "string",
           "required": true,
           "repeats": false
         },
         {
-          "linkId": "Person.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:role.value[x]:valueReference",
+          "linkId": "Person.extension[0]#preloaded",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:role.value[x]:valueReference",
           "text": "Role",
           "type": "reference",
           "required": true,
@@ -141,7 +141,7 @@
         },
         {
           "linkId": "Person.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:practitioner.value[x]:valueReference",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:practitioner.value[x]:valueReference",
           "text": "Practitioner of this account",
           "type": "reference",
           "required": false,
@@ -155,8 +155,8 @@
           "repeats": false
         },
         {
-          "linkId": "Person.extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:location.value[x]:valueReference",
+          "linkId": "Person.extension[2]#tree",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:location.value[x]:valueReference",
           "text": "Location",
           "type": "reference",
           "required": false,
@@ -164,7 +164,7 @@
         },
         {
           "linkId": "Person.active",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.active",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.active",
           "text": "Active?",
           "type": "boolean",
           "required": true,
@@ -184,7 +184,7 @@
         },
         {
           "linkId": "Person.extension[3]#password",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:initial-password.value[x]:valueString",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:initial-password.value[x]:valueString",
           "text": "Password",
           "type": "string",
           "required": false,
@@ -192,7 +192,7 @@
         },
         {
           "linkId": "Person.extension[4]#password",
-          "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user#Person.extension:confirm-initial-password.value[x]:valueString",
+          "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.extension:confirm-initial-password.value[x]:valueString",
           "text": "Confirm Password",
           "type": "string",
           "required": false,
@@ -200,7 +200,7 @@
         }
       ],
       "linkId": "Person",
-      "definition": "http://ihris.org/fhir/StructureDefinition/bw-person-user",
+      "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user",
       "text": "User",
       "type": "group"
     }

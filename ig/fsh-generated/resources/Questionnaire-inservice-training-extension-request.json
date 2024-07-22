@@ -1,0 +1,56 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "inservice-training-extension-request",
+  "url": "http://ihris.org/fhir/Questionnaire/inservice-training-extension-request",
+  "title": "Inservice Training Extension Request Workflow",
+  "description": "iHRIS workflow to record a Inservice Training Extension Request",
+  "name": "inservice-training-extension-request",
+  "status": "active",
+  "date": "2024-02-15",
+  "purpose": "Workflow page for recording a Inservice Training Extension Request information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile",
+      "text": "Request Extension Of Inservice Training",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:authorization-reference.value[x]:valueString",
+          "text": "Authorization Reference",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:authorization-confirmation-letter.value[x]:valueAttachment",
+          "text": "Authorization Confirmation Letter",
+          "type": "attachment",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:confirmation-letter-date.value[x]:valueDate",
+          "text": "Confirmation Letter Date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:extension-start-date.value[x]:valueDate",
+          "text": "Extension Start Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "linkId": "Basic.extension[4]#year",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:extension-end-year.value[x]:valueDate",
+          "text": "Extension End Year",
+          "type": "date",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

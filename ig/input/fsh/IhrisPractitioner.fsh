@@ -44,10 +44,6 @@ Description:    "iHRIS profile of Practitioner."
 * name.use ^label = "Use"
 * name.family 1..1 MS
 * name.family ^label = "Family"
-* name.family ^constraint[0].key = "ihris-name-check"
-* name.family ^constraint[0].severity = #error
-* name.family ^constraint[0].expression = "matches('^[A-Za-z ]*$')"
-* name.family ^constraint[0].human = "Name must be only text."
 * name.given 1..* MS
 * name.given ^label = "Given Name"
 * name.suffix 0..0
@@ -75,22 +71,22 @@ Description:    "iHRIS profile of Practitioner."
 * address.type 1..1 MS
 * address.type ^label = "Type"
 * address.line 1..1 MS
-* address.line ^label = "Line"
+* address.line ^label = "Street Address"
 * address.city MS
 * address.city ^label = "City"
-* address.district MS
+* address.district 0..0
 * address.district ^label = "District"
-* address.state MS
+* address.state 0..0
 * address.state ^label = "State"
-* address.postalCode MS
+* address.postalCode 0..0
 * address.postalCode ^label = "Postal Code"
 * address.country MS
 * address.country ^label = "Country"
 * address.extension contains
-    AddressDistrict named district 0..1 MS
-* address.extension[district] MS
-* address.extension[district] ^label = "District"
-* address.extension[district].valueReference MS
+    AddressMunicial named municipal 0..1 MS
+* address.extension[municipal] MS
+* address.extension[municipal] ^label = "District"
+* address.extension[municipal].valueReference MS
 * gender 1..1 MS
 * gender ^label = "Gender"
 * gender from TGOGenderValueSet (required)
@@ -116,9 +112,7 @@ Description:    "iHRIS profile of Practitioner."
 * communication.extension[proficiency].extension[level].valueCoding MS
 * communication.extension[proficiency].extension[type].valueCoding MS
 * extension contains
-    RegistrationNumber named registrationNumber 0..1 MS and
-    AgentId named agent-id 0..1 MS and
-    CorporationNumber named corporation-number 0..1 MS and
+    UniqueNumber named unique-number 0..1 MS and
     SpouseName named spouse-name 0..1 MS and
     BirthPlace named birth-place 0..1 MS and
     IhrisPractitionerNationality named nationality 0..1 MS and
@@ -134,64 +128,42 @@ Description:    "iHRIS profile of Practitioner."
 * extension[spouse-name].valueString MS
 * extension[children]  ^label = "Number of Children"
 * extension[children].valueInteger MS
-* extension[registrationNumber].valueString 1..1 MS
-* extension[registrationNumber].valueString ^label = "Registration Number"
-* extension[agent-id].valueString 1..1 MS
-* extension[agent-id].valueString ^label = "Agent ID"
-* extension[corporation-number].valueString 1..1 MS
-* extension[corporation-number].valueString ^label = "Corporation Number"
+* extension[unique-number].valueString 1..1 MS
+* extension[unique-number].valueString ^label = "Unique Identification Number (UIN)"
 * active 1..1 MS
 * active ^label = "Active"
+* id 1..1 MS
+* id ^label = "Agent ID"
 
-Extension:      AddressDistrict
-Id:             address-district
-Title:          "District Address"
-Description:    "District Address."
+Extension:      AddressMunicial
+Id:             address-municipal
+Title:          "District Municipal"
+Description:    "District Municipal."
 * ^context[0].type = #element
-* ^context[0].expression = "Basic"
-* value[x] only Reference 
-* valueReference only Reference(TGODistrict)
-* valueReference ^label = "District"
+* ^context[0].expression = "Practitioner"
+* value[x] only Reference(TGOCommune)
+* valueReference 1..1 MS
+* valueReference ^label = "Municipal"
 
 Extension:      SpouseName
 Id:             spouse-name
 Title:          "Spouse Name"
 Description:    "Spouse Name"
 * ^context.type = #element
-* ^context.expression = "Basic"
+* ^context.expression = "Practitioner"
 * value[x] only string
 * valueString 1..1 MS
 * valueString ^label = "Spouse Name"
 
-Extension:      RegistrationNumber
-Id:             registration-number
-Title:          "Registration Number"
-Description:    "Registration Number"
+Extension:      UniqueNumber
+Id:             unique-number
+Title:          "Unique Identification Number (UIN)"
+Description:    "Unique Identification Number (UIN)"
 * ^context.type = #element
-* ^context.expression = "Basic"
+* ^context.expression = "Practitioner"
 * value[x] only string
 * valueString 1..1 MS
-* valueString ^label = "Registration Number"
-
-Extension:      AgentId
-Id:             agent-id
-Title:          "Agent Id"
-Description:    "Agent Id"
-* ^context.type = #element
-* ^context.expression = "Basic"
-* value[x] only string
-* valueString 1..1 MS
-* valueString ^label = "Agent Id"
-
-Extension:      CorporationNumber
-Id:             corporation-number
-Title:          "Corporation Number"
-Description:    "Corporation Number"
-* ^context.type = #element
-* ^context.expression = "Basic"
-* value[x] only string
-* valueString 1..1 MS
-* valueString ^label = "Corporation Number"
+* valueString ^label = "Unique Identification Number (UIN)"
 
 Extension:      IdIssueDate
 Id:             id-issue-date
@@ -337,25 +309,6 @@ Description:    "iHRIS extension for Practitioner number of children."
 * valueInteger 1..1 MS
 * valueInteger ^label = "Number of Children"
 
-CodeSystem:      IhrisRelationCodesystem
-Id:              ihris-relation-codesystem
-Title:           "Relationship"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* #spouse "Spouse" "Spouse"
-* #mother "Mother" "Mother"
-* #father "Father" "Father"
-* #adoptedchild "Adopted Child" "Adopted Child"
-* #bilogicalChild "Biological Child" "Biological Child"
-* #other "other" "other"
-
-ValueSet:         IhrisRelationValueSet
-Id:               ihris-relation-valueset
-Title:            "iHRIS Relationship ValueSet"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* codes from system IhrisRelationCodesystem
-
 Instance:       ihris-page-relation
 InstanceOf:     IhrisPage
 Title:          "iHRIS relationship type CodeSystem Page"
@@ -373,17 +326,17 @@ Usage:          #example
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 * extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
 
-Instance:       ihris-search-registration-number
+Instance:       ihris-search-unique-number
 InstanceOf:     SearchParameter
-Title:          "search parameter for registration Number"
+Title:          "search parameter for unique Number"
 Usage:          #definition
-* url = "http://ihris.org/fhir/SearchParameter/ihris-search-license-registration"
-* description = "search parameter for registration Number"
-* name = "search parameter for registration number"
+* url = "http://ihris.org/fhir/SearchParameter/ihris-search-unique-number"
+* description = "search parameter for unique Number"
+* name = "search parameter for unique number"
 * status = #active
 * experimental = false
-* code = #regnum
+* code = #uniquenum
 * base[0] = #Practitioner
 * type = #string
-* expression = "Practitioner.extension('http://ihris.org/fhir/StructureDefinition/registration-number')"
+* expression = "Practitioner.extension('http://ihris.org/fhir/StructureDefinition/unique-number')"
 * target[0] = #Practitioner

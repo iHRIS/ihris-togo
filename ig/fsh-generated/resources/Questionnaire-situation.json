@@ -22,43 +22,14 @@
       "item": [
         {
           "linkId": "Basic.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-type.value[x]:valueCoding",
-          "text": "Agent Type",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-type-valueset",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueReference",
+          "text": "Profile/Qualification",
+          "type": "reference",
           "required": true,
           "repeats": false
         },
         {
           "linkId": "Basic.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:organization.value[x]:valueCoding",
-          "text": "Organization",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/organization-valueset",
-          "required": true,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic.extension[0]",
-              "operator": "=",
-              "answerCoding": {
-                "code": "contractualpartners",
-                "system": "http://ihris.org/fhir/CodeSystem/agent-type-codesystem"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "Basic.extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueCoding",
-          "text": "Profile/Qualification",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/qualification-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:function.value[x]:valueCoding",
           "text": "Function",
           "type": "choice",
@@ -67,7 +38,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[4]",
+          "linkId": "Basic.extension[2]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:service.value[x]:valueCoding",
           "text": "Service",
           "type": "choice",
@@ -76,7 +47,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[5]",
+          "linkId": "Basic.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding",
           "text": "Level of Study",
           "type": "choice",
@@ -85,7 +56,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[6]",
+          "linkId": "Basic.extension[4]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding",
           "text": "Specialty",
           "type": "choice",

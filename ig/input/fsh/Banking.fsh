@@ -10,9 +10,6 @@ Description:    "iHRIS Profile of the Basic resource for Banking."
 * extension[banking].extension[name] MS
 * extension[banking].extension[name] ^label = "Bank Name"
 * extension[banking].extension[name].valueCoding 1..1 MS
-* extension[banking].extension[branch] MS
-* extension[banking].extension[branch] ^label = "Branch Name"
-* extension[banking].extension[branch].valueString 1..1 MS
 * extension[banking].extension[account-number] MS
 * extension[banking].extension[account-number] ^label = "Account Number"
 * extension[banking].extension[account-number].valueString 1..1 MS
@@ -21,7 +18,7 @@ Description:    "iHRIS Profile of the Basic resource for Banking."
 * extension[banking].extension[account-name].valueString 1..1 MS
 * extension[banking].extension[account-type] MS
 * extension[banking].extension[account-type] ^label = "Account Type"
-* extension[banking].extension[account-type].valueString 1..1 MS
+* extension[banking].extension[account-type].valueCoding 1..1 MS
 
 
 Extension:      Banking
@@ -32,7 +29,6 @@ Description:    "iHRIS extension for Practitioner Bank."
 * ^context.expression = "Basic"
 * extension contains
     name 1..1 MS and
-    branch 1..1 MS and
     account-number 1..1 MS and
     account-name 1..1 MS and
     account-type 1..1 MS and
@@ -40,14 +36,13 @@ Description:    "iHRIS extension for Practitioner Bank."
 * extension[name].value[x] only Coding
 * extension[name].valueCoding ^label = "Bank Name"
 * extension[name].valueCoding from BankNameValueSet (required)
-* extension[branch].value[x] only string
-* extension[branch].valueString ^label = "Branch Name"
 * extension[account-number].value[x] only string
 * extension[account-number].valueString ^label = "Account Number"
 * extension[account-name].value[x] only string
 * extension[account-name].valueString ^label = "Account Name"
-* extension[account-type].value[x] only string
-* extension[account-type].valueString ^label = "Account Type"
+* extension[account-type].value[x] only Coding
+* extension[account-type].valueCoding from AccountTypeValueSet (required)
+* extension[account-type].valueCoding ^label = "Account Type"
 
 Instance:       Banking
 InstanceOf:      Questionnaire
@@ -80,32 +75,26 @@ Usage:          #definition
 * item[0].item[0].item[0].repeats = false
 
 * item[0].item[0].item[1].linkId = "Basic.extension[0].extension[1]"
-* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:branch.value[x]:valueString"
-* item[0].item[0].item[1].text = "Branch Name"
+* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-number.value[x]:valueString"
+* item[0].item[0].item[1].text = "Account Number"
 * item[0].item[0].item[1].type = #string
 * item[0].item[0].item[1].required = false
 * item[0].item[0].item[1].repeats = false
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-number.value[x]:valueString"
-* item[0].item[0].item[2].text = "Account Number"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-name.value[x]:valueString"
+* item[0].item[0].item[2].text = "Account Name"
 * item[0].item[0].item[2].type = #string
 * item[0].item[0].item[2].required = false
 * item[0].item[0].item[2].repeats = false
 
 * item[0].item[0].item[3].linkId = "Basic.extension[0].extension[3]"
-* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-name.value[x]:valueString"
-* item[0].item[0].item[3].text = "Account Name"
-* item[0].item[0].item[3].type = #string
+* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-type.value[x]:valueCoding"
+* item[0].item[0].item[3].text = "Account Type"
+* item[0].item[0].item[3].type = #choice
+* item[0].item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/account-type-valueset"
 * item[0].item[0].item[3].required = false
 * item[0].item[0].item[3].repeats = false
-
-* item[0].item[0].item[4].linkId = "Basic.extension[0].extension[4]"
-* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/banking-profile#Basic.extension:banking.extension:account-type.value[x]:valueString"
-* item[0].item[0].item[4].text = "Account Type"
-* item[0].item[0].item[4].type = #string
-* item[0].item[0].item[4].required = false
-* item[0].item[0].item[4].repeats = false
 
 Instance:       ihris-page-banking
 InstanceOf:     IhrisPage
@@ -138,7 +127,6 @@ Usage:          #example
 * extension[section][0].extension[name].valueString = "Basic"
 * extension[section][0].extension[field][0].valueString = "Basic.extension:practitioner"
 * extension[section][0].extension[field][1].valueString = "Basic.extension:banking.extension:name"
-* extension[section][0].extension[field][2].valueString = "Basic.extension:banking.extension:branch"
-* extension[section][0].extension[field][3].valueString = "Basic.extension:banking.extension:account-number"
-* extension[section][0].extension[field][4].valueString = "Basic.extension:banking.extension:account-name"
-* extension[section][0].extension[field][5].valueString = "Basic.extension:banking.extension:account-type"
+* extension[section][0].extension[field][2].valueString = "Basic.extension:banking.extension:account-number"
+* extension[section][0].extension[field][3].valueString = "Basic.extension:banking.extension:account-name"
+* extension[section][0].extension[field][4].valueString = "Basic.extension:banking.extension:account-type"
