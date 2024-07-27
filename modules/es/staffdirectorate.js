@@ -8,13 +8,14 @@ const staffdirectorate = {
       let jobtitle = ""
       let qualification = ""
       let specialization = ""
-      let contractualcategory = ""
       let civilservcategory = ""
       let appointmentdate = ""
       let servicestartdate = ""
       let integrationdate = ""
       let effectivepresdate = ""
-      let location = ""
+      let facility = ""
+      let district = ""
+      let region = ""
       const job = new Promise((resolve, reject) => {
         let params = {
           practitioner: fields.practitionerid,
@@ -26,7 +27,9 @@ const staffdirectorate = {
           total: 1
         }).then(async(response) => {
           if(response && response.entry && response.entry.length) {
-            jobtitle = response.entry[0].resource?.code[0]?.coding[0]?.display
+            if(response.entry[0].resource && response.entry[0].resource.code && response.entry[0].resource?.code[0]?.coding) {
+              jobtitle = response.entry[0].resource?.code[0]?.coding[0]?.display
+            }
             if(!jobtitle) {
               jobtitle = ""
             }
@@ -54,40 +57,72 @@ const staffdirectorate = {
             } else {
               effectivepresdate = ""
             }
-            if(response.entry[0].resource?.location) {
-              location = response.entry[0].resource?.location[0]?.reference
-              await fhirAxios.read("Location", location.split("/")[1]).then((loc) => {
-                location = loc.name
-              })
+
+            integrationdate = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/integration-date"
+            })?.valueDate
+            if(integrationdate) {
+              integrationdate = moment(integrationdate).format("DD-MM-YYYY")
+            } else {
+              integrationdate = ""
             }
 
-          }
-          resolve()
-        }).catch((err) => {
-          console.log(err);
-          reject()
-        })
-      })
-
-      const situation = new Promise((resolve, reject) => {
-        let params = {
-          practitioner: fields.practitionerid,
-          _profile: "http://ihris.org/fhir/StructureDefinition/situation-profile"
-        }
-        utils.getLatestResourceById({
-          resource: "Basic",
-          params,
-          total: 1
-        }).then((response) => {
-          if(response && response.entry && response.entry.length) {
             qualification = response.entry[0].resource.extension.find((ext) => {
-              return ext.url === 'http://ihris.org/fhir/StructureDefinition/qualification'
-            })?.valueCoding?.display
-            if(!qualification) {
+              return ext.url === 'http://ihris.org/fhir/StructureDefinition/qualification-reference'
+            })?.valueReference?.reference
+            if(qualification) {
+              await fhirAxios.read("Basic", qualification.split("/")[1]).then((resp) => {
+                qualification = resp.extension.find((ext) => {
+                  return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-basic-name"
+                })?.valueString
+              })
+            } else {
               qualification = ""
             }
+            if(response.entry[0].resource?.location) {
+              let location = response.entry[0].resource?.location[0]?.reference
+              await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
+                if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                  facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                  district = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                  region = loc.name
+                }
+                if(loc.partOf && loc.partOf.reference) {
+                  await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
+                    if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                      facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                      district = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                      region = loc.name
+                    }
+                    if(loc.partOf && loc.partOf.reference) {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                        if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                          facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                          district = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                          region = loc.name
+                        }
+                        resolve()
+                      })
+                    } else {
+                      resolve()
+                    }
+                  })
+                } else {
+                  resolve()
+                }
+              })
+            } else {
+              resolve()
+            }
+          } else {
+            resolve()
           }
-          resolve()
         }).catch((err) => {
           console.log(err);
           reject()
@@ -175,27 +210,19 @@ const staffdirectorate = {
           resource: "Basic",
           params,
           total: 1
-        }).then((response) => {
+        }).then(async(response) => {
           if(response && response.entry && response.entry.length) {
             civilservcategory = response.entry[0].resource.extension.find((ext) => {
-              return ext.url === 'http://ihris.org/fhir/StructureDefinition/civil-servant-category'
-            })?.valueCoding?.display
-            contractualcategory = response.entry[0].resource.extension.find((ext) => {
-              return ext.url === 'http://ihris.org/fhir/StructureDefinition/contractual-category'
-            })?.valueCoding?.display
-            if(!civilservcategory) {
-              civilservcategory = ""
-            }
-            if(!contractualcategory) {
-              contractualcategory = ""
-            }
-            integrationdate = response.entry[0].resource.extension.find((ext) => {
-              return ext.url === "http://ihris.org/fhir/StructureDefinition/integration-date"
-            })?.valueDate
-            if(integrationdate) {
-              integrationdate = moment(integrationdate).format("DD-MM-YYYY")
+              return ext.url === 'http://ihris.org/fhir/StructureDefinition/civil-servant-category-reference'
+            })?.valueReference?.reference
+            if(civilservcategory) {
+              await fhirAxios.read("Basic", civilservcategory.split("/")[1]).then((resp) => {
+                civilservcategory = resp.extension.find((ext) => {
+                  return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-basic-name'
+                }).valueString
+              })
             } else {
-              integrationdate = ""
+              civilservcategory = ""
             }
           }
           resolve()
@@ -204,8 +231,8 @@ const staffdirectorate = {
           reject()
         })
       })
-      Promise.all([job, situation, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + location
+      Promise.all([job, specialty, classification]).then(() => {
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region
         resolve(value)
       })
     })
@@ -246,7 +273,7 @@ const staffdirectorate = {
       resolve(values[3])
     })
   },
-  contractualcategory: (fields) => {
+  appointmentdate: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
@@ -255,7 +282,7 @@ const staffdirectorate = {
       resolve(values[4])
     })
   },
-  appointmentdate: (fields) => {
+  integrationdate: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
@@ -264,7 +291,7 @@ const staffdirectorate = {
       resolve(values[5])
     })
   },
-  integrationdate: (fields) => {
+  servicestartdate: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
@@ -273,7 +300,7 @@ const staffdirectorate = {
       resolve(values[6])
     })
   },
-  servicestartdate: (fields) => {
+  effectivepresdate: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
@@ -282,7 +309,7 @@ const staffdirectorate = {
       resolve(values[7])
     })
   },
-  effectivepresdate: (fields) => {
+  facility: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
@@ -291,13 +318,22 @@ const staffdirectorate = {
       resolve(values[8])
     })
   },
-  location: (fields) => {
+  district: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
       resolve(values[9])
+    })
+  },
+  region: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[10])
     })
   }
 }

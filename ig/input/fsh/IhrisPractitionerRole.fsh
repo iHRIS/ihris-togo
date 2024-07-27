@@ -297,13 +297,13 @@ Title:            "iHRIS Job Type ValueSet"
 
 Extension:      AppointmentDate
 Id:             appointment-date
-Title:          "iHRIS Job Description First Employment Date"
-Description:    "iHRIS extension for First Employment Date."
+Title:          "iHRIS Job Description Appointment Date"
+Description:    "iHRIS extension for Appointment Date."
 * ^context.type = #element
 * ^context.expression = "PractitionerRole"
 * value[x] only date
 * valueDate 1..1 MS
-* valueDate ^label = "First Employment Date"
+* valueDate ^label = "Appointment Date"
 
 Extension:      AppointmentReference
 Id:             appointment-reference
