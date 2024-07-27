@@ -6,7 +6,7 @@ Usage: #example
 * parameter[=].valueSignature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.14
 * parameter[=].valueSignature.when = "2022-06-21T09:31:16.469Z"
 * parameter[=].valueSignature.who = Reference(http://ihris.org/fhir/Organization/ihris)
-* parameter[=].valueSignature.data = "xZJYk3awfS0ze6/MCwhPgM1rZvUq+LCJr+auneNbU9sW7JUD/DEmmnnTdfrPKTtCW5g4LUslrK3JBiaaG6gPuDoI3Dkk9Jaqn35l6HHrChXnYgWFZJP20DZAx0YbryfbatsqOnwTckuTC9AuTe194m5bS+b/1xanVWRUmwt4zxU="
+* parameter[=].valueSignature.data = "DbZyDX4zu4B6SH2wKWLf7jQFKxDacGZh0ml4LRhtoJLk4naG3+SVsoshpoxVs+0OX8uOtTUb0CmC7VYw4+Fm+AaRMV3HqgJtVBIbPwGHADMkjYJ3Pzlce7pLpRX9HkohDrlY7vgwA51rCEFzDVpQVO76iZpnxMS5Q/m7vzFlb/U="
 * parameter[+].name = "config"
 * parameter[=].part[0].name = "site:title"
 * parameter[=].part[=].valueString = "Togo Ministry of Health"

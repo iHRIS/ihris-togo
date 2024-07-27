@@ -229,10 +229,6 @@ Usage:          #definition
 * item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user"
 * item[0].text = "User"
 * item[0].type = #group
-* item[0].extension[constraint].extension[key].valueId = "ihris-password-check"
-* item[0].extension[constraint].extension[severity].valueCode = #error
-* item[0].extension[constraint].extension[expression].valueString = "where(linkId='password').answer.first().valueString = where(linkId='confrimpassword').answer.first().valueString"
-* item[0].extension[constraint].extension[human].valueString = "Please make sure Password and Confrim Password Match."
 
 * item[0].item[0].linkId = "Person.name[0].text"
 * item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.text"
@@ -240,10 +236,6 @@ Usage:          #definition
 * item[0].item[0].type = #string
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
-* item[0].item[0].extension[constraint].extension[key].valueId = "ihris-name-check"
-* item[0].item[0].extension[constraint].extension[severity].valueCode = #error
-* item[0].item[0].extension[constraint].extension[expression].valueString = "matches('^[A-Za-z ]*$')"
-* item[0].item[0].extension[constraint].extension[human].valueString = "Name must be only text."
 
 * item[0].item[1].linkId = "Person.name[0].use"
 * item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.use"
@@ -347,14 +339,6 @@ Usage:          #definition
 * item[0].text = "Change Password"
 * item[0].definition = "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.id"
 * item[0].type = #group
-* item[0].extension[constraint][0].extension[key].valueId = "ihris-password-check"
-* item[0].extension[constraint][0].extension[severity].valueCode = #error
-* item[0].extension[constraint][0].extension[expression].valueString = "where(linkId='Person.extension[1]').answer.first().valueString = where(linkId='Person.extension[2]').answer.first().valueString"
-* item[0].extension[constraint][0].extension[human].valueString = "Please make sure New Password and Confrim Password Match."
-* item[0].extension[constraint][1].extension[key].valueId = "ihris-oldpassword-check"
-* item[0].extension[constraint][1].extension[severity].valueCode = #error
-* item[0].extension[constraint][1].extension[expression].valueString = "where(linkId='Person.extension[0]').answer.first().valueString != where(linkId='Person.extension[1]').answer.first().valueString"
-* item[0].extension[constraint][1].extension[human].valueString = "Please make sure New Password is not the Same as Old Password."
 
 * item[0].item[0].linkId = "Person.extension[0]#password"
 * item[0].item[0].text = "Old Password"

@@ -9,54 +9,8 @@
   "url": "http://ihris.org/fhir/Questionnaire/ihris-user",
   "item": [
     {
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "key",
-              "valueId": "ihris-password-check"
-            },
-            {
-              "url": "severity",
-              "valueCode": "error"
-            },
-            {
-              "url": "expression",
-              "valueString": "where(linkId='password').answer.first().valueString = where(linkId='confrimpassword').answer.first().valueString"
-            },
-            {
-              "url": "human",
-              "valueString": "Please make sure Password and Confrim Password Match."
-            }
-          ],
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint"
-        }
-      ],
       "item": [
         {
-          "extension": [
-            {
-              "extension": [
-                {
-                  "url": "key",
-                  "valueId": "ihris-name-check"
-                },
-                {
-                  "url": "severity",
-                  "valueCode": "error"
-                },
-                {
-                  "url": "expression",
-                  "valueString": "matches('^[A-Za-z ]*$')"
-                },
-                {
-                  "url": "human",
-                  "valueString": "Name must be only text."
-                }
-              ],
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint"
-            }
-          ],
           "linkId": "Person.name[0].text",
           "definition": "http://ihris.org/fhir/StructureDefinition/tgo-person-user#Person.name.text",
           "text": "Name",
