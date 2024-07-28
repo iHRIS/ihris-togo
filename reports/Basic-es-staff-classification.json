@@ -190,7 +190,7 @@
           "valueString": "nationalid"
         }, {
           "url": "fhirpath",
-          "valueString": "identifier.where(type.coding.code='nni').value"
+          "valueString": "identifier.where(type.coding.where(code='cni')).value"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -337,7 +337,7 @@
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": true
+          "valueBoolean": false
         }, {
           "url": "order",
           "valueInteger": 11
@@ -352,7 +352,7 @@
           "valueString": "bonus"
         }, {
           "url": "function",
-          "valueString": "classification.echelon({classificationdata})"
+          "valueString": "classification.bonus({classificationdata})"
         }, {
           "url": "parameters",
           "valueString": "classificationdata"
@@ -361,7 +361,7 @@
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": true
+          "valueBoolean": false
         }, {
           "url": "order",
           "valueInteger": 12
@@ -385,7 +385,7 @@
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": true
+          "valueBoolean": false
         }, {
           "url": "order",
           "valueInteger": 13
@@ -409,7 +409,7 @@
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": true
+          "valueBoolean": false
         }, {
           "url": "order",
           "valueInteger": 14
@@ -562,54 +562,6 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Integration Date"
-        }, {
-          "url": "name",
-          "valueString": "integrationdate"
-        }, {
-          "url": "function",
-          "valueString": "classification.integrationdate({classificationdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "classificationdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 21
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Date of Tenure"
-        }, {
-          "url": "name",
-          "valueString": "tenuredate"
-        }, {
-          "url": "function",
-          "valueString": "classification.tenuredate({classificationdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "classificationdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 22
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
           "valueString": "Facility"
         }, {
           "url": "name",
@@ -628,7 +580,31 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 23
+          "valueInteger": 21
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Commune"
+        }, {
+          "url": "name",
+          "valueString": "commune"
+        }, {
+          "url": "function",
+          "valueString": "classification.commune({classificationdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "classificationdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 22
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -652,7 +628,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 24
+          "valueInteger": 23
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -676,7 +652,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 25
+          "valueInteger": 24
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

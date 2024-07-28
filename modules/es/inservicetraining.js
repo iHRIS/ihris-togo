@@ -13,6 +13,7 @@ const inservicetraining = {
       let degree = ""
       let specialization = ""
       let facility = ""
+      let commune = ""
       let district = ""
       let region = ""
       const job = new Promise((resolve, reject) => {
@@ -31,6 +32,8 @@ const inservicetraining = {
               await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
                 if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                   facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                  commune = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                   district = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
@@ -40,21 +43,40 @@ const inservicetraining = {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                     if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                       facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                      commune = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                       district = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                       region = loc.name
                     }
                     if(loc.partOf && loc.partOf.reference) {
-                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                         if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                           facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                          commune = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                           district = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                           region = loc.name
                         }
-                        resolve()
+                        if(loc.partOf && loc.partOf.reference) {
+                          await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                            if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                              facility = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                              commune = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                              district = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                              region = loc.name
+                            }
+                            resolve()
+                          })
+                        } else {
+                          resolve()
+                        }
                       })
                     } else {
                       resolve()
@@ -118,50 +140,53 @@ const inservicetraining = {
             if(!startYear) {
               startYear = ""
             }
-          }
-        })
-      })
-      const training = new Promise((resolve, reject) => {
-        let params = {
-          practitioner: fields.practitionerid,
-          _profile: "http://ihris.org/fhir/StructureDefinition/inservice-training-profile"
-        }
-        utils.getLatestResourceById({
-          resource: "Basic",
-          params,
-          total: 1
-        }).then(async(response) => {
-          if(response && response.entry && response.entry.length) {
-            let training = response.entry[0].resource.extension.find((ext) => {
-              return ext.url === 'http://ihris.org/fhir/StructureDefinition/inservice-training'
+            let params = {
+              inservicetrainingrequest: "Basic/" + response.entry[0].resource.id,
+              _profile: "http://ihris.org/fhir/StructureDefinition/inservice-training-profile"
+            }
+            utils.getLatestResourceById({
+              resource: "Basic",
+              params,
+              total: 1
+            }).then(async(response) => {
+              if(response && response.entry && response.entry.length) {
+                let training = response.entry[0].resource.extension.find((ext) => {
+                  return ext.url === 'http://ihris.org/fhir/StructureDefinition/inservice-training'
+                })
+                completed = training.extension.find((ext) => {
+                  return ext.url === 'completed'
+                })?.valueCoding?.display
+                degree = training.extension.find((ext) => {
+                  return ext.url === 'degree-name'
+                })?.valueString
+                specialization = training.extension.find((ext) => {
+                  return ext.url === 'specialization'
+                })?.valueCoding?.display
+                if(!degree) {
+                  degree = ""
+                }
+                if(!specialization) {
+                  specialization = ""
+                }
+                if(!completed) {
+                  completed = ""
+                }
+                resolve()
+              } else {
+                return resolve()
+              }
+            }).catch((err) => {
+              console.log(err);
+              reject()
             })
-            completed = training.extension.find((ext) => {
-              return ext.url === 'completed'
-            })?.valueCoding?.display
-            degree = training.extension.find((ext) => {
-              return ext.url === 'degree-name'
-            })?.valueString
-            specialization = training.extension.find((ext) => {
-              return ext.url === 'specialization'
-            })?.valueCoding?.display
-            if(!degree) {
-              degree = ""
-            }
-            if(!specialization) {
-              specialization = ""
-            }
-            resolve()
           } else {
-            return resolve()
+            resolve()
           }
-        }).catch((err) => {
-          console.log(err);
-          reject()
         })
       })
 
-      Promise.all([job, trainingrequest, training]).then(() => {
-        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + completed
+      Promise.all([job, trainingrequest]).then(() => {
+        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + completed + "-^-" + commune
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -268,6 +293,15 @@ const inservicetraining = {
       resolve(inservicetraining[10])
     })
   },
+  commune: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.inservicetrainingdata) {
+        resolve()
+      }
+      let values = fields.inservicetrainingdata.split("-^-")
+      resolve(values[3])
+    })
+  }
 }
 
 module.exports = inservicetraining

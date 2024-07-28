@@ -45,13 +45,10 @@ const index = {
   },
   retirementDate: (fields) => {
     return new Promise((resolve) => {
-      if(!fields.dob || !fields.classificationcatcategory) {
+      if(!fields.dob) {
         return resolve()
       }
       let age = 60
-      if(fields.classificationcatcategory.split(":")[0] === "civilservant" && fields.classificationcatcategory.split(":")[1] === "A") {
-        age = 65
-      }
       let date = moment(fields.dob).add(age, "years").format("DD-MM-YYYY")
       resolve(date)
     })

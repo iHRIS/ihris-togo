@@ -160,7 +160,7 @@ Usage:          #example
 * extension[section][6].extension[resource].extension[column][0].extension[header].valueString = "Diploma"
 * extension[section][6].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueReference"
 * extension[section][6].extension[resource].extension[column][1].extension[header].valueString = "Sector"
-* extension[section][6].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueString"
+* extension[section][6].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueCoding.display"
 * extension[section][6].extension[resource].extension[column][2].extension[header].valueString = "Institution"
 * extension[section][6].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='institution').valueString"
 * extension[section][6].extension[resource].extension[column][3].extension[header].valueString = "Country"

@@ -18,6 +18,7 @@ const classification = {
       let echelon = ""
       let lastadminsituation = ""
       let facility = ""
+      let commune = ""
       let district = ""
       let region = ""
       const job = new Promise((resolve, reject) => {
@@ -36,6 +37,8 @@ const classification = {
               await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
                 if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                   facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                  commune = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                   district = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
@@ -45,21 +48,40 @@ const classification = {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                     if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                       facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                      commune = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                       district = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                       region = loc.name
                     }
                     if(loc.partOf && loc.partOf.reference) {
-                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                         if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                           facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                          commune = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                           district = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                           region = loc.name
                         }
-                        resolve()
+                        if(loc.partOf && loc.partOf.reference) {
+                          await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                            if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                              facility = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                              commune = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                              district = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                              region = loc.name
+                            }
+                            resolve()
+                          })
+                        } else {
+                          resolve()
+                        }
                       })
                     } else {
                       resolve()
@@ -193,18 +215,28 @@ const classification = {
             }
             if(!bonus) {
               bonus = "0"
+            } else {
+              bonus = bonus.toLocaleString()
             }
             if(!deduction) {
               deduction = "0"
+            } else {
+              deduction = deduction.toLocaleString()
             }
             if(!basic) {
               basic = "0"
+            } else {
+              basic = basic.toLocaleString()
             }
             if(!gross) {
               gross = "0"
+            } else {
+              gross = gross.toLocaleString()
             }
             if(!net) {
               net = "0"
+            } else {
+              net = net.toLocaleString()
             }
             resolve()
           } else {
@@ -217,7 +249,7 @@ const classification = {
       })
 
       Promise.all([job, classification]).then(() => {
-        let value = grade +"-^-"+ classificationclass +"-^-"+ civilservcategory +"-^-" + echelon +"-^-" + lastadminsituation +"-^-" + salaryindex +"-^-" + bonus +"-^-" + deduction +"-^-" + basic +"-^-" + gross +"-^-" + net +"-^-" + budgettype +"-^-" + agenttype +"-^-" + facility +"-^-" + district +"-^-" + region
+        let value = grade +"-^-"+ classificationclass +"-^-"+ civilservcategory +"-^-" + echelon +"-^-" + lastadminsituation +"-^-" + salaryindex +"-^-" + bonus +"-^-" + deduction +"-^-" + basic +"-^-" + gross +"-^-" + net +"-^-" + budgettype +"-^-" + agenttype +"-^-" + facility +"-^-" + district +"-^-" + region + "-^-" + commune
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -367,6 +399,15 @@ const classification = {
       }
       let values = fields.classificationdata.split("-^-")
       resolve(values[15])
+    })
+  },
+  commune: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.classificationdata) {
+        resolve()
+      }
+      let values = fields.classificationdata.split("-^-")
+      resolve(values[3])
     })
   }
 }

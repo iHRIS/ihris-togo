@@ -494,8 +494,8 @@
         "reference": {
           "reference": "StructureDefinition/appointment-date"
         },
-        "name": "iHRIS Job Description First Employment Date",
-        "description": "iHRIS extension for First Employment Date.",
+        "name": "iHRIS Job Description Appointment Date",
+        "description": "iHRIS extension for Appointment Date.",
         "exampleBoolean": false
       },
       {

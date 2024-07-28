@@ -17,6 +17,7 @@ const situation = {
       let level = ""
       let specialty = ""
       let facility = ""
+      let commune = ""
       let district = ""
       let region = ""
       const job = new Promise((resolve, reject) => {
@@ -33,32 +34,53 @@ const situation = {
             if(response.entry[0].resource?.location) {
               let location = response.entry[0].resource?.location[0]?.reference
               await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
-                if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                   facility = loc.name
-                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                  commune = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                   district = loc.name
-                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                   region = loc.name
                 }
                 if(loc.partOf && loc.partOf.reference) {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
-                    if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                    if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                       facility = loc.name
-                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                      commune = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                       district = loc.name
-                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                       region = loc.name
                     }
                     if(loc.partOf && loc.partOf.reference) {
-                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
-                        if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
+                        if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                           facility = loc.name
-                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                          commune = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                           district = loc.name
-                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                           region = loc.name
                         }
-                        resolve()
+                        if(loc.partOf && loc.partOf.reference) {
+                          await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                            if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                              facility = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                              commune = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                              district = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                              region = loc.name
+                            }
+                            resolve()
+                          })
+                        } else {
+                          resolve()
+                        }
                       })
                     } else {
                       resolve()
@@ -83,10 +105,10 @@ const situation = {
       const situation = new Promise((resolve, reject) => {
         let params = {
           practitioner: fields.practitionerid,
-          _profile: "http://ihris.org/fhir/StructureDefinition/situation-profile"
+          _profile: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role"
         }
         utils.getLatestResourceById({
-          resource: "Basic",
+          resource: "PractitionerRole",
           params,
           total: 1
         }).then(async(response) => {
@@ -179,7 +201,7 @@ const situation = {
       })
 
       Promise.all([job, situation]).then(() => {
-        let value = qualification+"-^-" + fn +"-^-" + level +"-^-" + specialty +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + appointmentdate +"-^-" + bonusdate +"-^-" + servicestartdate +"-^-" + serviceenddate +"-^-" + serviceeffectivedate +"-^-" + service +"-^-" + tenuredate +"-^-" + integrationdate
+        let value = qualification+"-^-" + fn +"-^-" + level +"-^-" + specialty +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + appointmentdate +"-^-" + bonusdate +"-^-" + servicestartdate +"-^-" + serviceenddate +"-^-" + serviceeffectivedate +"-^-" + service +"-^-" + tenuredate +"-^-" + integrationdate + "-^-" + commune
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -320,6 +342,15 @@ const situation = {
       }
       let values = fields.situationdata.split("-^-")
       resolve(values[14])
+    })
+  },
+  commune: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.situationdata) {
+        resolve()
+      }
+      let values = fields.situationdata.split("-^-")
+      resolve(values[15])
     })
   }
 }

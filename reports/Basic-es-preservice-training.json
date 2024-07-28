@@ -481,6 +481,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Commune"
+        }, {
+          "url": "name",
+          "valueString": "commune"
+        }, {
+          "url": "function",
+          "valueString": "preservicetraining.commune({preservicetrainingdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "preservicetrainingdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 16
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "District"
         }, {
           "url": "name",
@@ -499,7 +523,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 16
+          "valueInteger": 17
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -523,7 +547,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 17
+          "valueInteger": 18
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

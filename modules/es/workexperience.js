@@ -12,6 +12,7 @@ const workexperience = {
       let service = ""
       let location = ""
       let facility = ""
+      let commune = ""
       let district = ""
       let region = ""
       const role = new Promise((resolve, reject) => {
@@ -30,6 +31,8 @@ const workexperience = {
               await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
                 if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                   facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                  commune = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                   district = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
@@ -39,21 +42,40 @@ const workexperience = {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                     if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                       facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                      commune = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                       district = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                       region = loc.name
                     }
                     if(loc.partOf && loc.partOf.reference) {
-                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                         if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                           facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                          commune = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                           district = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                           region = loc.name
                         }
-                        resolve()
+                        if(loc.partOf && loc.partOf.reference) {
+                          await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                            if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                              facility = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                              commune = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                              district = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                              region = loc.name
+                            }
+                            resolve()
+                          })
+                        } else {
+                          resolve()
+                        }
                       })
                     } else {
                       resolve()
@@ -89,25 +111,25 @@ const workexperience = {
             let employment = response.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-employment-history'
             })
-            let ministry = employment.extension.find((ext) => {
+            ministry = employment.extension.find((ext) => {
               return ext.url === 'ministry'
             })?.valueString
-            let country = employment.extension.find((ext) => {
+            country = employment.extension.find((ext) => {
               return ext.url === 'country'
             })?.valueCoding?.display
-            let job = employment.extension.find((ext) => {
+            job = employment.extension.find((ext) => {
               return ext.url === 'job'
             })?.valueString
-            let startYear = employment.extension.find((ext) => {
+            startYear = employment.extension.find((ext) => {
               return ext.url === 'start-year'
             })?.valueDate
-            let endYear = employment.extension.find((ext) => {
+            endYear = employment.extension.find((ext) => {
               return ext.url === 'end-year'
             })?.valueDate
-            let service = employment.extension.find((ext) => {
+            service = employment.extension.find((ext) => {
               return ext.url === 'service'
             })?.valueCoding?.display
-            let location = employment.extension.find((ext) => {
+            location = employment.extension.find((ext) => {
               return ext.url === 'location'
             })?.valueReference?.reference
             if(location) {
@@ -147,7 +169,7 @@ const workexperience = {
       })
 
       Promise.all([role, experience]).then(() => {
-        let value = ministry +"-^-"+ country +"-^-"+ job +"-^-" + startYear +"-^-" + endYear +"-^-" + service +"-^-" + location +"-^-" + facility +"-^-" + district +"-^-" + region
+        let value = ministry +"-^-"+ country +"-^-"+ job +"-^-" + startYear +"-^-" + endYear +"-^-" + service +"-^-" + location +"-^-" + facility +"-^-" + district +"-^-" + region + "-^-" + commune
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -243,6 +265,15 @@ const workexperience = {
       }
       let values = fields.workexperiencedata.split("-^-")
       resolve(values[9])
+    })
+  },
+  commune: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.workexperiencedata) {
+        resolve()
+      }
+      let values = fields.workexperiencedata.split("-^-")
+      resolve(values[10])
     })
   }
 }

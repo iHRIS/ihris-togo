@@ -12,6 +12,7 @@ const preservicetraining = {
       let degree = ""
       let specialization = ""
       let facility = ""
+      let commune = ""
       let district = ""
       let region = ""
       const job = new Promise((resolve, reject) => {
@@ -30,6 +31,8 @@ const preservicetraining = {
               await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
                 if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                   facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                  commune = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                   district = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
@@ -39,21 +42,40 @@ const preservicetraining = {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                     if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                       facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                      commune = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                       district = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                       region = loc.name
                     }
                     if(loc.partOf && loc.partOf.reference) {
-                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
                         if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
                           facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                          commune = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
                           district = loc.name
                         } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
                           region = loc.name
                         }
-                        resolve()
+                        if(loc.partOf && loc.partOf.reference) {
+                          await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                            if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-facility")) {
+                              facility = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-commune")) {
+                              commune = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-district")) {
+                              district = loc.name
+                            } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/tgo-region")) {
+                              region = loc.name
+                            }
+                            resolve()
+                          })
+                        } else {
+                          resolve()
+                        }
                       })
                     } else {
                       resolve()
@@ -107,7 +129,7 @@ const preservicetraining = {
             degree = training.extension.find((ext) => {
               return ext.url === 'degree-name'
             })?.valueString
-            let specialization = training.extension.find((ext) => {
+            specialization = training.extension.find((ext) => {
               return ext.url === 'specialization'
             })?.valueCoding?.display
             if(!sector) {
@@ -142,7 +164,7 @@ const preservicetraining = {
       })
 
       Promise.all([job, training]).then(() => {
-        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region
+        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region + "-^-" + commune
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -238,6 +260,15 @@ const preservicetraining = {
       }
       let values = fields.preservicetrainingdata.split("-^-")
       resolve(values[9])
+    })
+  },
+  commune: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.preservicetrainingdata) {
+        resolve()
+      }
+      let values = fields.preservicetrainingdata.split("-^-")
+      resolve(values[10])
     })
   }
 }

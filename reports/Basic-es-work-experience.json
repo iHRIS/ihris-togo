@@ -256,7 +256,7 @@
           "valueString": "nationalid"
         }, {
           "url": "fhirpath",
-          "valueString": "identifier.where(type.coding.code='nni').value"
+          "valueString": "identifier.where(type.coding.where(code='cni')).value"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -484,6 +484,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Commune"
+        }, {
+          "url": "name",
+          "valueString": "commune"
+        }, {
+          "url": "function",
+          "valueString": "workexperience.commune({workexperiencedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "workexperiencedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 17
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "District"
         }, {
           "url": "name",
@@ -502,7 +526,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 17
+          "valueInteger": 18
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -526,7 +550,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 18
+          "valueInteger": 19
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

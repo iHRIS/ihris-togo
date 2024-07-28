@@ -631,7 +631,7 @@
         "id": "PractitionerRole.extension:appointment-date.value[x]:valueDate",
         "path": "PractitionerRole.extension.value[x]",
         "sliceName": "valueDate",
-        "label": "First Employment Date",
+        "label": "Appointment Date",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
