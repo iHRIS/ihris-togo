@@ -383,14 +383,20 @@
             "url": "name",
             "valueString": "phone"
           }, {
+            "url": "type",
+            "valueString": "text"
+          }, {
             "url": "fhirpath",
-            "valueString": "telecom.where(system='phone').value.first()"
+            "valueString": "telecom.where(system='phone').value"
           }, {
             "url": "filter",
             "valueBoolean": true
           }, {
             "url": "order",
             "valueInteger": 15
+          }, {
+            "url": "type",
+            "valueString": "string"
           }]
         }, {
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
