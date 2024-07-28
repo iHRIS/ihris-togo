@@ -151,7 +151,7 @@
           "valueString": "phone"
         }, {
           "url": "fhirpath",
-          "valueString": "telecom.where(system='phone').value"
+          "valueString": "telecom.where(system='phone').value.first()"
         }, {
           "url": "filter",
           "valueBoolean": true
