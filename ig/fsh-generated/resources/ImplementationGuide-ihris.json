@@ -2609,6 +2609,13 @@
       },
       {
         "reference": {
+          "reference": "Questionnaire/assign-prev-job"
+        },
+        "name": "AssignPrevJob",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Questionnaire/banking"
         },
         "name": "Banking",
@@ -3631,9 +3638,275 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-navigation-audit"
+        },
+        "name": "See Audit Logs Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-civil-servant-category"
+        },
+        "name": "See Civil Servant Category Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-class"
+        },
+        "name": "See Class Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-echelon"
+        },
+        "name": "See Echelon Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-grade"
+        },
+        "name": "See Grade Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-organization"
+        },
+        "name": "See Organization Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-classification-salary-index"
+        },
+        "name": "See Salary Index Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-dashboard"
+        },
+        "name": "See Dashboard Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database"
+        },
+        "name": "See Database Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-classification"
+        },
+        "name": "See Classification Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-eduLists"
+        },
+        "name": "See Education Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-facility-data"
+        },
+        "name": "See Facility Data Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-geography"
+        },
+        "name": "See Geographical Information Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-jobLists"
+        },
+        "name": "See Job Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-otherLists"
+        },
+        "name": "See Other Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-postLists"
+        },
+        "name": "See Position Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-salary"
+        },
+        "name": "See Salary List Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-database-situation"
+        },
+        "name": "See Situation Lists Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-eduLists-education-type"
+        },
+        "name": "See Education Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-eduLists-educational-major"
+        },
+        "name": "See Educational Major Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-eduLists-institution"
+        },
+        "name": "See Education Institution Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-eduLists-institution-type"
+        },
+        "name": "See Education Institution Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-eduLists-training-fund"
+        },
+        "name": "See Training Fund Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-navigation-evaluation"
         },
         "name": "iHRIS Task To Navigate to evaluation",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-department"
+        },
+        "name": "See Department Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-facility"
+        },
+        "name": "See Facility Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-facility-type"
+        },
+        "name": "See Facility Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-program"
+        },
+        "name": "See Program Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-sector"
+        },
+        "name": "See Sector Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-facility-data-unit"
+        },
+        "name": "See Unit Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-geography-commune"
+        },
+        "name": "See Commune Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-geography-country"
+        },
+        "name": "See Country Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-geography-district"
+        },
+        "name": "See District Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-geography-nationality"
+        },
+        "name": "See Nationality Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-geography-region"
+        },
+        "name": "See Province Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-ihris-apps-list"
+        },
+        "name": "See Apps Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-jobLists-cadre"
+        },
+        "name": "See Cadres Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-jobLists-classification"
+        },
+        "name": "See Classifications Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-jobLists-job-type"
+        },
+        "name": "See Job Type Menu",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3645,6 +3918,83 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-navigation-leaveRequest"
+        },
+        "name": "See Leave request Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-agent-status"
+        },
+        "name": "See Agent Status Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-bank"
+        },
+        "name": "See Bank Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-civility"
+        },
+        "name": "See Civility Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-disciplinary-action-taken"
+        },
+        "name": "See Disciplinary Action Taken Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-disciplineaction"
+        },
+        "name": "See Discipline Action Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-identifier"
+        },
+        "name": "See Identifier Types Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-ihris-relation"
+        },
+        "name": "See Relationship Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-institution-type"
+        },
+        "name": "See Institution Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-leave-type"
+        },
+        "name": "See Leave Types Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-otherLists-training"
+        },
+        "name": "See In-Service Training Type/Category Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-navigation-password"
         },
         "name": "iHRIS Task To Navigate to password",
@@ -3652,9 +4002,219 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-navigation-person"
+        },
+        "name": "See People Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-person-person-add"
+        },
+        "name": "See Add Person Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-person-person-search"
+        },
+        "name": "See Search People Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-postLists-employment-status"
+        },
+        "name": "See Employment Status Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-postLists-reason-departure"
+        },
+        "name": "See Reasons For departure Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-postLists-salarysource"
+        },
+        "name": "See Funds/Salary Sources Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-navigation-profile"
         },
         "name": "iHRIS Task To Navigate to Profile",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-reports"
+        },
+        "name": "See Reports Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-reports-staff-reports"
+        },
+        "name": "See Staff Reports Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-salary-frequency"
+        },
+        "name": "See Pay Frequency Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-salary-pay-scale"
+        },
+        "name": "See Salary Scale Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-salary-salarysource"
+        },
+        "name": "See Salary Sources Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-agent-type"
+        },
+        "name": "See Agent Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-budget-type"
+        },
+        "name": "See Budget Type Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-job"
+        },
+        "name": "See Job Titles/Function Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-profession-group"
+        },
+        "name": "See Profession Group Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-profession-subgroup"
+        },
+        "name": "See Profession Sub-Group Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-qualification"
+        },
+        "name": "See Qualification Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-service"
+        },
+        "name": "See Service Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-specialty"
+        },
+        "name": "See Specialty Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-situation-study-level"
+        },
+        "name": "See Study Level Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-classification"
+        },
+        "name": "See Classification Information Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-inservice"
+        },
+        "name": "See In-service Information Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-performance"
+        },
+        "name": "See Performance Evaluation Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-preservice"
+        },
+        "name": "See Pre-service Information Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-situation"
+        },
+        "name": "See Situation Information Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-staff-directorate"
+        },
+        "name": "See Staff Directorate Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-staff-reports-workexperience"
+        },
+        "name": "See Work Experience Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-users"
+        },
+        "name": "See System Users Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-users-role-tasks"
+        },
+        "name": "See User Role Tasks Menu",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-navigation-users-users-search"
+        },
+        "name": "See Search Users Menu",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3764,9 +4324,37 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-section-agent-status"
+        },
+        "name": "iHRIS Task To view agent-status Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-banking"
+        },
+        "name": "iHRIS Task To view banking Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-children"
+        },
+        "name": "iHRIS Task To view children Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-section-classification"
         },
         "name": "See Classification Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-contact"
+        },
+        "name": "iHRIS Task To view contact Section",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3785,6 +4373,20 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-section-employment-history"
+        },
+        "name": "iHRIS Task To view employment-history Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-identifiers"
+        },
+        "name": "iHRIS Task To view identifiers Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-section-inservice-training"
         },
         "name": "See Inservice Training Section",
@@ -3799,9 +4401,58 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-section-leave"
+        },
+        "name": "iHRIS Task To view leave Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-notes"
+        },
+        "name": "iHRIS Task To view notes Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-performance"
+        },
+        "name": "iHRIS Task To view performance Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-position"
+        },
+        "name": "iHRIS Task To view position Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-practitioner"
+        },
+        "name": "iHRIS Task To view Practitioner Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-section-preservice-training"
         },
         "name": "See Preservice Training Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-preservice-training-history"
+        },
+        "name": "iHRIS Task To view preservice-training-history Section",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-section-scanned-documents"
+        },
+        "name": "iHRIS Task To view scanned-documents Section",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3820,9 +4471,30 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-write-agent-status-profile"
+        },
+        "name": "Create Agent Status",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-banking-profile"
+        },
+        "name": "Create Banking",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-write-basic-resource"
         },
         "name": "iHRIS Task To Write Basic resource",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-classification-profile"
+        },
+        "name": "Create Classification",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3841,9 +4513,72 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-write-ihris-basic-discipline"
+        },
+        "name": "Create Discipline",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-ihris-basic-emergency"
+        },
+        "name": "Create Emergency Contact",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-ihris-basic-employment-history"
+        },
+        "name": "Create Employment History",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-ihris-basic-leave"
+        },
+        "name": "Create Leave",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-ihris-basic-performance"
+        },
+        "name": "Create Performance Evaluation",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-inservice-training-extension-request-profile"
+        },
+        "name": "Create Inservice Training Extension Request",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-inservice-training-profile"
+        },
+        "name": "Create Inservice Training",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-inservice-training-request-profile"
+        },
+        "name": "Create Inservice Training",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-write-location-resource"
         },
         "name": "iHRIS Task To Write Location resource",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-notes-profile"
+        },
+        "name": "Create Notes",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3876,6 +4611,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-write-preservice-training-profile"
+        },
+        "name": "Create Preservice Training",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-write-questionnaire-change-password"
         },
         "name": "iHRIS Task To Write Questionnaire ihris-password",
@@ -3900,6 +4642,20 @@
           "reference": "Basic/ihris-task-write-questionnaire-response-resource"
         },
         "name": "iHRIS Task To Write Questionnaire Response resource",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-scanned-document-profile"
+        },
+        "name": "Create Scanned Document",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-staff-child-profile"
+        },
+        "name": "Create Staff Child",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {

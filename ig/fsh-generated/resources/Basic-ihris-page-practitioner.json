@@ -528,7 +528,7 @@
                 },
                 {
                   "url": "text",
-                  "valueString": "Assign Situation"
+                  "valueString": "Assign Current Situation"
                 },
                 {
                   "url": "row",
@@ -568,12 +568,37 @@
                   "valueBoolean": false
                 },
                 {
+                  "url": "class",
+                  "valueString": "accent"
+                },
+                {
                   "url": "condition",
                   "valueString": "PractitionerRole.id.exists()"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/assign-prev-job/practitionerrole?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Previous Situation"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
                 },
                 {
                   "url": "class",
-                  "valueString": "accent"
+                  "valueString": "primary"
                 }
               ],
               "url": "action"
@@ -612,10 +637,6 @@
                 {
                   "url": "row",
                   "valueBoolean": true
-                },
-                {
-                  "url": "condition",
-                  "valueString": "PractitionerRole.period.end.empty()"
                 },
                 {
                   "url": "class",
@@ -856,7 +877,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueCoding.display"
                 }
               ],
               "url": "column"

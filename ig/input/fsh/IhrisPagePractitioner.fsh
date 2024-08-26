@@ -99,7 +99,7 @@ Usage:          #example
 * extension[section][4].extension[resource].extension[column][4].extension[header].valueString = "Actions"
 * extension[section][4].extension[resource].extension[column][4].extension[field].valueString = "_action"
 * extension[section][4].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/assign-job/practitionerrole?practitioner=FHIRID"
-* extension[section][4].extension[resource].extension[action][0].extension[text].valueString = "Assign Situation"
+* extension[section][4].extension[resource].extension[action][0].extension[text].valueString = "Assign Current Situation"
 * extension[section][4].extension[resource].extension[action][0].extension[row].valueBoolean = false
 * extension[section][4].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
 * extension[section][4].extension[resource].extension[action][0].extension[condition].valueString = "PractitionerRole.id.empty()"
@@ -108,22 +108,27 @@ Usage:          #example
 * extension[section][4].extension[resource].extension[action][1].extension[text].valueString = "Change Situation"
 * extension[section][4].extension[resource].extension[action][1].extension[row].valueBoolean = false
 * extension[section][4].extension[resource].extension[action][1].extension[emptyDisplay].valueBoolean = false
-* extension[section][4].extension[resource].extension[action][1].extension[condition].valueString = "PractitionerRole.id.exists()"
 * extension[section][4].extension[resource].extension[action][1].extension[class].valueString = "accent"
-* extension[section][4].extension[resource].extension[action][2].extension[link].valueString = "/resource/view/practitionerrole/ITEMID"
-* extension[section][4].extension[resource].extension[action][2].extension[text].valueString = "View"
-* extension[section][4].extension[resource].extension[action][2].extension[row].valueBoolean = true
+* extension[section][4].extension[resource].extension[action][1].extension[condition].valueString = "PractitionerRole.id.exists()"
+* extension[section][4].extension[resource].extension[action][2].extension[link].valueString = "/questionnaire/assign-prev-job/practitionerrole?practitioner=FHIRID"
+* extension[section][4].extension[resource].extension[action][2].extension[text].valueString = "Add Previous Situation"
+* extension[section][4].extension[resource].extension[action][2].extension[row].valueBoolean = false
+* extension[section][4].extension[resource].extension[action][2].extension[emptyDisplay].valueBoolean = true
 * extension[section][4].extension[resource].extension[action][2].extension[class].valueString = "primary"
-* extension[section][4].extension[resource].extension[action][3].extension[link].valueString = "/questionnaire/assign-job/practitionerrole/ITEMID?practitioner=FHIRID"
-* extension[section][4].extension[resource].extension[action][3].extension[text].valueString = "Edit"
+* extension[section][4].extension[resource].extension[action][3].extension[link].valueString = "/resource/view/practitionerrole/ITEMID"
+* extension[section][4].extension[resource].extension[action][3].extension[text].valueString = "View"
 * extension[section][4].extension[resource].extension[action][3].extension[row].valueBoolean = true
-* extension[section][4].extension[resource].extension[action][3].extension[condition].valueString = "PractitionerRole.period.end.empty()"
-* extension[section][4].extension[resource].extension[action][3].extension[class].valueString = "accent"
-* extension[section][4].extension[resource].extension[action][4].extension[link].valueString = "/questionnaire/ihris-endrole/practitionerrole?practitionerrole=ITEMID"
-* extension[section][4].extension[resource].extension[action][4].extension[text].valueString = "End Situation"
+* extension[section][4].extension[resource].extension[action][3].extension[class].valueString = "primary"
+* extension[section][4].extension[resource].extension[action][4].extension[link].valueString = "/questionnaire/assign-job/practitionerrole/ITEMID?practitioner=FHIRID"
+* extension[section][4].extension[resource].extension[action][4].extension[text].valueString = "Edit"
 * extension[section][4].extension[resource].extension[action][4].extension[row].valueBoolean = true
-* extension[section][4].extension[resource].extension[action][4].extension[condition].valueString = "PractitionerRole.period.end.empty()"
-* extension[section][4].extension[resource].extension[action][4].extension[class].valueString = "warning"
+// * extension[section][4].extension[resource].extension[action][4].extension[condition].valueString = "PractitionerRole.period.end.empty()"
+* extension[section][4].extension[resource].extension[action][4].extension[class].valueString = "accent"
+* extension[section][4].extension[resource].extension[action][5].extension[link].valueString = "/questionnaire/ihris-endrole/practitionerrole?practitionerrole=ITEMID"
+* extension[section][4].extension[resource].extension[action][5].extension[text].valueString = "End Situation"
+* extension[section][4].extension[resource].extension[action][5].extension[row].valueBoolean = true
+* extension[section][4].extension[resource].extension[action][5].extension[condition].valueString = "PractitionerRole.period.end.empty()"
+* extension[section][4].extension[resource].extension[action][5].extension[class].valueString = "warning"
 * extension[section][5].extension[title].valueString = "Agent Status"
 * extension[section][5].extension[description].valueString = "Agent Status"
 * extension[section][5].extension[name].valueString = "agent-status"

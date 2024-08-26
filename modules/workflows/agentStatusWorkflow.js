@@ -23,10 +23,21 @@ const agentStatusWorkflow = {
           if(prevStatus.entry.length) {
             let prevStartDate = prevStatus.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/start-date'
-            }).valueDate
+            })?.valueDate
+            if(!prevStartDate) {
+              prevStartDate = prevStatus.entry[0].resource.extension.find((ext) => {
+                return ext.url === 'http://ihris.org/fhir/StructureDefinition/resumption-date'
+              })?.valueDate
+            }
             let currStartDate = bundle.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/start-date'
-            }).valueDate
+            })?.valueDate
+
+            if(!currStartDate) {
+              currStartDate = bundle.entry[0].resource.extension.find((ext) => {
+                return ext.url === 'http://ihris.org/fhir/StructureDefinition/resumption-date'
+              })?.valueDate
+            }
 
             let prevAgStatus = prevStatus.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/agent-status'
@@ -37,7 +48,7 @@ const agentStatusWorkflow = {
             if(prevAgStatus === currAgStatus) {
               return reject({message: "La position administrative précédente est la même que la position administrative actuelle"})
             }
-            if(moment(currStartDate).isBefore(prevStartDate)) {
+            if(prevStartDate && moment(currStartDate).isBefore(prevStartDate)) {
               return reject({message: "Cette date de début doit être après la date de début de la position administrative précédente " + moment(prevStartDate).format("DD-MM-YYYY")})
             }
             if(currAgStatus === 'active' && moment(currStartDate).isAfter(moment().format("YYYY-MM-DD"))) {

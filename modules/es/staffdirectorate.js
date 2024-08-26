@@ -38,14 +38,14 @@ const staffdirectorate = {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/appointment-date"
             })?.valueDate
             if(appointmentdate) {
-              appointmentdate = moment(appointmentdate).format("DD-MM-YYYY")
+              appointmentdate = moment(appointmentdate).format("YYYY-MM-DD")
             } else {
               appointmentdate = ""
             }
 
             servicestartdate = response.entry[0].resource?.period?.start
             if(servicestartdate) {
-              servicestartdate = moment(servicestartdate).format("DD-MM-YYYY")
+              servicestartdate = moment(servicestartdate).format("YYYY-MM-DD")
             } else {
               servicestartdate = ""
             }
@@ -54,7 +54,7 @@ const staffdirectorate = {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/effective-presence-date"
             })?.valueDate
             if(effectivepresdate) {
-              effectivepresdate = moment(effectivepresdate).format("DD-MM-YYYY")
+              effectivepresdate = moment(effectivepresdate).format("YYYY-MM-DD")
             } else {
               effectivepresdate = ""
             }
@@ -63,7 +63,7 @@ const staffdirectorate = {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/integration-date"
             })?.valueDate
             if(integrationdate) {
-              integrationdate = moment(integrationdate).format("DD-MM-YYYY")
+              integrationdate = moment(integrationdate).format("YYYY-MM-DD")
             } else {
               integrationdate = ""
             }

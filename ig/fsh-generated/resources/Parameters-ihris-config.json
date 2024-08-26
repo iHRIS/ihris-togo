@@ -167,19 +167,19 @@
           "valueString": "mdi-account-multiple"
         },
         {
-          "name": "site:nav:menu:person:menu:person_search:text",
+          "name": "site:nav:menu:person:menu:person-search:text",
           "valueString": "Search People"
         },
         {
-          "name": "site:nav:menu:person:menu:person_search:url",
+          "name": "site:nav:menu:person:menu:person-search:url",
           "valueString": "/resource/search/practitioner"
         },
         {
-          "name": "site:nav:menu:person:menu:person_add:text",
+          "name": "site:nav:menu:person:menu:person-add:text",
           "valueString": "Add Person"
         },
         {
-          "name": "site:nav:menu:person:menu:person_add:url",
+          "name": "site:nav:menu:person:menu:person-add:url",
           "valueString": "/questionnaire/ihris-practitioner/practitioner"
         },
         {
@@ -1039,19 +1039,19 @@
           "valueString": "mdi-account-box-outline"
         },
         {
-          "name": "site:nav:menu:users:menu:users_search:text",
+          "name": "site:nav:menu:users:menu:users-search:text",
           "valueString": "Search Users"
         },
         {
-          "name": "site:nav:menu:users:menu:users_search:url",
+          "name": "site:nav:menu:users:menu:users-search:url",
           "valueString": "/resource/search/user"
         },
         {
-          "name": "site:nav:menu:users:menu:role_tasks:text",
+          "name": "site:nav:menu:users:menu:role-tasks:text",
           "valueString": "User Role Tasks"
         },
         {
-          "name": "site:nav:menu:users:menu:role_tasks:url",
+          "name": "site:nav:menu:users:menu:role-tasks:url",
           "valueString": "/resource/search/task"
         },
         {
@@ -1217,6 +1217,14 @@
         {
           "name": "workflow:questionnaire:assign-job:url",
           "valueString": "http://ihris.org/fhir/Questionnaire/assign-job"
+        },
+        {
+          "name": "workflow:processor:assign-prev-job:file",
+          "valueString": "workflowAssignJob"
+        },
+        {
+          "name": "workflow:questionnaire:assign-prev-job:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/assign-prev-job"
         },
         {
           "name": "workflow:processor:contract:file",
