@@ -64,10 +64,11 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[5]#preloaded",
-              "definition": "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree.value[x]:valueReference",
+              "linkId": "Basic.extension[0].extension[5]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree.value[x]:valueCoding",
               "text": "Diploma",
-              "type": "reference",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset",
               "required": true,
               "repeats": false
             },

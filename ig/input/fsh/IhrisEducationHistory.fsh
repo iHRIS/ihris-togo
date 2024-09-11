@@ -23,8 +23,8 @@ Description:    "iHRIS Profile of the Basic resource for Preservice Training."
 * extension[preservice-training].extension[end-year].valueDate ^label = "Year of training end"
 * extension[preservice-training].extension[end-year].valueDate 1..1 MS
 * extension[preservice-training].extension[degree] ^label = "Degree"
-* extension[preservice-training].extension[degree].valueReference ^label = "Degree"
-* extension[preservice-training].extension[degree].valueReference 1..1 MS
+* extension[preservice-training].extension[degree].valueCoding ^label = "Degree"
+* extension[preservice-training].extension[degree].valueCoding 1..1 MS
 * extension[preservice-training].extension[degree-name] ^label = "Degree Name"
 * extension[preservice-training].extension[degree-name].valueString ^label = "Degree Name"
 * extension[preservice-training].extension[degree-name].valueString 1..1 MS
@@ -46,8 +46,8 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
     InserviceTrainingRequestReference named inservice-training-request-reference 1..1 MS and
     InserviceTraining named inservice-training 1..1 MS
 * extension[inservice-training].extension[degree] ^label = "Degree"
-* extension[inservice-training].extension[degree].valueReference ^label = "Degree"
-* extension[inservice-training].extension[degree].valueReference 1..1 MS
+* extension[inservice-training].extension[degree].valueCoding ^label = "Degree"
+* extension[inservice-training].extension[degree].valueCoding 1..1 MS
 * extension[inservice-training].extension[degree-name] ^label = "Degree Name"
 * extension[inservice-training].extension[degree-name].valueString ^label = "Degree Name"
 * extension[inservice-training].extension[degree-name].valueString 1..1 MS
@@ -192,8 +192,9 @@ Title:          "Preservice Training details"
 * extension[start-year].valueDate ^label = "Year of training start"
 * extension[end-year].value[x] only date
 * extension[end-year].valueDate ^label = "Year of training end"
-* extension[degree].value[x] only Reference(TGOEducationTypeProfile)
-* extension[degree].valueReference ^label = "Degree"
+* extension[degree].value[x] only Coding
+* extension[degree].valueCoding ^label = "Degree"
+* extension[degree].valueCoding from http://ihris.org/fhir/ValueSet/study-level-valueset (required)
 * extension[degree-name].value[x] only string
 * extension[degree-name].valueString ^label = "Degree Name"
 * extension[specialized].value[x] only Coding
@@ -226,8 +227,9 @@ Title:          "Inservice Training details"
       observation 0..1 MS and
       completed 1..1 MS and
       reason 1..1 MS
-* extension[degree].value[x] only Reference(TGOEducationTypeProfile)
-* extension[degree].valueReference ^label = "Degree"
+* extension[degree].value[x] only Coding
+* extension[degree].valueCoding ^label = "Degree"
+* extension[degree].valueCoding from http://ihris.org/fhir/ValueSet/study-level-valueset (required)
 * extension[degree-name].value[x] only string
 * extension[degree-name].valueString ^label = "Degree Name"
 * extension[specialized].value[x] only Coding
@@ -471,10 +473,11 @@ Usage:          #definition
 * item[0].item[0].item[4].required = true
 * item[0].item[0].item[4].repeats = false
 
-* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]#preloaded"
-* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree.value[x]:valueReference"
+* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
+* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree.value[x]:valueCoding"
 * item[0].item[0].item[5].text = "Diploma"
-* item[0].item[0].item[5].type = #reference
+* item[0].item[0].item[5].type = #choice
+* item[0].item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
 * item[0].item[0].item[5].required = true
 * item[0].item[0].item[5].repeats = false
 
@@ -578,9 +581,10 @@ Usage:          #definition
 * item[0].item[0].item[1].enableWhen[0].answerCoding = yes-no-codesystem#no
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]#preloaded"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueReference"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueCoding"
 * item[0].item[0].item[2].text = "Diploma"
-* item[0].item[0].item[2].type = #reference
+* item[0].item[0].item[2].type = #choice
+* item[0].item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/study-level-valueset"
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 

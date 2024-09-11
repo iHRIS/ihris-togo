@@ -1600,10 +1600,7 @@
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/tgo-education-type-profile"
-            ]
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -1626,9 +1623,9 @@
         ]
       },
       {
-        "id": "Basic.extension:inservice-training.extension:degree.value[x]:valueReference",
+        "id": "Basic.extension:inservice-training.extension:degree.value[x]:valueCoding",
         "path": "Basic.extension.extension.value[x]",
-        "sliceName": "valueReference",
+        "sliceName": "valueCoding",
         "label": "Degree",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1641,10 +1638,7 @@
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/tgo-education-type-profile"
-            ]
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -1660,6 +1654,10 @@
         "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset"
+        },
         "mapping": [
           {
             "identity": "rim",
@@ -3890,8 +3888,8 @@
         "min": 1
       },
       {
-        "id": "Basic.extension:inservice-training.extension:degree.valueReference",
-        "path": "Basic.extension.extension.valueReference",
+        "id": "Basic.extension:inservice-training.extension:degree.valueCoding",
+        "path": "Basic.extension.extension.valueCoding",
         "min": 1,
         "mustSupport": true
       },

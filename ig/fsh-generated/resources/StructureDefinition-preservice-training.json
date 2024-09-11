@@ -1719,10 +1719,7 @@
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/tgo-education-type-profile"
-            ]
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -1745,9 +1742,9 @@
         ]
       },
       {
-        "id": "Extension.extension:degree.value[x]:valueReference",
+        "id": "Extension.extension:degree.value[x]:valueCoding",
         "path": "Extension.extension.value[x]",
-        "sliceName": "valueReference",
+        "sliceName": "valueCoding",
         "label": "Degree",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1760,10 +1757,7 @@
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/tgo-education-type-profile"
-            ]
+            "code": "Coding"
           }
         ],
         "constraint": [
@@ -1778,6 +1772,10 @@
         ],
         "isModifier": false,
         "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset"
+        },
         "mapping": [
           {
             "identity": "rim",
@@ -4158,19 +4156,20 @@
         },
         "type": [
           {
-            "code": "Reference",
-            "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/tgo-education-type-profile"
-            ]
+            "code": "Coding"
           }
         ]
       },
       {
-        "id": "Extension.extension:degree.valueReference",
-        "path": "Extension.extension.valueReference",
+        "id": "Extension.extension:degree.valueCoding",
+        "path": "Extension.extension.valueCoding",
         "label": "Degree",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset"
+        }
       },
       {
         "id": "Extension.extension:degree-name",

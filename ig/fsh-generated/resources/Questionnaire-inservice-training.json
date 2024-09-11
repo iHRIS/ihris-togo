@@ -50,9 +50,10 @@
             },
             {
               "linkId": "Basic.extension[0].extension[2]#preloaded",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueReference",
+              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueCoding",
               "text": "Diploma",
-              "type": "reference",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset",
               "required": true,
               "repeats": false
             },
