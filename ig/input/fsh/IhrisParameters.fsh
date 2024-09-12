@@ -138,7 +138,7 @@ Usage: #example
 * parameter[=].part[+].name = "site:nav:menu:database:menu:eduLists:menu:education-type:text"
 * parameter[=].part[=].valueString = "Education Type"
 * parameter[=].part[+].name = "site:nav:menu:database:menu:eduLists:menu:education-type:url"
-* parameter[=].part[=].valueString = "/resource/search/education-type"
+* parameter[=].part[=].valueString = "/resource/search/study-level"
 * parameter[=].part[+].name = "site:nav:menu:database:menu:eduLists:menu:education-type:order"
 * parameter[=].part[=].valueString = "1"
 * parameter[=].part[+].name = "site:nav:menu:database:menu:eduLists:menu:institution-type:text"
