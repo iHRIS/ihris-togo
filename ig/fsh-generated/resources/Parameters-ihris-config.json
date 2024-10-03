@@ -144,11 +144,7 @@
         },
         {
           "name": "site:nav:menu:dashboard:url",
-          "valueString": "/ihrisapp/ihris-data-visualizer/index.html#/dashBuilder/11388"
-        },
-        {
-          "name": "site:nav:menu:dashboard:external",
-          "valueString": "true"
+          "valueString": "/list-dashboards"
         },
         {
           "name": "site:nav:active",
