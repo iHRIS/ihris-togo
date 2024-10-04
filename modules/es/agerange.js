@@ -26,77 +26,79 @@ function deleteESIndex(index) {
     })
   })
 }
-function createESIndex(name, IDFields, callback) {
-  console.info('Checking if index ' + name + ' exists');
-  let url = URI(config.get("elasticsearch:base"))
-    .segment(name.toString().toLowerCase())
-    .toString();
-  axios({
-      method: 'head',
-      url,
-      auth: {
-        username: config.get("elasticsearch:username"),
-        password: config.get("elasticsearch:password"),
-      },
-    })
-    .then(response => {
-      if (response.status === 200) {
-        console.info('Index ' + name + ' exist, not creating');
-        return callback(false);
-      } else {
-        return callback(true);
-      }
-    })
-    .catch(err => {
-      if (err.response && err.response.status && err.response.status === 404) {
-        console.info('Index not found, creating index ' + name);
-        let mappings = {
-          mappings: {
-            properties: {
-              lastUpdated: {
-                type: 'date'
+function createESIndex(name, IDFields) {
+  return new Promise((resolve, reject) => {
+    console.info('Checking if index ' + name + ' exists');
+    let url = URI(config.get("elasticsearch:base"))
+      .segment(name.toString().toLowerCase())
+      .toString();
+    axios({
+        method: 'head',
+        url,
+        auth: {
+          username: config.get("elasticsearch:username"),
+          password: config.get("elasticsearch:password"),
+        },
+      })
+      .then(response => {
+        if (response.status === 200) {
+          console.info('Index ' + name + ' exist, not creating');
+          return resolve();
+        } else {
+          return reject();
+        }
+      })
+      .catch(err => {
+        if (err.response && err.response.status && err.response.status === 404) {
+          console.info('Index not found, creating index ' + name);
+          let mappings = {
+            mappings: {
+              properties: {
+                lastUpdated: {
+                  type: 'date'
+                }
+              }
+            }
+          };
+          for (let IDField of IDFields) {
+            mappings.mappings.properties[IDField] = {};
+            mappings.mappings.properties[IDField].type = 'text';
+            mappings.mappings.properties[IDField].fields = {
+              keyword: {
+                type: 'keyword'
               }
             }
           }
-        };
-        for (let IDField of IDFields) {
-          mappings.mappings.properties[IDField] = {};
-          mappings.mappings.properties[IDField].type = 'text';
-          mappings.mappings.properties[IDField].fields = {
-            keyword: {
-              type: 'keyword'
-            }
-          }
+          axios({
+              method: 'put',
+              url: url,
+              data: mappings,
+              auth: {
+                username: config.get("elasticsearch:username"),
+                password: config.get("elasticsearch:password"),
+              },
+            })
+            .then(response => {
+              if (response.status !== 200) {
+                console.error('Something went wrong and index was not created');
+                console.error(response.data);
+                return reject();
+              } else {
+                console.info('Index ' + name + ' created successfully');
+                return resolve();
+              }
+            })
+            .catch(err => {
+              console.error(err);
+              return reject();
+            });
+        } else {
+          console.error('Error occured while creating ES index');
+          console.error(err);
+          return reject();
         }
-        axios({
-            method: 'put',
-            url: url,
-            data: mappings,
-            auth: {
-              username: config.get("elasticsearch:username"),
-              password: config.get("elasticsearch:password"),
-            },
-          })
-          .then(response => {
-            if (response.status !== 200) {
-              console.error('Something went wrong and index was not created');
-              console.error(response.data);
-              return callback(true);
-            } else {
-              console.info('Index ' + name + ' created successfully');
-              return callback(false);
-            }
-          })
-          .catch(err => {
-            console.error(err);
-            return callback(true);
-          });
-      } else {
-        console.error('Error occured while creating ES index');
-        console.error(err);
-        return callback(true);
-      }
-    });
+      });
+  })
 };
 
 const agerange = {
@@ -112,11 +114,7 @@ const agerange = {
           await deleteESIndex("agerangegender").catch(() => {
             console.log('An error occured while deleting the index, this may cause dupplicate age range');
           })
-          createESIndex("agerangegender", ["agerangegender"], (err) => {
-            if(err) {
-              console.log("An error has occured");
-              return
-            }
+          createESIndex("agerangegender", ["agerangegender"]).then(() => {
             let url = URI(config.get("elasticsearch:base")).segment("chadstaffdirectorate").segment('_search').toString();
             let bulk = []
             let gender = ["male", "female"]
@@ -237,6 +235,8 @@ const agerange = {
             }).catch(() => {
               reject()
             })
+          }).catch(() => {
+            reject()
           })
         })
       }
@@ -246,12 +246,7 @@ const agerange = {
           await deleteESIndex("agerangespecialty").catch(() => {
             console.log('An error occured while deleting the index, this may cause dupplicate age range');
           })
-          createESIndex("agerangespecialty", ["agerangespecialty"], async(err) => {
-            if(err) {
-              console.log(err);
-              console.log("An error has occured");
-              return
-            }
+          createESIndex("agerangespecialty", ["agerangespecialty"]).then(async() => {
             let url = URI(config.get("elasticsearch:base")).segment("chadstaffdirectorate").segment('_search').toString();
             let specialties = await getDistinct("chadstaffdirectorate", "specialty", true)
             let bulk = []
@@ -366,6 +361,8 @@ const agerange = {
             }).catch(() => {
               reject()
             })
+          }).catch(() => {
+            reject()
           })
         })
       }

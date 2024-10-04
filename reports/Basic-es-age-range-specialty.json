@@ -19,9 +19,6 @@
         "url": "cachingDisabled",
         "valueBoolean": true
       }, {
-        "url": "externalCachingModule",
-        "valueString": "agerange.run()"
-      }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
