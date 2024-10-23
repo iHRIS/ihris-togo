@@ -172,6 +172,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Retirement Year"
+        }, {
+          "url": "name",
+          "valueString": "retirementyear"
+        }, {
+          "url": "function",
+          "valueString": "esfunctions.retirementYear({dob})"
+        }, {
+          "url": "parameters",
+          "valueString": "retirementdate"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 17
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "Registration Number"
         }, {
           "url": "name",
@@ -200,6 +224,27 @@
         }, {
           "url": "function",
           "valueString": "staffdirectorate.populate({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 21
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "recordcompletenessdata"
+        }, {
+          "url": "function",
+          "valueString": "recordcompleteness.populate({practitionerid})"
         }, {
           "url": "parameters",
           "valueString": "practitionerid"
@@ -284,6 +329,30 @@
         }, {
           "url": "order",
           "valueInteger": 6
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Organization"
+        }, {
+          "url": "name",
+          "valueString": "organization"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.organization({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 7
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -512,6 +581,30 @@
         }, {
           "url": "order",
           "valueInteger": 11
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Record Completeness"
+        }, {
+          "url": "name",
+          "valueString": "completeness"
+        }, {
+          "url": "function",
+          "valueString": "recordcompleteness.completeness({recordcompletenessdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "recordcompletenessdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 21
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

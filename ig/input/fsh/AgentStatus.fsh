@@ -14,9 +14,10 @@ Description:    "Agent Status Information Profile."
     ResumptionReference named resumption-reference 0..1 MS
 * extension[agent-status]  1..1 MS
 * extension[agent-status]  ^label = "Agent Status"
+* extension[agent-status].valueCoding MS
 * extension[agent-status-other]  1..1 MS
 * extension[agent-status-other]  ^label = "Other Agent Status"
-* extension[agent-status].valueCoding MS
+* extension[agent-status-other].valueString MS
 * extension[start-date]  1..1 MS
 * extension[start-date]  ^label = "Start Date"
 * extension[start-date].valueDate MS

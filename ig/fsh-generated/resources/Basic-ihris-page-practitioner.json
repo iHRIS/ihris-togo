@@ -109,6 +109,35 @@
         {
           "extension": [
             {
+              "url": "url",
+              "valueUrl": "/custom/delete-practitioner?path=/togo/components&id=FIELD"
+            },
+            {
+              "url": "field",
+              "valueString": "Practitioner.id"
+            },
+            {
+              "url": "text",
+              "valueString": "Delete"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-delete-circle-outline"
+            },
+            {
+              "url": "class",
+              "valueString": "error"
+            }
+          ],
+          "url": "link"
+        },
+        {
+          "extension": [
+            {
               "url": "path",
               "valueString": "Practitioner.extension:agent-id.value[x]:valueString"
             },
@@ -727,7 +756,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/start-date').valueDate"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/start-date').valueDate | extension.where(url='http://ihris.org/fhir/StructureDefinition/resumption-date').valueDate"
                 }
               ],
               "url": "column"
@@ -857,7 +886,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueReference"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueCoding"
                 }
               ]
             },
@@ -2251,7 +2280,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/banking').extension.where(url='account-type').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/banking').extension.where(url='account-type').valueCoding"
                 }
               ],
               "url": "column"
@@ -2286,6 +2315,10 @@
                 {
                   "url": "emptyDisplay",
                   "valueBoolean": true
+                },
+                {
+                  "url": "condition",
+                  "valueString": "Basic.id.empty()"
                 },
                 {
                   "url": "class",
@@ -2564,7 +2597,7 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Amount"
+                  "valueString": "Note"
                 },
                 {
                   "url": "field",
@@ -2632,6 +2665,139 @@
                 {
                   "url": "task",
                   "valueId": "ihris-task-edit-notes"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Record Completeness"
+        },
+        {
+          "url": "description",
+          "valueString": "Record Completeness"
+        },
+        {
+          "url": "name",
+          "valueString": "datacompleteness"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/data-completeness-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Date Added"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/note-date').valueDate"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "url": "searchfieldtarget",
+              "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Completeness"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/completeness').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/data-completeness/data-completeness?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Data Completeness"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-data-completeness"
+                },
+                {
+                  "url": "condition",
+                  "valueString": "Basic.id.empty()"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/data-completeness/data-completeness/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-data-completeness"
                 }
               ],
               "url": "action"

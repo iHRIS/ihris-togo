@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DataCompletenessValueSet",
+  "id": "data-completeness-valueset",
+  "title": "iHRIS Reason Departure ValueSet",
+  "version": "0.3.0",
+  "url": "http://ihris.org/fhir/ValueSet/data-completeness-valueset",
+  "date": "2020-11-14T08:41:04.362Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/data-completeness-codesystem"
+      }
+    ]
+  }
+}

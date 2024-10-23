@@ -230,6 +230,26 @@ Title:          "Edit Notes"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-notes"
 
+Instance:       ihris-task-add-data-completeness
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Data Completeness"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-data-completeness"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-data-completeness"
+
+Instance:       ihris-task-edit-data-completeness
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Data Completeness"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-data-completeness"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-data-completeness"
+
 Instance:       ihris-task-add-leave
 InstanceOf:     IhrisTask
 Usage:          #example

@@ -1,17 +1,17 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-es-report-performance",
+  "id": "ihris-es-report-discipline",
   "extension": [{
       "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportDetails",
       "extension": [{
         "url": "label",
-        "valueString": "Performance Evaluation"
+        "valueString": "Disciplinary Events"
       }, {
         "url": "displayCheckbox",
         "valueBoolean": false
       }, {
         "url": "name",
-        "valueString": "performance"
+        "valueString": "discipline"
       }, {
         "url": "locationBasedConstraint",
         "valueBoolean": true
@@ -20,13 +20,13 @@
         "valueString": "Basic"
       }, {
         "url": "resourcePage",
-        "valueString": "performance"
+        "valueString": "discipline"
       }, {
         "url": "initialFilter",
-        "valueString": "_profile=http://ihris.org/fhir/StructureDefinition/ihris-basic-performance"
+        "valueString": "_profile=http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline"
       }, {
         "url": "query",
-        "valueString": "Basic.meta.where(profile contains 'http://ihris.org/fhir/StructureDefinition/ihris-basic-performance').exists()"
+        "valueString": "Basic.meta.where(profile contains 'http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline').exists()"
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
@@ -49,19 +49,19 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Reviewer"
+          "valueString": "Action Type"
         }, {
           "url": "name",
-          "valueString": "reviewer"
+          "valueString": "actiontype"
         }, {
           "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='evaluator').valueString"
+          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='actionType').valueCoding.display"
         }, {
           "url": "filter",
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": false
+          "valueBoolean": true
         }, {
           "url": "order",
           "valueInteger": 2
@@ -70,13 +70,13 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Start Date"
+          "valueString": "Action Taken"
         }, {
           "url": "name",
-          "valueString": "startdate"
+          "valueString": "actiontaken"
         }, {
           "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='start-date').valueDate"
+          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='actionTaken').valueCoding.display"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -91,19 +91,19 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "End Date"
+          "valueString": "Start Date"
         }, {
           "url": "name",
-          "valueString": "enddate"
+          "valueString": "startdate"
         }, {
           "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='end-date').valueDate"
+          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='start-date').valueDate"
         }, {
           "url": "filter",
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": false
+          "valueBoolean": true
         }, {
           "url": "order",
           "valueInteger": 4
@@ -112,13 +112,13 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Criteria 1: General Knowledge"
+          "valueString": "End Date"
         }, {
           "url": "name",
-          "valueString": "criteria1"
+          "valueString": "enddate"
         }, {
           "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='general-knowledge').valueDecimal"
+          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='end-date').valueDate"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -128,84 +128,6 @@
         }, {
           "url": "order",
           "valueInteger": 5
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Criteria 2: Professional Culture"
-        }, {
-          "url": "name",
-          "valueString": "criteria2"
-        }, {
-          "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='professional-culture').valueDecimal"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 6
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Criteria 3: Discipline in carrying out duties"
-        }, {
-          "url": "name",
-          "valueString": "criteria3"
-        }, {
-          "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='discipline').valueDecimal"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 7
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Criteria 4: Aptitude for command functions"
-        }, {
-          "url": "name",
-          "valueString": "criteria4"
-        }, {
-          "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='aptitude').valueDecimal"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 8
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Score"
-        }, {
-          "url": "name",
-          "valueString": "score"
-        }, {
-          "url": "fhirpath",
-          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='score').valueDecimal"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 9
         }]
       }]
     },
@@ -225,7 +147,7 @@
         },
         {
           "url": "linkTo",
-          "valueString": "performance.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+          "valueString": "discipline.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
         },
         {
           "url": "multiple",
@@ -353,6 +275,27 @@
         }, {
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
+            "url": "name",
+            "valueString": "classificationcatcategory"
+          }, {
+            "url": "function",
+            "valueString": "esfunctions.classificationcategory({practitionerid})"
+          }, {
+            "url": "parameters",
+            "valueString": "practitionerid"
+          }, {
+            "url": "filter",
+            "valueBoolean": false
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": false
+          }, {
+            "url": "order",
+            "valueInteger": 20
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
             "url": "display",
             "valueString": "Retirement Date"
           }, {
@@ -383,9 +326,6 @@
             "url": "name",
             "valueString": "phone"
           }, {
-            "url": "type",
-            "valueString": "text"
-          }, {
             "url": "fhirpath",
             "valueString": "telecom.where(system='phone').value"
           }, {
@@ -394,9 +334,6 @@
           }, {
             "url": "order",
             "valueInteger": 15
-          }, {
-            "url": "type",
-            "valueString": "string"
           }]
         }, {
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -411,7 +348,7 @@
             "valueString": "text"
           }, {
             "url": "fhirpath",
-            "valueString": "identifier.where(type.coding.where(code='employeecode')).value"
+            "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/registration-number').valueString"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -432,7 +369,7 @@
             "valueString": "nationalid"
           }, {
             "url": "fhirpath",
-            "valueString": "identifier.where(type.coding.where(code='cni')).value"
+            "valueString": "identifier.where(type.coding.code='nni').value"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -447,10 +384,10 @@
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
             "url": "name",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "function",
-            "valueString": "performance.populate({practitionerid})"
+            "valueString": "orgunits.populate({practitionerid})"
           }, {
             "url": "parameters",
             "valueString": "practitionerid"
@@ -474,10 +411,10 @@
             "valueString": "facility"
           }, {
             "url": "function",
-            "valueString": "performance.facility({performancedata})"
+            "valueString": "orgunits.facility({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -492,16 +429,16 @@
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
             "url": "display",
-            "valueString": "Commune"
+            "valueString": "District"
           }, {
             "url": "name",
-            "valueString": "commune"
+            "valueString": "district"
           }, {
             "url": "function",
-            "valueString": "performance.commune({performancedata})"
+            "valueString": "orgunits.district({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -516,16 +453,16 @@
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
             "url": "display",
-            "valueString": "District"
+            "valueString": "Province"
           }, {
             "url": "name",
-            "valueString": "district"
+            "valueString": "region"
           }, {
             "url": "function",
-            "valueString": "performance.district({performancedata})"
+            "valueString": "orgunits.region({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -535,30 +472,6 @@
           }, {
             "url": "order",
             "valueInteger": 19
-          }]
-        }, {
-          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-          "extension": [{
-            "url": "display",
-            "valueString": "Province"
-          }, {
-            "url": "name",
-            "valueString": "region"
-          }, {
-            "url": "function",
-            "valueString": "performance.region({performancedata})"
-          }, {
-            "url": "parameters",
-            "valueString": "performancedata"
-          }, {
-            "url": "filter",
-            "valueBoolean": true
-          }, {
-            "url": "dropDownFilter",
-            "valueBoolean": true
-          }, {
-            "url": "order",
-            "valueInteger": 20
           }]
         }, {
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

@@ -103,7 +103,10 @@
       "Pre-service Information": "Formation Initiale",
       "In-service Information": "Formation Continue",
       "Work Experience": "Experience Professionnelle",
-      "Performance Evaluation": "Gestion des performances"
+      "Performance Evaluation": "Gestion des performances",
+      "Disciplinary Events": "",
+      "Leave Information": "",
+      "Bank Information": ""
     },
     "intro": {
       "Person Information": "Information Agent",
@@ -743,7 +746,27 @@
       "Tenure Reference": "Référence de l'arrêté de Titularisation",
       "Reference Integration Act": "Référence de l'acte d'intégration/Contrat",
       "Departure Reason": "Raison de départ",
-      "Departure Date": "Date de départ"
+      "Departure Date": "Date de départ",
+      "Previous Staff Situation": "",
+      "Province": "",
+      "Districts": "",
+      "Ministry Code System": "",
+      "Classification Class Code System": "",
+      "Classification Class": "",
+      "Specialization Code System": "",
+      "Training Mode Code System": "",
+      "Country Code System": "",
+      "Function Code System": "",
+      "Education Sector Code System": "",
+      "Education Sector": "",
+      "Assign Current Situation": "",
+      "Add Previous Situation": "",
+      "Delete": "",
+      "Data Completeness": "",
+      "Completeness": "",
+      "Data Completeness Information": "",
+      "Record Completeness": "",
+      "Add Data Completeness": ""
     },
     "hardcoded-texts": {
       "must be an integer": "must be an integer",
@@ -910,7 +933,21 @@
       "Criteria 3: Discipline in carrying out duties": "Critère 3: Conduite et Discipline /5",
       "Criteria 4: Aptitude for command functions": "Critère 4: Sens du Bien Public /5",
       "Score": "Note",
-      "Staff": "Staff"
+      "Staff": "Staff",
+      "Disciplinary Events": "",
+      "Action Type": "",
+      "Action Taken": "",
+      "Leave Report": "",
+      "Leave Type": "",
+      "`speciality": "",
+      "Facility/Place of work": "",
+      "Banking Information": "",
+      "Account Type": "",
+      "Account Name": "",
+      "Account Number": "",
+      "Bank Name": "",
+      "Agent Status Information": "",
+      "Status": ""
     }
   }
 }

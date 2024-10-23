@@ -119,8 +119,700 @@
     {
       "code": "specialty28",
       "display": "Traumatologie-orthopédie"
+    },
+    {
+      "code": "specialty29",
+      "display": "Chirurgie dentaire"
+    },
+    {
+      "code": "specialty30",
+      "display": "Médecine générale"
+    },
+    {
+      "code": "specialty31",
+      "display": "Odonto-stomatologie"
+    },
+    {
+      "code": "specialty32",
+      "display": "Pharmacie"
+    },
+    {
+      "code": "specialty33",
+      "display": "Anatomopathologie"
+    },
+    {
+      "code": "specialty34",
+      "display": "Anesthésiologie"
+    },
+    {
+      "code": "specialty35",
+      "display": "Bactériologie-virologie"
+    },
+    {
+      "code": "specialty36",
+      "display": "Biochimie médicale"
+    },
+    {
+      "code": "specialty37",
+      "display": "Biologie épidémiologie"
+    },
+    {
+      "code": "specialty38",
+      "display": "Chirurgie cancérologie"
+    },
+    {
+      "code": "specialty39",
+      "display": "Chirurgie cardiaque"
+    },
+    {
+      "code": "specialty40",
+      "display": "Chirurgie cardiovasculaire"
+    },
+    {
+      "code": "specialty41",
+      "display": "Chirurgie maxillo-faciale"
+    },
+    {
+      "code": "specialty42",
+      "display": "Chirurgie plastique"
+    },
+    {
+      "code": "specialty43",
+      "display": "Chirurgie thoracique"
+    },
+    {
+      "code": "specialty44",
+      "display": "Chirurgie viscérale"
+    },
+    {
+      "code": "specialty45",
+      "display": "Diabétologie"
+    },
+    {
+      "code": "specialty46",
+      "display": "Endocrinologie"
+    },
+    {
+      "code": "specialty47",
+      "display": "Epidémiologie"
+    },
+    {
+      "code": "specialty48",
+      "display": "Gastro-entérologie"
+    },
+    {
+      "code": "specialty49",
+      "display": "Génétique médicale"
+    },
+    {
+      "code": "specialty50",
+      "display": "Gériatrie"
+    },
+    {
+      "code": "specialty51",
+      "display": "Hématologie"
+    },
+    {
+      "code": "specialty52",
+      "display": "Histologie-Embryologie-Cytogénétique"
+    },
+    {
+      "code": "specialty53",
+      "display": "Immunologie"
+    },
+    {
+      "code": "specialty54",
+      "display": "Immunologie clinique et allergie"
+    },
+    {
+      "code": "specialty55",
+      "display": "Infectiologie"
+    },
+    {
+      "code": "specialty56",
+      "display": "Médecine d’urgence"
+    },
+    {
+      "code": "specialty57",
+      "display": "Médecine du sport"
+    },
+    {
+      "code": "specialty58",
+      "display": "Médecine du Travail"
+    },
+    {
+      "code": "specialty59",
+      "display": "Médecine légale"
+    },
+    {
+      "code": "specialty60",
+      "display": "Médecine légale, du travail et du sport"
+    },
+    {
+      "code": "specialty61",
+      "display": "Médecine nucléaire"
+    },
+    {
+      "code": "specialty62",
+      "display": "Médecine vétérinaire"
+    },
+    {
+      "code": "specialty63",
+      "display": "Microbiologie médicale et infectiologie"
+    },
+    {
+      "code": "specialty64",
+      "display": "Néphrologie"
+    },
+    {
+      "code": "specialty65",
+      "display": "Neurochirurgie"
+    },
+    {
+      "code": "specialty66",
+      "display": "Oncologie médicale"
+    },
+    {
+      "code": "specialty67",
+      "display": "Oto-rhino-laryngologie et chirurgie cervico-faciale"
+    },
+    {
+      "code": "specialty68",
+      "display": "Paludologie"
+    },
+    {
+      "code": "specialty69",
+      "display": "Physiatrie"
+    },
+    {
+      "code": "specialty70",
+      "display": "Pneumologie"
+    },
+    {
+      "code": "specialty71",
+      "display": "Psychiatrie"
+    },
+    {
+      "code": "specialty72",
+      "display": "Psychiatrie d’adulte"
+    },
+    {
+      "code": "specialty73",
+      "display": "Radiologie diagnostique"
+    },
+    {
+      "code": "specialty74",
+      "display": "Radio-oncologie"
+    },
+    {
+      "code": "specialty75",
+      "display": "Stomatologie"
+    },
+    {
+      "code": "specialty76",
+      "display": "Stomatologie et chirurgie maxillo-faciale"
+    },
+    {
+      "code": "specialty77",
+      "display": "Toxicologie médicale"
+    },
+    {
+      "code": "specialty78",
+      "display": "Urologie"
+    },
+    {
+      "code": "specialty79",
+      "display": "Urologie-andrologie"
+    },
+    {
+      "code": "specialty80",
+      "display": "Analyses médicales et biologiques"
+    },
+    {
+      "code": "specialty81",
+      "display": "Anesthésie réanimation"
+    },
+    {
+      "code": "specialty82",
+      "display": "Auxiliaire en pharmacie"
+    },
+    {
+      "code": "specialty83",
+      "display": "Biologie-biochimie et biotechnologie"
+    },
+    {
+      "code": "specialty84",
+      "display": "Ergothérapie"
+    },
+    {
+      "code": "specialty85",
+      "display": "Génie sanitaire"
+    },
+    {
+      "code": "specialty86",
+      "display": "Hygiène et assainissement"
+    },
+    {
+      "code": "specialty87",
+      "display": "Kinésithérapie"
+    },
+    {
+      "code": "specialty88",
+      "display": "Nutrition"
+    },
+    {
+      "code": "specialty89",
+      "display": "Ophtalmologie"
+    },
+    {
+      "code": "specialty90",
+      "display": "Optique-optométrie"
+    },
+    {
+      "code": "specialty91",
+      "display": "Orthopédiste"
+    },
+    {
+      "code": "specialty92",
+      "display": "Orthophonie"
+    },
+    {
+      "code": "specialty93",
+      "display": "Orthoprothésie"
+    },
+    {
+      "code": "specialty94",
+      "display": "Radiologie et imagerie médicale"
+    },
+    {
+      "code": "specialty95",
+      "display": "Soins infirmiers"
+    },
+    {
+      "code": "specialty96",
+      "display": "Soins obstétricaux"
+    },
+    {
+      "code": "specialty97",
+      "display": "Accoucheuse auxiliaire d’Etat"
+    },
+    {
+      "code": "specialty98",
+      "display": "Infirmier auxiliaire d’Etat"
+    },
+    {
+      "code": "specialty99",
+      "display": "Action commerciale et force de vente"
+    },
+    {
+      "code": "specialty100",
+      "display": "Administration des réseaux locaux d’entreprise"
+    },
+    {
+      "code": "specialty101",
+      "display": "Administration et Gestion des Affaires"
+    },
+    {
+      "code": "specialty102",
+      "display": "Administration Générale"
+    },
+    {
+      "code": "specialty103",
+      "display": "Administration hospitalière"
+    },
+    {
+      "code": "specialty104",
+      "display": "Administration système"
+    },
+    {
+      "code": "specialty105",
+      "display": "Agent de promotion sociale"
+    },
+    {
+      "code": "specialty106",
+      "display": "Anthropologie"
+    },
+    {
+      "code": "specialty107",
+      "display": "Anthropologie de la santé"
+    },
+    {
+      "code": "specialty108",
+      "display": "Architecture"
+    },
+    {
+      "code": "specialty109",
+      "display": "Architecture réseau"
+    },
+    {
+      "code": "specialty110",
+      "display": "Architecture urbanisme"
+    },
+    {
+      "code": "specialty111",
+      "display": "Assistant administratif"
+    },
+    {
+      "code": "specialty112",
+      "display": "Assistant de direction"
+    },
+    {
+      "code": "specialty113",
+      "display": "Assistant de Gestion PME-PMI"
+    },
+    {
+      "code": "specialty114",
+      "display": "Audit"
+    },
+    {
+      "code": "specialty115",
+      "display": "Audit et Contrôle de Gestion"
+    },
+    {
+      "code": "specialty116",
+      "display": "Banque et Assurances"
+    },
+    {
+      "code": "specialty117",
+      "display": "Biomédical"
+    },
+    {
+      "code": "specialty118",
+      "display": "Cadre supérieur de développement social (Assistant social)"
+    },
+    {
+      "code": "specialty119",
+      "display": "Chaudronnerie"
+    },
+    {
+      "code": "specialty120",
+      "display": "Commerce International"
+    },
+    {
+      "code": "specialty121",
+      "display": "Communication des entreprises"
+    },
+    {
+      "code": "specialty122",
+      "display": "Communication et Information"
+    },
+    {
+      "code": "specialty123",
+      "display": "Comptabilité et Gestion des Entreprises"
+    },
+    {
+      "code": "specialty124",
+      "display": "Comptabilité"
+    },
+    {
+      "code": "specialty125",
+      "display": "Contrôle de gestion"
+    },
+    {
+      "code": "specialty126",
+      "display": "Contrôle et audit interne"
+    },
+    {
+      "code": "specialty127",
+      "display": "Contrôle interne"
+    },
+    {
+      "code": "specialty128",
+      "display": "Couture"
+    },
+    {
+      "code": "specialty129",
+      "display": "Cybersécurité"
+    },
+    {
+      "code": "specialty130",
+      "display": "Dessin bâtiment"
+    },
+    {
+      "code": "specialty131",
+      "display": "Développement d’applications"
+    },
+    {
+      "code": "specialty132",
+      "display": "Développement Social"
+    },
+    {
+      "code": "specialty133",
+      "display": "Développement web et mobile"
+    },
+    {
+      "code": "specialty134",
+      "display": "Documentation, archivage et Bibliothèque"
+    },
+    {
+      "code": "specialty135",
+      "display": "Droit de la santé"
+    },
+    {
+      "code": "specialty136",
+      "display": "Droit des affaires"
+    },
+    {
+      "code": "specialty137",
+      "display": "Droit privé"
+    },
+    {
+      "code": "specialty138",
+      "display": "Droit public fondamental"
+    },
+    {
+      "code": "specialty139",
+      "display": "Economie"
+    },
+    {
+      "code": "specialty140",
+      "display": "Economie de la santé"
+    },
+    {
+      "code": "specialty141",
+      "display": "Economie planification"
+    },
+    {
+      "code": "specialty142",
+      "display": "Electricité d’équipement"
+    },
+    {
+      "code": "specialty143",
+      "display": "Electronique"
+    },
+    {
+      "code": "specialty144",
+      "display": "Electrotechnique"
+    },
+    {
+      "code": "specialty145",
+      "display": "Finance Banque"
+    },
+    {
+      "code": "specialty146",
+      "display": "Finances et trésor"
+    },
+    {
+      "code": "specialty147",
+      "display": "Froid et climatisation"
+    },
+    {
+      "code": "specialty148",
+      "display": "Génie Civil"
+    },
+    {
+      "code": "specialty149",
+      "display": "Génie Electrique"
+    },
+    {
+      "code": "specialty150",
+      "display": "Génie Logiciel"
+    },
+    {
+      "code": "specialty151",
+      "display": "Géographie"
+    },
+    {
+      "code": "specialty152",
+      "display": "Gestion Commerciale"
+    },
+    {
+      "code": "specialty153",
+      "display": "Gestion commerciale et Marketing"
+    },
+    {
+      "code": "specialty154",
+      "display": "Gestion Comptable et Contrôle Audit"
+    },
+    {
+      "code": "specialty155",
+      "display": "Gestion de Projet et Passation des Marchés"
+    },
+    {
+      "code": "specialty156",
+      "display": "Gestion des collectivités locales"
+    },
+    {
+      "code": "specialty157",
+      "display": "Gestion des Marchés Publics"
+    },
+    {
+      "code": "specialty158",
+      "display": "Gestion des opérations et de la logistique"
+    },
+    {
+      "code": "specialty159",
+      "display": "Gestion des Projets"
+    },
+    {
+      "code": "specialty160",
+      "display": "Gestion des Ressources Humaines"
+    },
+    {
+      "code": "specialty161",
+      "display": "Gestion des services de santé"
+    },
+    {
+      "code": "specialty162",
+      "display": "Gestion Fiscale des Entreprises"
+    },
+    {
+      "code": "specialty163",
+      "display": "Histoire"
+    },
+    {
+      "code": "specialty164",
+      "display": "Informatique et gestion"
+    },
+    {
+      "code": "specialty165",
+      "display": "Inspection des services de santé"
+    },
+    {
+      "code": "specialty166",
+      "display": "Inspection pharmaceutique"
+    },
+    {
+      "code": "specialty167",
+      "display": "Journalisme"
+    },
+    {
+      "code": "specialty168",
+      "display": "Maçonnerie"
+    },
+    {
+      "code": "specialty169",
+      "display": "Maintenance informatique"
+    },
+    {
+      "code": "specialty170",
+      "display": "Management et Gestion des Entreprises"
+    },
+    {
+      "code": "specialty171",
+      "display": "Marketing-Communication"
+    },
+    {
+      "code": "specialty172",
+      "display": "Mécanique automobile"
+    },
+    {
+      "code": "specialty173",
+      "display": "Mécanique d’entretien"
+    },
+    {
+      "code": "specialty174",
+      "display": "Mécanique générale"
+    },
+    {
+      "code": "specialty175",
+      "display": "Menuiserie"
+    },
+    {
+      "code": "specialty176",
+      "display": "Planification"
+    },
+    {
+      "code": "specialty177",
+      "display": "Planification du développement"
+    },
+    {
+      "code": "specialty178",
+      "display": "Plomberie sanitaire"
+    },
+    {
+      "code": "specialty179",
+      "display": "Qualité Sécurité Hygiène Environnement"
+    },
+    {
+      "code": "specialty180",
+      "display": "Qualité-Sécurité–Environnement et Responsabilité Sociétale (QSE/RS) des entreprises"
+    },
+    {
+      "code": "specialty181",
+      "display": "Réseaux & télécoms"
+    },
+    {
+      "code": "specialty182",
+      "display": "Réseaux informatiques"
+    },
+    {
+      "code": "specialty183",
+      "display": "Réseaux, système et sécurité"
+    },
+    {
+      "code": "specialty184",
+      "display": "Science des données (Data science)"
+    },
+    {
+      "code": "specialty185",
+      "display": "Sciences Technique Comptable et Financière"
+    },
+    {
+      "code": "specialty186",
+      "display": "Secrétariat administratif"
+    },
+    {
+      "code": "specialty187",
+      "display": "Secrétariat commercial bilingue"
+    },
+    {
+      "code": "specialty188",
+      "display": "Secrétariat de direction"
+    },
+    {
+      "code": "specialty189",
+      "display": "Secrétariat médical"
+    },
+    {
+      "code": "specialty190",
+      "display": "Secrétariat bureautique"
+    },
+    {
+      "code": "specialty191",
+      "display": "Sociologie"
+    },
+    {
+      "code": "specialty192",
+      "display": "Sociologie de la santé"
+    },
+    {
+      "code": "specialty193",
+      "display": "Système d’information en santé"
+    },
+    {
+      "code": "specialty194",
+      "display": "Télécommunications et Réseaux (conception des systèmes électroniques)"
+    },
+    {
+      "code": "specialty195",
+      "display": "Transport-Logistique"
+    },
+    {
+      "code": "specialty196",
+      "display": "PhD en biologie"
+    },
+    {
+      "code": "specialty197",
+      "display": "Psychologie de la santé"
+    },
+    {
+      "code": "specialty198",
+      "display": "Psychologie du travail"
+    },
+    {
+      "code": "specialty199",
+      "display": "Sciences, Technologie, Ingénierie et Santé (ED-STIS)"
+    },
+    {
+      "code": "specialty200",
+      "display": "Sociologie"
+    },
+    {
+      "code": "specialty201",
+      "display": "Immunologie, mention biologie et pathologie humaine"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 28
+  "count": 201
 }

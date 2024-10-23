@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DataCompletenessCodeSystem",
+  "id": "data-completeness-codesystem",
+  "title": "Reason For Change/Departure",
+  "version": "0.3.0",
+  "url": "http://ihris.org/fhir/CodeSystem/data-completeness-codesystem",
+  "concept": [
+    {
+      "code": "complete",
+      "display": "Complete"
+    },
+    {
+      "code": "incomplete",
+      "display": "Incomplete"
+    }
+  ],
+  "date": "2020-11-14T08:41:04.362Z",
+  "count": 2
+}

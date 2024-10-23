@@ -171,6 +171,9 @@
           "url": "name",
           "valueString": "regnumber"
         }, {
+          "url": "type",
+          "valueString": "text"
+        }, {
           "url": "fhirpath",
           "valueString": "identifier.where(type.coding.where(code='employeecode')).value"
         }, {

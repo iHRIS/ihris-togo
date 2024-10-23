@@ -59,13 +59,20 @@
         },
         {
           "linkId": "Basic.extension[6]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:service-resumption-date.value[x]:valueDate",
+          "text": "Service Resumption Date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[7]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:end-service-reference.value[x]:valueString",
           "text": "End of Service Reference",
           "type": "string",
           "required": false
         },
         {
-          "linkId": "Basic.extension[7]",
+          "linkId": "Basic.extension[8]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:sector.value[x]:valueCoding",
           "text": "Sector",
           "type": "choice",
@@ -73,7 +80,7 @@
           "required": true
         },
         {
-          "linkId": "Basic.extension[8]",
+          "linkId": "Basic.extension[9]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:institution-name.value[x]:valueString",
           "text": "Institution Name",
           "type": "string",
@@ -81,7 +88,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[9]",
+          "linkId": "Basic.extension[10]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-country.value[x]:valueCoding",
           "text": "Training Country",
           "type": "choice",
@@ -90,7 +97,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[10]",
+          "linkId": "Basic.extension[11]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-mode.value[x]:valueCoding",
           "text": "Training Mode",
           "type": "choice",
@@ -99,7 +106,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[11]",
+          "linkId": "Basic.extension[12]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund.value[x]:valueCoding",
           "text": "Funding",
           "type": "choice",
@@ -108,7 +115,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[12]",
+          "linkId": "Basic.extension[13]",
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund-other.value[x]:valueString",
           "text": "Other Funding",
           "type": "string",
@@ -116,7 +123,7 @@
           "repeats": false,
           "enableWhen": [
             {
-              "question": "Basic.extension[11]",
+              "question": "Basic.extension[12]",
               "operator": "=",
               "answerCoding": {
                 "code": "other",

@@ -9,6 +9,7 @@ const staffdirectorate = {
       let qualification = ""
       let specialization = ""
       let civilservcategory = ""
+      let organization = ""
       let appointmentdate = ""
       let servicestartdate = ""
       let integrationdate = ""
@@ -246,6 +247,12 @@ const staffdirectorate = {
             } else {
               civilservcategory = ""
             }
+            organization = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === 'http://ihris.org/fhir/StructureDefinition/organization'
+            })?.valueCoding?.display
+            if(!organization) {
+              organization = ""
+            }
           }
           resolve()
         }).catch((err) => {
@@ -254,7 +261,7 @@ const staffdirectorate = {
         })
       })
       Promise.all([job, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune + "-^-" + organization
         resolve(value)
       })
     })
@@ -366,7 +373,16 @@ const staffdirectorate = {
       let values = fields.staffdirectoratedata.split("-^-")
       resolve(values[11])
     })
-  }
+  },
+  organization: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[12])
+    })
+  },
 }
 
 module.exports = staffdirectorate

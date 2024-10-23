@@ -22,6 +22,12 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
 * extension[display].extension[link][0].extension[class].valueString = "secondary"
+* extension[display].extension[link][1].extension[url].valueUrl = "/custom/delete-practitioner?path=/togo/components&id=FIELD"
+* extension[display].extension[link][1].extension[field].valueString = "Practitioner.id"
+* extension[display].extension[link][1].extension[text].valueString = "Delete"
+* extension[display].extension[link][1].extension[button].valueBoolean = true
+* extension[display].extension[link][1].extension[icon].valueString = "mdi-delete-circle-outline"
+* extension[display].extension[link][1].extension[class].valueString = "error"
 * extension[display].extension[field][0].extension[path].valueString = "Practitioner.extension:agent-id.value[x]:valueString"
 * extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
 * extension[section][0].extension[title].valueString = "Identifiers"
@@ -138,7 +144,7 @@ Usage:          #example
 * extension[section][5].extension[resource].extension[column][0].extension[header].valueString = "Status"
 * extension[section][5].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding.display"
 * extension[section][5].extension[resource].extension[column][1].extension[header].valueString = "Resumption/Start Date"
-* extension[section][5].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/start-date').valueDate"
+* extension[section][5].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/start-date').valueDate | extension.where(url='http://ihris.org/fhir/StructureDefinition/resumption-date').valueDate"
 * extension[section][5].extension[resource].extension[column][2].extension[header].valueString = "End Date"
 * extension[section][5].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/end-date').valueDate"
 * extension[section][5].extension[resource].extension[column][3].extension[header].valueString = "Actions"
@@ -163,7 +169,7 @@ Usage:          #example
 * extension[section][6].extension[resource].extension[searchfieldtarget].valueString = "Practitioner"
 * extension[section][6].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
 * extension[section][6].extension[resource].extension[column][0].extension[header].valueString = "Diploma"
-* extension[section][6].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueReference"
+* extension[section][6].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueCoding"
 * extension[section][6].extension[resource].extension[column][1].extension[header].valueString = "Sector"
 * extension[section][6].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueCoding.display"
 * extension[section][6].extension[resource].extension[column][2].extension[header].valueString = "Institution"
@@ -407,13 +413,14 @@ Usage:          #example
 * extension[section][14].extension[resource].extension[column][1].extension[header].valueString = "Account Number"
 * extension[section][14].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/banking').extension.where(url='account-number').valueString"
 * extension[section][14].extension[resource].extension[column][2].extension[header].valueString = "Account Type"
-* extension[section][14].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/banking').extension.where(url='account-type').valueString"
+* extension[section][14].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/banking').extension.where(url='account-type').valueCoding"
 * extension[section][14].extension[resource].extension[column][3].extension[header].valueString = "Actions"
 * extension[section][14].extension[resource].extension[column][3].extension[field].valueString = "_action"
 * extension[section][14].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/banking/banking?practitioner=FHIRID"
 * extension[section][14].extension[resource].extension[action][0].extension[text].valueString = "Add Banking Information"
 * extension[section][14].extension[resource].extension[action][0].extension[row].valueBoolean = false
 * extension[section][14].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
+* extension[section][14].extension[resource].extension[action][0].extension[condition].valueString = "Basic.id.empty()"
 * extension[section][14].extension[resource].extension[action][0].extension[class].valueString = "primary"
 * extension[section][14].extension[resource].extension[action][0].extension[task].valueId = "ihris-task-add-banking"
 * extension[section][14].extension[resource].extension[action][1].extension[link].valueString = "/resource/view/banking/ITEMID"
@@ -463,7 +470,7 @@ Usage:          #example
 * extension[section][16].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
 * extension[section][16].extension[resource].extension[column][0].extension[header].valueString = "Date Added"
 * extension[section][16].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/note-date').valueDate"
-* extension[section][16].extension[resource].extension[column][1].extension[header].valueString = "Amount"
+* extension[section][16].extension[resource].extension[column][1].extension[header].valueString = "Note"
 * extension[section][16].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/note').valueString"
 * extension[section][16].extension[resource].extension[column][2].extension[header].valueString = "Actions"
 * extension[section][16].extension[resource].extension[column][2].extension[field].valueString = "_action"
@@ -477,3 +484,27 @@ Usage:          #example
 * extension[section][16].extension[resource].extension[action][1].extension[text].valueString = "Edit"
 * extension[section][16].extension[resource].extension[action][1].extension[row].valueBoolean = true
 * extension[section][16].extension[resource].extension[action][1].extension[task].valueId = "ihris-task-edit-notes"
+* extension[section][17].extension[title].valueString = "Record Completeness"
+* extension[section][17].extension[description].valueString = "Record Completeness"
+* extension[section][17].extension[name].valueString = "datacompleteness"
+* extension[section][17].extension[resource].extension[resource].valueReference = Reference(StructureDefinition/data-completeness-profile)
+* extension[section][17].extension[resource].extension[searchfield].valueString = "practitioner"
+* extension[section][17].extension[resource].extension[searchfieldtarget].valueString = "Practitioner"
+* extension[section][17].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+* extension[section][17].extension[resource].extension[column][0].extension[header].valueString = "Date Added"
+* extension[section][17].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/note-date').valueDate"
+* extension[section][17].extension[resource].extension[column][1].extension[header].valueString = "Completeness"
+* extension[section][17].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/completeness').valueCoding"
+* extension[section][17].extension[resource].extension[column][2].extension[header].valueString = "Actions"
+* extension[section][17].extension[resource].extension[column][2].extension[field].valueString = "_action"
+* extension[section][17].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/data-completeness/data-completeness?practitioner=FHIRID"
+* extension[section][17].extension[resource].extension[action][0].extension[text].valueString = "Add Data Completeness"
+* extension[section][17].extension[resource].extension[action][0].extension[row].valueBoolean = false
+* extension[section][17].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
+* extension[section][17].extension[resource].extension[action][0].extension[class].valueString = "primary"
+* extension[section][17].extension[resource].extension[action][0].extension[task].valueId = "ihris-task-add-data-completeness"
+* extension[section][17].extension[resource].extension[action][0].extension[condition].valueString = "Basic.id.empty()"
+* extension[section][17].extension[resource].extension[action][1].extension[link].valueString = "/questionnaire/data-completeness/data-completeness/ITEMID?practitioner=FHIRID"
+* extension[section][17].extension[resource].extension[action][1].extension[text].valueString = "Edit"
+* extension[section][17].extension[resource].extension[action][1].extension[row].valueBoolean = true
+* extension[section][17].extension[resource].extension[action][1].extension[task].valueId = "ihris-task-edit-data-completeness"

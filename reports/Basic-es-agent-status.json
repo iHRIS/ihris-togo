@@ -1,17 +1,17 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-es-report-inservice-training",
+  "id": "ihris-es-report-staff-agent-status",
   "extension": [{
       "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportDetails",
       "extension": [{
         "url": "label",
-        "valueString": "In-servicetraining Information"
+        "valueString": "Agent Status Information"
       }, {
         "url": "displayCheckbox",
         "valueBoolean": false
       }, {
         "url": "name",
-        "valueString": "inservicetraining"
+        "valueString": "agentstatus"
       }, {
         "url": "locationBasedConstraint",
         "valueBoolean": true
@@ -145,30 +145,6 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Retirement Date"
-        }, {
-          "url": "name",
-          "valueString": "retirementdate"
-        }, {
-          "url": "function",
-          "valueString": "esfunctions.retirementDate({dob})"
-        }, {
-          "url": "parameters",
-          "valueString": "dob"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 5
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
           "valueString": "Phone Number"
         }, {
           "url": "name",
@@ -235,10 +211,31 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "name",
-          "valueString": "inservicetrainingdata"
+          "valueString": "agentstatusdata"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.populate({practitionerid})"
+          "valueString": "agentstatus.populate({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 21
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "orgunitsdata"
+        }, {
+          "url": "function",
+          "valueString": "orgunits.populate({practitionerid})"
         }, {
           "url": "parameters",
           "valueString": "practitionerid"
@@ -256,16 +253,40 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Completed"
+          "valueString": "Retirement Date"
         }, {
           "url": "name",
-          "valueString": "completed"
+          "valueString": "retirementdate"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.completed({inservicetrainingdata})"
+          "valueString": "esfunctions.retirementDate({dob})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "dob"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 5
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Status"
+        }, {
+          "url": "name",
+          "valueString": "status"
+        }, {
+          "url": "function",
+          "valueString": "agentstatus.status({agentstatusdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "agentstatusdata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -280,169 +301,25 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Diploma"
+          "valueString": "Start Date"
         }, {
           "url": "name",
-          "valueString": "degree"
+          "valueString": "date"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.degree({inservicetrainingdata})"
+          "valueString": "agentstatus.startdate({agentstatusdata})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "agentstatusdata"
         }, {
           "url": "filter",
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": true
+          "valueBoolean": false
         }, {
           "url": "order",
           "valueInteger": 9
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Specialization"
-        }, {
-          "url": "name",
-          "valueString": "specialization"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.specialization({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 10
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Sector"
-        }, {
-          "url": "name",
-          "valueString": "sector"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.sector({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 11
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Institution"
-        }, {
-          "url": "name",
-          "valueString": "institution"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.institution({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 12
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Country"
-        }, {
-          "url": "name",
-          "valueString": "country"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.country({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 13
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Year of training start"
-        }, {
-          "url": "name",
-          "valueString": "startyear"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.startYear({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 14
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Year of training end"
-        }, {
-          "url": "name",
-          "valueString": "endyear"
-        }, {
-          "url": "function",
-          "valueString": "inservicetraining.endYear({inservicetrainingdata})"
-        }, {
-          "url": "parameters",
-          "valueString": "inservicetrainingdata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 15
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -454,10 +331,10 @@
           "valueString": "facility"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.facility({inservicetrainingdata})"
+          "valueString": "orgunits.facility({orgunitsdata})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "orgunitsdata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -466,7 +343,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 16
+          "valueInteger": 21
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -478,10 +355,10 @@
           "valueString": "commune"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.commune({inservicetrainingdata})"
+          "valueString": "orgunits.commune({orgunitsdata})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "orgunitsdata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -490,7 +367,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 17
+          "valueInteger": 22
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -502,10 +379,10 @@
           "valueString": "district"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.district({inservicetrainingdata})"
+          "valueString": "orgunits.district({orgunitsdata})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "orgunitsdata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -514,7 +391,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 18
+          "valueInteger": 23
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -526,10 +403,10 @@
           "valueString": "region"
         }, {
           "url": "function",
-          "valueString": "inservicetraining.region({inservicetrainingdata})"
+          "valueString": "orgunits.region({orgunitsdata})"
         }, {
           "url": "parameters",
-          "valueString": "inservicetrainingdata"
+          "valueString": "orgunitsdata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -538,7 +415,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 19
+          "valueInteger": 24
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

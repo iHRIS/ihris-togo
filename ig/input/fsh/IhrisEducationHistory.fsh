@@ -66,9 +66,6 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
 * extension[inservice-training].extension[reason] ^label = "Observation"
 * extension[inservice-training].extension[reason].valueString 1..1 MS
 * extension[inservice-training].extension[reason].valueString ^label = "Reason"
-* extension[inservice-training].extension[service-resumption-date] 1..1 MS
-* extension[inservice-training].extension[service-resumption-date] ^label = "Service Resumption Date"
-* extension[inservice-training].extension[service-resumption-date].valueDate MS
 * extension[inservice-training].extension[service-resumption-reference] 1..1 MS
 * extension[inservice-training].extension[service-resumption-reference] ^label = "Service Resumption Reference"
 * extension[inservice-training].extension[service-resumption-reference].valueString MS
@@ -87,6 +84,7 @@ Description:    "Inservice Training Request Information Profile."
     TrainingStartDate named training-start-date 1..1 MS and
     TrainingEndYear named training-end-year 1..1 MS and
     ServiceEndDate named service-end-date 0..1 MS and
+    ServiceResumptionDate named service-resumption-date 1..1 MS and
     EndServiceReference named end-service-reference 0..1 MS and
     Sector named sector 1..1 MS and
     InstitutionName named institution-name 1..1 MS and
@@ -112,6 +110,9 @@ Description:    "Inservice Training Request Information Profile."
 * extension[service-end-date]  1..1 MS
 * extension[service-end-date]  ^label = "End of Service Date"
 * extension[service-end-date].valueDate MS
+* extension[service-resumption-date] 1..1 MS
+* extension[service-resumption-date] ^label = "Service Resumption Date"
+* extension[service-resumption-date].valueDate MS
 * extension[end-service-reference]  1..1 MS
 * extension[end-service-reference]  ^label = "End of Service Reference"
 * extension[end-service-reference].valueString MS
@@ -146,7 +147,8 @@ Description:    "Inservice Training Extension Request Information Profile."
     AuthorizationConfirmationLetter named authorization-confirmation-letter 0..1 MS and
     ConfirmationLetterDate named confirmation-letter-date 0..1 MS and
     ExtensionStartDate named extension-start-date 1..1 MS and
-    ExtensionEndYear named extension-end-year 1..1 MS
+    ExtensionEndYear named extension-end-year 1..1 MS and
+    ServiceResumptionDate named service-resumption-date 1..1 MS
 * extension[authorization-reference]  1..1 MS
 * extension[authorization-reference]  ^label = "Authorization Reference"
 * extension[authorization-reference].valueString MS
@@ -162,6 +164,9 @@ Description:    "Inservice Training Extension Request Information Profile."
 * extension[extension-end-year]  1..1 MS
 * extension[extension-end-year]  ^label = "Extension End Year"
 * extension[extension-end-year].valueDate MS
+* extension[service-resumption-date] 1..1 MS
+* extension[service-resumption-date] ^label = "Service Resumption Date"
+* extension[service-resumption-date].valueDate MS
     
 Extension:      PreserviceTraining
 Id:             preservice-training
@@ -218,7 +223,6 @@ Extension:      InserviceTraining
 Id:             inservice-training
 Title:          "Inservice Training details"
 * extension contains
-      service-resumption-date 1..1 MS and
       service-resumption-reference 1..1 MS and
       degree 1..1 MS and
       degree-name 1..1 MS and
@@ -240,8 +244,6 @@ Title:          "Inservice Training details"
 * extension[specialization].valueCoding from http://ihris.org/fhir/ValueSet/specialty-valueset (required)
 * extension[observation].value[x] only string
 * extension[observation].valueString ^label = "Observation"
-* extension[service-resumption-date].value[x] only date
-* extension[service-resumption-date].valueDate ^label = "Service Resumption Date"
 * extension[service-resumption-reference].value[x] only string
 * extension[service-resumption-reference].valueString ^label = "Service Resumption Reference"
 * extension[completed].value[x] only Coding
@@ -349,6 +351,16 @@ Description:    "Service End Date."
 * value[x] only date
 * valueDate 1..1 MS
 * valueDate ^label = "Service End Date"
+
+Extension:      ServiceResumptionDate
+Id:             service-resumption-date
+Title:          "Service Resumption Date"
+Description:    "Service Resumption Date."
+* ^context.type = #element
+* ^context.expression = "Basic"
+* value[x] only date
+* valueDate 1..1 MS
+* valueDate ^label = "Service Resumption Date"
 
 Extension:      InstitutionName
 Id:             institution-name
@@ -627,25 +639,15 @@ Usage:          #definition
 * item[0].item[0].item[6].enableWhen[0].operator = #=
 * item[0].item[0].item[6].enableWhen[0].answerCoding = yes-no-codesystem#yes
 
-* item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"
-* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-date.value[x]:valueDate"
-* item[0].item[0].item[7].text = "Service Resumption Date"
-* item[0].item[0].item[7].type = #date
+* item[0].item[0].item[7].linkId = "Basic.extension[0].extension[8]"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-reference.value[x]:valueString"
+* item[0].item[0].item[7].text = "Service Resumption Reference"
+* item[0].item[0].item[7].type = #string
 * item[0].item[0].item[7].required = true
 * item[0].item[0].item[7].repeats = false
 * item[0].item[0].item[7].enableWhen[0].question = "Basic.extension[0].extension[0]"
 * item[0].item[0].item[7].enableWhen[0].operator = #=
 * item[0].item[0].item[7].enableWhen[0].answerCoding = yes-no-codesystem#yes
-
-* item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]"
-* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-reference.value[x]:valueString"
-* item[0].item[0].item[8].text = "Service Resumption Reference"
-* item[0].item[0].item[8].type = #string
-* item[0].item[0].item[8].required = true
-* item[0].item[0].item[8].repeats = false
-* item[0].item[0].item[8].enableWhen[0].question = "Basic.extension[0].extension[0]"
-* item[0].item[0].item[8].enableWhen[0].operator = #=
-* item[0].item[0].item[8].enableWhen[0].answerCoding = yes-no-codesystem#yes
 
 Instance:       InserviceTrainingRequest
 InstanceOf:      Questionnaire
@@ -701,58 +703,64 @@ Usage:          #definition
 * item[0].item[5].required = false
 
 * item[0].item[6].linkId = "Basic.extension[6]"
-* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:end-service-reference.value[x]:valueString"
-* item[0].item[6].text = "End of Service Reference"
-* item[0].item[6].type = #string
+* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:service-resumption-date.value[x]:valueDate"
+* item[0].item[6].text = "Service Resumption Date"
+* item[0].item[6].type = #date
 * item[0].item[6].required = false
 
 * item[0].item[7].linkId = "Basic.extension[7]"
-* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:sector.value[x]:valueCoding"
-* item[0].item[7].text = "Sector"
-* item[0].item[7].type = #choice
-* item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
-* item[0].item[7].required = true
+* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:end-service-reference.value[x]:valueString"
+* item[0].item[7].text = "End of Service Reference"
+* item[0].item[7].type = #string
+* item[0].item[7].required = false
 
 * item[0].item[8].linkId = "Basic.extension[8]"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:institution-name.value[x]:valueString"
-* item[0].item[8].text = "Institution Name"
-* item[0].item[8].type = #string
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:sector.value[x]:valueCoding"
+* item[0].item[8].text = "Sector"
+* item[0].item[8].type = #choice
+* item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
 * item[0].item[8].required = true
-* item[0].item[8].repeats = false
 
 * item[0].item[9].linkId = "Basic.extension[9]"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-country.value[x]:valueCoding"
-* item[0].item[9].text = "Training Country"
-* item[0].item[9].type = #choice
-* item[0].item[9].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
-* item[0].item[9].required = false
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:institution-name.value[x]:valueString"
+* item[0].item[9].text = "Institution Name"
+* item[0].item[9].type = #string
+* item[0].item[9].required = true
 * item[0].item[9].repeats = false
 
 * item[0].item[10].linkId = "Basic.extension[10]"
-* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-mode.value[x]:valueCoding"
-* item[0].item[10].text = "Training Mode"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-country.value[x]:valueCoding"
+* item[0].item[10].text = "Training Country"
 * item[0].item[10].type = #choice
-* item[0].item[10].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
+* item[0].item[10].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
 * item[0].item[10].required = false
 * item[0].item[10].repeats = false
 
 * item[0].item[11].linkId = "Basic.extension[11]"
-* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund.value[x]:valueCoding"
-* item[0].item[11].text = "Funding"
+* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-mode.value[x]:valueCoding"
+* item[0].item[11].text = "Training Mode"
 * item[0].item[11].type = #choice
-* item[0].item[11].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
-* item[0].item[11].required = true
+* item[0].item[11].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
+* item[0].item[11].required = false
 * item[0].item[11].repeats = false
 
 * item[0].item[12].linkId = "Basic.extension[12]"
-* item[0].item[12].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund-other.value[x]:valueString"
-* item[0].item[12].text = "Other Funding"
-* item[0].item[12].type = #string
+* item[0].item[12].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund.value[x]:valueCoding"
+* item[0].item[12].text = "Funding"
+* item[0].item[12].type = #choice
+* item[0].item[12].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
 * item[0].item[12].required = true
 * item[0].item[12].repeats = false
-* item[0].item[12].enableWhen[0].question = "Basic.extension[11]"
-* item[0].item[12].enableWhen[0].operator = #=
-* item[0].item[12].enableWhen[0].answerCoding = training-fund-codesystem#other
+
+* item[0].item[13].linkId = "Basic.extension[13]"
+* item[0].item[13].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:training-fund-other.value[x]:valueString"
+* item[0].item[13].text = "Other Funding"
+* item[0].item[13].type = #string
+* item[0].item[13].required = true
+* item[0].item[13].repeats = false
+* item[0].item[13].enableWhen[0].question = "Basic.extension[12]"
+* item[0].item[13].enableWhen[0].operator = #=
+* item[0].item[13].enableWhen[0].answerCoding = training-fund-codesystem#other
 
 Instance:       InserviceTrainingExtensionRequest
 InstanceOf:      Questionnaire
@@ -800,6 +808,12 @@ Usage:          #definition
 * item[0].item[4].text = "Extension End Year"
 * item[0].item[4].type = #date
 * item[0].item[4].required = false
+
+* item[0].item[5].linkId = "Basic.extension[5]"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:service-resumption-date.value[x]:valueDate"
+* item[0].item[5].text = "Service Resumption Date"
+* item[0].item[5].type = #date
+* item[0].item[5].required = false
 
 Instance:       ihris-page-preservice-training
 InstanceOf:     IhrisPage
@@ -929,7 +943,8 @@ Usage:          #example
 * extension[section][0].extension[field][5].valueString = "Basic.extension:confirmation-letter-date"
 * extension[section][0].extension[field][6].valueString = "Basic.extension:training-start-date"
 * extension[section][0].extension[field][7].valueString = "Basic.extension:service-end-date"
-* extension[section][0].extension[field][8].valueString = "Basic.extension:end-service-reference"
+* extension[section][0].extension[field][8].valueString = "Basic.extension:service-resumption-date"
+* extension[section][0].extension[field][9].valueString = "Basic.extension:end-service-reference"
 * extension[section][1].extension[title].valueString = "Extension Of Inservice Training Information"
 * extension[section][1].extension[description].valueString = "Extension Of Inservice Training Information"
 * extension[section][1].extension[name].valueString = "extensioninservicetraining"
@@ -943,8 +958,10 @@ Usage:          #example
 * extension[section][1].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/extension-start-date').valueDate"
 * extension[section][1].extension[resource].extension[column][2].extension[header].valueString = "Extension End Year"
 * extension[section][1].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/extension-end-year').valueDate"
-* extension[section][1].extension[resource].extension[column][3].extension[header].valueString = "Actions"
-* extension[section][1].extension[resource].extension[column][3].extension[field].valueString = "_action"
+* extension[section][1].extension[resource].extension[column][3].extension[header].valueString = "Service Resumption Date"
+* extension[section][1].extension[resource].extension[column][3].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/service-resumption-date').valueDate"
+* extension[section][1].extension[resource].extension[column][4].extension[header].valueString = "Actions"
+* extension[section][1].extension[resource].extension[column][4].extension[field].valueString = "_action"
 * extension[section][1].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/inservice-training-extension-request/inservice-training-extension-request?request=FHIRID"
 * extension[section][1].extension[resource].extension[action][0].extension[text].valueString = "Add Extension Of Inservice Training"
 * extension[section][1].extension[resource].extension[action][0].extension[row].valueBoolean = false

@@ -122,24 +122,6 @@
               ]
             },
             {
-              "linkId": "Basic.extension[0].extension[7]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-date.value[x]:valueDate",
-              "text": "Service Resumption Date",
-              "type": "date",
-              "required": true,
-              "repeats": false,
-              "enableWhen": [
-                {
-                  "question": "Basic.extension[0].extension[0]",
-                  "operator": "=",
-                  "answerCoding": {
-                    "code": "yes",
-                    "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
-                  }
-                }
-              ]
-            },
-            {
               "linkId": "Basic.extension[0].extension[8]",
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:service-resumption-reference.value[x]:valueString",
               "text": "Service Resumption Reference",

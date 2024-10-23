@@ -49,6 +49,13 @@
           "text": "Extension End Year",
           "type": "date",
           "required": false
+        },
+        {
+          "linkId": "Basic.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-extension-request-profile#Basic.extension:service-resumption-date.value[x]:valueDate",
+          "text": "Service Resumption Date",
+          "type": "date",
+          "required": false
         }
       ]
     }

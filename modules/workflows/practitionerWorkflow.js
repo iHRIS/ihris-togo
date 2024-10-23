@@ -8,7 +8,50 @@ const practitionerWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
-        let uniquenum = bundle.entry[0].resource.extension.find((ext) => {
+        let practitioner = bundle.entry.find((entry) => {
+          return entry.resource.resourceType === "Practitioner"
+        })
+        let completeness = bundle.entry.find((entry) => {
+          return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/data-completeness-profile")
+        })
+        let agentstatus = bundle.entry.find((entry) => {
+          return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/agent-status-profile")
+        })
+        let refIndex = completeness.resource.extension.findIndex((ext) => {
+          return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference"
+        })
+        if(refIndex === -1) {
+          let index = completeness.resource.extension.length
+          completeness.resource.extension[index] = {
+            url: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference",
+            valueReference: {
+              reference: ""
+            }
+          }
+          if(practitioner.resource.id) {
+            completeness.resource.extension[index].valueReference.reference = "Practioner/" + practitioner.resource.id
+          } else {
+            completeness.resource.extension[index].valueReference.reference = practitioner.fullUrl
+          }
+        }
+        refIndex = agentstatus.resource.extension.findIndex((ext) => {
+          return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference"
+        })
+        if(refIndex === -1) {
+          let index = agentstatus.resource.extension.length
+          agentstatus.resource.extension[index] = {
+            url: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference",
+            valueReference: {
+              reference: ""
+            }
+          }
+          if(practitioner.resource.id) {
+            agentstatus.resource.extension[index].valueReference.reference = "Practioner/" + practitioner.resource.id
+          } else {
+            agentstatus.resource.extension[index].valueReference.reference = practitioner.fullUrl
+          }
+        }
+        let uniquenum = practitioner.resource.extension.find((ext) => {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/unique-number"
         })?.valueString
         if(uniquenum) {
@@ -25,7 +68,7 @@ const practitionerWorkflow = {
             }
           })
         }
-        for(let telecom of bundle.entry[0].resource.telecom) {
+        for(let telecom of practitioner.resource.telecom) {
           if(telecom.system === 'phone') {
             if(telecom.value.length != 8) {
               return reject({message: "Le Numero de Telephone doit avoir 8 Chiffres"})
@@ -44,7 +87,7 @@ const practitionerWorkflow = {
             }
           }
         }
-        for(let identifier of bundle.entry[0].resource.identifier) {
+        for(let identifier of practitioner.resource.identifier) {
           let issueDate = identifier.extension.find((ext) => {
             return ext.url === "http://ihris.org/fhir/StructureDefinition/id-issue-date"
           })

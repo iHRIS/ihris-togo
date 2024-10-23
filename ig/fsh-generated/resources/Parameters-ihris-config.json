@@ -1023,6 +1023,54 @@
           "valueString": "6"
         },
         {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:text",
+          "valueString": "Disciplinary Events"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:url",
+          "valueString": "/report/ihris-es-report-discipline"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:order",
+          "valueString": "7"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:leave:text",
+          "valueString": "Leave Information"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:leave:url",
+          "valueString": "/report/ihris-es-report-leave"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:leave:order",
+          "valueString": "8"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:banking:text",
+          "valueString": "Bank Information"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:banking:url",
+          "valueString": "/report/ihris-es-report-banking"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:banking:order",
+          "valueString": "9"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agentstatus:text",
+          "valueString": "Agent Status"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agentstatus:url",
+          "valueString": "/report/ihris-es-report-staff-agent-status"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agentstatus:order",
+          "valueString": "10"
+        },
+        {
           "name": "site:nav:menu:users:text",
           "valueString": "System Users"
         },
@@ -1293,6 +1341,14 @@
         {
           "name": "workflow:questionnaire:emergency:url",
           "valueString": "http://ihris.org/fhir/Questionnaire/ihris-emergency"
+        },
+        {
+          "name": "workflow:processor:data-completeness:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:data-completeness:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/data-completeness"
         },
         {
           "name": "workflow:processor:discipline:file",
@@ -1568,7 +1624,7 @@
         },
         {
           "name": "defaults:components:attachment:maxValueAttachment",
-          "valueString": "512KB"
+          "valueString": "2MB"
         },
         {
           "name": "defaults:components:date:date-format",
