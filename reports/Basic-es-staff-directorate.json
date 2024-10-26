@@ -28,28 +28,34 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Fullname"
+          "valueString": "Surname"
         }, {
           "url": "name",
-          "valueString": "fullname"
-        },{
-          "url": "displayformat",
-          "extension": [{
-            "url": "format",
-            "valueString": "%s %s"
-          }, {
-            "url": "order",
-            "valueString": "given, family"
-          }, {
-            "url": "paths:given:fhirpath",
-            "valueString": "name.where(use='official').given"
-          }, {
-            "url": "paths:given:join",
-            "valueString": " "
-          }, {
-            "url": "paths:family:fhirpath",
-            "valueString": "name.where(use='official').family"
-          }]
+          "valueString": "surname"
+        }, {
+          "url": "fhirpath",
+          "valueString": "name.where(use='official').family"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 1
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Given Name(s)"
+        }, {
+          "url": "name",
+          "valueString": "given"
+        }, {
+          "url": "fhirpath",
+          "valueString": "name.where(use='official').given"
         }, {
           "url": "filter",
           "valueBoolean": true

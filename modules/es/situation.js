@@ -13,9 +13,12 @@ const situation = {
       let tenuredate = ""
       let integrationdate = ""
       let qualification = ""
+      let professiongrp = ""
+      let professionsubgrp = ""
       let fn = ""
       let level = ""
       let specialty = ""
+      let otherfunctionfac = ""
       let facility = ""
       let commune = ""
       let district = ""
@@ -137,10 +140,30 @@ const situation = {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/qualification-reference'
             })?.valueReference?.reference
             if(qualification) {
-              await fhirAxios.read("Basic", qualification.split("/")[1]).then((resp) => {
+              await fhirAxios.read("Basic", qualification.split("/")[1]).then(async(resp) => {
                 qualification = resp.extension.find((ext) => {
                   return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-basic-name'
                 }).valueString
+                let profsubref = resp.extension.find((ext) => {
+                  return ext.url === "http://ihris.org/fhir/StructureDefinition/profession-parent"
+                })?.valueReference?.reference
+                if(profsubref) {
+                  await fhirAxios.read("Basic", profsubref.split("/")[1]).then(async(resp) => {
+                    professionsubgrp = resp.extension.find((ext) => {
+                      return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-basic-name'
+                    }).valueString
+                    let profref = resp.extension.find((ext) => {
+                      return ext.url === "http://ihris.org/fhir/StructureDefinition/profession-parent"
+                    })?.valueReference?.reference
+                    if(profref) {
+                      await fhirAxios.read("Basic", profref.split("/")[1]).then((resp) => {
+                        professiongrp = resp.extension.find((ext) => {
+                          return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-basic-name'
+                        }).valueString
+                      })
+                    }
+                  })
+                }
               })
             } else {
               qualification = ""
@@ -154,8 +177,27 @@ const situation = {
             specialty = response.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/specialty'
             })?.valueCoding?.display
+            let otherfunctions = response.entry[0].resource.extension.filter((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/other-function"
+            })
+            if(otherfunctions && otherfunctions.length) {
+              otherfunctionfac = otherfunctions[0].extension.find((ext) => {
+                return ext.url === "facility"
+              })?.valueReference?.reference
+              if(otherfunctionfac) {
+                await fhirAxios.read("Location", otherfunctionfac.split("/")[1]).then((loc) => {
+                  otherfunctionfac = loc.name
+                })
+              }
+            }
             if(!qualification) {
               qualification = ""
+            }
+            if(!professiongrp) {
+              professiongrp = ""
+            }
+            if(!professionsubgrp) {
+              professionsubgrp = ""
             }
             if(!fn) {
               fn = ""
@@ -201,7 +243,7 @@ const situation = {
       })
 
       Promise.all([job, situation]).then(() => {
-        let value = qualification+"-^-" + fn +"-^-" + level +"-^-" + specialty +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + appointmentdate +"-^-" + bonusdate +"-^-" + servicestartdate +"-^-" + serviceenddate +"-^-" + serviceeffectivedate +"-^-" + service +"-^-" + tenuredate +"-^-" + integrationdate + "-^-" + commune
+        let value = qualification+"-^-" + fn +"-^-" + level +"-^-" + specialty +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + appointmentdate +"-^-" + bonusdate +"-^-" + servicestartdate +"-^-" + serviceenddate +"-^-" + serviceeffectivedate +"-^-" + service +"-^-" + tenuredate +"-^-" + integrationdate + "-^-" + commune + "-^-" + professiongrp + "-^-" + professionsubgrp + "-^-" + otherfunctionfac
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -351,6 +393,33 @@ const situation = {
       }
       let values = fields.situationdata.split("-^-")
       resolve(values[15])
+    })
+  },
+  professiongrp: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.situationdata) {
+        resolve()
+      }
+      let values = fields.situationdata.split("-^-")
+      resolve(values[16])
+    })
+  },
+  professionsubgrp: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.situationdata) {
+        resolve()
+      }
+      let values = fields.situationdata.split("-^-")
+      resolve(values[17])
+    })
+  },
+  otherfunctionfac: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.situationdata) {
+        resolve()
+      }
+      let values = fields.situationdata.split("-^-")
+      resolve(values[18])
     })
   }
 }

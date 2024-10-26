@@ -106,7 +106,9 @@
       "Performance Evaluation": "Gestion des performances",
       "Disciplinary Events": "",
       "Leave Information": "",
-      "Bank Information": ""
+      "Bank Information": "",
+      "Unit/Division": "",
+      "DRH": ""
     },
     "intro": {
       "Person Information": "Information Agent",
@@ -947,7 +949,27 @@
       "Account Number": "",
       "Bank Name": "",
       "Agent Status Information": "",
-      "Status": ""
+      "Status": "",
+      "Age Range Gender Count": "",
+      "Age Range": "",
+      "Total": "",
+      "Age Range Specialty Count": "",
+      "DRH Report": "",
+      "Place of Birth": "",
+      "First Service Date": "",
+      "Preservice Diploma": "",
+      "Inservice Diploma": "",
+      "Professional Grouping": "",
+      "Professional Sub Grouping": "",
+      "Agent Status": "",
+      "Record Completeness": "",
+      "Phone Number 1": "",
+      "Phone Number 2": "",
+      "Email": "",
+      "Program": "",
+      "Other Function Facility": "",
+      "Region": "",
+      "Seniority (Total)": ""
     }
   }
 }

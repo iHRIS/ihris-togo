@@ -10,15 +10,27 @@ const staffdirectorate = {
       let specialization = ""
       let civilservcategory = ""
       let organization = ""
+      let agenttype = ""
+      let budgettype = ""
       let appointmentdate = ""
       let servicestartdate = ""
+      let firstservicedate = ""
+      let presdegree = ""
+      let insdegree = ""
       let integrationdate = ""
+      let bankname = ""
+      let accountnumber = ""
       let effectivepresdate = ""
       let facility = ""
       let commune = ""
       let district = ""
       let region = ""
-      const job = new Promise((resolve, reject) => {
+      const job = new Promise(async(resolve, reject) => {
+        await utils.getFirstRole(fields.practitionerid).then((firstrole) => {
+          if(firstrole && firstrole.period && firstrole.period.start) {
+            firstservicedate = firstrole.period.start
+          }
+        })
         let params = {
           practitioner: fields.practitionerid,
           _profile: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role"
@@ -152,6 +164,99 @@ const staffdirectorate = {
         })
       })
 
+      const preservice = new Promise((resolve, reject) => {
+        let params = {
+          practitioner: fields.practitionerid,
+          _profile: "http://ihris.org/fhir/StructureDefinition/preservice-training-profile"
+        }
+        utils.getLatestResourceById({
+          resource: "Basic",
+          params,
+          total: 1
+        }).then(async(response) => {
+          if(response && response.entry && response.entry.length) {
+            let spec = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/preservice-training"
+            })
+            if(spec) {
+              presdegree = spec.extension.find((ext) => {
+                return ext.url === "degree-name"
+              })?.valueString
+            }
+            if(!presdegree) {
+              presdegree = ""
+            }
+          }
+          resolve()
+        }).catch(() => {
+          reject()
+        })
+      })
+
+      const inservice = new Promise((resolve, reject) => {
+        let params = {
+          practitioner: fields.practitionerid,
+          _profile: "http://ihris.org/fhir/StructureDefinition/preservice-training-profile"
+        }
+        utils.getLatestResourceById({
+          resource: "Basic",
+          params,
+          total: 1
+        }).then(async(response) => {
+          if(response && response.entry && response.entry.length) {
+            let spec = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/preservice-training"
+            })
+            if(spec) {
+              insdegree = spec.extension.find((ext) => {
+                return ext.url === "degree-name"
+              })?.valueString
+            }
+            if(!insdegree) {
+              insdegree = ""
+            }
+          }
+          resolve()
+        }).catch(() => {
+          reject()
+        })
+      })
+
+      const banking = new Promise((resolve, reject) => {
+        let params = {
+          practitioner: fields.practitionerid,
+          _profile: "http://ihris.org/fhir/StructureDefinition/banking-profile"
+        }
+        utils.getLatestResourceById({
+          resource: "Basic",
+          params,
+          total: 1
+        }).then(async(response) => {
+          if(response && response.entry && response.entry.length) {
+            let bank = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/banking"
+            })
+            if(bank) {
+              bankname = bank.extension.find((ext) => {
+                return ext.url === "name"
+              })?.valueCoding.display
+              accountnumber = bank.extension.find((ext) => {
+                return ext.url === "account-number"
+              })?.valueString
+            }
+            if(!bankname) {
+              bankname = ""
+            }
+            if(!accountnumber) {
+              accountnumber = ""
+            }
+          }
+          resolve()
+        }).catch(() => {
+          reject()
+        })
+      })
+
       const specialty = new Promise((resolve, reject) => {
         let params = {
           practitioner: fields.practitionerid,
@@ -235,6 +340,12 @@ const staffdirectorate = {
           total: 1
         }).then(async(response) => {
           if(response && response.entry && response.entry.length) {
+            agenttype = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/agent-type"
+            })?.valueCoding?.display
+            budgettype = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === "http://ihris.org/fhir/StructureDefinition/budget-type"
+            })?.valueCoding?.display
             civilservcategory = response.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/civil-servant-category-reference'
             })?.valueReference?.reference
@@ -253,6 +364,12 @@ const staffdirectorate = {
             if(!organization) {
               organization = ""
             }
+            if(!agenttype) {
+              agenttype = ""
+            }
+            if(!budgettype) {
+              budgettype = ""
+            }
           }
           resolve()
         }).catch((err) => {
@@ -260,8 +377,8 @@ const staffdirectorate = {
           reject()
         })
       })
-      Promise.all([job, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune + "-^-" + organization
+      Promise.all([job, specialty, classification, preservice, inservice, banking]).then(() => {
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune + "-^-" + organization + "-^-" + firstservicedate + "-^-" + presdegree + "-^-" + insdegree + "-^-" + bankname + "-^-" + accountnumber + "-^-" + agenttype + "-^-" + budgettype
         resolve(value)
       })
     })
@@ -383,6 +500,69 @@ const staffdirectorate = {
       resolve(values[12])
     })
   },
+  firstservicedate: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[13])
+    })
+  },
+  presdegree: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[14])
+    })
+  },
+  insdegree: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[14])
+    })
+  },
+  bankname: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[15])
+    })
+  },
+  accountnumber: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[16])
+    })
+  },
+  agenttype: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[17])
+    })
+  },
+  budgettype: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[18])
+    })
+  }
 }
 
 module.exports = staffdirectorate

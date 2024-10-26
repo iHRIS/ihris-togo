@@ -8,7 +8,7 @@ Usage:          #example
 * extension[display].extension[search][1].valueString = "Given Name(s)|Practitioner.name.where(use='official').given"
 * extension[display].extension[search][2].valueString = "Birth Date|Practitioner.birthDate"
 * extension[display].extension[search][3].valueString = "Gender|Practitioner.gender|http://ihris.org/fhir/ValueSet/tgo-gender-valueset"
-* extension[display].extension[search][4].valueString = "Registration Number|Practitioner.extension.where(url='http://ihris.org/fhir/StructureDefinition/registration-number').valueString"
+* extension[display].extension[search][4].valueString = "Registration Number|Practitioner.identifier.where(type.coding.where(code='employeecode')).value"
 * extension[display].extension[filter][0].valueString = "Name|name:contains"
 * extension[display].extension[filter][1].valueString = "Gender|gender|http://ihris.org/fhir/ValueSet/tgo-gender-valueset"
 * extension[display].extension[filter][2].valueString = "Unique Number|uniquenum"

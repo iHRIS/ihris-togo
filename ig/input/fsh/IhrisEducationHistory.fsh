@@ -985,7 +985,7 @@ Usage:          #example
 * extension[section][2].extension[resource].extension[searchfieldtarget].valueString = "Basic"
 * extension[section][2].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training-request-reference').valueReference.reference"
 * extension[section][2].extension[resource].extension[column][0].extension[header].valueString = "Diploma"
-* extension[section][2].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='degree').valueReference"
+* extension[section][2].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='degree').valueCoding.display"
 * extension[section][2].extension[resource].extension[column][1].extension[header].valueString = "Diploma Name"
 * extension[section][2].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='degree-name').valueString"
 * extension[section][2].extension[resource].extension[column][2].extension[header].valueString = "Training Completed"

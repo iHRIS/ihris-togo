@@ -1,6 +1,7 @@
+const fhirpath = require('fhirpath')
+const moment = require("moment")
 const ihrissmartrequire = require('ihrissmartrequire')
 const fhirAxios = ihrissmartrequire("modules/fhir/fhirAxios");
-const fhirpath = require('fhirpath')
 
 const getFirstRole = (practitioner, excludeRole) => {
   return new Promise((resolve, reject) => {

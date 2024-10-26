@@ -628,7 +628,7 @@
         },
         {
           "name": "site:nav:menu:database:menu:classification:color",
-          "valueString": "#227FDD"
+          "valueString": "#78496A"
         },
         {
           "name": "site:nav:menu:database:menu:classification:order",
@@ -939,6 +939,18 @@
           "valueString": "#78496a"
         },
         {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:drh:text",
+          "valueString": "DRH"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:drh:url",
+          "valueString": "/report/ihris-es-report-drh"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:drh:order",
+          "valueString": "0"
+        },
+        {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:staff-directorate:text",
           "valueString": "Staff Directorate"
         },
@@ -948,7 +960,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:staff-directorate:order",
-          "valueString": "0"
+          "valueString": "1"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:situation:text",
@@ -960,7 +972,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:situation:order",
-          "valueString": "1"
+          "valueString": "2"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:classification:text",
@@ -972,7 +984,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:classification:order",
-          "valueString": "2"
+          "valueString": "3"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:preservice:text",
@@ -984,7 +996,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:preservice:order",
-          "valueString": "3"
+          "valueString": "4"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:inservice:text",
@@ -996,7 +1008,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:inservice:order",
-          "valueString": "4"
+          "valueString": "5"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:workexperience:text",
@@ -1008,7 +1020,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:workexperience:order",
-          "valueString": "5"
+          "valueString": "6"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:performance:text",
@@ -1020,7 +1032,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:performance:order",
-          "valueString": "6"
+          "valueString": "7"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:text",
@@ -1032,7 +1044,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:order",
-          "valueString": "7"
+          "valueString": "8"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:leave:text",
@@ -1044,7 +1056,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:leave:order",
-          "valueString": "8"
+          "valueString": "9"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:banking:text",
@@ -1056,7 +1068,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:banking:order",
-          "valueString": "9"
+          "valueString": "10"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agentstatus:text",
@@ -1068,7 +1080,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agentstatus:order",
-          "valueString": "10"
+          "valueString": "11"
         },
         {
           "name": "site:nav:menu:users:text",

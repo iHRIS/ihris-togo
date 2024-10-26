@@ -135,28 +135,34 @@
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
             "url": "display",
-            "valueString": "Staff"
+            "valueString": "Surname"
           }, {
             "url": "name",
-            "valueString": "fullname"
+            "valueString": "surname"
           }, {
-            "url": "displayformat",
-            "extension": [{
-              "url": "format",
-              "valueString": "%s, %s"
-            }, {
-              "url": "order",
-              "valueString": "given, family"
-            }, {
-              "url": "paths:given:fhirpath",
-              "valueString": "name.where(use='official').given"
-            }, {
-              "url": "paths:given:join",
-              "valueString": " "
-            }, {
-              "url": "paths:family:fhirpath",
-              "valueString": "name.where(use='official').family"
-            }]
+            "url": "fhirpath",
+            "valueString": "name.where(use='official').family"
+          }, {
+            "url": "filter",
+            "valueBoolean": true
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": false
+          }, {
+            "url": "order",
+            "valueInteger": 1
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
+            "url": "display",
+            "valueString": "Given Name(s)"
+          }, {
+            "url": "name",
+            "valueString": "given"
+          }, {
+            "url": "fhirpath",
+            "valueString": "name.where(use='official').given"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -218,8 +224,8 @@
             "url": "name",
             "valueString": "age"
           }, {
-            "url": "function",
-            "valueString": "esfunctions.age({dob})"
+            "url": "script",
+            "valueString": "if(doc['dob'].size() != 0){Instant instant = Instant.ofEpochMilli(new Date().getTime());ZonedDateTime birth = doc['dob'].value;ZonedDateTime now = ZonedDateTime.ofInstant(instant, ZoneId.of('Z'));ChronoUnit.YEARS.between(birth, now)}else {''}"
           }, {
             "url": "parameters",
             "valueString": "dob"
