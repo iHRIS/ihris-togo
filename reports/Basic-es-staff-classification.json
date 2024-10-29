@@ -238,13 +238,13 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Retirement Date"
+          "valueString": "Probable Retirement Date"
         }, {
           "url": "name",
-          "valueString": "retirementdate"
+          "valueString": "probableretirementdate"
         }, {
           "url": "function",
-          "valueString": "esfunctions.retirementDate({dob})"
+          "valueString": "esfunctions.probableRetirementDate({dob})"
         }, {
           "url": "parameters",
           "valueString": "dob"
@@ -290,6 +290,9 @@
         }, {
           "url": "name",
           "valueString": "classificationclass"
+        }, {
+          "url": "type",
+          "valueString": "text"
         }, {
           "url": "function",
           "valueString": "classification.classificationclass({classificationdata})"
@@ -339,6 +342,9 @@
           "url": "name",
           "valueString": "basic"
         }, {
+          "url": "type",
+          "valueString": "text"
+        }, {
           "url": "function",
           "valueString": "classification.basic({classificationdata})"
         }, {
@@ -362,6 +368,9 @@
         }, {
           "url": "name",
           "valueString": "bonus"
+        }, {
+          "url": "type",
+          "valueString": "text"
         }, {
           "url": "function",
           "valueString": "classification.bonus({classificationdata})"
@@ -387,6 +396,9 @@
           "url": "name",
           "valueString": "deduction"
         }, {
+          "url": "type",
+          "valueString": "text"
+        }, {
           "url": "function",
           "valueString": "classification.deduction({classificationdata})"
         }, {
@@ -411,6 +423,9 @@
           "url": "name",
           "valueString": "gross"
         }, {
+          "url": "type",
+          "valueString": "text"
+        }, {
           "url": "function",
           "valueString": "classification.gross({classificationdata})"
         }, {
@@ -434,6 +449,9 @@
         }, {
           "url": "name",
           "valueString": "net"
+        }, {
+          "url": "type",
+          "valueString": "text"
         }, {
           "url": "function",
           "valueString": "classification.net({classificationdata})"

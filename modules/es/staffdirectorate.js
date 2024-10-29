@@ -12,6 +12,7 @@ const staffdirectorate = {
       let organization = ""
       let agenttype = ""
       let budgettype = ""
+      let retirementdate = ""
       let appointmentdate = ""
       let servicestartdate = ""
       let firstservicedate = ""
@@ -41,6 +42,25 @@ const staffdirectorate = {
           total: 1
         }).then(async(response) => {
           if(response && response.entry && response.entry.length) {
+            params = {
+              _profile: "http://ihris.org/fhir/StructureDefinition/role-departure-profile",
+              practitionerrole: "PractitionerRole/" + response.entry[0].resource.id
+            }
+            await fhirAxios.search("Basic", params).then((dep) => {
+              if(dep.entry && dep.entry.length) {
+                let reason = dep.entry[0].resource.extension.find((ext) => {
+                  return ext.url === "http://ihris.org/fhir/StructureDefinition/position-departure-reason"
+                })?.valueCoding?.code
+                if(reason === "earlyRetirement" || reason === "mandatoryRetirement") {
+                  retirementdate = dep.entry[0].resource.extension.find((ext) => {
+                    return ext.url === 'http://ihris.org/fhir/StructureDefinition/departure-date'
+                  })?.valueDate
+                  if(!retirementdate) {
+                    retirementdate = ""
+                  }
+                }
+              }
+            })
             if(response.entry[0].resource && response.entry[0].resource.code && response.entry[0].resource?.code[0]?.coding) {
               jobtitle = response.entry[0].resource?.code[0]?.coding[0]?.display
             }
@@ -378,7 +398,7 @@ const staffdirectorate = {
         })
       })
       Promise.all([job, specialty, classification, preservice, inservice, banking]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune + "-^-" + organization + "-^-" + firstservicedate + "-^-" + presdegree + "-^-" + insdegree + "-^-" + bankname + "-^-" + accountnumber + "-^-" + agenttype + "-^-" + budgettype
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + commune + "-^-" + organization + "-^-" + firstservicedate + "-^-" + presdegree + "-^-" + insdegree + "-^-" + bankname + "-^-" + accountnumber + "-^-" + agenttype + "-^-" + budgettype + "-^-" + retirementdate
         resolve(value)
       })
     })
@@ -524,7 +544,7 @@ const staffdirectorate = {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[14])
+      resolve(values[15])
     })
   },
   bankname: (fields) => {
@@ -533,7 +553,7 @@ const staffdirectorate = {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[15])
+      resolve(values[16])
     })
   },
   accountnumber: (fields) => {
@@ -542,7 +562,7 @@ const staffdirectorate = {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[16])
+      resolve(values[17])
     })
   },
   agenttype: (fields) => {
@@ -551,7 +571,7 @@ const staffdirectorate = {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[17])
+      resolve(values[18])
     })
   },
   budgettype: (fields) => {
@@ -560,7 +580,16 @@ const staffdirectorate = {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[18])
+      resolve(values[19])
+    })
+  },
+  retirementdate: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[20])
     })
   }
 }

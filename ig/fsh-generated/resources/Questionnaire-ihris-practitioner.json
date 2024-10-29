@@ -167,6 +167,14 @@
           "repeats": false
         },
         {
+          "linkId": "Practitioner.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:first-service-start-date.value[x]:valueDate",
+          "text": "First Service Start Date",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
           "linkId": "Practitioner.active",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active",
           "text": "Active",
@@ -383,108 +391,6 @@
               "required": false
             }
           ]
-        }
-      ]
-    },
-    {
-      "linkId": "Basic[0]",
-      "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile",
-      "text": "Agent Status",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "Basic[0].extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:agent-status.value[x]:valueCoding",
-          "text": "Status",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-status-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic[0].extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-date.value[x]:valueDate",
-          "text": "Resumption Date",
-          "type": "date",
-          "required": true,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic[0].extension[0]",
-              "operator": "=",
-              "answerCoding": {
-                "code": "active",
-                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "Basic[0].extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-reference.value[x]:valueString",
-          "text": "Resumption Reference",
-          "type": "string",
-          "required": false,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic.extension[0]",
-              "operator": "=",
-              "answerCoding": {
-                "code": "active",
-                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "Basic[0].extension[3]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:start-date.value[x]:valueDate",
-          "text": "Start Date",
-          "type": "date",
-          "required": true,
-          "repeats": false,
-          "enableWhen": [
-            {
-              "question": "Basic.extension[0]",
-              "operator": "!=",
-              "answerCoding": {
-                "code": "active",
-                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "linkId": "Basic[1]",
-      "definition": "http://ihris.org/fhir/StructureDefinition/data-completeness-profile",
-      "text": "Data Completeness|Data Completeness",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "Basic[1].extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/data-completeness-profile#Basic.extension:note-date.value[x]:valueDate",
-          "text": "Date Added",
-          "type": "date",
-          "required": true,
-          "repeats": false,
-          "code": [
-            {
-              "system": "default-eval",
-              "code": "date.now"
-            }
-          ]
-        },
-        {
-          "linkId": "Basic[1].extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/data-completeness-profile#Basic.extension:completeness.value[x]:valueCoding",
-          "text": "Completeness",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/data-completeness-valueset",
-          "required": true,
-          "repeats": false
         }
       ]
     }

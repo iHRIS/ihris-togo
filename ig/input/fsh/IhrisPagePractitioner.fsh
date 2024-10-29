@@ -47,6 +47,7 @@ Usage:          #example
 * extension[section][1].extension[field][3].valueString = "Practitioner.extension:children"
 * extension[section][1].extension[field][4].valueString = "Practitioner.extension:marital-status"
 * extension[section][1].extension[field][5].valueString = "Practitioner.extension:nationality"
+* extension[section][1].extension[field][6].valueString = "Practitioner.extension:first-service-start-date"
 * extension[section][2].extension[title].valueString = "Contact Details"
 * extension[section][2].extension[description].valueString = "Address, email, phone numbers"
 * extension[section][2].extension[name].valueString = "contact"

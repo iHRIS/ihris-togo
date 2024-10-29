@@ -172,13 +172,13 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Retirement Date"
+          "valueString": "Probable Retirement Date"
         }, {
           "url": "name",
-          "valueString": "retirementdate"
+          "valueString": "probretirementdate"
         }, {
           "url": "function",
-          "valueString": "esfunctions.retirementDate({dob})"
+          "valueString": "esfunctions.probableRetirementDate({dob})"
         }, {
           "url": "parameters",
           "valueString": "dob"
@@ -190,7 +190,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 8
+          "valueInteger": 7
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -325,6 +325,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Retirement Date"
+        }, {
+          "url": "name",
+          "valueString": "retirementdate"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.retirementdate({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 8
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "First Service Date"
         }, {
           "url": "name",
@@ -355,7 +379,7 @@
           "valueString": "totalseniority"
         }, {
           "url": "script",
-          "valueString": "if(doc['firstservicedate'].size() != 0){Instant instant = Instant.ofEpochMilli(new Date().getTime());ZonedDateTime firstdate = doc['firstservicedate'].value;ZonedDateTime now = ZonedDateTime.ofInstant(instant, ZoneId.of('Z'));long years = ChronoUnit.YEARS.between(firstdate, now);ZonedDateTime afterYears = firstdate.plusYears(years);long months = ChronoUnit.MONTHS.between(afterYears, now);ZonedDateTime afterMonths = afterYears.plusMonths(months);long days = ChronoUnit.DAYS.between(afterMonths, now);return years + ' years, ' + months + ' months, ' + days + ' days';}"
+          "valueString": "if(doc['firstservicedate'].size() != 0){Instant instant = Instant.ofEpochMilli(new Date().getTime());ZonedDateTime firstdate = doc['firstservicedate'].value;ZonedDateTime now = ZonedDateTime.ofInstant(instant, ZoneId.of('Z'));long years = ChronoUnit.YEARS.between(firstdate, now);ZonedDateTime afterYears = firstdate.plusYears(years);long months = ChronoUnit.MONTHS.between(afterYears, now);ZonedDateTime afterMonths = afterYears.plusMonths(months);long days = ChronoUnit.DAYS.between(afterMonths, now);return years + ' ans, ' + months + ' mois, ' + days + ' jours';}"
         }, {
           "url": "filter",
           "valueBoolean": false
@@ -403,7 +427,7 @@
           "valueString": "currentseniority"
         }, {
           "url": "script",
-          "valueString": "if(doc['servicestartdate'].size() != 0){Instant instant = Instant.ofEpochMilli(new Date().getTime());ZonedDateTime currdate = doc['servicestartdate'].value;ZonedDateTime now = ZonedDateTime.ofInstant(instant, ZoneId.of('Z'));long years = ChronoUnit.YEARS.between(currdate, now);ZonedDateTime afterYears = currdate.plusYears(years);long months = ChronoUnit.MONTHS.between(afterYears, now);ZonedDateTime afterMonths = afterYears.plusMonths(months);long days = ChronoUnit.DAYS.between(afterMonths, now);return years + ' years, ' + months + ' months, ' + days + ' days';}"
+          "valueString": "if(doc['servicestartdate'].size() != 0){Instant instant = Instant.ofEpochMilli(new Date().getTime());ZonedDateTime currdate = doc['servicestartdate'].value;ZonedDateTime now = ZonedDateTime.ofInstant(instant, ZoneId.of('Z'));long years = ChronoUnit.YEARS.between(currdate, now);ZonedDateTime afterYears = currdate.plusYears(years);long months = ChronoUnit.MONTHS.between(afterYears, now);ZonedDateTime afterMonths = afterYears.plusMonths(months);long days = ChronoUnit.DAYS.between(afterMonths, now);return years + ' ans, ' + months + ' mois, ' + days + ' jours';}"
         }, {
           "url": "filter",
           "valueBoolean": false
@@ -676,7 +700,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 21
+          "valueInteger": 36
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

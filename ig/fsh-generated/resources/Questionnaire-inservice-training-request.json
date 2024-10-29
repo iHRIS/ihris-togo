@@ -76,7 +76,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:sector.value[x]:valueCoding",
           "text": "Sector",
           "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/education-sector-valueset",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
           "required": true
         },
         {

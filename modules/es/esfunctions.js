@@ -43,7 +43,7 @@ const index = {
       resolve(age)
     })
   },
-  retirementDate: (fields) => {
+  probableRetirementDate: (fields) => {
     return new Promise((resolve) => {
       if(!fields.dob) {
         return resolve()
@@ -53,7 +53,7 @@ const index = {
       resolve(date)
     })
   },
-  retirementYear: (fields) => {
+  probableRetirementYear: (fields) => {
     return new Promise((resolve) => {
       if(fields.retirementDate) {
         return resolve(fields.retirementdate.split("-")[2])

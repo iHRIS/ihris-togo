@@ -151,13 +151,13 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Retirement Date"
+          "valueString": "Probable Retirement Date"
         }, {
           "url": "name",
-          "valueString": "retirementdate"
+          "valueString": "probableretirementdate"
         }, {
           "url": "function",
-          "valueString": "esfunctions.retirementDate({dob})"
+          "valueString": "esfunctions.probableRetirementDate({dob})"
         }, {
           "url": "parameters",
           "valueString": "dob"

@@ -121,11 +121,18 @@ Usage:          #definition
 * item[0].item[8].required = true
 * item[0].item[8].repeats = false
 
-* item[0].item[9].linkId = "Practitioner.active"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
-* item[0].item[9].text = "Active"
-* item[0].item[9].type = #boolean
+* item[0].item[9].linkId = "Practitioner.extension[5]"
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:first-service-start-date.value[x]:valueDate"
+* item[0].item[9].text = "First Service Start Date"
+* item[0].item[9].type = #date
 * item[0].item[9].required = true
+* item[0].item[9].repeats = false
+
+* item[0].item[10].linkId = "Practitioner.active"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
+* item[0].item[10].text = "Active"
+* item[0].item[10].type = #boolean
+* item[0].item[10].required = true
 
 * item[1].linkId = "__Practitioner:contact"
 * item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner"
@@ -275,68 +282,3 @@ Usage:          #definition
 * item[2].item[0].item[5].type = #string
 * item[2].item[0].item[5].repeats = false
 * item[2].item[0].item[5].required = false
-
-* item[3].linkId = "Basic[0]"
-* item[3].definition = "http://ihris.org/fhir/StructureDefinition/agent-status-profile"
-* item[3].text = "Agent Status"
-* item[3].type = #group
-
-* item[3].item[0].linkId = "Basic[0].extension[0]"
-* item[3].item[0].definition = "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:agent-status.value[x]:valueCoding"
-* item[3].item[0].text = "Status"
-* item[3].item[0].type = #choice
-* item[3].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-status-valueset"
-* item[3].item[0].required = true
-* item[3].item[0].repeats = false
-
-* item[3].item[1].linkId = "Basic[0].extension[1]"
-* item[3].item[1].definition = "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-date.value[x]:valueDate"
-* item[3].item[1].text = "Resumption Date"
-* item[3].item[1].type = #date
-* item[3].item[1].required = true
-* item[3].item[1].repeats = false
-* item[3].item[1].enableWhen[0].question = "Basic[0].extension[0]"
-* item[3].item[1].enableWhen[0].operator = #=
-* item[3].item[1].enableWhen[0].answerCoding = agent-status-codesystem#active
-
-* item[3].item[2].linkId = "Basic[0].extension[2]"
-* item[3].item[2].definition = "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-reference.value[x]:valueString"
-* item[3].item[2].text = "Resumption Reference"
-* item[3].item[2].type = #string
-* item[3].item[2].required = false
-* item[3].item[2].repeats = false
-* item[3].item[2].enableWhen[0].question = "Basic.extension[0]"
-* item[3].item[2].enableWhen[0].operator = #=
-* item[3].item[2].enableWhen[0].answerCoding = agent-status-codesystem#active
-
-* item[3].item[3].linkId = "Basic[0].extension[3]"
-* item[3].item[3].definition = "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:start-date.value[x]:valueDate"
-* item[3].item[3].text = "Start Date"
-* item[3].item[3].type = #date
-* item[3].item[3].required = true
-* item[3].item[3].repeats = false
-* item[3].item[3].enableWhen[0].question = "Basic.extension[0]"
-* item[3].item[3].enableWhen[0].operator = #!=
-* item[3].item[3].enableWhen[0].answerCoding = agent-status-codesystem#active
-
-* item[4].linkId = "Basic[1]"
-* item[4].definition = "http://ihris.org/fhir/StructureDefinition/data-completeness-profile"
-* item[4].text = "Data Completeness|Data Completeness"
-* item[4].type = #group
-
-* item[4].item[0].linkId = "Basic[1].extension[0]"
-* item[4].item[0].definition = "http://ihris.org/fhir/StructureDefinition/data-completeness-profile#Basic.extension:note-date.value[x]:valueDate"
-* item[4].item[0].text = "Date Added"
-* item[4].item[0].type = #date
-* item[4].item[0].required = true
-* item[4].item[0].repeats = false
-* item[4].item[0].code[0].system = "default-eval"
-* item[4].item[0].code[0].code = #date.now
-
-* item[4].item[1].linkId = "Basic[1].extension[1]"
-* item[4].item[1].definition = "http://ihris.org/fhir/StructureDefinition/data-completeness-profile#Basic.extension:completeness.value[x]:valueCoding"
-* item[4].item[1].text = "Completeness"
-* item[4].item[1].type = #choice
-* item[4].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/data-completeness-valueset"
-* item[4].item[1].required = true
-* item[4].item[1].repeats = false

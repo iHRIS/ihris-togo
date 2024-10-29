@@ -29,7 +29,7 @@ const recordcompleteness = {
           if(!completeness) {
             completeness = ""
           }
-          let value = completeness +"-^-"+ dateadded  
+          let value = completeness +"-^-"+ dateadded
           resolve(value)
         } else {
           return resolve("")

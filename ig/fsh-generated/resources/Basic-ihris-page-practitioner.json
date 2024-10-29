@@ -224,6 +224,10 @@
         {
           "url": "field",
           "valueString": "Practitioner.extension:nationality"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:first-service-start-date"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

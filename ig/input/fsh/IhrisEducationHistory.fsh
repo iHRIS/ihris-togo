@@ -452,7 +452,7 @@ Usage:          #definition
 * item[0].item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:sector.value[x]:valueCoding"
 * item[0].item[0].item[0].text = "Sector"
 * item[0].item[0].item[0].type = #choice
-* item[0].item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+* item[0].item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
 * item[0].item[0].item[0].required = false
 * item[0].item[0].item[0].repeats = false
 
@@ -718,7 +718,7 @@ Usage:          #definition
 * item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:sector.value[x]:valueCoding"
 * item[0].item[8].text = "Sector"
 * item[0].item[8].type = #choice
-* item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+* item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
 * item[0].item[8].required = true
 
 * item[0].item[9].linkId = "Basic.extension[9]"

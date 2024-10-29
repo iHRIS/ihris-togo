@@ -778,6 +778,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/first-service-start-date"
+        },
+        "name": "First Service Start Date",
+        "description": "First Service Start Date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/function"
         },
         "name": "Function",

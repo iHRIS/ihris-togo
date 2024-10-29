@@ -11,45 +11,12 @@ const practitionerWorkflow = {
         let practitioner = bundle.entry.find((entry) => {
           return entry.resource.resourceType === "Practitioner"
         })
-        let completeness = bundle.entry.find((entry) => {
-          return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/data-completeness-profile")
-        })
-        let agentstatus = bundle.entry.find((entry) => {
-          return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/agent-status-profile")
-        })
-        let refIndex = completeness.resource.extension.findIndex((ext) => {
-          return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference"
-        })
-        if(refIndex === -1) {
-          let index = completeness.resource.extension.length
-          completeness.resource.extension[index] = {
-            url: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference",
-            valueReference: {
-              reference: ""
-            }
-          }
-          if(practitioner.resource.id) {
-            completeness.resource.extension[index].valueReference.reference = "Practioner/" + practitioner.resource.id
-          } else {
-            completeness.resource.extension[index].valueReference.reference = practitioner.fullUrl
-          }
-        }
-        refIndex = agentstatus.resource.extension.findIndex((ext) => {
-          return ext.url === "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference"
-        })
-        if(refIndex === -1) {
-          let index = agentstatus.resource.extension.length
-          agentstatus.resource.extension[index] = {
-            url: "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference",
-            valueReference: {
-              reference: ""
-            }
-          }
-          if(practitioner.resource.id) {
-            agentstatus.resource.extension[index].valueReference.reference = "Practioner/" + practitioner.resource.id
-          } else {
-            agentstatus.resource.extension[index].valueReference.reference = practitioner.fullUrl
-          }
+        let birthdate = practitioner.resource.birthDate
+        let firstservicestart = practitioner.resource.extension.find((ext) => {
+          return ext.url === 'http://ihris.org/fhir/StructureDefinition/first-service-start-date'
+        })?.valueDate
+        if(birthdate && firstservicestart && moment(firstservicestart).diff(birthdate, "years") < 16) {
+          return reject({message: "Date of birth and first service start date must be atleast 16 years apart"})
         }
         let uniquenum = practitioner.resource.extension.find((ext) => {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/unique-number"
